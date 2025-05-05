@@ -42,11 +42,9 @@ export default function HeroSlideshow({ slides }: HeroSlideshowProps) {
     if (!api) return;
     
     api.on("select", handleSelect);
-    api.on("settled", handleSelect);
     
     return () => {
       api.off("select", handleSelect);
-      api.off("settled", handleSelect);
     };
   }, [api, handleSelect]);
 
@@ -76,12 +74,12 @@ export default function HeroSlideshow({ slides }: HeroSlideshowProps) {
               <div 
                 className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]"
                 style={{
-                  backgroundImage: `url('${slide.image}')`,
+                  backgroundImage: `url(${slide.image})`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                 }}
               >
-                <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+                <div className="absolute inset-0 bg-black bg-opacity-40"></div>
                 <div className="container mx-auto px-4 h-full flex items-center">
                   <div className="text-white max-w-2xl">
                     <motion.h2 

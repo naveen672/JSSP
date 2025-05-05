@@ -208,9 +208,7 @@ export default function Header() {
               <div className="h-12 flex items-center justify-center">
                 <Logo className="h-12 w-auto" />
               </div>
-              <div>
-                <p className="text-neutral-gray text-xs hidden md:block">Excellence in Technical Education</p>
-              </div>
+              <div className="hidden"></div>
             </div>
           </Link>
           

@@ -7,12 +7,18 @@ export const newsItems = [
   '100% placement record for the 5th consecutive year'
 ];
 
+// Import images for Hero Slideshow
+import image10 from '@assets/10.jpg';
+import image11 from '@assets/11.jpg';
+import image12 from '@assets/12.jpg';
+import image13 from '@assets/13.jpg';
+
 // Hero Slideshow Data
 export const heroSlides = [
   {
-    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=600&q=80',
-    title: 'Shaping Futures Through Technical Excellence',
-    description: 'Discover cutting-edge diploma programs designed to prepare you for tomorrow\'s challenges.',
+    image: image12,
+    title: 'Welcome to JSS Polytechnic',
+    description: 'A premier institution dedicated to technical excellence and innovation.',
     primaryButton: {
       text: 'Apply Now',
       url: '/admissions'
@@ -23,29 +29,42 @@ export const heroSlides = [
     }
   },
   {
-    image: 'https://images.unsplash.com/photo-1581093450021-a7360e9a6b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=600&q=80',
-    title: 'State-of-the-Art Campus Facilities',
-    description: 'Modern laboratories, workshops, and learning spaces designed for hands-on technical education.',
+    image: image13,
+    title: 'State-of-the-Art Campus',
+    description: 'Modern infrastructure and facilities for comprehensive technical education.',
     primaryButton: {
       text: 'Campus Tour',
-      url: '/campus-life'
+      url: '/facilities'
     },
     secondaryButton: {
       text: 'Our Facilities',
-      url: '/campus-life'
+      url: '/facilities'
     }
   },
   {
-    image: 'https://images.unsplash.com/photo-1605711285791-0219e80e43a3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=600&q=80',
-    title: 'Industry-Connected Learning',
-    description: 'Partnerships with leading companies ensuring our graduates are industry-ready from day one.',
+    image: image11,
+    title: 'Lush Green Environment',
+    description: 'Study in a beautiful campus with modern amenities and serene surroundings.',
     primaryButton: {
-      text: 'Our Partners',
-      url: '/about'
+      text: 'Explore Campus',
+      url: '/facilities'
     },
     secondaryButton: {
-      text: 'Success Stories',
-      url: '/about'
+      text: 'Student Life',
+      url: '/student-support'
+    }
+  },
+  {
+    image: image10,
+    title: 'NCC and Extracurricular Activities',
+    description: 'Comprehensive development through various non-academic programs and activities.',
+    primaryButton: {
+      text: 'Join Activities',
+      url: '/student-support'
+    },
+    secondaryButton: {
+      text: 'NCC at JSS',
+      url: '/ncc-annual-report'
     }
   }
 ];
