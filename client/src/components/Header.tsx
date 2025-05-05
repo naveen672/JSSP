@@ -160,6 +160,7 @@ export default function Header() {
     { path: '/facilities', label: 'Facilities', hasSubmenu: true, submenu: facilitiesSubmenus },
     { path: '/student-support', label: 'Student Support', hasSubmenu: true, submenu: studentSupportSubmenus },
     { path: '/training-placements', label: 'Training & Placements', hasSubmenu: true, submenu: trainingPlacementsSubmenus },
+    { path: '/iqac', label: 'IQAC', hasSubmenu: false },
     { path: '/more', label: 'More', hasSubmenu: true, submenu: moreSubmenus },
     { path: '/contact', label: 'Contact', hasSubmenu: false },
   ];
@@ -712,7 +713,7 @@ export default function Header() {
                               </button>
                               {activeMobileCategories['about-home'] && (
                                 <div className="mt-1 pl-4 space-y-1">
-                                  {link.submenu?.slice(0, 6).map((subItem) => (
+                                  {link.submenu?.slice(0, 7).map((subItem) => (
                                     <Link 
                                       key={subItem.path} 
                                       href={subItem.path}
@@ -741,7 +742,7 @@ export default function Header() {
                               </button>
                               {activeMobileCategories['benefits'] && (
                                 <div className="mt-1 pl-4 space-y-1">
-                                  {link.submenu?.slice(6, 9).map((subItem) => (
+                                  {link.submenu?.slice(7, 10).map((subItem) => (
                                     <Link 
                                       key={subItem.path} 
                                       href={subItem.path}
