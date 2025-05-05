@@ -27,7 +27,10 @@ export default function CtaSection({ title, description, primaryButton, secondar
             className="bg-white text-secondary hover:bg-neutral hover:text-secondary-dark font-medium px-8 py-4 rounded-md transition duration-300 text-lg" 
             asChild
           >
-            <Link href={primaryButton.url}>{primaryButton.text}</Link>
+            <Link href={primaryButton.url} className="flex items-center justify-center gap-2">
+              {primaryButton.text}
+              <ArrowRight size={18} />
+            </Link>
           </Button>
           <Button 
             size="lg"
@@ -35,7 +38,10 @@ export default function CtaSection({ title, description, primaryButton, secondar
             className="border-2 border-white text-white hover:bg-white hover:text-secondary font-medium px-8 py-4 rounded-md transition duration-300 text-lg"
             asChild
           >
-            <Link href={secondaryButton.url}>{secondaryButton.text}</Link>
+            <Link href={secondaryButton.url} className="flex items-center justify-center gap-2">
+              {secondaryButton.text}
+              <Send size={18} />
+            </Link>
           </Button>
         </div>
       </div>
