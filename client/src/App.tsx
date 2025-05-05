@@ -60,6 +60,8 @@ import Library from "@/pages/Library";
 import Hostel from "@/pages/Hostel";
 import Sports from "@/pages/Sports";
 import Infrastructure from "@/pages/Infrastructure";
+import Placements from "@/pages/Placements";
+import Internships from "@/pages/Internships";
 
 // Infrastructure department pages
 import InfrastructureDeptCS from "@/pages/infrastructure/DeptCS";
@@ -144,6 +146,8 @@ function Router() {
       <Route path="/hostel" component={Hostel} />
       <Route path="/sports" component={Sports} />
       <Route path="/infrastructure" component={Infrastructure} />
+      <Route path="/placements" component={Placements} />
+      <Route path="/internships" component={Internships} />
       
       {/* Infrastructure Department Routes */}
       <Route path="/infrastructure/dept-cs" component={InfrastructureDeptCS} />

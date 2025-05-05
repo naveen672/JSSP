@@ -107,6 +107,8 @@ export default function Header() {
     { path: '/library', label: 'Library & Information Centre', category: 'facilities' },
     { path: '/hostel', label: 'Hostel', category: 'facilities' },
     { path: '/sports', label: 'Sports', category: 'facilities' },
+    { path: '/placements', label: 'Placements', category: 'placements' },
+    { path: '/internships', label: 'Internships & Training', category: 'placements' },
     { path: '/infrastructure', label: 'Infrastructure', category: 'infrastructure' },
     { path: '/infrastructure/dept-cs', label: 'Computer Science & Engineering', category: 'infrastructure' },
     { path: '/infrastructure/dept-ec', label: 'Electronics & Communication', category: 'infrastructure' },
