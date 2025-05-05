@@ -40,7 +40,7 @@ export default function ProgramsSection({ programs }: ProgramsSectionProps) {
               ></div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-heading font-bold text-primary mb-2">{program.title}</h3>
-                <p className="text-neutral-gray mb-4">{program.description}</p>
+                <p className="text-neutral-gray mb-4 text-base">{program.description}</p>
                 <div className="flex items-center text-sm text-neutral-gray mb-4">
                   <Clock className="text-primary text-base mr-2" size={18} />
                   <span>{program.duration}</span>

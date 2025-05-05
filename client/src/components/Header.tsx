@@ -26,13 +26,14 @@ export default function Header() {
           {/* Logo */}
           <Link href="/">
             <div className="flex items-center space-x-3 cursor-pointer">
-              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3m0 2.18l6 3.27h-2.18l-3.82-2.09l-3.82 2.09H6l6-3.27m1 14.05l-5-2.73v-4.77L12 15l4-2.27v4.77l-3 1.73"/>
-                </svg>
+              <div className="h-12 flex items-center justify-center">
+                <img 
+                  src="/assets/jsslogo.png" 
+                  alt="JSS Polytechnic Logo" 
+                  className="h-12 w-auto" 
+                />
               </div>
               <div>
-                <h1 className="text-primary font-heading font-bold text-xl md:text-2xl">JSS POLYTECHNIC</h1>
                 <p className="text-neutral-gray text-xs hidden md:block">Excellence in Technical Education</p>
               </div>
             </div>

@@ -29,13 +29,14 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 rounded-full bg-white p-1 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-primary" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3m0 2.18l6 3.27h-2.18l-3.82-2.09l-3.82 2.09H6l6-3.27m1 14.05l-5-2.73v-4.77L12 15l4-2.27v4.77l-3 1.73"/>
-                </svg>
+            <div className="flex flex-col items-center space-y-3 mb-6">
+              <div className="bg-white p-2 rounded-lg">
+                <img 
+                  src="/assets/jsslogo.png" 
+                  alt="JSS Polytechnic Logo" 
+                  className="h-12 w-auto" 
+                />
               </div>
-              <h3 className="font-heading font-bold text-xl">JSS POLYTECHNIC</h3>
             </div>
             <p className="text-neutral-100 opacity-80 mb-4">
               Empowering students with technical knowledge and skills for a successful career since 1990.

@@ -21,7 +21,7 @@ export default function AboutSection({ description, features, stats, imageUrl }:
             <div className="w-24 h-1 bg-secondary mb-6"></div>
             
             {description.map((paragraph, index) => (
-              <p key={index} className="text-neutral-gray mb-4">{paragraph}</p>
+              <p key={index} className="text-neutral-gray mb-4 text-base">{paragraph}</p>
             ))}
             
             <div className="grid grid-cols-2 gap-4 mb-8">
