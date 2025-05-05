@@ -11,8 +11,9 @@ export default function VisionMission() {
       {/* Page Banner */}
       <div className="bg-gradient-to-r from-primary to-primary/90 text-white py-12 shadow-md relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]"></div>
+        <div className="absolute inset-0 bg-black/20"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white/90">Vision and Mission</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white drop-shadow-lg">Vision and Mission</h1>
           <div className="flex items-center gap-2 text-white/90">
             <span className="hover:text-white transition-colors">Home</span>
             <span className="text-white/50">•</span>

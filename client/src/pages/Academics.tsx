@@ -14,9 +14,11 @@ export default function Academics() {
       <NewsTicker news={newsItems} />
       
       {/* Hero Section */}
-      <div className="bg-primary py-16 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-4 text-white/90">Academic Programs</h1>
+      <div className="bg-primary py-16 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]"></div>
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-4 text-white drop-shadow-lg">Academic Programs</h1>
           <p className="max-w-2xl mx-auto text-lg">
             Discover our industry-focused diploma programs designed to prepare you for a successful career
           </p>
