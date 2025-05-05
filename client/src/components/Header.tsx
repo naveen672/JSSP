@@ -43,6 +43,12 @@ export default function Header() {
     };
   }, [location]);
 
+  // Helper function to close mobile menu and unlock scrolling
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    document.body.classList.remove('mobile-menu-open');
+  };
+  
   const toggleMenu = () => {
     const newState = !isMenuOpen;
     setIsMenuOpen(newState);
@@ -1267,7 +1273,7 @@ export default function Header() {
                                 key={subItem.path} 
                                 href={subItem.path}
                                 className="submenu-link"
-                                onClick={() => setIsMenuOpen(false)}
+                                onClick={closeMenu}
                               >
                                 {subItem.label}
                               </Link>
@@ -1281,7 +1287,7 @@ export default function Header() {
                                 key={subItem.path} 
                                 href={subItem.path}
                                 className="submenu-link"
-                                onClick={() => setIsMenuOpen(false)}
+                                onClick={closeMenu}
                               >
                                 {subItem.label}
                               </Link>
@@ -1297,7 +1303,7 @@ export default function Header() {
                     className={`block py-2.5 px-4 text-foreground hover:bg-primary/5 hover:text-primary rounded-md transition-all duration-200 ${
                       location === link.path ? 'bg-primary/10 text-primary font-semibold' : ''
                     }`}
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={closeMenu}
                   >
                     {link.label}
                   </Link>
