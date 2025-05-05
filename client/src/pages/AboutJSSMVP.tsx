@@ -37,11 +37,11 @@ export default function AboutJSSMVP() {
           <Separator className="my-6 bg-gradient-to-r from-primary/20 to-primary/5 h-0.5 rounded-full" />
           
           <div className="prose max-w-none prose-headings:text-primary">
-            <p className="lead text-lg mb-6 font-medium">
+            <p className="lead text-lg mb-6 font-semibold text-[#1a2542] border-l-4 pl-4 py-1 border-primary/30 bg-primary/5 rounded-r-md">
               Jagadguru Sri Veerasimhasana Math, a religious monastery situated at Suttur in Mysore District of Karnataka State, has a history of about one thousand years. Jagadguru Sri Shivarathrishwara Mahavidyapeetha, popularly known as JSS Mahavidyapeetha (JSSMVP), sponsored by the above Math, was established during 1954 by the then President of JSSMVP, His Holiness Jagadguru Dr Sri Shivarathri Rajendra Mahaswamiji.
             </p>
             
-            <p className="mb-6">
+            <p className="mb-6 text-[#1a2542] font-medium leading-relaxed">
               Today, JSSMVP under the spiritual guidance of His Holiness, is on the threshold of launching many more programmes covering all aspects of life in the service of the nation. His Holiness's vision, enthusiasm, spirit of dedication is incomparable. The long tradition of the JSS Mahavidyapeetha is being continued now with renewed force and fervor.
             </p>
             
@@ -52,8 +52,8 @@ export default function AboutJSSMVP() {
               </p>
             </div>
             
-            <p className="mb-6">
-              The JSS Mahavidyapeetha's technical education system consists of the following institutions:
+            <p className="mb-6 text-[#1a2542] font-medium leading-relaxed">
+              The JSS Mahavidyapeetha's technical education system consists of the following prestigious institutions:
             </p>
             
             <div className="grid md:grid-cols-2 gap-6 my-8">

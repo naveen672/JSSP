@@ -9,14 +9,15 @@ export default function VisionMission() {
       <Header />
       
       {/* Page Banner */}
-      <div className="bg-gradient-to-r from-primary/90 to-primary/80 text-white py-10 shadow-md">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Vision and Mission</h1>
+      <div className="bg-gradient-to-r from-primary to-primary/90 text-white py-12 shadow-md relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Vision and Mission</h1>
           <div className="flex items-center gap-2 text-white/90">
-            <span>Home</span>
-            <span>•</span>
-            <span className="font-medium">About</span>
-            <span>•</span>
+            <span className="hover:text-white transition-colors">Home</span>
+            <span className="text-white/50">•</span>
+            <span className="font-medium hover:text-white transition-colors">About</span>
+            <span className="text-white/50">•</span>
             <span className="font-medium">Vision & Mission</span>
           </div>
         </div>
@@ -25,8 +26,8 @@ export default function VisionMission() {
       <div className="container mx-auto px-4 py-12 flex-grow">
         <div className="max-w-4xl mx-auto">
           <div className="mb-12 text-center">
-            <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto">
-              Our Vision and Mission statements guide our path toward excellence in technical education, shaping our strategies and day-to-day activities.
+            <p className="text-lg md:text-xl text-[#1a2542] font-medium max-w-3xl mx-auto border-b-2 border-primary/20 pb-6 italic">
+              Our Vision and Mission statements guide our path toward excellence in technical education, shaping our strategies and day-to-day activities with purpose and direction.
             </p>
           </div>
           
@@ -37,17 +38,17 @@ export default function VisionMission() {
               
               <div className="relative z-10">
                 <div className="flex flex-col md:flex-row md:items-center gap-6 mb-6">
-                  <div className="bg-primary/10 p-5 rounded-full w-20 h-20 flex items-center justify-center mx-auto md:mx-0">
+                  <div className="bg-gradient-to-br from-primary/20 to-primary/10 p-5 rounded-full w-20 h-20 flex items-center justify-center mx-auto md:mx-0 shadow-sm">
                     <Target className="h-10 w-10 text-primary" />
                   </div>
                   <div>
                     <h4 className="text-sm font-semibold text-primary/70 uppercase tracking-wider text-center md:text-left">Our Vision</h4>
-                    <h2 className="text-2xl md:text-3xl font-bold text-primary text-center md:text-left">Vision of the Institute</h2>
+                    <h2 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/90 text-center md:text-left">Vision of the Institute</h2>
                   </div>
                 </div>
                 
-                <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-6 rounded-lg">
-                  <p className="text-lg leading-relaxed">
+                <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-6 rounded-lg shadow-sm border border-primary/10">
+                  <p className="text-lg leading-relaxed text-[#1a2542] font-medium">
                     Vision of the institute to be recognized as a prestigious academic Centre for excellence in technical education and to meet the needs of Academia, Industry & Society.
                   </p>
                 </div>
@@ -60,52 +61,52 @@ export default function VisionMission() {
               
               <div className="relative z-10">
                 <div className="flex flex-col md:flex-row md:items-center gap-6 mb-6">
-                  <div className="bg-secondary/10 p-5 rounded-full w-20 h-20 flex items-center justify-center mx-auto md:mx-0">
+                  <div className="bg-gradient-to-br from-secondary/20 to-secondary/10 p-5 rounded-full w-20 h-20 flex items-center justify-center mx-auto md:mx-0 shadow-sm">
                     <Compass className="h-10 w-10 text-secondary" />
                   </div>
                   <div>
                     <h4 className="text-sm font-semibold text-secondary/70 uppercase tracking-wider text-center md:text-left">Our Mission</h4>
-                    <h2 className="text-2xl md:text-3xl font-bold text-primary text-center md:text-left">Mission of the Institute</h2>
+                    <h2 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/90 text-center md:text-left">Mission of the Institute</h2>
                   </div>
                 </div>
                 
                 <div className="space-y-6">
-                  <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 relative overflow-hidden group">
-                    <div className="absolute top-0 left-0 w-1.5 h-full bg-secondary"></div>
+                  <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 relative overflow-hidden group hover:border-secondary/20 transition-all duration-300">
+                    <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-secondary to-secondary/80"></div>
                     <div className="flex gap-4 items-start">
-                      <div className="bg-secondary/10 rounded-full w-10 h-10 flex items-center justify-center shrink-0">
+                      <div className="bg-gradient-to-br from-secondary/20 to-secondary/10 rounded-full w-10 h-10 flex items-center justify-center shrink-0 shadow-sm">
                         <span className="text-secondary font-bold">M1</span>
                       </div>
                       <div>
-                        <p className="text-foreground">
+                        <p className="text-[#1a2542] font-medium">
                           To impart holistic outcome based education in both technical and non technical programs through state of the art curriculum and effective teaching-learning process.
                         </p>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 relative overflow-hidden group">
-                    <div className="absolute top-0 left-0 w-1.5 h-full bg-secondary"></div>
+                  <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 relative overflow-hidden group hover:border-secondary/20 transition-all duration-300">
+                    <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-secondary to-secondary/80"></div>
                     <div className="flex gap-4 items-start">
-                      <div className="bg-secondary/10 rounded-full w-10 h-10 flex items-center justify-center shrink-0">
+                      <div className="bg-gradient-to-br from-secondary/20 to-secondary/10 rounded-full w-10 h-10 flex items-center justify-center shrink-0 shadow-sm">
                         <span className="text-secondary font-bold">M2</span>
                       </div>
                       <div>
-                        <p className="text-foreground">
+                        <p className="text-[#1a2542] font-medium">
                           To promote industry institutional collaboration through MOUs and internship programs.
                         </p>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 relative overflow-hidden group">
-                    <div className="absolute top-0 left-0 w-1.5 h-full bg-secondary"></div>
+                  <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 relative overflow-hidden group hover:border-secondary/20 transition-all duration-300">
+                    <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-secondary to-secondary/80"></div>
                     <div className="flex gap-4 items-start">
-                      <div className="bg-secondary/10 rounded-full w-10 h-10 flex items-center justify-center shrink-0">
+                      <div className="bg-gradient-to-br from-secondary/20 to-secondary/10 rounded-full w-10 h-10 flex items-center justify-center shrink-0 shadow-sm">
                         <span className="text-secondary font-bold">M3</span>
                       </div>
                       <div>
-                        <p className="text-foreground">
+                        <p className="text-[#1a2542] font-medium">
                           To infuse ethical and responsible engineering practices to create successful professionals.
                         </p>
                       </div>
