@@ -6,28 +6,46 @@ import { Button } from '@/components/ui/button';
 
 export default function AICTE() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
       <Header />
       
-      <div className="container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex items-center gap-3 mb-6">
-            <Award className="h-8 w-8 text-primary" />
-            <h1 className="text-3xl font-bold text-primary">All India Council for Technical Education (AICTE) and EOA</h1>
+      {/* Page Banner */}
+      <div className="bg-gradient-to-r from-primary to-primary/90 text-white py-12 shadow-md relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white drop-shadow-sm">AICTE & EOA</h1>
+          <div className="flex items-center gap-2 text-white/90">
+            <span className="hover:text-white transition-colors">Home</span>
+            <span className="text-white/50">•</span>
+            <span className="font-medium">All India Council for Technical Education</span>
+          </div>
+        </div>
+      </div>
+      
+      <div className="container mx-auto px-4 py-12 flex-grow">
+        <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md border border-gray-100">
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center justify-center p-3 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full mb-4 shadow-sm">
+              <Award className="h-10 w-10 text-primary" />
+            </div>
+            <h2 className="text-2xl font-bold text-[#1a2542] mb-4">
+              All India Council for Technical Education (AICTE) and EOA
+            </h2>
+            <p className="text-lg font-semibold text-[#1a2542] max-w-2xl mx-auto border-l-4 pl-4 py-1 border-primary/30 bg-primary/5 rounded-r-md">
+              The All India Council for Technical Education (AICTE) is a statutory body established by the Government of India. JSS Polytechnic has been approved by AICTE.
+            </p>
           </div>
           
-          <Separator className="my-6" />
-          
-          <div className="bg-white p-6 rounded-xl shadow-md">
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
             <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="font-medium text-gray-500">AICTE File No.</h3>
-                <p className="font-medium">South-West/1-9321175360/2021/EOA</p>
+              <div className="bg-white p-4 rounded-lg border border-gray-100 hover:shadow-md transition-shadow duration-300 hover:border-primary/20">
+                <h3 className="font-medium text-primary/70 text-sm">AICTE File No.</h3>
+                <p className="font-semibold text-[#1a2542]">South-West/1-9321175360/2021/EOA</p>
               </div>
               
-              <div>
-                <h3 className="font-medium text-gray-500">Name of the Institution</h3>
-                <p className="font-medium">JSS Polytechnic, Mysuru.</p>
+              <div className="bg-white p-4 rounded-lg border border-gray-100 hover:shadow-md transition-shadow duration-300 hover:border-primary/20">
+                <h3 className="font-medium text-primary/70 text-sm">Name of the Institution</h3>
+                <p className="font-semibold text-[#1a2542]">JSS Polytechnic, Mysuru.</p>
               </div>
               
               <div>
