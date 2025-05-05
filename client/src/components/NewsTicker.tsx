@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Bell } from 'lucide-react';
 
 interface NewsTickerProps {
   news: string[];
@@ -23,8 +24,8 @@ export default function NewsTicker({ news }: NewsTickerProps) {
           }}
         >
           {duplicatedNews.map((item, index) => (
-            <span key={index} className="inline-block mr-8">
-              📢 {item}
+            <span key={index} className="inline-block mr-8 flex items-center">
+              <Bell className="mr-1 h-4 w-4 animate-pulse" /> <span>{item}</span>
             </span>
           ))}
         </motion.div>
