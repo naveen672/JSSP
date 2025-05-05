@@ -199,13 +199,13 @@ export default function Header() {
   };
   
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
+    <header className="sticky top-0 z-50 shadow-md bg-white border-b border-gray-100">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link href="/">
-            <div className="flex items-center space-x-3 cursor-pointer">
-              <div className="h-12 flex items-center justify-center">
+            <div className="flex items-center space-x-3 cursor-pointer group">
+              <div className="h-12 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
                 <Logo className="h-12 w-auto" />
               </div>
               <div className="hidden"></div>
@@ -213,14 +213,24 @@ export default function Header() {
           </Link>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => 
               link.hasSubmenu ? (
                 <DropdownMenu key={link.path}>
-                  <DropdownMenuTrigger className={`flex items-center text-primary hover:text-secondary font-medium transition duration-300 ${
-                    location === link.path ? 'text-secondary font-semibold' : ''
-                  }`}>
-                    {link.label} <ChevronDown className="ml-1 h-4 w-4" />
+                  <DropdownMenuTrigger className={`flex items-center font-medium transition-all duration-300 
+                    ${location === link.path 
+                      ? 'text-primary font-semibold' 
+                      : 'text-foreground hover:text-primary'
+                    }
+                    relative py-2 group
+                  `}>
+                    <span className="relative">
+                      {link.label}
+                      <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full 
+                        ${location === link.path ? 'w-full' : ''}
+                      `}></span>
+                    </span>
+                    <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:transform group-hover:-rotate-180" />
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="w-72 bg-white text-primary">
                     {link.path === '/' ? (

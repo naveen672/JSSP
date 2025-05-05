@@ -5,49 +5,68 @@
 /* Component styles moved to base layer */
 
 :root {
-      --background: 0 0% 100%;
---foreground: 20 14.3% 4.1%;
---muted: 60 4.8% 95.9%;
---muted-foreground: 25 5.3% 44.7%;
---popover: 0 0% 100%;
---popover-foreground: 20 14.3% 4.1%;
---card: 0 0% 100%;
---card-foreground: 20 14.3% 4.1%;
---border: 20 5.9% 90%;
---input: 20 5.9% 90%;
---primary: 207 90% 54%;
---primary-foreground: 211 100% 99%;
---secondary: 60 4.8% 95.9%;
---secondary-foreground: 24 9.8% 10%;
---accent: 60 4.8% 95.9%;
---accent-foreground: 24 9.8% 10%;
---destructive: 0 84.2% 60.2%;
---destructive-foreground: 60 9.1% 97.8%;
---ring: 20 14.3% 4.1%;
---radius: 0.5rem;
-  }
-  .dark {
-      --background: 240 10% 3.9%;
---foreground: 0 0% 98%;
---muted: 240 3.7% 15.9%;
---muted-foreground: 240 5% 64.9%;
---popover: 240 10% 3.9%;
---popover-foreground: 0 0% 98%;
---card: 240 10% 3.9%;
---card-foreground: 0 0% 98%;
---border: 240 3.7% 15.9%;
---input: 240 3.7% 15.9%;
---primary: 207 90% 54%;
---primary-foreground: 211 100% 99%;
---secondary: 240 3.7% 15.9%;
---secondary-foreground: 0 0% 98%;
---accent: 240 3.7% 15.9%;
---accent-foreground: 0 0% 98%;
---destructive: 0 62.8% 30.6%;
---destructive-foreground: 0 0% 98%;
---ring: 240 4.9% 83.9%;
---radius: 0.5rem;
-  }
+  /* Base colors - light theme */
+  --background: 210 20% 98%; /* Slightly blue-tinted white for better contrast */
+  --foreground: 215 35% 20%; /* Dark blue-gray for text */
+  --muted: 210 15% 95%;
+  --muted-foreground: 215 25% 40%;
+  --popover: 210 20% 98%;
+  --popover-foreground: 215 35% 20%;
+  --card: 0 0% 100%;
+  --card-foreground: 215 35% 20%;
+  --border: 215 15% 90%;
+  --input: 215 15% 90%;
+
+  /* Primary: JSS Polytechnic Red with slight adjustments for vibrancy */
+  --primary: 350 80% 45%; /* Vibrant red matching the JSS buildings */
+  --primary-foreground: 0 0% 100%;
+  
+  /* Secondary: Complementary gold/yellow */
+  --secondary: 40 100% 50%; /* Rich gold color */
+  --secondary-foreground: 35 40% 15%;
+  
+  /* Accent: Teal as contrast color */
+  --accent: 185 70% 45%;
+  --accent-foreground: 185 5% 95%;
+  
+  /* System colors */
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 350 80% 45%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  /* Base colors - dark theme */
+  --background: 215 35% 15%; /* Dark blue-gray instead of pure black */
+  --foreground: 210 20% 98%;
+  --muted: 215 25% 25%;
+  --muted-foreground: 210 15% 70%;
+  --popover: 215 35% 15%;
+  --popover-foreground: 210 20% 98%;
+  --card: 215 30% 18%;
+  --card-foreground: 210 20% 98%;
+  --border: 215 25% 25%;
+  --input: 215 25% 25%;
+  
+  /* Primary: JSS Polytechnic Red with slight adjustments for dark mode */
+  --primary: 350 80% 55%; /* Brighter red for dark mode */
+  --primary-foreground: 0 0% 100%;
+  
+  /* Secondary: Brighter gold for dark mode */
+  --secondary: 40 100% 60%;
+  --secondary-foreground: 0 0% 100%;
+  
+  /* Accent: Brighter teal for dark mode */
+  --accent: 185 80% 50%;
+  --accent-foreground: 0 0% 100%;
+  
+  /* System colors */
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 350 80% 55%;
+  --radius: 0.5rem;
+}
 
 @layer base {
   * {
@@ -56,6 +75,8 @@
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
+    background-image: linear-gradient(to bottom, rgba(210, 220, 230, 0.2), rgba(210, 220, 230, 0.1));
+    background-attachment: fixed;
   }
   
   /* Mobile menu scrolling fix */
@@ -65,34 +86,83 @@
     }
   }
   
+  h1 {
+    @apply text-primary font-bold;
+    background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--primary)/0.8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  h2, h3, h4 {
+    @apply text-foreground font-semibold;
+  }
+  
   p, span, li {
-    @apply text-neutral-800 font-medium;
+    @apply text-foreground font-medium;
   }
   
   .text-neutral-gray {
-    @apply text-neutral-800 !important;
+    @apply text-foreground/80 !important;
   }
   
   .opacity-80 {
     @apply opacity-100 !important;
   }
   
+  /* Button enhancements */
+  .btn-primary, button[class*="bg-primary"] {
+    @apply bg-primary text-white shadow-md hover:shadow-lg transition-all duration-300;
+    background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary)/0.9));
+  }
+  
+  .btn-secondary, button[class*="bg-secondary"] {
+    @apply bg-secondary text-white shadow-md hover:shadow-lg transition-all duration-300;
+    background-image: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary)/0.9));
+  }
+  
+  /* Card styling */
+  .card, div[class*="bg-white rounded"] {
+    @apply bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  }
+  
   /* Custom fix for dropdown menu text color */
+  [data-radix-dropdown-menu-content] {
+    @apply bg-white shadow-lg border border-gray-100 rounded-lg overflow-hidden !important;
+  }
+  
   [data-radix-dropdown-menu-content] [data-radix-dropdown-menu-item] {
-    @apply bg-white text-gray-800 !important;
+    @apply bg-white text-foreground hover:text-primary !important;
   }
   
   [data-radix-dropdown-menu-content] [data-radix-dropdown-menu-item]:hover {
-    @apply bg-gray-100 !important;
+    @apply bg-gray-50 !important;
   }
   
   /* Custom styles for dropdown menu buttons to match mobile */
   [data-radix-dropdown-menu-content] button {
-    @apply text-primary !important;
+    @apply text-primary font-medium !important;
   }
   
   /* Apply consistent styles to all dropdown buttons */
   .dropdown-menu-button {
-    @apply flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-primary hover:bg-neutral-100 rounded !important;
+    @apply flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-primary hover:bg-gray-50 rounded !important;
+  }
+  
+  /* Header enhancements */
+  header {
+    @apply bg-white shadow-md;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.98));
+  }
+  
+  /* Footer enhancements */
+  footer {
+    background: linear-gradient(to right, hsl(var(--primary)/0.05), hsl(var(--primary)/0.02));
+    @apply border-t border-gray-200;
   }
 }
