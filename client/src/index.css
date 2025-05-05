@@ -67,4 +67,13 @@
   .opacity-80 {
     @apply opacity-100 !important;
   }
+  
+  /* Custom fix for dropdown menu text color */
+  [data-radix-dropdown-menu-content] [data-radix-dropdown-menu-item] {
+    @apply bg-white text-gray-800 !important;
+  }
+  
+  [data-radix-dropdown-menu-content] [data-radix-dropdown-menu-item]:hover {
+    @apply bg-gray-100 !important;
+  }
 }

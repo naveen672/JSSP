@@ -163,43 +163,88 @@ export default function Header() {
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="w-72">
                     {link.path === '/' ? (
-                      // Home dropdown content
+                      // Home dropdown content with click-to-show nested submenus
                       <>
+                        {/* About section */}
                         <DropdownMenuGroup>
-                          <DropdownMenuLabel>About</DropdownMenuLabel>
-                          {link.submenu?.slice(0, 6).map((subItem) => (
-                            <DropdownMenuItem key={subItem.path} asChild>
-                              <Link href={subItem.path} className="w-full cursor-pointer">
-                                {subItem.label}
-                              </Link>
-                            </DropdownMenuItem>
-                          ))}
+                          <button 
+                            onClick={() => toggleNestedSubmenu('about-home')}
+                            className="flex justify-between items-center w-full px-2 py-2 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                          >
+                            <span>About</span>
+                            <ChevronRight 
+                              className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                activeSubmenuCategory === 'about-home' ? 'transform rotate-90' : ''
+                              }`}
+                            />
+                          </button>
+                          {activeSubmenuCategory === 'about-home' && (
+                            <div className="pl-2 py-1 space-y-1">
+                              {link.submenu?.slice(0, 6).map((subItem) => (
+                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
+                                  <Link href={subItem.path} className="w-full cursor-pointer">
+                                    {subItem.label}
+                                  </Link>
+                                </DropdownMenuItem>
+                              ))}
+                            </div>
+                          )}
                         </DropdownMenuGroup>
                         
                         <DropdownMenuSeparator />
                         
+                        {/* Employee Benefits section */}
                         <DropdownMenuGroup>
-                          <DropdownMenuLabel>Employee Benefits</DropdownMenuLabel>
-                          {link.submenu?.slice(6, 9).map((subItem) => (
-                            <DropdownMenuItem key={subItem.path} asChild>
-                              <Link href={subItem.path} className="w-full cursor-pointer">
-                                {subItem.label}
-                              </Link>
-                            </DropdownMenuItem>
-                          ))}
+                          <button 
+                            onClick={() => toggleNestedSubmenu('benefits')}
+                            className="flex justify-between items-center w-full px-2 py-2 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                          >
+                            <span>Employee Benefits</span>
+                            <ChevronRight 
+                              className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                activeSubmenuCategory === 'benefits' ? 'transform rotate-90' : ''
+                              }`}
+                            />
+                          </button>
+                          {activeSubmenuCategory === 'benefits' && (
+                            <div className="pl-2 py-1 space-y-1">
+                              {link.submenu?.slice(6, 9).map((subItem) => (
+                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
+                                  <Link href={subItem.path} className="w-full cursor-pointer">
+                                    {subItem.label}
+                                  </Link>
+                                </DropdownMenuItem>
+                              ))}
+                            </div>
+                          )}
                         </DropdownMenuGroup>
                         
                         <DropdownMenuSeparator />
                         
+                        {/* Reports & Downloads section */}
                         <DropdownMenuGroup>
-                          <DropdownMenuLabel>Reports & Downloads</DropdownMenuLabel>
-                          {link.submenu?.slice(9).map((subItem) => (
-                            <DropdownMenuItem key={subItem.path} asChild>
-                              <Link href={subItem.path} className="w-full cursor-pointer">
-                                {subItem.label}
-                              </Link>
-                            </DropdownMenuItem>
-                          ))}
+                          <button 
+                            onClick={() => toggleNestedSubmenu('reports')}
+                            className="flex justify-between items-center w-full px-2 py-2 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                          >
+                            <span>Reports & Downloads</span>
+                            <ChevronRight 
+                              className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                activeSubmenuCategory === 'reports' ? 'transform rotate-90' : ''
+                              }`}
+                            />
+                          </button>
+                          {activeSubmenuCategory === 'reports' && (
+                            <div className="pl-2 py-1 space-y-1">
+                              {link.submenu?.slice(9).map((subItem) => (
+                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
+                                  <Link href={subItem.path} className="w-full cursor-pointer">
+                                    {subItem.label}
+                                  </Link>
+                                </DropdownMenuItem>
+                              ))}
+                            </div>
+                          )}
                         </DropdownMenuGroup>
                       </>
                     ) : link.path === '/academics' ? (
@@ -221,7 +266,7 @@ export default function Header() {
                           {activeSubmenuCategory === 'departments' && (
                             <div className="pl-2 py-1 space-y-1">
                               {link.submenu?.filter(item => item.category === 'departments').map((subItem) => (
-                                <DropdownMenuItem key={subItem.path} asChild>
+                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
                                   <Link href={subItem.path} className="w-full cursor-pointer">
                                     {subItem.label}
                                   </Link>
@@ -249,7 +294,7 @@ export default function Header() {
                           {activeSubmenuCategory === 'calendar' && (
                             <div className="pl-2 py-1 space-y-1">
                               {link.submenu?.filter(item => item.category === 'calendar').map((subItem) => (
-                                <DropdownMenuItem key={subItem.path} asChild>
+                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
                                   <Link href={subItem.path} className="w-full cursor-pointer">
                                     {subItem.label}
                                   </Link>
