@@ -109,22 +109,19 @@ export default function Header() {
     { path: '/science-department', label: 'Science Department', category: 'facilities' },
   ];
 
-  // Student Support submenus
+  // Student Support submenus with nested categories
   const studentSupportSubmenus: SubmenuItem[] = [
+    // Basic Support
     { path: '/scholarships', label: 'Scholarships', category: 'support' },
     { path: '/mentoring-scheme', label: 'Mentoring Scheme', category: 'support' },
     { path: '/anti-ragging', label: 'Anti Ragging', category: 'support' },
-  ];
-
-  // Committees submenus
-  const committeesSubmenus: SubmenuItem[] = [
+    
+    // Committees (nested under Student Support)
     { path: '/moocs-committee', label: "MOOC's Committee", category: 'committees' },
     { path: '/internal-complaint-committee', label: 'Internal Complaint Committee', category: 'committees' },
     { path: '/sc-st-committee', label: 'SC/ST Committee', category: 'committees' },
-  ];
-
-  // Higher Education submenus
-  const higherEducationSubmenus: SubmenuItem[] = [
+    
+    // Higher Education (nested under Student Support)
     { path: '/higher-education', label: 'Higher Education', category: 'higher-ed' },
     { path: '/exam', label: 'Exam', category: 'higher-ed' },
     { path: '/fee-payment', label: 'Fee Payment', category: 'higher-ed' },
@@ -138,8 +135,6 @@ export default function Header() {
     { path: '/academics', label: 'Academics', hasSubmenu: true, submenu: academicsSubmenus },
     { path: '/facilities', label: 'Facilities', hasSubmenu: true, submenu: facilitiesSubmenus },
     { path: '/student-support', label: 'Student Support', hasSubmenu: true, submenu: studentSupportSubmenus },
-    { path: '/committees', label: 'Committees', hasSubmenu: true, submenu: committeesSubmenus },
-    { path: '/higher-education', label: 'Higher Education', hasSubmenu: true, submenu: higherEducationSubmenus },
     { path: '/admissions', label: 'Admissions', hasSubmenu: false },
     { path: '/campus-life', label: 'Campus Life', hasSubmenu: false },
     { path: '/contact', label: 'Contact', hasSubmenu: false },
@@ -498,37 +493,89 @@ export default function Header() {
                         ))}
                       </>
                     ) : link.path === '/student-support' ? (
-                      // Student Support dropdown content
+                      // Student Support dropdown content - with nested categories
                       <>
-                        {link.submenu?.map((subItem) => (
-                          <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
-                            <Link href={subItem.path} className="w-full cursor-pointer">
-                              {subItem.label}
-                            </Link>
-                          </DropdownMenuItem>
-                        ))}
-                      </>
-                    ) : link.path === '/committees' ? (
-                      // Committees dropdown content
-                      <>
-                        {link.submenu?.map((subItem) => (
-                          <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
-                            <Link href={subItem.path} className="w-full cursor-pointer">
-                              {subItem.label}
-                            </Link>
-                          </DropdownMenuItem>
-                        ))}
-                      </>
-                    ) : link.path === '/higher-education' ? (
-                      // Higher Education dropdown content
-                      <>
-                        {link.submenu?.map((subItem) => (
-                          <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
-                            <Link href={subItem.path} className="w-full cursor-pointer">
-                              {subItem.label}
-                            </Link>
-                          </DropdownMenuItem>
-                        ))}
+                        {/* Basic Support section */}
+                        <DropdownMenuGroup>
+                          <button 
+                            onClick={() => toggleNestedSubmenu('support')}
+                            className="dropdown-menu-button"
+                          >
+                            <span>Student Services</span>
+                            <ChevronRight 
+                              className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                activeSubmenuCategory === 'support' ? 'transform rotate-90' : ''
+                              }`}
+                            />
+                          </button>
+                          {activeSubmenuCategory === 'support' && (
+                            <div className="pl-2 py-1 space-y-1">
+                              {link.submenu?.filter(item => item.category === 'support').map((subItem) => (
+                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
+                                  <Link href={subItem.path} className="w-full cursor-pointer">
+                                    {subItem.label}
+                                  </Link>
+                                </DropdownMenuItem>
+                              ))}
+                            </div>
+                          )}
+                        </DropdownMenuGroup>
+                        
+                        <DropdownMenuSeparator />
+                        
+                        {/* Committees section */}
+                        <DropdownMenuGroup>
+                          <button 
+                            onClick={() => toggleNestedSubmenu('committees')}
+                            className="dropdown-menu-button"
+                          >
+                            <span>Committees</span>
+                            <ChevronRight 
+                              className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                activeSubmenuCategory === 'committees' ? 'transform rotate-90' : ''
+                              }`}
+                            />
+                          </button>
+                          {activeSubmenuCategory === 'committees' && (
+                            <div className="pl-2 py-1 space-y-1">
+                              {link.submenu?.filter(item => item.category === 'committees').map((subItem) => (
+                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
+                                  <Link href={subItem.path} className="w-full cursor-pointer">
+                                    {subItem.label}
+                                  </Link>
+                                </DropdownMenuItem>
+                              ))}
+                            </div>
+                          )}
+                        </DropdownMenuGroup>
+                        
+                        <DropdownMenuSeparator />
+                        
+                        {/* Higher Education section */}
+                        <DropdownMenuGroup>
+                          <button 
+                            onClick={() => toggleNestedSubmenu('higher-ed')}
+                            className="dropdown-menu-button"
+                          >
+                            <span>Higher Education</span>
+                            <ChevronRight 
+                              className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                activeSubmenuCategory === 'higher-ed' ? 'transform rotate-90' : ''
+                              }`}
+                            />
+                          </button>
+                          {activeSubmenuCategory === 'higher-ed' && (
+                            <div className="pl-2 py-1 space-y-1">
+                              {link.submenu?.filter(item => item.category === 'higher-ed').map((subItem) => (
+                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
+                                  <Link href={subItem.path} className="w-full cursor-pointer">
+                                    {subItem.label}
+                                  </Link>
+                                </DropdownMenuItem>
+                              ))}
+                            </div>
+                          )}
+                        </DropdownMenuGroup>
                       </>
                     ) : null}
                   </DropdownMenuContent>
@@ -896,47 +943,95 @@ export default function Header() {
                             ))}
                           </div>
                         ) : link.path === '/student-support' ? (
-                          // Student Support mobile submenu
-                          <div className="space-y-2">
-                            {link.submenu?.map((subItem) => (
-                              <Link 
-                                key={subItem.path} 
-                                href={subItem.path}
-                                className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
-                                onClick={() => setIsMenuOpen(false)}
+                          // Student Support mobile submenu with nested categories
+                          <>
+                            {/* Basic Support mobile section */}
+                            <div className="space-y-1">
+                              <button 
+                                onClick={() => toggleMobileCategory('mobile-support')}
+                                className="dropdown-menu-button"
                               >
-                                {subItem.label}
-                              </Link>
-                            ))}
-                          </div>
-                        ) : link.path === '/committees' ? (
-                          // Committees mobile submenu
-                          <div className="space-y-2">
-                            {link.submenu?.map((subItem) => (
-                              <Link 
-                                key={subItem.path} 
-                                href={subItem.path}
-                                className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
-                                onClick={() => setIsMenuOpen(false)}
+                                <span>Student Services</span>
+                                <ChevronRight 
+                                  className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                    activeMobileCategories['mobile-support'] ? 'transform rotate-90' : ''
+                                  }`}
+                                />
+                              </button>
+                              {activeMobileCategories['mobile-support'] && (
+                                <div className="mt-1 pl-4 space-y-1">
+                                  {link.submenu?.filter(item => item.category === 'support').map((subItem) => (
+                                    <Link 
+                                      key={subItem.path} 
+                                      href={subItem.path}
+                                      className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                      onClick={() => setIsMenuOpen(false)}
+                                    >
+                                      {subItem.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                            
+                            {/* Committees mobile section */}
+                            <div className="space-y-1 mt-2">
+                              <button 
+                                onClick={() => toggleMobileCategory('mobile-committees')}
+                                className="dropdown-menu-button"
                               >
-                                {subItem.label}
-                              </Link>
-                            ))}
-                          </div>
-                        ) : link.path === '/higher-education' ? (
-                          // Higher Education mobile submenu
-                          <div className="space-y-2">
-                            {link.submenu?.map((subItem) => (
-                              <Link 
-                                key={subItem.path} 
-                                href={subItem.path}
-                                className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
-                                onClick={() => setIsMenuOpen(false)}
+                                <span>Committees</span>
+                                <ChevronRight 
+                                  className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                    activeMobileCategories['mobile-committees'] ? 'transform rotate-90' : ''
+                                  }`}
+                                />
+                              </button>
+                              {activeMobileCategories['mobile-committees'] && (
+                                <div className="mt-1 pl-4 space-y-1">
+                                  {link.submenu?.filter(item => item.category === 'committees').map((subItem) => (
+                                    <Link 
+                                      key={subItem.path} 
+                                      href={subItem.path}
+                                      className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                      onClick={() => setIsMenuOpen(false)}
+                                    >
+                                      {subItem.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                            
+                            {/* Higher Education mobile section */}
+                            <div className="space-y-1 mt-2">
+                              <button 
+                                onClick={() => toggleMobileCategory('mobile-higher-ed')}
+                                className="dropdown-menu-button"
                               >
-                                {subItem.label}
-                              </Link>
-                            ))}
-                          </div>
+                                <span>Higher Education</span>
+                                <ChevronRight 
+                                  className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                    activeMobileCategories['mobile-higher-ed'] ? 'transform rotate-90' : ''
+                                  }`}
+                                />
+                              </button>
+                              {activeMobileCategories['mobile-higher-ed'] && (
+                                <div className="mt-1 pl-4 space-y-1">
+                                  {link.submenu?.filter(item => item.category === 'higher-ed').map((subItem) => (
+                                    <Link 
+                                      key={subItem.path} 
+                                      href={subItem.path}
+                                      className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                      onClick={() => setIsMenuOpen(false)}
+                                    >
+                                      {subItem.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          </>
                         ) : null}
                       </div>
                     )}
