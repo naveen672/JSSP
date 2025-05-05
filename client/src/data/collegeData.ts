@@ -77,7 +77,8 @@ export const programs = [
     description: 'Learn design, manufacturing, and maintenance of mechanical systems with hands-on training.',
     image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=400&q=80',
     duration: '3 Years',
-    type: 'Full-time'
+    type: 'Full-time',
+    departmentLink: '/dept-me'
   },
   {
     id: 2,
@@ -85,7 +86,8 @@ export const programs = [
     description: 'Master programming, database management, and software development skills.',
     image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=400&q=80',
     duration: '3 Years',
-    type: 'Full-time'
+    type: 'Full-time',
+    departmentLink: '/dept-cs'
   },
   {
     id: 3,
@@ -93,7 +95,35 @@ export const programs = [
     description: 'Study power systems, electrical machines, and control systems with practical applications.',
     image: 'https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=400&q=80',
     duration: '3 Years',
-    type: 'Full-time'
+    type: 'Full-time',
+    departmentLink: '/dept-ee'
+  },
+  {
+    id: 4,
+    title: 'Diploma in Electronics & Communication',
+    description: 'Explore electronic circuits, communication systems, and signal processing technologies.',
+    image: 'https://images.unsplash.com/photo-1563770557593-e11b79937af8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=400&q=80',
+    duration: '3 Years',
+    type: 'Full-time',
+    departmentLink: '/dept-ec'
+  },
+  {
+    id: 5,
+    title: 'Diploma in Information Science',
+    description: 'Study information systems, data management, and computing technologies.',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=400&q=80',
+    duration: '3 Years',
+    type: 'Full-time',
+    departmentLink: '/dept-is'
+  },
+  {
+    id: 6,
+    title: 'Diploma in Civil Engineering',
+    description: 'Learn structural design, construction management, and infrastructure development.',
+    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=400&q=80',
+    duration: '3 Years',
+    type: 'Full-time',
+    departmentLink: '/dept-ce'
   }
 ];
 

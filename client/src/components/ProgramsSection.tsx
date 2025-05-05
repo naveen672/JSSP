@@ -1,6 +1,12 @@
 import { Link } from 'wouter';
-import { ArrowRight, Clock, School, GraduationCap, BookOpen } from 'lucide-react';
+import { ArrowRight, Clock, School, GraduationCap, BookOpen, ChevronDown, ExternalLink } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 interface Program {
   id: number;
@@ -9,6 +15,7 @@ interface Program {
   image: string;
   duration: string;
   type: string;
+  departmentLink?: string;
 }
 
 interface ProgramsSectionProps {
@@ -51,9 +58,86 @@ export default function ProgramsSection({ programs }: ProgramsSectionProps) {
                   <School className="text-primary text-base mr-2" size={18} />
                   <span>{program.type}</span>
                 </div>
-                <Link href={`/academics#program-${program.id}`} className="inline-block text-secondary font-medium hover:underline flex items-center">
-                  Learn more <ArrowRight className="h-4 w-4 ml-1" />
-                </Link>
+                <div className="flex justify-between items-center">
+                  <Link 
+                    href={program.departmentLink || `/academics#program-${program.id}`} 
+                    className="text-secondary font-medium hover:underline flex items-center"
+                  >
+                    Learn more <ArrowRight className="h-4 w-4 ml-1" />
+                  </Link>
+                  
+                  <DropdownMenu>
+                    <DropdownMenuTrigger className="inline-flex items-center justify-center rounded-md text-primary px-2 py-1 text-sm font-medium hover:bg-primary/10 transition-colors">
+                      Options <ChevronDown className="h-4 w-4 ml-1" />
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end">
+                      {program.departmentLink && (
+                        <DropdownMenuItem asChild>
+                          <Link href={program.departmentLink} className="cursor-pointer flex items-center">
+                            <BookOpen className="h-4 w-4 mr-2" />
+                            <span>Department Page</span>
+                          </Link>
+                        </DropdownMenuItem>
+                      )}
+                      {program.departmentLink && program.departmentLink.includes('cs') && (
+                        <DropdownMenuItem asChild>
+                          <Link href="/prof-body-cs" className="cursor-pointer flex items-center">
+                            <ExternalLink className="h-4 w-4 mr-2" />
+                            <span>Professional Body</span>
+                          </Link>
+                        </DropdownMenuItem>
+                      )}
+                      {program.departmentLink && program.departmentLink.includes('ec') && (
+                        <DropdownMenuItem asChild>
+                          <Link href="/prof-body-ec" className="cursor-pointer flex items-center">
+                            <ExternalLink className="h-4 w-4 mr-2" />
+                            <span>Professional Body</span>
+                          </Link>
+                        </DropdownMenuItem>
+                      )}
+                      {program.departmentLink && program.departmentLink.includes('ee') && (
+                        <DropdownMenuItem asChild>
+                          <Link href="/prof-body-ee" className="cursor-pointer flex items-center">
+                            <ExternalLink className="h-4 w-4 mr-2" />
+                            <span>Professional Body</span>
+                          </Link>
+                        </DropdownMenuItem>
+                      )}
+                      {program.departmentLink && program.departmentLink.includes('me') && (
+                        <DropdownMenuItem asChild>
+                          <Link href="/prof-body-me" className="cursor-pointer flex items-center">
+                            <ExternalLink className="h-4 w-4 mr-2" />
+                            <span>Professional Body</span>
+                          </Link>
+                        </DropdownMenuItem>
+                      )}
+                      {program.departmentLink && program.departmentLink.includes('mt') && (
+                        <DropdownMenuItem asChild>
+                          <Link href="/prof-body-mt" className="cursor-pointer flex items-center">
+                            <ExternalLink className="h-4 w-4 mr-2" />
+                            <span>Professional Body</span>
+                          </Link>
+                        </DropdownMenuItem>
+                      )}
+                      {program.departmentLink && program.departmentLink.includes('ce') && (
+                        <DropdownMenuItem asChild>
+                          <Link href="/prof-body-ce" className="cursor-pointer flex items-center">
+                            <ExternalLink className="h-4 w-4 mr-2" />
+                            <span>Professional Body</span>
+                          </Link>
+                        </DropdownMenuItem>
+                      )}
+                      {program.departmentLink && program.departmentLink.includes('is') && (
+                        <DropdownMenuItem asChild>
+                          <Link href="/academics" className="cursor-pointer flex items-center">
+                            <School className="h-4 w-4 mr-2" />
+                            <span>Program Details</span>
+                          </Link>
+                        </DropdownMenuItem>
+                      )}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </div>
               </CardContent>
             </Card>
           ))}
