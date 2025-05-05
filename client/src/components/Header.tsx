@@ -338,7 +338,7 @@ export default function Header() {
                         <DropdownMenuGroup>
                           <button 
                             onClick={() => toggleNestedSubmenu('professional')}
-                            className="flex justify-between items-center w-full px-2 py-2 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                            className="dropdown-menu-button"
                           >
                             <span>Professional Bodies Draft</span>
                             <ChevronRight 
@@ -366,7 +366,7 @@ export default function Header() {
                         <DropdownMenuGroup>
                           <button 
                             onClick={() => toggleNestedSubmenu('about')}
-                            className="flex justify-between items-center w-full px-2 py-2 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                            className="dropdown-menu-button"
                           >
                             <span>About</span>
                             <ChevronRight 
@@ -394,7 +394,7 @@ export default function Header() {
                         <DropdownMenuGroup>
                           <button 
                             onClick={() => toggleNestedSubmenu('admission')}
-                            className="flex justify-between items-center w-full px-2 py-2 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                            className="dropdown-menu-button"
                           >
                             <span>Admission</span>
                             <ChevronRight 
@@ -422,7 +422,7 @@ export default function Header() {
                         <DropdownMenuGroup>
                           <button 
                             onClick={() => toggleNestedSubmenu('disclosure')}
-                            className="flex justify-between items-center w-full px-2 py-2 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                            className="dropdown-menu-button"
                           >
                             <span>Mandatory Disclosure</span>
                             <ChevronRight 
@@ -506,7 +506,7 @@ export default function Header() {
                             <div className="space-y-1">
                               <button 
                                 onClick={() => toggleMobileCategory('about-home')}
-                                className="flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                                className="dropdown-menu-button"
                               >
                                 <span>About</span>
                                 <ChevronRight 
@@ -535,7 +535,7 @@ export default function Header() {
                             <div className="space-y-1 mt-2">
                               <button 
                                 onClick={() => toggleMobileCategory('benefits')}
-                                className="flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                                className="dropdown-menu-button"
                               >
                                 <span>Employee Benefits</span>
                                 <ChevronRight 
@@ -564,7 +564,7 @@ export default function Header() {
                             <div className="space-y-1 mt-2">
                               <button 
                                 onClick={() => toggleMobileCategory('reports')}
-                                className="flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                                className="dropdown-menu-button"
                               >
                                 <span>Reports & Downloads</span>
                                 <ChevronRight 
