@@ -1,5 +1,5 @@
 import { Link } from 'wouter';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Info, CalendarDays, Users, Landmark } from 'lucide-react';
 
 interface AboutSectionProps {
   description: string[];
@@ -17,7 +17,10 @@ export default function AboutSection({ description, features, stats, imageUrl }:
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">About JSS Polytechnic</h2>
+            <div className="flex items-center gap-3 mb-4">
+              <Info className="text-secondary" size={28} />
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary">About JSS Polytechnic</h2>
+            </div>
             <div className="w-24 h-1 bg-secondary mb-6"></div>
             
             {description.map((paragraph, index) => (

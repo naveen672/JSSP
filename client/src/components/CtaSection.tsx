@@ -1,5 +1,6 @@
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
+import { ArrowRight, Send } from 'lucide-react';
 
 interface CtaSectionProps {
   title: string;

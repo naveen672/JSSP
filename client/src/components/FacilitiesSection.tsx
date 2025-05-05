@@ -1,4 +1,5 @@
 import { Link } from 'wouter';
+import { Building } from 'lucide-react';
 
 interface Facility {
   id: number;
@@ -16,7 +17,10 @@ export default function FacilitiesSection({ facilities }: FacilitiesSectionProps
     <section className="py-16 bg-primary text-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold">Campus Facilities</h2>
+          <div className="flex items-center justify-center gap-3 mb-2">
+            <Building className="text-secondary" size={28} />
+            <h2 className="text-3xl md:text-4xl font-heading font-bold">Campus Facilities</h2>
+          </div>
           <div className="w-24 h-1 bg-secondary mx-auto mt-4 mb-6"></div>
           <p className="max-w-2xl mx-auto text-base">
             Our campus features modern facilities designed to provide students with the best learning environment.

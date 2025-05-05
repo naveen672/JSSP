@@ -1,5 +1,5 @@
 import { Link } from 'wouter';
-import { ArrowRight, Clock, School } from 'lucide-react';
+import { ArrowRight, Clock, School, GraduationCap, BookOpen } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 interface Program {
@@ -20,7 +20,10 @@ export default function ProgramsSection({ programs }: ProgramsSectionProps) {
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary">Our Programs</h2>
+          <div className="flex items-center justify-center gap-3 mb-2">
+            <GraduationCap className="text-secondary" size={28} />
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary">Our Programs</h2>
+          </div>
           <div className="w-24 h-1 bg-secondary mx-auto mt-4 mb-6"></div>
           <p className="text-neutral-gray max-w-2xl mx-auto">
             Discover our industry-aligned diploma programs designed to give you 
