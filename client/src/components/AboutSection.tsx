@@ -24,7 +24,11 @@ export default function AboutSection({ description, features, stats, imageUrl }:
             <div className="w-24 h-1 bg-secondary mb-6"></div>
             
             {description.map((paragraph, index) => (
-              <p key={index} className="text-neutral-gray mb-4 text-base">{paragraph}</p>
+              index === 0 ? (
+                <p key={index} className="lead text-lg mb-6 font-semibold text-[#1a2542] border-l-4 pl-4 py-1 border-primary/30 bg-primary/5 rounded-r-md">{paragraph}</p>
+              ) : (
+                <p key={index} className="mb-4 text-[#1a2542] font-medium leading-relaxed">{paragraph}</p>
+              )
             ))}
             
             <div className="grid grid-cols-2 gap-4 mb-8">

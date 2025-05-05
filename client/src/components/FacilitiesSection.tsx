@@ -22,8 +22,8 @@ export default function FacilitiesSection({ facilities }: FacilitiesSectionProps
             <h2 className="text-3xl md:text-4xl font-heading font-bold">Campus Facilities</h2>
           </div>
           <div className="w-24 h-1 bg-secondary mx-auto mt-4 mb-6"></div>
-          <p className="max-w-2xl mx-auto text-base">
-            Our campus features modern facilities designed to provide students with the best learning environment.
+          <p className="max-w-2xl mx-auto text-base font-medium text-white/90 leading-relaxed">
+            Our campus features modern facilities designed to provide students with the best learning environment and resources for their academic and personal growth.
           </p>
         </div>
         
@@ -37,7 +37,7 @@ export default function FacilitiesSection({ facilities }: FacilitiesSectionProps
                 {facility.icon}
               </div>
               <h3 className="text-xl font-heading font-bold mb-2">{facility.title}</h3>
-              <p className="text-neutral opacity-80 text-base">{facility.description}</p>
+              <p className="text-white/90 text-base font-medium leading-relaxed">{facility.description}</p>
             </div>
           ))}
         </div>
