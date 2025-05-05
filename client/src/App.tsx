@@ -23,6 +23,7 @@ import Messages from "@/pages/Messages";
 import Governance from "@/pages/Governance";
 import AICTE from "@/pages/AICTE";
 import NBA from "@/pages/NBA";
+import IQAC from "@/pages/IQAC";
 import MandatoryDisclosure from "@/pages/MandatoryDisclosure";
 
 // Professional Bodies pages
@@ -95,6 +96,7 @@ function Router() {
       <Route path="/governance" component={Governance} />
       <Route path="/aicte" component={AICTE} />
       <Route path="/nba" component={NBA} />
+      <Route path="/iqac" component={IQAC} />
       <Route path="/mandatory-disclosure" component={MandatoryDisclosure} />
       
       {/* Employee Benefits Routes */}

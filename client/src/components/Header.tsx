@@ -51,6 +51,7 @@ export default function Header() {
     { path: '/governance', label: 'Governance' },
     { path: '/aicte', label: 'All India Council for Technical Education (AICTE) and EOA' },
     { path: '/nba', label: 'NBA' },
+    { path: '/iqac', label: 'Internal Quality Assurance Cell (IQAC)' },
     // Employee Benefits
     { path: '/student-accident-policy', label: 'Student Group Accident Policy' },
     { path: '/jss-health-scheme', label: 'JSS Health Scheme' },
@@ -159,7 +160,6 @@ export default function Header() {
     { path: '/facilities', label: 'Facilities', hasSubmenu: true, submenu: facilitiesSubmenus },
     { path: '/student-support', label: 'Student Support', hasSubmenu: true, submenu: studentSupportSubmenus },
     { path: '/training-placements', label: 'Training & Placements', hasSubmenu: true, submenu: trainingPlacementsSubmenus },
-    { path: '/iqac', label: 'IQAC', hasSubmenu: false },
     { path: '/more', label: 'More', hasSubmenu: true, submenu: moreSubmenus },
     { path: '/contact', label: 'Contact', hasSubmenu: false },
   ];
@@ -249,7 +249,7 @@ export default function Header() {
                           </button>
                           {activeSubmenuCategory === 'about-home' && (
                             <div className="pl-2 py-1 space-y-1">
-                              {link.submenu?.slice(0, 6).map((subItem) => (
+                              {link.submenu?.slice(0, 7).map((subItem) => (
                                 <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-primary/5 hover:text-primary transition-all duration-200">
                                   <Link href={subItem.path} className="w-full cursor-pointer">
                                     {subItem.label}
