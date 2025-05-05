@@ -75,7 +75,7 @@ export default function Header() {
     { path: '/dept-sc', label: 'Science Department', category: 'departments' },
     
     // Calendar of Events
-    { path: '/calendar-2023-24', label: '2023-24 Even Semester', category: 'calendar' },
+    { path: '/calendar-of-events', label: 'Calendar of Events', category: 'calendar' },
     
     // JSS Collaborations
     { path: '/jss-mous', label: 'JSS Collaboration_MOUs', category: 'collaborations' },
