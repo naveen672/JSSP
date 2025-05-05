@@ -3,6 +3,10 @@ import { Helmet } from 'react-helmet';
 import Breadcrumb from '@/components/Breadcrumb';
 import { Building, LucideIcon, School, Users } from 'lucide-react';
 import { Link } from 'wouter';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import NewsTicker from '@/components/NewsTicker';
+import { newsItems } from '@/data/collegeData';
 
 interface DepartmentCard {
   name: string;
@@ -70,6 +74,9 @@ export default function Infrastructure() {
         <title>Infrastructure | JSS Polytechnic</title>
         <meta name="description" content="Infrastructure facilities at JSS Polytechnic - Modern classrooms, laboratories, and departmental facilities for quality technical education." />
       </Helmet>
+      
+      <Header />
+      <NewsTicker news={newsItems} />
       
       {/* Page Header */}
       <div className="bg-primary text-white py-12">

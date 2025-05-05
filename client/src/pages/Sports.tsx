@@ -2,6 +2,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import Breadcrumb from '@/components/Breadcrumb';
 import { Trophy, Dumbbell, Users, Calendar, Target } from 'lucide-react';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import NewsTicker from '@/components/NewsTicker';
+import { newsItems } from '@/data/collegeData';
 
 export default function Sports() {
   return (
@@ -10,6 +14,9 @@ export default function Sports() {
         <title>Sports Facilities | JSS Polytechnic</title>
         <meta name="description" content="Sports facilities at JSS Polytechnic - Encouraging physical activities and sports events for overall development of students." />
       </Helmet>
+      
+      <Header />
+      <NewsTicker news={newsItems} />
       
       {/* Page Header */}
       <div className="bg-primary text-white py-12">
@@ -244,6 +251,7 @@ export default function Sports() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
