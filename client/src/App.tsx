@@ -23,6 +23,7 @@ import Messages from "@/pages/Messages";
 import Governance from "@/pages/Governance";
 import AICTE from "@/pages/AICTE";
 import NBA from "@/pages/NBA";
+import MandatoryDisclosure from "@/pages/MandatoryDisclosure";
 
 // Employee Benefits pages
 import StudentAccidentPolicy from "@/pages/StudentAccidentPolicy";
@@ -72,6 +73,7 @@ function Router() {
       <Route path="/governance" component={Governance} />
       <Route path="/aicte" component={AICTE} />
       <Route path="/nba" component={NBA} />
+      <Route path="/mandatory-disclosure" component={MandatoryDisclosure} />
       
       {/* Employee Benefits Routes */}
       <Route path="/student-accident-policy" component={StudentAccidentPolicy} />
