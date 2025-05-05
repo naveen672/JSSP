@@ -519,13 +519,87 @@ export default function Header() {
                     ) : link.path === '/facilities' ? (
                       // Facilities dropdown content
                       <>
-                        {link.submenu?.map((subItem) => (
-                          <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-primary/5 hover:text-primary transition-all duration-200">
-                            <Link href={subItem.path} className="w-full cursor-pointer">
-                              {subItem.label}
-                            </Link>
-                          </DropdownMenuItem>
-                        ))}
+                        {/* General Facilities section */}
+                        <DropdownMenuGroup>
+                          <button 
+                            onClick={() => toggleNestedSubmenu('facilities')}
+                            className="dropdown-menu-button"
+                          >
+                            <span>General Facilities</span>
+                            <ChevronRight 
+                              className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                activeSubmenuCategory === 'facilities' ? 'transform rotate-90' : ''
+                              }`}
+                            />
+                          </button>
+                          {activeSubmenuCategory === 'facilities' && (
+                            <div className="pl-2 py-1 space-y-1">
+                              {link.submenu?.filter(item => item.category === 'facilities').map((subItem) => (
+                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-primary/5 hover:text-primary transition-all duration-200">
+                                  <Link href={subItem.path} className="w-full cursor-pointer">
+                                    {subItem.label}
+                                  </Link>
+                                </DropdownMenuItem>
+                              ))}
+                            </div>
+                          )}
+                        </DropdownMenuGroup>
+                        
+                        <DropdownMenuSeparator />
+                        
+                        {/* Placements & Training section */}
+                        <DropdownMenuGroup>
+                          <button 
+                            onClick={() => toggleNestedSubmenu('placements')}
+                            className="dropdown-menu-button"
+                          >
+                            <span>Placements & Training</span>
+                            <ChevronRight 
+                              className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                activeSubmenuCategory === 'placements' ? 'transform rotate-90' : ''
+                              }`}
+                            />
+                          </button>
+                          {activeSubmenuCategory === 'placements' && (
+                            <div className="pl-2 py-1 space-y-1">
+                              {link.submenu?.filter(item => item.category === 'placements').map((subItem) => (
+                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-primary/5 hover:text-primary transition-all duration-200">
+                                  <Link href={subItem.path} className="w-full cursor-pointer">
+                                    {subItem.label}
+                                  </Link>
+                                </DropdownMenuItem>
+                              ))}
+                            </div>
+                          )}
+                        </DropdownMenuGroup>
+                        
+                        <DropdownMenuSeparator />
+                        
+                        {/* Infrastructure section */}
+                        <DropdownMenuGroup>
+                          <button 
+                            onClick={() => toggleNestedSubmenu('infrastructure')}
+                            className="dropdown-menu-button"
+                          >
+                            <span>Infrastructure</span>
+                            <ChevronRight 
+                              className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                activeSubmenuCategory === 'infrastructure' ? 'transform rotate-90' : ''
+                              }`}
+                            />
+                          </button>
+                          {activeSubmenuCategory === 'infrastructure' && (
+                            <div className="pl-2 py-1 space-y-1">
+                              {link.submenu?.filter(item => item.category === 'infrastructure').map((subItem) => (
+                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-primary/5 hover:text-primary transition-all duration-200">
+                                  <Link href={subItem.path} className="w-full cursor-pointer">
+                                    {subItem.label}
+                                  </Link>
+                                </DropdownMenuItem>
+                              ))}
+                            </div>
+                          )}
+                        </DropdownMenuGroup>
                       </>
                     ) : link.path === '/student-support' ? (
                       // Student Support dropdown content - with nested categories
@@ -995,18 +1069,94 @@ export default function Header() {
                           </>
                         ) : link.path === '/facilities' ? (
                           // Facilities mobile submenu
-                          <div className="space-y-2">
-                            {link.submenu?.map((subItem) => (
-                              <Link 
-                                key={subItem.path} 
-                                href={subItem.path}
-                                className="submenu-link"
-                                onClick={() => setIsMenuOpen(false)}
+                          <>
+                            {/* General Facilities mobile section */}
+                            <div className="space-y-1">
+                              <button 
+                                onClick={() => toggleMobileCategory('facilities')}
+                                className="dropdown-menu-button"
                               >
-                                {subItem.label}
-                              </Link>
-                            ))}
-                          </div>
+                                <span>General Facilities</span>
+                                <ChevronRight 
+                                  className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                    activeMobileCategories['facilities'] ? 'transform rotate-90' : ''
+                                  }`}
+                                />
+                              </button>
+                              {activeMobileCategories['facilities'] && (
+                                <div className="mt-1 pl-4 space-y-1">
+                                  {link.submenu?.filter(item => item.category === 'facilities').map((subItem) => (
+                                    <Link 
+                                      key={subItem.path} 
+                                      href={subItem.path}
+                                      className="submenu-link"
+                                      onClick={() => setIsMenuOpen(false)}
+                                    >
+                                      {subItem.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                            
+                            {/* Placements & Training mobile section */}
+                            <div className="space-y-1 mt-2">
+                              <button 
+                                onClick={() => toggleMobileCategory('placements')}
+                                className="dropdown-menu-button"
+                              >
+                                <span>Placements & Training</span>
+                                <ChevronRight 
+                                  className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                    activeMobileCategories['placements'] ? 'transform rotate-90' : ''
+                                  }`}
+                                />
+                              </button>
+                              {activeMobileCategories['placements'] && (
+                                <div className="mt-1 pl-4 space-y-1">
+                                  {link.submenu?.filter(item => item.category === 'placements').map((subItem) => (
+                                    <Link 
+                                      key={subItem.path} 
+                                      href={subItem.path}
+                                      className="submenu-link"
+                                      onClick={() => setIsMenuOpen(false)}
+                                    >
+                                      {subItem.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                            
+                            {/* Infrastructure mobile section */}
+                            <div className="space-y-1 mt-2">
+                              <button 
+                                onClick={() => toggleMobileCategory('infrastructure')}
+                                className="dropdown-menu-button"
+                              >
+                                <span>Infrastructure</span>
+                                <ChevronRight 
+                                  className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                    activeMobileCategories['infrastructure'] ? 'transform rotate-90' : ''
+                                  }`}
+                                />
+                              </button>
+                              {activeMobileCategories['infrastructure'] && (
+                                <div className="mt-1 pl-4 space-y-1">
+                                  {link.submenu?.filter(item => item.category === 'infrastructure').map((subItem) => (
+                                    <Link 
+                                      key={subItem.path} 
+                                      href={subItem.path}
+                                      className="submenu-link"
+                                      onClick={() => setIsMenuOpen(false)}
+                                    >
+                                      {subItem.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          </>
                         ) : link.path === '/student-support' ? (
                           // Student Support mobile submenu with nested categories
                           <>
