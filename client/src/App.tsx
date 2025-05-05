@@ -49,6 +49,11 @@ import DeptSC from "@/pages/DeptSC";
 import JSSMOUs from "@/pages/JSSMOUs";
 import AboutAcademics from "@/pages/AboutAcademics";
 
+// Admission pages
+import CollegeProspectus from "@/pages/CollegeProspectus";
+import AdmissionDetails from "@/pages/AdmissionDetails";
+import AdmissionHelpdesk from "@/pages/AdmissionHelpdesk";
+
 function Router() {
   return (
     <Switch>
@@ -94,6 +99,11 @@ function Router() {
       
       {/* Academic Routes */}
       <Route path="/about-academics" component={AboutAcademics} />
+      
+      {/* Admission Routes */}
+      <Route path="/college-prospectus" component={CollegeProspectus} />
+      <Route path="/admission-details" component={AdmissionDetails} />
+      <Route path="/admission-helpdesk" component={AdmissionHelpdesk} />
       
       {/* 404 Not Found */}
       <Route component={NotFound} />
