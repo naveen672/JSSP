@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'wouter';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react';
 import Logo from './Logo';
 
 // Define types for menu items
@@ -114,6 +114,27 @@ export default function Header() {
     }));
   };
   
+  // For nested submenu clicks on desktop
+  const [activeSubmenuCategory, setActiveSubmenuCategory] = useState<string | null>(null);
+
+  const toggleNestedSubmenu = (category: string) => {
+    if (activeSubmenuCategory === category) {
+      setActiveSubmenuCategory(null);
+    } else {
+      setActiveSubmenuCategory(category);
+    }
+  };
+
+  // For nested submenu clicks on mobile
+  const [activeMobileCategories, setActiveMobileCategories] = useState<Record<string, boolean>>({});
+  
+  const toggleMobileCategory = (category: string) => {
+    setActiveMobileCategories(prev => ({
+      ...prev,
+      [category]: !prev[category]
+    }));
+  };
+  
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4">
@@ -182,102 +203,200 @@ export default function Header() {
                         </DropdownMenuGroup>
                       </>
                     ) : link.path === '/academics' ? (
-                      // Academics dropdown content
+                      // Academics dropdown content - only show categories as click toggles
                       <>
                         {/* Departments section */}
                         <DropdownMenuGroup>
-                          <DropdownMenuLabel>Departments</DropdownMenuLabel>
-                          {link.submenu?.filter(item => item.category === 'departments').map((subItem) => (
-                            <DropdownMenuItem key={subItem.path} asChild>
-                              <Link href={subItem.path} className="w-full cursor-pointer">
-                                {subItem.label}
-                              </Link>
-                            </DropdownMenuItem>
-                          ))}
+                          <button 
+                            onClick={() => toggleNestedSubmenu('departments')}
+                            className="flex justify-between items-center w-full px-2 py-2 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                          >
+                            <span>Departments</span>
+                            <ChevronRight 
+                              className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                activeSubmenuCategory === 'departments' ? 'transform rotate-90' : ''
+                              }`}
+                            />
+                          </button>
+                          {activeSubmenuCategory === 'departments' && (
+                            <div className="pl-2 py-1 space-y-1">
+                              {link.submenu?.filter(item => item.category === 'departments').map((subItem) => (
+                                <DropdownMenuItem key={subItem.path} asChild>
+                                  <Link href={subItem.path} className="w-full cursor-pointer">
+                                    {subItem.label}
+                                  </Link>
+                                </DropdownMenuItem>
+                              ))}
+                            </div>
+                          )}
                         </DropdownMenuGroup>
                         
                         <DropdownMenuSeparator />
                         
                         {/* Calendar of Events */}
                         <DropdownMenuGroup>
-                          <DropdownMenuLabel>Calendar of Events</DropdownMenuLabel>
-                          {link.submenu?.filter(item => item.category === 'calendar').map((subItem) => (
-                            <DropdownMenuItem key={subItem.path} asChild>
-                              <Link href={subItem.path} className="w-full cursor-pointer">
-                                {subItem.label}
-                              </Link>
-                            </DropdownMenuItem>
-                          ))}
+                          <button 
+                            onClick={() => toggleNestedSubmenu('calendar')}
+                            className="flex justify-between items-center w-full px-2 py-2 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                          >
+                            <span>Calendar of Events</span>
+                            <ChevronRight 
+                              className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                activeSubmenuCategory === 'calendar' ? 'transform rotate-90' : ''
+                              }`}
+                            />
+                          </button>
+                          {activeSubmenuCategory === 'calendar' && (
+                            <div className="pl-2 py-1 space-y-1">
+                              {link.submenu?.filter(item => item.category === 'calendar').map((subItem) => (
+                                <DropdownMenuItem key={subItem.path} asChild>
+                                  <Link href={subItem.path} className="w-full cursor-pointer">
+                                    {subItem.label}
+                                  </Link>
+                                </DropdownMenuItem>
+                              ))}
+                            </div>
+                          )}
                         </DropdownMenuGroup>
                         
                         <DropdownMenuSeparator />
                         
                         {/* JSS Collaborations */}
                         <DropdownMenuGroup>
-                          <DropdownMenuLabel>JSS Collaborations</DropdownMenuLabel>
-                          {link.submenu?.filter(item => item.category === 'collaborations').map((subItem) => (
-                            <DropdownMenuItem key={subItem.path} asChild>
-                              <Link href={subItem.path} className="w-full cursor-pointer">
-                                {subItem.label}
-                              </Link>
-                            </DropdownMenuItem>
-                          ))}
+                          <button 
+                            onClick={() => toggleNestedSubmenu('collaborations')}
+                            className="flex justify-between items-center w-full px-2 py-2 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                          >
+                            <span>JSS Collaborations</span>
+                            <ChevronRight 
+                              className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                activeSubmenuCategory === 'collaborations' ? 'transform rotate-90' : ''
+                              }`}
+                            />
+                          </button>
+                          {activeSubmenuCategory === 'collaborations' && (
+                            <div className="pl-2 py-1 space-y-1">
+                              {link.submenu?.filter(item => item.category === 'collaborations').map((subItem) => (
+                                <DropdownMenuItem key={subItem.path} asChild>
+                                  <Link href={subItem.path} className="w-full cursor-pointer">
+                                    {subItem.label}
+                                  </Link>
+                                </DropdownMenuItem>
+                              ))}
+                            </div>
+                          )}
                         </DropdownMenuGroup>
                         
                         <DropdownMenuSeparator />
                         
                         {/* Professional Bodies */}
                         <DropdownMenuGroup>
-                          <DropdownMenuLabel>Professional Bodies Draft</DropdownMenuLabel>
-                          {link.submenu?.filter(item => item.category === 'professional').map((subItem) => (
-                            <DropdownMenuItem key={subItem.path} asChild>
-                              <Link href={subItem.path} className="w-full cursor-pointer">
-                                {subItem.label}
-                              </Link>
-                            </DropdownMenuItem>
-                          ))}
+                          <button 
+                            onClick={() => toggleNestedSubmenu('professional')}
+                            className="flex justify-between items-center w-full px-2 py-2 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                          >
+                            <span>Professional Bodies Draft</span>
+                            <ChevronRight 
+                              className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                activeSubmenuCategory === 'professional' ? 'transform rotate-90' : ''
+                              }`}
+                            />
+                          </button>
+                          {activeSubmenuCategory === 'professional' && (
+                            <div className="pl-2 py-1 space-y-1">
+                              {link.submenu?.filter(item => item.category === 'professional').map((subItem) => (
+                                <DropdownMenuItem key={subItem.path} asChild>
+                                  <Link href={subItem.path} className="w-full cursor-pointer">
+                                    {subItem.label}
+                                  </Link>
+                                </DropdownMenuItem>
+                              ))}
+                            </div>
+                          )}
                         </DropdownMenuGroup>
                         
                         <DropdownMenuSeparator />
                         
                         {/* About Academics */}
                         <DropdownMenuGroup>
-                          <DropdownMenuLabel>About</DropdownMenuLabel>
-                          {link.submenu?.filter(item => item.category === 'about').map((subItem) => (
-                            <DropdownMenuItem key={subItem.path} asChild>
-                              <Link href={subItem.path} className="w-full cursor-pointer">
-                                {subItem.label}
-                              </Link>
-                            </DropdownMenuItem>
-                          ))}
+                          <button 
+                            onClick={() => toggleNestedSubmenu('about')}
+                            className="flex justify-between items-center w-full px-2 py-2 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                          >
+                            <span>About</span>
+                            <ChevronRight 
+                              className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                activeSubmenuCategory === 'about' ? 'transform rotate-90' : ''
+                              }`}
+                            />
+                          </button>
+                          {activeSubmenuCategory === 'about' && (
+                            <div className="pl-2 py-1 space-y-1">
+                              {link.submenu?.filter(item => item.category === 'about').map((subItem) => (
+                                <DropdownMenuItem key={subItem.path} asChild>
+                                  <Link href={subItem.path} className="w-full cursor-pointer">
+                                    {subItem.label}
+                                  </Link>
+                                </DropdownMenuItem>
+                              ))}
+                            </div>
+                          )}
                         </DropdownMenuGroup>
                         
                         <DropdownMenuSeparator />
                         
                         {/* Admission */}
                         <DropdownMenuGroup>
-                          <DropdownMenuLabel>Admission</DropdownMenuLabel>
-                          {link.submenu?.filter(item => item.category === 'admission').map((subItem) => (
-                            <DropdownMenuItem key={subItem.path} asChild>
-                              <Link href={subItem.path} className="w-full cursor-pointer">
-                                {subItem.label}
-                              </Link>
-                            </DropdownMenuItem>
-                          ))}
+                          <button 
+                            onClick={() => toggleNestedSubmenu('admission')}
+                            className="flex justify-between items-center w-full px-2 py-2 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                          >
+                            <span>Admission</span>
+                            <ChevronRight 
+                              className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                activeSubmenuCategory === 'admission' ? 'transform rotate-90' : ''
+                              }`}
+                            />
+                          </button>
+                          {activeSubmenuCategory === 'admission' && (
+                            <div className="pl-2 py-1 space-y-1">
+                              {link.submenu?.filter(item => item.category === 'admission').map((subItem) => (
+                                <DropdownMenuItem key={subItem.path} asChild>
+                                  <Link href={subItem.path} className="w-full cursor-pointer">
+                                    {subItem.label}
+                                  </Link>
+                                </DropdownMenuItem>
+                              ))}
+                            </div>
+                          )}
                         </DropdownMenuGroup>
                         
                         <DropdownMenuSeparator />
                         
                         {/* Mandatory Disclosure */}
                         <DropdownMenuGroup>
-                          <DropdownMenuLabel>Mandatory Disclosure</DropdownMenuLabel>
-                          {link.submenu?.filter(item => item.category === 'disclosure').map((subItem) => (
-                            <DropdownMenuItem key={subItem.path} asChild>
-                              <Link href={subItem.path} className="w-full cursor-pointer">
-                                {subItem.label}
-                              </Link>
-                            </DropdownMenuItem>
-                          ))}
+                          <button 
+                            onClick={() => toggleNestedSubmenu('disclosure')}
+                            className="flex justify-between items-center w-full px-2 py-2 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                          >
+                            <span>Mandatory Disclosure</span>
+                            <ChevronRight 
+                              className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                activeSubmenuCategory === 'disclosure' ? 'transform rotate-90' : ''
+                              }`}
+                            />
+                          </button>
+                          {activeSubmenuCategory === 'disclosure' && (
+                            <div className="pl-2 py-1 space-y-1">
+                              {link.submenu?.filter(item => item.category === 'disclosure').map((subItem) => (
+                                <DropdownMenuItem key={subItem.path} asChild>
+                                  <Link href={subItem.path} className="w-full cursor-pointer">
+                                    {subItem.label}
+                                  </Link>
+                                </DropdownMenuItem>
+                              ))}
+                            </div>
+                          )}
                         </DropdownMenuGroup>
                       </>
                     ) : null}
@@ -340,47 +459,89 @@ export default function Header() {
                           <>
                             {/* About section */}
                             <div className="space-y-1">
-                              <h4 className="text-sm font-semibold text-neutral-600 px-4 py-1">About</h4>
-                              {link.submenu?.slice(0, 6).map((subItem) => (
-                                <Link 
-                                  key={subItem.path} 
-                                  href={subItem.path}
-                                  className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
-                                  onClick={() => setIsMenuOpen(false)}
-                                >
-                                  {subItem.label}
-                                </Link>
-                              ))}
+                              <button 
+                                onClick={() => toggleMobileCategory('about-home')}
+                                className="flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                              >
+                                <span>About</span>
+                                <ChevronRight 
+                                  className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                    activeMobileCategories['about-home'] ? 'transform rotate-90' : ''
+                                  }`}
+                                />
+                              </button>
+                              {activeMobileCategories['about-home'] && (
+                                <div className="mt-1 pl-4 space-y-1">
+                                  {link.submenu?.slice(0, 6).map((subItem) => (
+                                    <Link 
+                                      key={subItem.path} 
+                                      href={subItem.path}
+                                      className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                      onClick={() => setIsMenuOpen(false)}
+                                    >
+                                      {subItem.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
                             </div>
                             
                             {/* Employee Benefits section */}
-                            <div className="space-y-1">
-                              <h4 className="text-sm font-semibold text-neutral-600 px-4 py-1">Employee Benefits</h4>
-                              {link.submenu?.slice(6, 9).map((subItem) => (
-                                <Link 
-                                  key={subItem.path} 
-                                  href={subItem.path}
-                                  className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
-                                  onClick={() => setIsMenuOpen(false)}
-                                >
-                                  {subItem.label}
-                                </Link>
-                              ))}
+                            <div className="space-y-1 mt-2">
+                              <button 
+                                onClick={() => toggleMobileCategory('benefits')}
+                                className="flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                              >
+                                <span>Employee Benefits</span>
+                                <ChevronRight 
+                                  className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                    activeMobileCategories['benefits'] ? 'transform rotate-90' : ''
+                                  }`}
+                                />
+                              </button>
+                              {activeMobileCategories['benefits'] && (
+                                <div className="mt-1 pl-4 space-y-1">
+                                  {link.submenu?.slice(6, 9).map((subItem) => (
+                                    <Link 
+                                      key={subItem.path} 
+                                      href={subItem.path}
+                                      className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                      onClick={() => setIsMenuOpen(false)}
+                                    >
+                                      {subItem.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
                             </div>
                             
                             {/* Reports and Downloads section */}
-                            <div className="space-y-1">
-                              <h4 className="text-sm font-semibold text-neutral-600 px-4 py-1">Reports & Downloads</h4>
-                              {link.submenu?.slice(9).map((subItem) => (
-                                <Link 
-                                  key={subItem.path} 
-                                  href={subItem.path}
-                                  className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
-                                  onClick={() => setIsMenuOpen(false)}
-                                >
-                                  {subItem.label}
-                                </Link>
-                              ))}
+                            <div className="space-y-1 mt-2">
+                              <button 
+                                onClick={() => toggleMobileCategory('reports')}
+                                className="flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                              >
+                                <span>Reports & Downloads</span>
+                                <ChevronRight 
+                                  className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                    activeMobileCategories['reports'] ? 'transform rotate-90' : ''
+                                  }`}
+                                />
+                              </button>
+                              {activeMobileCategories['reports'] && (
+                                <div className="mt-1 pl-4 space-y-1">
+                                  {link.submenu?.slice(9).map((subItem) => (
+                                    <Link 
+                                      key={subItem.path} 
+                                      href={subItem.path}
+                                      className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                      onClick={() => setIsMenuOpen(false)}
+                                    >
+                                      {subItem.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
                             </div>
                           </>
                         ) : link.path === '/academics' ? (
@@ -388,107 +549,205 @@ export default function Header() {
                           <>
                             {/* Departments section */}
                             <div className="space-y-1">
-                              <h4 className="text-sm font-semibold text-neutral-600 px-4 py-1">Departments</h4>
-                              {link.submenu?.filter(item => item.category === 'departments').map((subItem) => (
-                                <Link 
-                                  key={subItem.path} 
-                                  href={subItem.path}
-                                  className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
-                                  onClick={() => setIsMenuOpen(false)}
-                                >
-                                  {subItem.label}
-                                </Link>
-                              ))}
+                              <button 
+                                onClick={() => toggleMobileCategory('departments')}
+                                className="flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                              >
+                                <span>Departments</span>
+                                <ChevronRight 
+                                  className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                    activeMobileCategories['departments'] ? 'transform rotate-90' : ''
+                                  }`}
+                                />
+                              </button>
+                              {activeMobileCategories['departments'] && (
+                                <div className="mt-1 pl-4 space-y-1">
+                                  {link.submenu?.filter(item => item.category === 'departments').map((subItem) => (
+                                    <Link 
+                                      key={subItem.path} 
+                                      href={subItem.path}
+                                      className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                      onClick={() => setIsMenuOpen(false)}
+                                    >
+                                      {subItem.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
                             </div>
                             
                             {/* Calendar of Events */}
-                            <div className="space-y-1">
-                              <h4 className="text-sm font-semibold text-neutral-600 px-4 py-1">Calendar of Events</h4>
-                              {link.submenu?.filter(item => item.category === 'calendar').map((subItem) => (
-                                <Link 
-                                  key={subItem.path} 
-                                  href={subItem.path}
-                                  className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
-                                  onClick={() => setIsMenuOpen(false)}
-                                >
-                                  {subItem.label}
-                                </Link>
-                              ))}
+                            <div className="space-y-1 mt-2">
+                              <button 
+                                onClick={() => toggleMobileCategory('calendar')}
+                                className="flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                              >
+                                <span>Calendar of Events</span>
+                                <ChevronRight 
+                                  className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                    activeMobileCategories['calendar'] ? 'transform rotate-90' : ''
+                                  }`}
+                                />
+                              </button>
+                              {activeMobileCategories['calendar'] && (
+                                <div className="mt-1 pl-4 space-y-1">
+                                  {link.submenu?.filter(item => item.category === 'calendar').map((subItem) => (
+                                    <Link 
+                                      key={subItem.path} 
+                                      href={subItem.path}
+                                      className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                      onClick={() => setIsMenuOpen(false)}
+                                    >
+                                      {subItem.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
                             </div>
                             
                             {/* JSS Collaborations */}
-                            <div className="space-y-1">
-                              <h4 className="text-sm font-semibold text-neutral-600 px-4 py-1">JSS Collaborations</h4>
-                              {link.submenu?.filter(item => item.category === 'collaborations').map((subItem) => (
-                                <Link 
-                                  key={subItem.path} 
-                                  href={subItem.path}
-                                  className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
-                                  onClick={() => setIsMenuOpen(false)}
-                                >
-                                  {subItem.label}
-                                </Link>
-                              ))}
+                            <div className="space-y-1 mt-2">
+                              <button 
+                                onClick={() => toggleMobileCategory('collaborations')}
+                                className="flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                              >
+                                <span>JSS Collaborations</span>
+                                <ChevronRight 
+                                  className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                    activeMobileCategories['collaborations'] ? 'transform rotate-90' : ''
+                                  }`}
+                                />
+                              </button>
+                              {activeMobileCategories['collaborations'] && (
+                                <div className="mt-1 pl-4 space-y-1">
+                                  {link.submenu?.filter(item => item.category === 'collaborations').map((subItem) => (
+                                    <Link 
+                                      key={subItem.path} 
+                                      href={subItem.path}
+                                      className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                      onClick={() => setIsMenuOpen(false)}
+                                    >
+                                      {subItem.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
                             </div>
                             
                             {/* Professional Bodies */}
-                            <div className="space-y-1">
-                              <h4 className="text-sm font-semibold text-neutral-600 px-4 py-1">Professional Bodies Draft</h4>
-                              {link.submenu?.filter(item => item.category === 'professional').map((subItem) => (
-                                <Link 
-                                  key={subItem.path} 
-                                  href={subItem.path}
-                                  className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
-                                  onClick={() => setIsMenuOpen(false)}
-                                >
-                                  {subItem.label}
-                                </Link>
-                              ))}
+                            <div className="space-y-1 mt-2">
+                              <button 
+                                onClick={() => toggleMobileCategory('professional')}
+                                className="flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                              >
+                                <span>Professional Bodies Draft</span>
+                                <ChevronRight 
+                                  className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                    activeMobileCategories['professional'] ? 'transform rotate-90' : ''
+                                  }`}
+                                />
+                              </button>
+                              {activeMobileCategories['professional'] && (
+                                <div className="mt-1 pl-4 space-y-1">
+                                  {link.submenu?.filter(item => item.category === 'professional').map((subItem) => (
+                                    <Link 
+                                      key={subItem.path} 
+                                      href={subItem.path}
+                                      className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                      onClick={() => setIsMenuOpen(false)}
+                                    >
+                                      {subItem.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
                             </div>
                             
                             {/* About Academics */}
-                            <div className="space-y-1">
-                              <h4 className="text-sm font-semibold text-neutral-600 px-4 py-1">About</h4>
-                              {link.submenu?.filter(item => item.category === 'about').map((subItem) => (
-                                <Link 
-                                  key={subItem.path} 
-                                  href={subItem.path}
-                                  className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
-                                  onClick={() => setIsMenuOpen(false)}
-                                >
-                                  {subItem.label}
-                                </Link>
-                              ))}
+                            <div className="space-y-1 mt-2">
+                              <button 
+                                onClick={() => toggleMobileCategory('about')}
+                                className="flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                              >
+                                <span>About</span>
+                                <ChevronRight 
+                                  className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                    activeMobileCategories['about'] ? 'transform rotate-90' : ''
+                                  }`}
+                                />
+                              </button>
+                              {activeMobileCategories['about'] && (
+                                <div className="mt-1 pl-4 space-y-1">
+                                  {link.submenu?.filter(item => item.category === 'about').map((subItem) => (
+                                    <Link 
+                                      key={subItem.path} 
+                                      href={subItem.path}
+                                      className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                      onClick={() => setIsMenuOpen(false)}
+                                    >
+                                      {subItem.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
                             </div>
                             
                             {/* Admission */}
-                            <div className="space-y-1">
-                              <h4 className="text-sm font-semibold text-neutral-600 px-4 py-1">Admission</h4>
-                              {link.submenu?.filter(item => item.category === 'admission').map((subItem) => (
-                                <Link 
-                                  key={subItem.path} 
-                                  href={subItem.path}
-                                  className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
-                                  onClick={() => setIsMenuOpen(false)}
-                                >
-                                  {subItem.label}
-                                </Link>
-                              ))}
+                            <div className="space-y-1 mt-2">
+                              <button 
+                                onClick={() => toggleMobileCategory('admission')}
+                                className="flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                              >
+                                <span>Admission</span>
+                                <ChevronRight 
+                                  className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                    activeMobileCategories['admission'] ? 'transform rotate-90' : ''
+                                  }`}
+                                />
+                              </button>
+                              {activeMobileCategories['admission'] && (
+                                <div className="mt-1 pl-4 space-y-1">
+                                  {link.submenu?.filter(item => item.category === 'admission').map((subItem) => (
+                                    <Link 
+                                      key={subItem.path} 
+                                      href={subItem.path}
+                                      className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                      onClick={() => setIsMenuOpen(false)}
+                                    >
+                                      {subItem.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
                             </div>
                             
                             {/* Mandatory Disclosure */}
-                            <div className="space-y-1">
-                              <h4 className="text-sm font-semibold text-neutral-600 px-4 py-1">Mandatory Disclosure</h4>
-                              {link.submenu?.filter(item => item.category === 'disclosure').map((subItem) => (
-                                <Link 
-                                  key={subItem.path} 
-                                  href={subItem.path}
-                                  className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
-                                  onClick={() => setIsMenuOpen(false)}
-                                >
-                                  {subItem.label}
-                                </Link>
-                              ))}
+                            <div className="space-y-1 mt-2">
+                              <button 
+                                onClick={() => toggleMobileCategory('disclosure')}
+                                className="flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                              >
+                                <span>Mandatory Disclosure</span>
+                                <ChevronRight 
+                                  className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                    activeMobileCategories['disclosure'] ? 'transform rotate-90' : ''
+                                  }`}
+                                />
+                              </button>
+                              {activeMobileCategories['disclosure'] && (
+                                <div className="mt-1 pl-4 space-y-1">
+                                  {link.submenu?.filter(item => item.category === 'disclosure').map((subItem) => (
+                                    <Link 
+                                      key={subItem.path} 
+                                      href={subItem.path}
+                                      className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                      onClick={() => setIsMenuOpen(false)}
+                                    >
+                                      {subItem.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
                             </div>
                           </>
                         ) : null}
