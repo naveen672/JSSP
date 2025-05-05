@@ -93,11 +93,53 @@ export default function Header() {
     { path: '/mandatory-disclosure', label: 'Mandatory Disclosure', category: 'disclosure' },
   ];
 
+  // Facilities submenus
+  const facilitiesSubmenus: SubmenuItem[] = [
+    { path: '/library', label: 'Library', category: 'facilities' },
+    { path: '/hostel', label: 'Hostel', category: 'facilities' },
+    { path: '/sports', label: 'Sports', category: 'facilities' },
+    { path: '/infrastructure', label: 'Infrastructure', category: 'facilities' },
+    { path: '/cs-engineering', label: 'Computer Science & Engineering', category: 'facilities' },
+    { path: '/ec-engineering', label: 'Electronics & Communication Engineering', category: 'facilities' },
+    { path: '/mechanical-engineering', label: 'Mechanical Engineering', category: 'facilities' },
+    { path: '/ee-engineering', label: 'Electrical & Electronics Engineering', category: 'facilities' },
+    { path: '/mechatronics-engineering', label: 'Mechatronics Engineering', category: 'facilities' },
+    { path: '/is-engineering', label: 'Information Science & Engineering', category: 'facilities' },
+    { path: '/civil-engineering', label: 'Civil Engineering', category: 'facilities' },
+    { path: '/science-department', label: 'Science Department', category: 'facilities' },
+  ];
+
+  // Student Support submenus
+  const studentSupportSubmenus: SubmenuItem[] = [
+    { path: '/scholarships', label: 'Scholarships', category: 'support' },
+    { path: '/mentoring-scheme', label: 'Mentoring Scheme', category: 'support' },
+    { path: '/anti-ragging', label: 'Anti Ragging', category: 'support' },
+  ];
+
+  // Committees submenus
+  const committeesSubmenus: SubmenuItem[] = [
+    { path: '/moocs-committee', label: "MOOC's Committee", category: 'committees' },
+    { path: '/internal-complaint-committee', label: 'Internal Complaint Committee', category: 'committees' },
+    { path: '/sc-st-committee', label: 'SC/ST Committee', category: 'committees' },
+  ];
+
+  // Higher Education submenus
+  const higherEducationSubmenus: SubmenuItem[] = [
+    { path: '/higher-education', label: 'Higher Education', category: 'higher-ed' },
+    { path: '/exam', label: 'Exam', category: 'higher-ed' },
+    { path: '/fee-payment', label: 'Fee Payment', category: 'higher-ed' },
+    { path: '/cultural-crew', label: 'Cultural Crew', category: 'higher-ed' },
+    { path: '/social-outreach', label: 'Social Outreach Programs', category: 'higher-ed' },
+  ];
+
   // Main navigation links
   const navLinks: NavLink[] = [
     { path: '/', label: 'Home', hasSubmenu: true, submenu: homeSubmenus },
-    { path: '/about', label: 'About', hasSubmenu: false },
     { path: '/academics', label: 'Academics', hasSubmenu: true, submenu: academicsSubmenus },
+    { path: '/facilities', label: 'Facilities', hasSubmenu: true, submenu: facilitiesSubmenus },
+    { path: '/student-support', label: 'Student Support', hasSubmenu: true, submenu: studentSupportSubmenus },
+    { path: '/committees', label: 'Committees', hasSubmenu: true, submenu: committeesSubmenus },
+    { path: '/higher-education', label: 'Higher Education', hasSubmenu: true, submenu: higherEducationSubmenus },
     { path: '/admissions', label: 'Admissions', hasSubmenu: false },
     { path: '/campus-life', label: 'Campus Life', hasSubmenu: false },
     { path: '/contact', label: 'Contact', hasSubmenu: false },
@@ -322,7 +364,7 @@ export default function Header() {
                           {activeSubmenuCategory === 'collaborations' && (
                             <div className="pl-2 py-1 space-y-1">
                               {link.submenu?.filter(item => item.category === 'collaborations').map((subItem) => (
-                                <DropdownMenuItem key={subItem.path} asChild>
+                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
                                   <Link href={subItem.path} className="w-full cursor-pointer">
                                     {subItem.label}
                                   </Link>
@@ -350,7 +392,7 @@ export default function Header() {
                           {activeSubmenuCategory === 'professional' && (
                             <div className="pl-2 py-1 space-y-1">
                               {link.submenu?.filter(item => item.category === 'professional').map((subItem) => (
-                                <DropdownMenuItem key={subItem.path} asChild>
+                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
                                   <Link href={subItem.path} className="w-full cursor-pointer">
                                     {subItem.label}
                                   </Link>
@@ -378,7 +420,7 @@ export default function Header() {
                           {activeSubmenuCategory === 'about' && (
                             <div className="pl-2 py-1 space-y-1">
                               {link.submenu?.filter(item => item.category === 'about').map((subItem) => (
-                                <DropdownMenuItem key={subItem.path} asChild>
+                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
                                   <Link href={subItem.path} className="w-full cursor-pointer">
                                     {subItem.label}
                                   </Link>
@@ -406,7 +448,7 @@ export default function Header() {
                           {activeSubmenuCategory === 'admission' && (
                             <div className="pl-2 py-1 space-y-1">
                               {link.submenu?.filter(item => item.category === 'admission').map((subItem) => (
-                                <DropdownMenuItem key={subItem.path} asChild>
+                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
                                   <Link href={subItem.path} className="w-full cursor-pointer">
                                     {subItem.label}
                                   </Link>
@@ -434,7 +476,7 @@ export default function Header() {
                           {activeSubmenuCategory === 'disclosure' && (
                             <div className="pl-2 py-1 space-y-1">
                               {link.submenu?.filter(item => item.category === 'disclosure').map((subItem) => (
-                                <DropdownMenuItem key={subItem.path} asChild>
+                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
                                   <Link href={subItem.path} className="w-full cursor-pointer">
                                     {subItem.label}
                                   </Link>
@@ -443,6 +485,50 @@ export default function Header() {
                             </div>
                           )}
                         </DropdownMenuGroup>
+                      </>
+                    ) : link.path === '/facilities' ? (
+                      // Facilities dropdown content
+                      <>
+                        {link.submenu?.map((subItem) => (
+                          <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
+                            <Link href={subItem.path} className="w-full cursor-pointer">
+                              {subItem.label}
+                            </Link>
+                          </DropdownMenuItem>
+                        ))}
+                      </>
+                    ) : link.path === '/student-support' ? (
+                      // Student Support dropdown content
+                      <>
+                        {link.submenu?.map((subItem) => (
+                          <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
+                            <Link href={subItem.path} className="w-full cursor-pointer">
+                              {subItem.label}
+                            </Link>
+                          </DropdownMenuItem>
+                        ))}
+                      </>
+                    ) : link.path === '/committees' ? (
+                      // Committees dropdown content
+                      <>
+                        {link.submenu?.map((subItem) => (
+                          <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
+                            <Link href={subItem.path} className="w-full cursor-pointer">
+                              {subItem.label}
+                            </Link>
+                          </DropdownMenuItem>
+                        ))}
+                      </>
+                    ) : link.path === '/higher-education' ? (
+                      // Higher Education dropdown content
+                      <>
+                        {link.submenu?.map((subItem) => (
+                          <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
+                            <Link href={subItem.path} className="w-full cursor-pointer">
+                              {subItem.label}
+                            </Link>
+                          </DropdownMenuItem>
+                        ))}
                       </>
                     ) : null}
                   </DropdownMenuContent>
@@ -596,7 +682,7 @@ export default function Header() {
                             <div className="space-y-1">
                               <button 
                                 onClick={() => toggleMobileCategory('departments')}
-                                className="flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                                className="dropdown-menu-button"
                               >
                                 <span>Departments</span>
                                 <ChevronRight 
@@ -625,7 +711,7 @@ export default function Header() {
                             <div className="space-y-1 mt-2">
                               <button 
                                 onClick={() => toggleMobileCategory('calendar')}
-                                className="flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                                className="dropdown-menu-button"
                               >
                                 <span>Calendar of Events</span>
                                 <ChevronRight 
@@ -654,7 +740,7 @@ export default function Header() {
                             <div className="space-y-1 mt-2">
                               <button 
                                 onClick={() => toggleMobileCategory('collaborations')}
-                                className="flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                                className="dropdown-menu-button"
                               >
                                 <span>JSS Collaborations</span>
                                 <ChevronRight 
@@ -683,7 +769,7 @@ export default function Header() {
                             <div className="space-y-1 mt-2">
                               <button 
                                 onClick={() => toggleMobileCategory('professional')}
-                                className="flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                                className="dropdown-menu-button"
                               >
                                 <span>Professional Bodies Draft</span>
                                 <ChevronRight 
@@ -712,7 +798,7 @@ export default function Header() {
                             <div className="space-y-1 mt-2">
                               <button 
                                 onClick={() => toggleMobileCategory('about')}
-                                className="flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                                className="dropdown-menu-button"
                               >
                                 <span>About</span>
                                 <ChevronRight 
@@ -741,7 +827,7 @@ export default function Header() {
                             <div className="space-y-1 mt-2">
                               <button 
                                 onClick={() => toggleMobileCategory('admission')}
-                                className="flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                                className="dropdown-menu-button"
                               >
                                 <span>Admission</span>
                                 <ChevronRight 
@@ -770,7 +856,7 @@ export default function Header() {
                             <div className="space-y-1 mt-2">
                               <button 
                                 onClick={() => toggleMobileCategory('disclosure')}
-                                className="flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                                className="dropdown-menu-button"
                               >
                                 <span>Mandatory Disclosure</span>
                                 <ChevronRight 
@@ -795,6 +881,62 @@ export default function Header() {
                               )}
                             </div>
                           </>
+                        ) : link.path === '/facilities' ? (
+                          // Facilities mobile submenu
+                          <div className="space-y-2">
+                            {link.submenu?.map((subItem) => (
+                              <Link 
+                                key={subItem.path} 
+                                href={subItem.path}
+                                className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                onClick={() => setIsMenuOpen(false)}
+                              >
+                                {subItem.label}
+                              </Link>
+                            ))}
+                          </div>
+                        ) : link.path === '/student-support' ? (
+                          // Student Support mobile submenu
+                          <div className="space-y-2">
+                            {link.submenu?.map((subItem) => (
+                              <Link 
+                                key={subItem.path} 
+                                href={subItem.path}
+                                className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                onClick={() => setIsMenuOpen(false)}
+                              >
+                                {subItem.label}
+                              </Link>
+                            ))}
+                          </div>
+                        ) : link.path === '/committees' ? (
+                          // Committees mobile submenu
+                          <div className="space-y-2">
+                            {link.submenu?.map((subItem) => (
+                              <Link 
+                                key={subItem.path} 
+                                href={subItem.path}
+                                className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                onClick={() => setIsMenuOpen(false)}
+                              >
+                                {subItem.label}
+                              </Link>
+                            ))}
+                          </div>
+                        ) : link.path === '/higher-education' ? (
+                          // Higher Education mobile submenu
+                          <div className="space-y-2">
+                            {link.submenu?.map((subItem) => (
+                              <Link 
+                                key={subItem.path} 
+                                href={subItem.path}
+                                className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                onClick={() => setIsMenuOpen(false)}
+                              >
+                                {subItem.label}
+                              </Link>
+                            ))}
+                          </div>
                         ) : null}
                       </div>
                     )}
