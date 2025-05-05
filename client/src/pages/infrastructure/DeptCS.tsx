@@ -2,6 +2,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import Breadcrumb from '@/components/Breadcrumb';
 import { Building, Monitor, Users, ShieldCheck, Computer } from 'lucide-react';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import NewsTicker from '@/components/NewsTicker';
+import { newsItems } from '@/data/collegeData';
 
 export default function DeptCS() {
   return (
@@ -10,6 +14,9 @@ export default function DeptCS() {
         <title>Computer Science Department Infrastructure | JSS Polytechnic</title>
         <meta name="description" content="Computer Science Department infrastructure at JSS Polytechnic - Modern classrooms, computer labs, and facilities for quality technical education." />
       </Helmet>
+      
+      <Header />
+      <NewsTicker news={newsItems} />
       
       {/* Page Header */}
       <div className="bg-primary text-white py-12">
@@ -195,6 +202,7 @@ export default function DeptCS() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

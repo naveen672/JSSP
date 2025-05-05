@@ -183,6 +183,7 @@ export default function Infrastructure() {
           </section>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
