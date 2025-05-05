@@ -18,6 +18,15 @@ export default function AboutSection({ description, features, stats, imageUrl, l
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
+            {logoUrl && (
+              <div className="mb-6">
+                <img 
+                  src={logoUrl} 
+                  alt="JSS Polytechnic Logo" 
+                  className="h-20 w-auto mb-4"
+                />
+              </div>
+            )}
             <div className="flex items-center gap-3 mb-4">
               <Info className="text-secondary" size={28} />
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary">About JSS Polytechnic</h2>
