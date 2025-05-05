@@ -103,18 +103,16 @@ export default function Header() {
 
   // Facilities submenus
   const facilitiesSubmenus: SubmenuItem[] = [
-    { path: '/library', label: 'Library', category: 'facilities' },
+    { path: '/library', label: 'Library & Information Centre', category: 'facilities' },
     { path: '/hostel', label: 'Hostel', category: 'facilities' },
     { path: '/sports', label: 'Sports', category: 'facilities' },
-    { path: '/infrastructure', label: 'Infrastructure', category: 'facilities' },
-    { path: '/cs-engineering', label: 'Computer Science & Engineering', category: 'facilities' },
-    { path: '/ec-engineering', label: 'Electronics & Communication Engineering', category: 'facilities' },
-    { path: '/mechanical-engineering', label: 'Mechanical Engineering', category: 'facilities' },
-    { path: '/ee-engineering', label: 'Electrical & Electronics Engineering', category: 'facilities' },
-    { path: '/mechatronics-engineering', label: 'Mechatronics Engineering', category: 'facilities' },
-    { path: '/is-engineering', label: 'Information Science & Engineering', category: 'facilities' },
-    { path: '/civil-engineering', label: 'Civil Engineering', category: 'facilities' },
-    { path: '/science-department', label: 'Science Department', category: 'facilities' },
+    { path: '/infrastructure', label: 'Infrastructure', category: 'infrastructure' },
+    { path: '/infrastructure/dept-cs', label: 'Computer Science & Engineering', category: 'infrastructure' },
+    { path: '/infrastructure/dept-ec', label: 'Electronics & Communication', category: 'infrastructure' },
+    { path: '/infrastructure/dept-me', label: 'Mechanical Engineering', category: 'infrastructure' },
+    { path: '/infrastructure/dept-ee', label: 'Electrical & Electronics', category: 'infrastructure' },
+    { path: '/infrastructure/dept-mt', label: 'Mechatronics', category: 'infrastructure' },
+    { path: '/infrastructure/dept-ce', label: 'Civil Engineering', category: 'infrastructure' },
   ];
 
   // Student Support submenus with nested categories
