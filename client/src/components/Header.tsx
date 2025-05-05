@@ -32,7 +32,15 @@ export default function Header() {
   const [location] = useLocation();
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    const newState = !isMenuOpen;
+    setIsMenuOpen(newState);
+    
+    // Add or remove the body class for preventing background scroll
+    if (newState) {
+      document.body.classList.add('mobile-menu-open');
+    } else {
+      document.body.classList.remove('mobile-menu-open');
+    }
   };
 
   // Submenu items for Home
@@ -650,7 +658,7 @@ export default function Header() {
         
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-3 space-y-3">
+          <div className="md:hidden py-3 space-y-3 max-h-[80vh] overflow-y-auto pb-8">
             {navLinks.map((link) => (
               <div key={link.path}>
                 {link.hasSubmenu ? (

@@ -58,6 +58,13 @@
     @apply font-sans antialiased bg-background text-foreground;
   }
   
+  /* Mobile menu scrolling fix */
+  @media (max-width: 768px) {
+    body.mobile-menu-open {
+      overflow: hidden;
+    }
+  }
+  
   p, span, li {
     @apply text-neutral-800 font-medium;
   }
