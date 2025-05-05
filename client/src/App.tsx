@@ -34,6 +34,7 @@ import NCCAnnualReport from "@/pages/NCCAnnualReport";
 import AuditReport20222023 from "@/pages/AuditReport20222023";
 import AuditReport20212022 from "@/pages/AuditReport20212022";
 import AuditReport20202021 from "@/pages/AuditReport20202021";
+import CalendarOfEvents from "@/pages/Calendar";
 
 function Router() {
   return (
@@ -64,6 +65,7 @@ function Router() {
       <Route path="/audit-report-2022-2023" component={AuditReport20222023} />
       <Route path="/audit-report-2021-2022" component={AuditReport20212022} />
       <Route path="/audit-report-2020-2021" component={AuditReport20202021} />
+      <Route path="/calendar-of-events" component={CalendarOfEvents} />
       
       {/* 404 Not Found */}
       <Route component={NotFound} />
