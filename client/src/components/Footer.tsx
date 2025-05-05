@@ -2,6 +2,7 @@ import { Link } from 'wouter';
 import { Facebook, Twitter, Linkedin, Instagram, MapPin, Phone, Mail } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
+import Logo from './Logo';
 
 export default function Footer() {
   const quickLinks = [
@@ -31,11 +32,7 @@ export default function Footer() {
           <div>
             <div className="flex flex-col items-center space-y-3 mb-6">
               <div className="bg-white p-2 rounded-lg">
-                <img 
-                  src="/jsslogo.png" 
-                  alt="JSS Polytechnic Logo" 
-                  className="h-12 w-auto" 
-                />
+                <Logo className="h-12 w-auto" />
               </div>
             </div>
             <p className="text-neutral-100 opacity-80 mb-4">

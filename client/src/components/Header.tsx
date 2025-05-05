@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'wouter';
 import { Menu, X } from 'lucide-react';
+import Logo from './Logo';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,11 +28,7 @@ export default function Header() {
           <Link href="/">
             <div className="flex items-center space-x-3 cursor-pointer">
               <div className="h-12 flex items-center justify-center">
-                <img 
-                  src="/jsslogo.png" 
-                  alt="JSS Polytechnic Logo" 
-                  className="h-12 w-auto" 
-                />
+                <Logo className="h-12 w-auto" />
               </div>
               <div>
                 <p className="text-neutral-gray text-xs hidden md:block">Excellence in Technical Education</p>
