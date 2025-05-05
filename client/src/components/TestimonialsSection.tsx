@@ -1,3 +1,5 @@
+import { MessageSquareQuote } from 'lucide-react';
+
 interface Testimonial {
   id: number;
   quote: string;
@@ -16,7 +18,10 @@ export default function TestimonialsSection({ testimonials }: TestimonialsSectio
     <section className="py-16 bg-neutral">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary">Student Testimonials</h2>
+          <div className="flex items-center justify-center gap-3 mb-2">
+            <MessageSquareQuote className="text-secondary" size={28} />
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary">Student Testimonials</h2>
+          </div>
           <div className="w-24 h-1 bg-secondary mx-auto mt-4 mb-6"></div>
           <p className="text-neutral-gray max-w-2xl mx-auto">
             Hear what our students and alumni have to say about their experience at JSS Polytechnic.

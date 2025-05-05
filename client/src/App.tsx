@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import { useState, useEffect } from 'react';
 import SplashScreen from "@/components/SplashScreen";
+import ScrollToTop from "@/components/ScrollToTop";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Academics from "@/pages/Academics";
@@ -43,7 +44,12 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
-        {showSplash ? <SplashScreen /> : <Router />}
+        {showSplash ? <SplashScreen /> : (
+          <>
+            <Router />
+            <ScrollToTop />
+          </>
+        )}
       </TooltipProvider>
     </QueryClientProvider>
   );
