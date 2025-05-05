@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Breadcrumb from '@/components/Breadcrumb';
-import { Building, Monitor, Users, ShieldCheck, DesktopComputer } from 'lucide-react';
+import { Building, Monitor, Users, ShieldCheck, Computer } from 'lucide-react';
 
 export default function DeptCS() {
   return (
@@ -15,7 +15,7 @@ export default function DeptCS() {
       <div className="bg-primary text-white py-12">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl md:text-4xl font-bold mb-4 flex items-center">
-            <DesktopComputer className="mr-3" size={32} />
+            <Computer className="mr-3" size={32} />
             Computer Science Department Infrastructure
           </h1>
           <Breadcrumb items={[

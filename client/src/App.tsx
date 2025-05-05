@@ -54,6 +54,20 @@ import DeptIS from "@/pages/DeptIS";
 import DeptME from "@/pages/DeptME";
 import DeptSC from "@/pages/DeptSC";
 
+// Facility pages
+import Library from "@/pages/Library";
+import Hostel from "@/pages/Hostel";
+import Sports from "@/pages/Sports";
+import Infrastructure from "@/pages/Infrastructure";
+
+// Infrastructure department pages
+import InfrastructureDeptCS from "@/pages/infrastructure/DeptCS";
+import InfrastructureDeptEC from "@/pages/infrastructure/DeptEC";
+import InfrastructureDeptME from "@/pages/infrastructure/DeptME";
+import InfrastructureDeptEE from "@/pages/infrastructure/DeptEE";
+import InfrastructureDeptMT from "@/pages/infrastructure/DeptMT";
+import InfrastructureDeptCE from "@/pages/infrastructure/DeptCE";
+
 // Collaboration pages
 import JSSMOUs from "@/pages/JSSMOUs";
 import AboutAcademics from "@/pages/AboutAcademics";
