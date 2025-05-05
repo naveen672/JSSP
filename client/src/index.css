@@ -151,7 +151,7 @@
   
   /* Apply consistent styles to all dropdown buttons */
   .dropdown-menu-button {
-    @apply flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-primary hover:bg-gray-50 rounded !important;
+    @apply flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-foreground hover:bg-primary/5 hover:text-primary rounded-md transition-all duration-200 !important;
   }
   
   /* Header enhancements */
@@ -164,5 +164,10 @@
   footer {
     background: linear-gradient(to right, hsl(var(--primary)/0.05), hsl(var(--primary)/0.02));
     @apply border-t border-gray-200;
+  }
+  
+  /* Mobile submenu link styling */
+  .submenu-link {
+    @apply block py-1.5 px-4 text-sm text-foreground hover:bg-primary/5 hover:text-primary rounded-md transition-all duration-200 !important;
   }
 }

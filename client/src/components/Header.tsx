@@ -640,11 +640,19 @@ export default function Header() {
                 <Link 
                   key={link.path} 
                   href={link.path}
-                  className={`text-primary hover:text-secondary font-medium transition duration-300 ${
-                    location === link.path ? 'text-secondary font-semibold' : ''
-                  }`}
+                  className={`relative font-medium transition-all duration-300 py-2 group inline-block
+                    ${location === link.path 
+                      ? 'text-primary font-semibold' 
+                      : 'text-foreground hover:text-primary'
+                    }
+                  `}
                 >
-                  {link.label}
+                  <span className="relative">
+                    {link.label}
+                    <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full 
+                      ${location === link.path ? 'w-full' : ''}
+                    `}></span>
+                  </span>
                 </Link>
               )
             )}
@@ -652,7 +660,7 @@ export default function Header() {
           
           {/* Mobile menu button */}
           <button 
-            className="md:hidden text-primary focus:outline-none" 
+            className="md:hidden text-primary hover:text-primary/80 focus:outline-none p-2 rounded-full transition-all duration-300 bg-transparent hover:bg-primary/5" 
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
@@ -666,21 +674,21 @@ export default function Header() {
         
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-3 space-y-3 max-h-[80vh] overflow-y-auto pb-8">
+          <div className="md:hidden py-3 space-y-3 max-h-[80vh] overflow-y-auto pb-8 bg-white/95 backdrop-blur-sm rounded-b-lg shadow-sm border-t border-gray-100">
             {navLinks.map((link) => (
               <div key={link.path}>
                 {link.hasSubmenu ? (
                   <div>
                     <button 
-                      className={`flex items-center justify-between w-full py-2 px-4 text-primary hover:bg-neutral-100 rounded ${
-                        location === link.path ? 'bg-neutral-100 text-secondary font-semibold' : ''
+                      className={`flex items-center justify-between w-full py-2.5 px-4 text-foreground hover:bg-primary/5 hover:text-primary rounded-md transition-all duration-200 ${
+                        location === link.path ? 'bg-primary/10 text-primary font-semibold' : ''
                       }`}
                       onClick={() => toggleMobileSubmenu(link.path)}
                     >
                       <span>{link.label}</span>
                       <ChevronDown 
-                        className={`h-4 w-4 transition-transform duration-200 ${
-                          expandedMobileMenus[link.path] ? 'transform rotate-180' : ''
+                        className={`h-4 w-4 transition-transform duration-300 ${
+                          expandedMobileMenus[link.path] ? 'transform rotate-180 text-primary' : ''
                         }`} 
                       />
                     </button>
@@ -695,12 +703,12 @@ export default function Header() {
                             <div className="space-y-1">
                               <button 
                                 onClick={() => toggleMobileCategory('about-home')}
-                                className="dropdown-menu-button"
+                                className="flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-foreground hover:bg-primary/5 hover:text-primary rounded-md transition-all duration-200"
                               >
                                 <span>About</span>
                                 <ChevronRight 
-                                  className={`ml-1 h-4 w-4 transition-transform duration-200 ${
-                                    activeMobileCategories['about-home'] ? 'transform rotate-90' : ''
+                                  className={`ml-1 h-4 w-4 transition-transform duration-300 ${
+                                    activeMobileCategories['about-home'] ? 'transform rotate-90 text-primary' : ''
                                   }`}
                                 />
                               </button>
@@ -1123,8 +1131,8 @@ export default function Header() {
                 ) : (
                   <Link 
                     href={link.path}
-                    className={`block py-2 px-4 text-primary hover:bg-neutral-100 rounded ${
-                      location === link.path ? 'bg-neutral-100 text-secondary font-semibold' : ''
+                    className={`block py-2.5 px-4 text-foreground hover:bg-primary/5 hover:text-primary rounded-md transition-all duration-200 ${
+                      location === link.path ? 'bg-primary/10 text-primary font-semibold' : ''
                     }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
