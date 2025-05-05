@@ -32,7 +32,7 @@ export default function ProgramsSection({ programs }: ProgramsSectionProps) {
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary">Our Programs</h2>
           </div>
           <div className="w-24 h-1 bg-secondary mx-auto mt-4 mb-6"></div>
-          <p className="text-[#1a2542] max-w-2xl mx-auto font-medium leading-relaxed">
+          <p className="text-gray-700 max-w-2xl mx-auto font-medium leading-relaxed">
             Discover our industry-aligned diploma programs designed to give you 
             practical skills and knowledge for a successful career in today's competitive market.
           </p>
@@ -50,8 +50,8 @@ export default function ProgramsSection({ programs }: ProgramsSectionProps) {
               ></div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-heading font-bold text-primary mb-2">{program.title}</h3>
-                <p className="text-[#1a2542] mb-4 text-base font-medium leading-relaxed">{program.description}</p>
-                <div className="flex items-center text-sm text-neutral-gray mb-4">
+                <p className="text-gray-700 mb-4 text-base font-medium leading-relaxed">{program.description}</p>
+                <div className="flex items-center text-sm text-gray-700 mb-4">
                   <Clock className="text-primary text-base mr-2" size={18} />
                   <span>{program.duration}</span>
                   <span className="mx-2">|</span>
@@ -67,7 +67,7 @@ export default function ProgramsSection({ programs }: ProgramsSectionProps) {
                   </Link>
                   
                   <DropdownMenu>
-                    <DropdownMenuTrigger className="inline-flex items-center justify-center rounded-md text-primary px-2 py-1 text-sm font-medium hover:bg-primary/10 transition-colors">
+                    <DropdownMenuTrigger className="inline-flex items-center justify-center rounded-md bg-gray-100 border border-gray-200 text-gray-800 px-2 py-1 text-sm font-medium hover:bg-gray-200 transition-colors">
                       Options <ChevronDown className="h-4 w-4 ml-1" />
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end">
