@@ -47,6 +47,7 @@ import DeptSC from "@/pages/DeptSC";
 
 // Collaboration pages
 import JSSMOUs from "@/pages/JSSMOUs";
+import AboutAcademics from "@/pages/AboutAcademics";
 
 function Router() {
   return (
@@ -90,6 +91,9 @@ function Router() {
       
       {/* Collaboration Routes */}
       <Route path="/jss-mous" component={JSSMOUs} />
+      
+      {/* Academic Routes */}
+      <Route path="/about-academics" component={AboutAcademics} />
       
       {/* 404 Not Found */}
       <Route component={NotFound} />
