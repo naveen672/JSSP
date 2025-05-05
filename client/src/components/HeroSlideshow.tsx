@@ -79,14 +79,14 @@ export default function HeroSlideshow({ slides }: HeroSlideshowProps) {
                   backgroundPosition: 'center',
                 }}
               >
-                <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40"></div>
                 <div className="container mx-auto px-4 h-full flex items-center">
-                  <div className="text-white max-w-2xl">
+                  <div className="text-white max-w-2xl z-10">
                     <motion.h2 
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5 }}
-                      className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold leading-tight"
+                      className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight drop-shadow-xl"
                     >
                       {slide.title}
                     </motion.h2>
@@ -94,7 +94,7 @@ export default function HeroSlideshow({ slides }: HeroSlideshowProps) {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: 0.3 }}
-                      className="mt-4 text-lg"
+                      className="mt-4 text-lg md:text-xl drop-shadow-md"
                     >
                       {slide.description}
                     </motion.p>
@@ -106,7 +106,7 @@ export default function HeroSlideshow({ slides }: HeroSlideshowProps) {
                     >
                       <Button 
                         size="lg" 
-                        className="bg-secondary hover:bg-secondary-dark text-white font-medium transition duration-300"
+                        className="btn-primary text-white font-medium shadow-lg hover:shadow-xl"
                         asChild
                       >
                         <a href={slide.primaryButton.url}>{slide.primaryButton.text}</a>
@@ -114,7 +114,7 @@ export default function HeroSlideshow({ slides }: HeroSlideshowProps) {
                       <Button 
                         size="lg" 
                         variant="outline" 
-                        className="border-2 border-white text-white hover:bg-white hover:text-primary"
+                        className="border-2 border-white text-white hover:bg-white hover:text-primary shadow-lg hover:shadow-xl transition-all duration-300"
                         asChild
                       >
                         <a href={slide.secondaryButton.url}>{slide.secondaryButton.text}</a>
@@ -127,21 +127,23 @@ export default function HeroSlideshow({ slides }: HeroSlideshowProps) {
           ))}
         </CarouselContent>
         
-        <CarouselPrevious className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-70 text-white p-2 rounded-full focus:outline-none z-10">
+        <CarouselPrevious className="absolute left-6 top-1/2 transform -translate-y-1/2 bg-primary/80 hover:bg-primary text-white p-3 rounded-full focus:outline-none z-10 shadow-md transition-all duration-300 opacity-80 hover:opacity-100">
           <ChevronLeft className="h-6 w-6" />
         </CarouselPrevious>
-        <CarouselNext className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-70 text-white p-2 rounded-full focus:outline-none z-10">
+        <CarouselNext className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-primary/80 hover:bg-primary text-white p-3 rounded-full focus:outline-none z-10 shadow-md transition-all duration-300 opacity-80 hover:opacity-100">
           <ChevronRight className="h-6 w-6" />
         </CarouselNext>
       </Carousel>
       
       {/* Slide Indicators */}
-      <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 z-10">
         {slides.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full bg-white focus:outline-none transition-opacity duration-300 ${
-              current === index ? 'bg-opacity-100' : 'bg-opacity-50'
+            className={`w-3 h-3 rounded-full focus:outline-none transition-all duration-300 ${
+              current === index 
+                ? 'bg-primary shadow-md scale-125' 
+                : 'bg-white/70 hover:bg-white/90'
             }`}
             onClick={() => api?.scrollTo(index)}
             aria-label={`Go to slide ${index + 1}`}

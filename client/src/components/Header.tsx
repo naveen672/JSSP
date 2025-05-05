@@ -252,7 +252,7 @@ export default function Header() {
                           {activeSubmenuCategory === 'about-home' && (
                             <div className="pl-2 py-1 space-y-1">
                               {link.submenu?.slice(0, 6).map((subItem) => (
-                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
+                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-primary/5 hover:text-primary transition-all duration-200">
                                   <Link href={subItem.path} className="w-full cursor-pointer">
                                     {subItem.label}
                                   </Link>
@@ -280,7 +280,7 @@ export default function Header() {
                           {activeSubmenuCategory === 'benefits' && (
                             <div className="pl-2 py-1 space-y-1">
                               {link.submenu?.slice(6, 9).map((subItem) => (
-                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
+                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-primary/5 hover:text-primary transition-all duration-200">
                                   <Link href={subItem.path} className="w-full cursor-pointer">
                                     {subItem.label}
                                   </Link>
@@ -308,7 +308,7 @@ export default function Header() {
                           {activeSubmenuCategory === 'reports' && (
                             <div className="pl-2 py-1 space-y-1">
                               {link.submenu?.slice(9).map((subItem) => (
-                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
+                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-primary/5 hover:text-primary transition-all duration-200">
                                   <Link href={subItem.path} className="w-full cursor-pointer">
                                     {subItem.label}
                                   </Link>
@@ -337,7 +337,7 @@ export default function Header() {
                           {activeSubmenuCategory === 'departments' && (
                             <div className="pl-2 py-1 space-y-1">
                               {link.submenu?.filter(item => item.category === 'departments').map((subItem) => (
-                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
+                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-primary/5 hover:text-primary transition-all duration-200">
                                   <Link href={subItem.path} className="w-full cursor-pointer">
                                     {subItem.label}
                                   </Link>
@@ -365,7 +365,7 @@ export default function Header() {
                           {activeSubmenuCategory === 'calendar' && (
                             <div className="pl-2 py-1 space-y-1">
                               {link.submenu?.filter(item => item.category === 'calendar').map((subItem) => (
-                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
+                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-primary/5 hover:text-primary transition-all duration-200">
                                   <Link href={subItem.path} className="w-full cursor-pointer">
                                     {subItem.label}
                                   </Link>
@@ -393,7 +393,7 @@ export default function Header() {
                           {activeSubmenuCategory === 'collaborations' && (
                             <div className="pl-2 py-1 space-y-1">
                               {link.submenu?.filter(item => item.category === 'collaborations').map((subItem) => (
-                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
+                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-primary/5 hover:text-primary transition-all duration-200">
                                   <Link href={subItem.path} className="w-full cursor-pointer">
                                     {subItem.label}
                                   </Link>
@@ -421,7 +421,7 @@ export default function Header() {
                           {activeSubmenuCategory === 'professional' && (
                             <div className="pl-2 py-1 space-y-1">
                               {link.submenu?.filter(item => item.category === 'professional').map((subItem) => (
-                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
+                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-primary/5 hover:text-primary transition-all duration-200">
                                   <Link href={subItem.path} className="w-full cursor-pointer">
                                     {subItem.label}
                                   </Link>
@@ -449,7 +449,7 @@ export default function Header() {
                           {activeSubmenuCategory === 'about' && (
                             <div className="pl-2 py-1 space-y-1">
                               {link.submenu?.filter(item => item.category === 'about').map((subItem) => (
-                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
+                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-primary/5 hover:text-primary transition-all duration-200">
                                   <Link href={subItem.path} className="w-full cursor-pointer">
                                     {subItem.label}
                                   </Link>
@@ -477,7 +477,7 @@ export default function Header() {
                           {activeSubmenuCategory === 'admission' && (
                             <div className="pl-2 py-1 space-y-1">
                               {link.submenu?.filter(item => item.category === 'admission').map((subItem) => (
-                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
+                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-primary/5 hover:text-primary transition-all duration-200">
                                   <Link href={subItem.path} className="w-full cursor-pointer">
                                     {subItem.label}
                                   </Link>
@@ -505,7 +505,7 @@ export default function Header() {
                           {activeSubmenuCategory === 'disclosure' && (
                             <div className="pl-2 py-1 space-y-1">
                               {link.submenu?.filter(item => item.category === 'disclosure').map((subItem) => (
-                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
+                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-primary/5 hover:text-primary transition-all duration-200">
                                   <Link href={subItem.path} className="w-full cursor-pointer">
                                     {subItem.label}
                                   </Link>
@@ -519,7 +519,7 @@ export default function Header() {
                       // Facilities dropdown content
                       <>
                         {link.submenu?.map((subItem) => (
-                          <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
+                          <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-primary/5 hover:text-primary transition-all duration-200">
                             <Link href={subItem.path} className="w-full cursor-pointer">
                               {subItem.label}
                             </Link>
@@ -545,7 +545,7 @@ export default function Header() {
                           {activeSubmenuCategory === 'support' && (
                             <div className="pl-2 py-1 space-y-1">
                               {link.submenu?.filter(item => item.category === 'support').map((subItem) => (
-                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
+                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-primary/5 hover:text-primary transition-all duration-200">
                                   <Link href={subItem.path} className="w-full cursor-pointer">
                                     {subItem.label}
                                   </Link>
@@ -573,7 +573,7 @@ export default function Header() {
                           {activeSubmenuCategory === 'committees' && (
                             <div className="pl-2 py-1 space-y-1">
                               {link.submenu?.filter(item => item.category === 'committees').map((subItem) => (
-                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
+                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-primary/5 hover:text-primary transition-all duration-200">
                                   <Link href={subItem.path} className="w-full cursor-pointer">
                                     {subItem.label}
                                   </Link>
@@ -601,7 +601,7 @@ export default function Header() {
                           {activeSubmenuCategory === 'higher-ed' && (
                             <div className="pl-2 py-1 space-y-1">
                               {link.submenu?.filter(item => item.category === 'higher-ed').map((subItem) => (
-                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
+                                <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-primary/5 hover:text-primary transition-all duration-200">
                                   <Link href={subItem.path} className="w-full cursor-pointer">
                                     {subItem.label}
                                   </Link>
@@ -615,7 +615,7 @@ export default function Header() {
                       // Training & Placements dropdown content
                       <>
                         {link.submenu?.map((subItem) => (
-                          <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
+                          <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-primary/5 hover:text-primary transition-all duration-200">
                             <Link href={subItem.path} className="w-full cursor-pointer">
                               {subItem.label}
                             </Link>
@@ -626,7 +626,7 @@ export default function Header() {
                       // More dropdown content
                       <>
                         {link.submenu?.map((subItem) => (
-                          <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
+                          <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-primary/5 hover:text-primary transition-all duration-200">
                             <Link href={subItem.path} className="w-full cursor-pointer">
                               {subItem.label}
                             </Link>
@@ -718,7 +718,7 @@ export default function Header() {
                                     <Link 
                                       key={subItem.path} 
                                       href={subItem.path}
-                                      className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                      className="submenu-link"
                                       onClick={() => setIsMenuOpen(false)}
                                     >
                                       {subItem.label}
@@ -747,7 +747,7 @@ export default function Header() {
                                     <Link 
                                       key={subItem.path} 
                                       href={subItem.path}
-                                      className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                      className="submenu-link"
                                       onClick={() => setIsMenuOpen(false)}
                                     >
                                       {subItem.label}
@@ -776,7 +776,7 @@ export default function Header() {
                                     <Link 
                                       key={subItem.path} 
                                       href={subItem.path}
-                                      className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                      className="submenu-link"
                                       onClick={() => setIsMenuOpen(false)}
                                     >
                                       {subItem.label}
@@ -808,7 +808,7 @@ export default function Header() {
                                     <Link 
                                       key={subItem.path} 
                                       href={subItem.path}
-                                      className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                      className="submenu-link"
                                       onClick={() => setIsMenuOpen(false)}
                                     >
                                       {subItem.label}
@@ -837,7 +837,7 @@ export default function Header() {
                                     <Link 
                                       key={subItem.path} 
                                       href={subItem.path}
-                                      className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                      className="submenu-link"
                                       onClick={() => setIsMenuOpen(false)}
                                     >
                                       {subItem.label}
@@ -866,7 +866,7 @@ export default function Header() {
                                     <Link 
                                       key={subItem.path} 
                                       href={subItem.path}
-                                      className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                      className="submenu-link"
                                       onClick={() => setIsMenuOpen(false)}
                                     >
                                       {subItem.label}
@@ -895,7 +895,7 @@ export default function Header() {
                                     <Link 
                                       key={subItem.path} 
                                       href={subItem.path}
-                                      className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                      className="submenu-link"
                                       onClick={() => setIsMenuOpen(false)}
                                     >
                                       {subItem.label}
@@ -924,7 +924,7 @@ export default function Header() {
                                     <Link 
                                       key={subItem.path} 
                                       href={subItem.path}
-                                      className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                      className="submenu-link"
                                       onClick={() => setIsMenuOpen(false)}
                                     >
                                       {subItem.label}
@@ -953,7 +953,7 @@ export default function Header() {
                                     <Link 
                                       key={subItem.path} 
                                       href={subItem.path}
-                                      className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                      className="submenu-link"
                                       onClick={() => setIsMenuOpen(false)}
                                     >
                                       {subItem.label}
@@ -982,7 +982,7 @@ export default function Header() {
                                     <Link 
                                       key={subItem.path} 
                                       href={subItem.path}
-                                      className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                      className="submenu-link"
                                       onClick={() => setIsMenuOpen(false)}
                                     >
                                       {subItem.label}
@@ -999,7 +999,7 @@ export default function Header() {
                               <Link 
                                 key={subItem.path} 
                                 href={subItem.path}
-                                className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                className="submenu-link"
                                 onClick={() => setIsMenuOpen(false)}
                               >
                                 {subItem.label}
@@ -1028,7 +1028,7 @@ export default function Header() {
                                     <Link 
                                       key={subItem.path} 
                                       href={subItem.path}
-                                      className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                      className="submenu-link"
                                       onClick={() => setIsMenuOpen(false)}
                                     >
                                       {subItem.label}
@@ -1057,7 +1057,7 @@ export default function Header() {
                                     <Link 
                                       key={subItem.path} 
                                       href={subItem.path}
-                                      className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                      className="submenu-link"
                                       onClick={() => setIsMenuOpen(false)}
                                     >
                                       {subItem.label}
@@ -1086,7 +1086,7 @@ export default function Header() {
                                     <Link 
                                       key={subItem.path} 
                                       href={subItem.path}
-                                      className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                      className="submenu-link"
                                       onClick={() => setIsMenuOpen(false)}
                                     >
                                       {subItem.label}
@@ -1103,7 +1103,7 @@ export default function Header() {
                               <Link 
                                 key={subItem.path} 
                                 href={subItem.path}
-                                className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                className="submenu-link"
                                 onClick={() => setIsMenuOpen(false)}
                               >
                                 {subItem.label}
@@ -1117,7 +1117,7 @@ export default function Header() {
                               <Link 
                                 key={subItem.path} 
                                 href={subItem.path}
-                                className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                className="submenu-link"
                                 onClick={() => setIsMenuOpen(false)}
                               >
                                 {subItem.label}
