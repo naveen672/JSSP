@@ -36,6 +36,15 @@ import AuditReport20212022 from "@/pages/AuditReport20212022";
 import AuditReport20202021 from "@/pages/AuditReport20202021";
 import CalendarOfEvents from "@/pages/Calendar";
 
+// Department pages
+import DeptCivil from "@/pages/DeptCivil";
+import DeptCS from "@/pages/DeptCS";
+import DeptEC from "@/pages/DeptEC";
+import DeptEE from "@/pages/DeptEE";
+import DeptIS from "@/pages/DeptIS";
+import DeptME from "@/pages/DeptME";
+import DeptSC from "@/pages/DeptSC";
+
 function Router() {
   return (
     <Switch>
