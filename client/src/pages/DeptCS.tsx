@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export default function DeptCS() {
   return (
@@ -11,6 +12,15 @@ export default function DeptCS() {
       </Helmet>
 
       <Header />
+      
+      {/* Breadcrumb */}
+      <Breadcrumb 
+        items={[
+          { label: "Academics", path: "/academics" },
+          { label: "Departments", path: "/academics" },
+          { label: "Computer Science & Engineering", path: "/dept-cs" }
+        ]} 
+      />
 
       {/* Banner Section */}
       <div className="relative bg-gradient-to-r from-primary to-primary/80 py-20 px-4">

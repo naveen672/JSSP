@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import { PhoneCall, Clock, Mail, MapPin } from "lucide-react";
 
 export default function AdmissionHelpdesk() {
@@ -12,6 +13,14 @@ export default function AdmissionHelpdesk() {
       </Helmet>
 
       <Header />
+      
+      {/* Breadcrumb */}
+      <Breadcrumb 
+        items={[
+          { label: "Admissions", path: "/admissions" },
+          { label: "Admission Help Desk", path: "/admission-helpdesk" }
+        ]} 
+      />
 
       {/* Banner Section */}
       <div className="relative bg-gradient-to-r from-primary to-primary/80 py-20 px-4">
