@@ -25,6 +25,14 @@ import AICTE from "@/pages/AICTE";
 import NBA from "@/pages/NBA";
 import MandatoryDisclosure from "@/pages/MandatoryDisclosure";
 
+// Professional Bodies pages
+import ProfBodyCS from "@/pages/ProfBodyCS";
+import ProfBodyEC from "@/pages/ProfBodyEC";
+import ProfBodyEE from "@/pages/ProfBodyEE";
+import ProfBodyME from "@/pages/ProfBodyME";
+import ProfBodyMT from "@/pages/ProfBodyMT";
+import ProfBodyCE from "@/pages/ProfBodyCE";
+
 // Employee Benefits pages
 import StudentAccidentPolicy from "@/pages/StudentAccidentPolicy";
 import JSSHealthScheme from "@/pages/JSSHealthScheme";
@@ -106,6 +114,14 @@ function Router() {
       <Route path="/college-prospectus" component={CollegeProspectus} />
       <Route path="/admission-details" component={AdmissionDetails} />
       <Route path="/admission-helpdesk" component={AdmissionHelpdesk} />
+      
+      {/* Professional Bodies Routes */}
+      <Route path="/prof-body-cs" component={ProfBodyCS} />
+      <Route path="/prof-body-ec" component={ProfBodyEC} />
+      <Route path="/prof-body-ee" component={ProfBodyEE} />
+      <Route path="/prof-body-me" component={ProfBodyME} />
+      <Route path="/prof-body-mt" component={ProfBodyMT} />
+      <Route path="/prof-body-ce" component={ProfBodyCE} />
       
       {/* 404 Not Found */}
       <Route component={NotFound} />
