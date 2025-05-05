@@ -76,6 +76,15 @@ function Router() {
       <Route path="/audit-report-2020-2021" component={AuditReport20202021} />
       <Route path="/calendar-of-events" component={CalendarOfEvents} />
       
+      {/* Department Routes */}
+      <Route path="/dept-cs" component={DeptCS} />
+      <Route path="/dept-ec" component={DeptEC} />
+      <Route path="/dept-me" component={DeptME} />
+      <Route path="/dept-ee" component={DeptEE} />
+      <Route path="/dept-is" component={DeptIS} />
+      <Route path="/dept-ce" component={DeptCivil} />
+      <Route path="/dept-sc" component={DeptSC} />
+      
       {/* 404 Not Found */}
       <Route component={NotFound} />
     </Switch>
