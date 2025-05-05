@@ -9,9 +9,10 @@ interface AboutSectionProps {
     label: string;
   };
   imageUrl: string;
+  logoUrl?: string;
 }
 
-export default function AboutSection({ description, features, stats, imageUrl }: AboutSectionProps) {
+export default function AboutSection({ description, features, stats, imageUrl, logoUrl }: AboutSectionProps) {
   return (
     <section className="py-16 bg-neutral-50">
       <div className="container mx-auto px-4">

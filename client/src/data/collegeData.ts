@@ -12,6 +12,7 @@ import image10 from '@assets/10.jpg';
 import image11 from '@assets/11.jpg';
 import image12 from '@assets/12.jpg';
 import image13 from '@assets/13.jpg';
+import jssLogo from '@assets/jsslogo.png';
 
 // Hero Slideshow Data
 export const heroSlides = [
@@ -143,7 +144,8 @@ export const aboutInfo = {
     value: '98%',
     label: 'Placement Rate'
   },
-  imageUrl: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=600&q=80'
+  imageUrl: image10,
+  logoUrl: jssLogo
 };
 
 // Facilities Data
