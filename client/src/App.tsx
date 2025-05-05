@@ -45,6 +45,9 @@ import DeptIS from "@/pages/DeptIS";
 import DeptME from "@/pages/DeptME";
 import DeptSC from "@/pages/DeptSC";
 
+// Collaboration pages
+import JSSMOUs from "@/pages/JSSMOUs";
+
 function Router() {
   return (
     <Switch>
@@ -84,6 +87,9 @@ function Router() {
       <Route path="/dept-is" component={DeptIS} />
       <Route path="/dept-ce" component={DeptCivil} />
       <Route path="/dept-sc" component={DeptSC} />
+      
+      {/* Collaboration Routes */}
+      <Route path="/jss-mous" component={JSSMOUs} />
       
       {/* 404 Not Found */}
       <Route component={NotFound} />
