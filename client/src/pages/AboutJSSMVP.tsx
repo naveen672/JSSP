@@ -12,7 +12,7 @@ export default function AboutJSSMVP() {
       <div className="bg-gradient-to-r from-primary to-primary/90 text-white py-12 shadow-md relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">About JSSMVP</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white drop-shadow-sm">About JSSMVP</h1>
           <div className="flex items-center gap-2 text-white/90">
             <span className="hover:text-white transition-colors">Home</span>
             <span className="text-white/50">•</span>
@@ -46,7 +46,7 @@ export default function AboutJSSMVP() {
             </p>
             
             <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-6 rounded-lg my-8 border-l-4 border-primary shadow-sm">
-              <h2 className="text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/90">TECHNICAL EDUCATION SYSTEM OF JSS MAHAVIDYAPEETHA</h2>
+              <h2 className="text-2xl font-bold mb-4 text-[#1a2542]">TECHNICAL EDUCATION SYSTEM OF JSS MAHAVIDYAPEETHA</h2>
               <p className="mb-0 text-[#1a2542] font-medium">
                 As the number of Technical Institutions has increased considerably, JSS Mahavidyapeetha has established a separate Directorate to look after its Technical Institutions. This Directorate is under the control of a Director (Technical).
               </p>
@@ -58,7 +58,7 @@ export default function AboutJSSMVP() {
             
             <div className="grid md:grid-cols-2 gap-6 my-8">
               <div className="bg-white rounded-lg shadow-md border border-gray-100 p-6 hover:shadow-lg transition-shadow duration-300 hover:border-primary/20">
-                <h3 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/90 mb-4 flex items-center">
+                <h3 className="text-xl font-bold text-[#1a2542] mb-4 flex items-center">
                   <span className="bg-gradient-to-br from-primary/20 to-primary/10 p-2 rounded-full mr-3 inline-flex shadow-sm">
                     <span className="w-2 h-2 bg-primary rounded-full"></span>
                   </span>
@@ -85,7 +85,7 @@ export default function AboutJSSMVP() {
               </div>
               
               <div className="bg-white rounded-lg shadow-md border border-gray-100 p-6 hover:shadow-lg transition-shadow duration-300 hover:border-primary/20">
-                <h3 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/90 mb-4 flex items-center">
+                <h3 className="text-xl font-bold text-[#1a2542] mb-4 flex items-center">
                   <span className="bg-gradient-to-br from-primary/20 to-primary/10 p-2 rounded-full mr-3 inline-flex shadow-sm">
                     <span className="w-2 h-2 bg-primary rounded-full"></span>
                   </span>
@@ -112,7 +112,7 @@ export default function AboutJSSMVP() {
               </div>
             </div>
             
-            <h3 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/90 mt-8 mb-4 flex items-center">
+            <h3 className="text-xl font-bold text-[#1a2542] mt-8 mb-4 flex items-center">
               <span className="bg-gradient-to-br from-primary/20 to-primary/10 p-2 rounded-full mr-3 inline-flex shadow-sm">
                 <span className="w-2 h-2 bg-primary rounded-full"></span>
               </span>

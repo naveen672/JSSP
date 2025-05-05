@@ -20,7 +20,7 @@ export default function CtaSection({ title, description, primaryButton, secondar
     <section className="py-20 bg-secondary text-white">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">{title}</h2>
-        <p className="max-w-2xl mx-auto mb-8 text-lg">{description}</p>
+        <p className="max-w-2xl mx-auto mb-8 text-lg font-medium text-white/90 leading-relaxed">{description}</p>
         <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
           <Button 
             size="lg"

@@ -23,8 +23,8 @@ export default function TestimonialsSection({ testimonials }: TestimonialsSectio
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary">Student Testimonials</h2>
           </div>
           <div className="w-24 h-1 bg-secondary mx-auto mt-4 mb-6"></div>
-          <p className="text-neutral-gray max-w-2xl mx-auto">
-            Hear what our students and alumni have to say about their experience at JSS Polytechnic.
+          <p className="text-[#1a2542] max-w-2xl mx-auto font-medium leading-relaxed">
+            Hear what our students and alumni have to say about their transformative learning experiences at JSS Polytechnic.
           </p>
         </div>
         
@@ -32,7 +32,7 @@ export default function TestimonialsSection({ testimonials }: TestimonialsSectio
           {testimonials.map((testimonial) => (
             <div key={testimonial.id} className="bg-white rounded-lg shadow-md p-6 relative">
               <div className="text-secondary text-5xl absolute -top-4 left-4">"</div>
-              <p className="text-neutral-gray mb-4 pt-4">{testimonial.quote}</p>
+              <p className="text-[#1a2542] mb-4 pt-4 font-medium leading-relaxed">{testimonial.quote}</p>
               <div className="flex items-center">
                 <img 
                   src={testimonial.avatar}

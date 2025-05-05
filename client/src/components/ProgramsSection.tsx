@@ -25,9 +25,9 @@ export default function ProgramsSection({ programs }: ProgramsSectionProps) {
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary">Our Programs</h2>
           </div>
           <div className="w-24 h-1 bg-secondary mx-auto mt-4 mb-6"></div>
-          <p className="text-neutral-gray max-w-2xl mx-auto">
+          <p className="text-[#1a2542] max-w-2xl mx-auto font-medium leading-relaxed">
             Discover our industry-aligned diploma programs designed to give you 
-            practical skills and knowledge for a successful career.
+            practical skills and knowledge for a successful career in today's competitive market.
           </p>
         </div>
         
@@ -43,7 +43,7 @@ export default function ProgramsSection({ programs }: ProgramsSectionProps) {
               ></div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-heading font-bold text-primary mb-2">{program.title}</h3>
-                <p className="text-neutral-gray mb-4 text-base">{program.description}</p>
+                <p className="text-[#1a2542] mb-4 text-base font-medium leading-relaxed">{program.description}</p>
                 <div className="flex items-center text-sm text-neutral-gray mb-4">
                   <Clock className="text-primary text-base mr-2" size={18} />
                   <span>{program.duration}</span>
