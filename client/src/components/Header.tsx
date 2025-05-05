@@ -296,7 +296,7 @@ export default function Header() {
                         <DropdownMenuGroup>
                           <button 
                             onClick={() => toggleNestedSubmenu('reports')}
-                            className="flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-primary hover:bg-neutral-100 rounded"
+                            className="flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-gray-800 hover:bg-gray-100 rounded"
                           >
                             <span>Reports & Downloads</span>
                             <ChevronRight 
@@ -680,7 +680,7 @@ export default function Header() {
                 {link.hasSubmenu ? (
                   <div>
                     <button 
-                      className={`flex items-center justify-between w-full py-2.5 px-4 text-foreground hover:bg-primary/5 hover:text-primary rounded-md transition-all duration-200 ${
+                      className={`flex items-center justify-between w-full py-2.5 px-4 text-gray-800 hover:bg-primary/5 hover:text-primary rounded-md transition-all duration-200 ${
                         location === link.path ? 'bg-primary/10 text-primary font-semibold' : ''
                       }`}
                       onClick={() => toggleMobileSubmenu(link.path)}
@@ -703,7 +703,7 @@ export default function Header() {
                             <div className="space-y-1">
                               <button 
                                 onClick={() => toggleMobileCategory('about-home')}
-                                className="flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-foreground hover:bg-primary/5 hover:text-primary rounded-md transition-all duration-200"
+                                className="flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-gray-800 hover:bg-primary/5 hover:text-primary rounded-md transition-all duration-200"
                               >
                                 <span>About</span>
                                 <ChevronRight 
