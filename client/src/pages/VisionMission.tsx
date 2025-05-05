@@ -2,25 +2,27 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Separator } from '@/components/ui/separator';
 import { Target, Compass } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export default function VisionMission() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
       
+      {/* Breadcrumb */}
+      <Breadcrumb 
+        items={[
+          { label: "About", path: "/about" },
+          { label: "Vision & Mission", path: "/vision-mission" }
+        ]} 
+      />
+      
       {/* Page Banner */}
       <div className="bg-gradient-to-r from-primary to-primary/90 text-white py-12 shadow-md relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]"></div>
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white drop-shadow-lg">Vision and Mission</h1>
-          <div className="flex items-center gap-2 text-white/90">
-            <span className="hover:text-white transition-colors">Home</span>
-            <span className="text-white/50">•</span>
-            <span className="font-medium hover:text-white transition-colors">About</span>
-            <span className="text-white/50">•</span>
-            <span className="font-medium">Vision & Mission</span>
-          </div>
+          <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">Vision and Mission</h1>
         </div>
       </div>
       

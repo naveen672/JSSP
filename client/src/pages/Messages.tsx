@@ -2,11 +2,20 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Separator } from '@/components/ui/separator';
 import { MessageSquare } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export default function Messages() {
   return (
     <div className="min-h-screen">
       <Header />
+      
+      {/* Breadcrumb */}
+      <Breadcrumb 
+        items={[
+          { label: "About", path: "/about" },
+          { label: "Messages", path: "/messages" }
+        ]} 
+      />
       
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
