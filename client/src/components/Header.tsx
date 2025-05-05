@@ -161,7 +161,7 @@ export default function Header() {
                   }`}>
                     {link.label} <ChevronDown className="ml-1 h-4 w-4" />
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent className="w-72">
+                  <DropdownMenuContent className="w-72 bg-white text-primary">
                     {link.path === '/' ? (
                       // Home dropdown content with click-to-show nested submenus
                       <>
@@ -169,7 +169,7 @@ export default function Header() {
                         <DropdownMenuGroup>
                           <button 
                             onClick={() => toggleNestedSubmenu('about-home')}
-                            className="flex justify-between items-center w-full px-2 py-2 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                            className="flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-primary hover:bg-neutral-100 rounded"
                           >
                             <span>About</span>
                             <ChevronRight 
@@ -197,7 +197,7 @@ export default function Header() {
                         <DropdownMenuGroup>
                           <button 
                             onClick={() => toggleNestedSubmenu('benefits')}
-                            className="flex justify-between items-center w-full px-2 py-2 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                            className="flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-primary hover:bg-neutral-100 rounded"
                           >
                             <span>Employee Benefits</span>
                             <ChevronRight 
@@ -225,7 +225,7 @@ export default function Header() {
                         <DropdownMenuGroup>
                           <button 
                             onClick={() => toggleNestedSubmenu('reports')}
-                            className="flex justify-between items-center w-full px-2 py-2 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                            className="flex justify-between items-center w-full py-2 px-4 text-sm font-medium text-primary hover:bg-neutral-100 rounded"
                           >
                             <span>Reports & Downloads</span>
                             <ChevronRight 
@@ -254,7 +254,7 @@ export default function Header() {
                         <DropdownMenuGroup>
                           <button 
                             onClick={() => toggleNestedSubmenu('departments')}
-                            className="flex justify-between items-center w-full px-2 py-2 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                            className="dropdown-menu-button"
                           >
                             <span>Departments</span>
                             <ChevronRight 
@@ -282,7 +282,7 @@ export default function Header() {
                         <DropdownMenuGroup>
                           <button 
                             onClick={() => toggleNestedSubmenu('calendar')}
-                            className="flex justify-between items-center w-full px-2 py-2 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                            className="dropdown-menu-button"
                           >
                             <span>Calendar of Events</span>
                             <ChevronRight 
@@ -310,7 +310,7 @@ export default function Header() {
                         <DropdownMenuGroup>
                           <button 
                             onClick={() => toggleNestedSubmenu('collaborations')}
-                            className="flex justify-between items-center w-full px-2 py-2 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                            className="dropdown-menu-button"
                           >
                             <span>JSS Collaborations</span>
                             <ChevronRight 
