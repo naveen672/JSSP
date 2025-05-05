@@ -137,6 +137,20 @@ function Router() {
       <Route path="/prof-body-mt" component={ProfBodyMT} />
       <Route path="/prof-body-ce" component={ProfBodyCE} />
       
+      {/* Facilities Routes */}
+      <Route path="/library" component={Library} />
+      <Route path="/hostel" component={Hostel} />
+      <Route path="/sports" component={Sports} />
+      <Route path="/infrastructure" component={Infrastructure} />
+      
+      {/* Infrastructure Department Routes */}
+      <Route path="/infrastructure/dept-cs" component={InfrastructureDeptCS} />
+      <Route path="/infrastructure/dept-ec" component={InfrastructureDeptEC} />
+      <Route path="/infrastructure/dept-me" component={InfrastructureDeptME} />
+      <Route path="/infrastructure/dept-ee" component={InfrastructureDeptEE} />
+      <Route path="/infrastructure/dept-mt" component={InfrastructureDeptMT} />
+      <Route path="/infrastructure/dept-ce" component={InfrastructureDeptCE} />
+      
       {/* 404 Not Found */}
       <Route component={NotFound} />
     </Switch>

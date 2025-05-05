@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Breadcrumb from '@/components/Breadcrumb';
-import { Cog, Tool, Users, ShieldCheck, Printer3d, Wrench } from 'lucide-react';
+import { Cog, Wrench, Users, ShieldCheck, Printer, Settings } from 'lucide-react';
 
 export default function DeptME() {
   return (
@@ -171,7 +171,7 @@ export default function DeptME() {
           <div className="lg:col-span-1 space-y-6">
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h2 className="text-xl font-bold text-primary mb-4 flex items-center">
-                <Tool className="mr-2" size={20} />
+                <Settings className="mr-2" size={20} />
                 Workshop Equipment
               </h2>
               <div className="space-y-3">
@@ -189,7 +189,7 @@ export default function DeptME() {
             
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h2 className="text-xl font-bold text-primary mb-4 flex items-center">
-                <Printer3d className="mr-2" size={20} />
+                <Printer className="mr-2" size={20} />
                 3D Printing Lab
               </h2>
               <div className="space-y-3">

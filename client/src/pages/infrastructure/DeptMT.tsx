@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Breadcrumb from '@/components/Breadcrumb';
-import { Cpu, Monitor, Robot, ShieldCheck, Layers } from 'lucide-react';
+import { Cpu, Monitor, Bot, ShieldCheck, Layers } from 'lucide-react';
 
 export default function DeptMT() {
   return (
@@ -15,7 +15,7 @@ export default function DeptMT() {
       <div className="bg-primary text-white py-12">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl md:text-4xl font-bold mb-4 flex items-center">
-            <Robot className="mr-3" size={32} />
+            <Bot className="mr-3" size={32} />
             Mechatronics Department Infrastructure
           </h1>
           <Breadcrumb items={[
