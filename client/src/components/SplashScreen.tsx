@@ -17,7 +17,7 @@ export default function SplashScreen() {
       >
         <div className="w-64 h-auto bg-white p-4 rounded-lg flex items-center justify-center">
           <img 
-            src="/assets/jsslogo.png" 
+            src="https://raw.githubusercontent.com/user-attachments/assets/main/jsslogo.png" 
             alt="JSS Polytechnic Logo" 
             className="w-full h-auto" 
           />

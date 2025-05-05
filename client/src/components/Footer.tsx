@@ -32,7 +32,7 @@ export default function Footer() {
             <div className="flex flex-col items-center space-y-3 mb-6">
               <div className="bg-white p-2 rounded-lg">
                 <img 
-                  src="/assets/jsslogo.png" 
+                  src="https://raw.githubusercontent.com/user-attachments/assets/main/jsslogo.png" 
                   alt="JSS Polytechnic Logo" 
                   className="h-12 w-auto" 
                 />

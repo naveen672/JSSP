@@ -55,4 +55,16 @@
   body {
     @apply font-sans antialiased bg-background text-foreground;
   }
+  
+  p, span, li {
+    @apply text-neutral-800 font-medium;
+  }
+  
+  .text-neutral-gray {
+    @apply text-neutral-800 !important;
+  }
+  
+  .opacity-80 {
+    @apply opacity-100 !important;
+  }
 }
