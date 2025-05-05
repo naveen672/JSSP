@@ -135,6 +135,16 @@ export default function Header() {
     { path: '/training', label: 'Training', category: 'training' },
     { path: '/placements', label: 'Placements', category: 'training' },
   ];
+  
+  // More submenus
+  const moreSubmenus: SubmenuItem[] = [
+    { path: '/alumni', label: 'Alumni', category: 'more' },
+    { path: '/photo-gallery', label: 'Photo Gallery', category: 'more' },
+    { path: '/media-coverage', label: 'Media Coverage Update', category: 'more' },
+    { path: '/online-grievance', label: 'Online Grievance Support', category: 'more' },
+    { path: '/career-opportunity', label: 'Career Opportunity', category: 'more' },
+    { path: '/service-rules', label: 'Service Rules', category: 'more' },
+  ];
 
   // Main navigation links
   const navLinks: NavLink[] = [
@@ -144,7 +154,7 @@ export default function Header() {
     { path: '/student-support', label: 'Student Support', hasSubmenu: true, submenu: studentSupportSubmenus },
     { path: '/training-placements', label: 'Training & Placements', hasSubmenu: true, submenu: trainingPlacementsSubmenus },
     { path: '/iqac', label: 'IQAC', hasSubmenu: false },
-    { path: '/more', label: 'More', hasSubmenu: false },
+    { path: '/more', label: 'More', hasSubmenu: true, submenu: moreSubmenus },
     { path: '/contact', label: 'Contact', hasSubmenu: false },
   ];
 
@@ -587,6 +597,17 @@ export default function Header() {
                       </>
                     ) : link.path === '/training-placements' ? (
                       // Training & Placements dropdown content
+                      <>
+                        {link.submenu?.map((subItem) => (
+                          <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
+                            <Link href={subItem.path} className="w-full cursor-pointer">
+                              {subItem.label}
+                            </Link>
+                          </DropdownMenuItem>
+                        ))}
+                      </>
+                    ) : link.path === '/more' ? (
+                      // More dropdown content
                       <>
                         {link.submenu?.map((subItem) => (
                           <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-gray-100 text-gray-800">
@@ -1053,6 +1074,20 @@ export default function Header() {
                           </>
                         ) : link.path === '/training-placements' ? (
                           // Training & Placements mobile submenu
+                          <div className="space-y-2">
+                            {link.submenu?.map((subItem) => (
+                              <Link 
+                                key={subItem.path} 
+                                href={subItem.path}
+                                className="block py-1 px-4 text-sm text-primary hover:bg-neutral-100 rounded"
+                                onClick={() => setIsMenuOpen(false)}
+                              >
+                                {subItem.label}
+                              </Link>
+                            ))}
+                          </div>
+                        ) : link.path === '/more' ? (
+                          // More mobile submenu
                           <div className="space-y-2">
                             {link.submenu?.map((subItem) => (
                               <Link 
