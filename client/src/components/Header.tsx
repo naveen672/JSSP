@@ -220,7 +220,7 @@ export default function Header() {
                   <DropdownMenuTrigger className={`flex items-center font-medium transition-all duration-300 
                     ${location === link.path 
                       ? 'text-primary font-semibold' 
-                      : 'text-foreground hover:text-primary'
+                      : 'text-[#1a2542] hover:text-primary font-semibold'
                     }
                     relative py-2 group
                   `}>
@@ -643,7 +643,7 @@ export default function Header() {
                   className={`relative font-medium transition-all duration-300 py-2 group inline-block
                     ${location === link.path 
                       ? 'text-primary font-semibold' 
-                      : 'text-foreground hover:text-primary'
+                      : 'text-[#1a2542] hover:text-primary font-semibold'
                     }
                   `}
                 >

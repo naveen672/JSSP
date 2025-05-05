@@ -6,65 +6,65 @@
 
 :root {
   /* Base colors - light theme */
-  --background: 210 20% 98%; /* Slightly blue-tinted white for better contrast */
-  --foreground: 215 35% 20%; /* Dark blue-gray for text */
-  --muted: 210 15% 95%;
-  --muted-foreground: 215 25% 40%;
-  --popover: 210 20% 98%;
-  --popover-foreground: 215 35% 20%;
+  --background: 0 0% 100%; /* Pure white for clean background */
+  --foreground: 222 47% 11%; /* Deep navy for high-contrast text */
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215 28% 35%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
   --card: 0 0% 100%;
-  --card-foreground: 215 35% 20%;
-  --border: 215 15% 90%;
-  --input: 215 15% 90%;
+  --card-foreground: 222 47% 11%;
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
 
-  /* Primary: JSS Polytechnic Red with slight adjustments for vibrancy */
-  --primary: 350 80% 45%; /* Vibrant red matching the JSS buildings */
+  /* Primary: Deep crimson red - more sophisticated and rich */
+  --primary: 354 70% 39%; /* JSS branded deep red */
   --primary-foreground: 0 0% 100%;
   
-  /* Secondary: Complementary gold/yellow */
-  --secondary: 40 100% 50%; /* Rich gold color */
-  --secondary-foreground: 35 40% 15%;
+  /* Secondary: Royal gold with better contrast */
+  --secondary: 36 84% 42%; /* Rich gold with better visibility */
+  --secondary-foreground: 0 0% 100%;
   
-  /* Accent: Teal as contrast color */
-  --accent: 185 70% 45%;
-  --accent-foreground: 185 5% 95%;
+  /* Accent: Deep teal for professional contrast */
+  --accent: 196 83% 32%; /* Deep teal */
+  --accent-foreground: 210 40% 98%;
   
   /* System colors */
   --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 60 9.1% 97.8%;
-  --ring: 350 80% 45%;
+  --destructive-foreground: 210 40% 98%;
+  --ring: 354 70% 39%;
   --radius: 0.5rem;
 }
 
 .dark {
   /* Base colors - dark theme */
-  --background: 215 35% 15%; /* Dark blue-gray instead of pure black */
-  --foreground: 210 20% 98%;
-  --muted: 215 25% 25%;
-  --muted-foreground: 210 15% 70%;
-  --popover: 215 35% 15%;
-  --popover-foreground: 210 20% 98%;
-  --card: 215 30% 18%;
-  --card-foreground: 210 20% 98%;
-  --border: 215 25% 25%;
-  --input: 215 25% 25%;
+  --background: 222 47% 11%; /* Deep navy background */
+  --foreground: 213 31% 91%;
+  --muted: 223 47% 16%;
+  --muted-foreground: 215 20% 65%;
+  --popover: 222 47% 11%;
+  --popover-foreground: 213 31% 91%;
+  --card: 222 47% 13%;
+  --card-foreground: 213 31% 91%;
+  --border: 216 34% 17%;
+  --input: 216 34% 17%;
   
-  /* Primary: JSS Polytechnic Red with slight adjustments for dark mode */
-  --primary: 350 80% 55%; /* Brighter red for dark mode */
+  /* Primary: Vibrant crimson for dark mode */
+  --primary: 354 74% 48%; /* Brighter red for dark mode */
   --primary-foreground: 0 0% 100%;
   
   /* Secondary: Brighter gold for dark mode */
-  --secondary: 40 100% 60%;
+  --secondary: 36 94% 55%;
   --secondary-foreground: 0 0% 100%;
   
-  /* Accent: Brighter teal for dark mode */
-  --accent: 185 80% 50%;
+  /* Accent: Bright teal for dark mode */
+  --accent: 196 83% 45%;
   --accent-foreground: 0 0% 100%;
   
   /* System colors */
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 0 0% 98%;
-  --ring: 350 80% 55%;
+  --ring: 354 74% 48%;
   --radius: 0.5rem;
 }
 
@@ -98,7 +98,8 @@
   }
   
   p, span, li {
-    @apply text-foreground font-medium;
+    @apply text-foreground font-medium text-opacity-90;
+    color: hsl(222 47% 11% / 0.9); /* Explicit color to ensure visibility */
   }
   
   .text-neutral-gray {
@@ -137,11 +138,11 @@
   }
   
   [data-radix-dropdown-menu-content] [data-radix-dropdown-menu-item] {
-    @apply bg-white text-foreground hover:text-primary !important;
+    @apply bg-white text-[#1a2542] hover:text-primary font-medium !important;
   }
   
   [data-radix-dropdown-menu-content] [data-radix-dropdown-menu-item]:hover {
-    @apply bg-gray-50 !important;
+    @apply bg-primary/5 !important;
   }
   
   /* Custom styles for dropdown menu buttons to match mobile */
@@ -157,7 +158,14 @@
   /* Header enhancements */
   header {
     @apply bg-white shadow-md;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.98));
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.95));
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Navigation text enhancement */
+  nav a, nav button {
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
+    letter-spacing: 0.02em;
   }
   
   /* Footer enhancements */
@@ -168,6 +176,6 @@
   
   /* Mobile submenu link styling */
   .submenu-link {
-    @apply block py-1.5 px-4 text-sm text-foreground hover:bg-primary/5 hover:text-primary rounded-md transition-all duration-200 !important;
+    @apply block py-1.5 px-4 text-sm font-medium text-[#1a2542] hover:bg-primary/5 hover:text-primary rounded-md transition-all duration-200 !important;
   }
 }
