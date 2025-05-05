@@ -2,6 +2,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import Breadcrumb from '@/components/Breadcrumb';
 import { Book, Library as LibraryIcon, Users, Calendar, User } from 'lucide-react';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import NewsTicker from '@/components/NewsTicker';
+import { newsItems } from '@/data/collegeData';
 
 export default function Library() {
   return (
@@ -10,6 +14,9 @@ export default function Library() {
         <title>Library & Information Centre | JSS Polytechnic</title>
         <meta name="description" content="Library and Information Centre at JSS Polytechnic - A resource centre for teaching and learning with extensive collection of books and digital resources." />
       </Helmet>
+      
+      <Header />
+      <NewsTicker news={newsItems} />
       
       {/* Page Header */}
       <div className="bg-primary text-white py-12">
@@ -316,6 +323,7 @@ export default function Library() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
