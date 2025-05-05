@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'wouter';
 import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react';
 import Logo from './Logo';
@@ -30,6 +30,18 @@ import {
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [location] = useLocation();
+  
+  // Add an effect to handle cleanup of body class when location changes
+  useEffect(() => {
+    // Always ensure mobile menu is closed and body scroll is enabled on navigation
+    setIsMenuOpen(false);
+    document.body.classList.remove('mobile-menu-open');
+    
+    // Cleanup function to ensure body class is removed when component unmounts
+    return () => {
+      document.body.classList.remove('mobile-menu-open');
+    };
+  }, [location]);
 
   const toggleMenu = () => {
     const newState = !isMenuOpen;
