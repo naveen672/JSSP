@@ -278,7 +278,7 @@ export default function Header() {
                           </button>
                           {activeSubmenuCategory === 'benefits' && (
                             <div className="pl-2 py-1 space-y-1">
-                              {link.submenu?.slice(6, 9).map((subItem) => (
+                              {link.submenu?.slice(7, 10).map((subItem) => (
                                 <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-primary/5 hover:text-primary transition-all duration-200">
                                   <Link href={subItem.path} className="w-full cursor-pointer">
                                     {subItem.label}
@@ -306,7 +306,7 @@ export default function Header() {
                           </button>
                           {activeSubmenuCategory === 'reports' && (
                             <div className="pl-2 py-1 space-y-1">
-                              {link.submenu?.slice(9).map((subItem) => (
+                              {link.submenu?.slice(10).map((subItem) => (
                                 <DropdownMenuItem key={subItem.path} asChild className="bg-white hover:bg-primary/5 hover:text-primary transition-all duration-200">
                                   <Link href={subItem.path} className="w-full cursor-pointer">
                                     {subItem.label}
@@ -771,7 +771,7 @@ export default function Header() {
                               </button>
                               {activeMobileCategories['reports'] && (
                                 <div className="mt-1 pl-4 space-y-1">
-                                  {link.submenu?.slice(9).map((subItem) => (
+                                  {link.submenu?.slice(10).map((subItem) => (
                                     <Link 
                                       key={subItem.path} 
                                       href={subItem.path}
