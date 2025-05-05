@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Logo from './Logo';
 
 export default function SplashScreen() {
   return (
@@ -16,11 +17,7 @@ export default function SplashScreen() {
         }}
       >
         <div className="w-64 h-auto bg-white p-4 rounded-lg flex items-center justify-center">
-          <img 
-            src="/jsslogo.png" 
-            alt="JSS Polytechnic Logo" 
-            className="w-full h-auto" 
-          />
+          <Logo className="w-full h-auto" />
         </div>
       </motion.div>
       <p className="text-neutral-100 mt-2 text-sm">Building tomorrow's leaders</p>
