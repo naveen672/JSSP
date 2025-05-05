@@ -28,7 +28,7 @@ export default function Header() {
             <div className="flex items-center space-x-3 cursor-pointer">
               <div className="h-12 flex items-center justify-center">
                 <img 
-                  src="https://raw.githubusercontent.com/user-attachments/assets/main/jsslogo.png" 
+                  src="/jsslogo.png" 
                   alt="JSS Polytechnic Logo" 
                   className="h-12 w-auto" 
                 />
