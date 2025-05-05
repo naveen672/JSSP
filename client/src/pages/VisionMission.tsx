@@ -43,7 +43,7 @@ export default function VisionMission() {
                   </div>
                   <div>
                     <h4 className="text-sm font-semibold text-primary/70 uppercase tracking-wider text-center md:text-left">Our Vision</h4>
-                    <h2 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/90 text-center md:text-left">Vision of the Institute</h2>
+                    <h2 className="text-2xl md:text-3xl font-bold text-[#1a2542] text-center md:text-left">Vision of the Institute</h2>
                   </div>
                 </div>
                 
@@ -66,7 +66,7 @@ export default function VisionMission() {
                   </div>
                   <div>
                     <h4 className="text-sm font-semibold text-secondary/70 uppercase tracking-wider text-center md:text-left">Our Mission</h4>
-                    <h2 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/90 text-center md:text-left">Mission of the Institute</h2>
+                    <h2 className="text-2xl md:text-3xl font-bold text-[#1a2542] text-center md:text-left">Mission of the Institute</h2>
                   </div>
                 </div>
                 
