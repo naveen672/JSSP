@@ -17,16 +17,16 @@
   --border: 214 32% 91%;
   --input: 214 32% 91%;
 
-  /* Primary: Sophisticated navy - professional and trustworthy */
-  --primary: 215 100% 25%; /* Deep navy blue */
+  /* Primary: Bright orange */
+  --primary: 33 100% 55%; /* #FF9F1C - bright orange */
   --primary-foreground: 0 0% 100%;
   
-  /* Secondary: Complementary slate blue with elegant contrast */
-  --secondary: 240 70% 45%; /* Slate blue */
-  --secondary-foreground: 0 0% 100%;
+  /* Secondary: Light orange */
+  --secondary: 35 100% 71%; /* #FFBF69 - light orange */
+  --secondary-foreground: 215 100% 25%;
   
-  /* Accent: Rich coral for dynamic highlights */
-  --accent: 15 85% 55%; /* Coral accent */
+  /* Accent: Muted pink */
+  --accent: 18 36% 71%; /* #CB997E - muted pink */
   --accent-foreground: 210 40% 98%;
   
   /* System colors */
@@ -49,16 +49,16 @@
   --border: 216 34% 17%;
   --input: 216 34% 17%;
   
-  /* Primary: Brighter navy for dark mode */
-  --primary: 215 100% 40%; /* Brighter navy for dark mode */
+  /* Primary: Bright orange for dark mode */
+  --primary: 33 100% 65%; /* Brighter #FF9F1C for dark mode */
   --primary-foreground: 0 0% 100%;
   
-  /* Secondary: Vibrant slate blue for dark mode */
-  --secondary: 240 80% 60%;
-  --secondary-foreground: 0 0% 100%;
+  /* Secondary: Light orange for dark mode */
+  --secondary: 35 100% 81%;  /* Brighter #FFBF69 for dark mode */
+  --secondary-foreground: 215 100% 25%;
   
-  /* Accent: Glowing coral for dark mode */
-  --accent: 15 95% 65%;
+  /* Accent: Muted pink for dark mode */
+  --accent: 18 36% 76%; /* Brighter #CB997E for dark mode */
   --accent-foreground: 0 0% 100%;
   
   /* System colors */
@@ -74,10 +74,11 @@
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-sans antialiased text-foreground;
+    background-color: #FFE8D6; /* Pale peach background */
     background-image: 
-      linear-gradient(to right, rgba(var(--primary-rgb), 0.02) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(var(--primary-rgb), 0.02) 1px, transparent 1px);
+      linear-gradient(to right, rgba(var(--primary-rgb), 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(var(--primary-rgb), 0.05) 1px, transparent 1px);
     background-size: 40px 40px;
     background-attachment: fixed;
   }
@@ -90,7 +91,7 @@
   }
   
   :root {
-    --primary-rgb: 0, 51, 102; /* RGB equivalent of the navy primary HSL color */
+    --primary-rgb: 255, 159, 28; /* RGB equivalent of #FF9F1C bright orange */
   }
   
   /* Mobile menu scrolling fix */
@@ -129,39 +130,59 @@
   /* Button enhancements */
   .btn-primary, button[class*="bg-primary"] {
     @apply bg-primary text-white shadow-md hover:shadow-lg transition-all duration-300;
-    background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary)/0.85));
+    background-image: linear-gradient(135deg, #FF9F1C, #FF9F1C);
     border-radius: 8px;
     transform: translateY(0);
   }
   
   .btn-primary:hover, button[class*="bg-primary"]:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px -5px rgba(var(--primary-rgb), 0.4), 0 8px 10px -6px rgba(var(--primary-rgb), 0.2);
+    box-shadow: 0 10px 25px -5px rgba(255, 159, 28, 0.4), 0 8px 10px -6px rgba(255, 159, 28, 0.2);
+    background-image: linear-gradient(135deg, #FF9F1C, #FFBF69);
   }
   
   .btn-secondary, button[class*="bg-secondary"] {
-    @apply bg-secondary text-white shadow-md hover:shadow-lg transition-all duration-300;
-    background-image: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary)/0.85));
+    @apply shadow-md hover:shadow-lg transition-all duration-300;
+    background-color: #FFBF69;
+    color: #333;
+    font-weight: 600;
     border-radius: 8px;
     transform: translateY(0);
   }
   
   .btn-secondary:hover, button[class*="bg-secondary"]:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px -5px rgba(0, 150, 136, 0.4), 0 8px 10px -6px rgba(0, 150, 136, 0.2);
+    box-shadow: 0 10px 25px -5px rgba(255, 191, 105, 0.5), 0 8px 10px -6px rgba(255, 191, 105, 0.3);
+    background-color: #FFBF69;
+    color: #222;
+  }
+  
+  .btn-accent, button[class*="bg-accent"] {
+    @apply shadow-md hover:shadow-lg transition-all duration-300;
+    background-color: #CB997E;
+    color: white;
+    border-radius: 8px;
+    transform: translateY(0);
+  }
+  
+  .btn-accent:hover, button[class*="bg-accent"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(203, 153, 126, 0.5), 0 8px 10px -6px rgba(203, 153, 126, 0.3);
   }
   
   /* Card styling */
   .card, div[class*="bg-white rounded"] {
-    @apply bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden;
+    @apply rounded-xl shadow-md border overflow-hidden;
+    background-color: white;
+    border-color: rgba(var(--primary-rgb), 0.15);
     transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 18px rgba(var(--primary-rgb), 0.03), 0 1px 8px rgba(var(--primary-rgb), 0.02);
+    box-shadow: 0 4px 18px rgba(var(--primary-rgb), 0.1), 0 1px 8px rgba(var(--primary-rgb), 0.08);
   }
   
   .card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 30px -6px rgba(var(--primary-rgb), 0.08), 0 10px 20px -8px rgba(var(--primary-rgb), 0.06);
-    border-color: rgba(var(--primary-rgb), 0.1);
+    box-shadow: 0 15px 30px -6px rgba(var(--primary-rgb), 0.2), 0 10px 20px -8px rgba(var(--primary-rgb), 0.15);
+    border-color: rgba(var(--primary-rgb), 0.25);
   }
   
   /* Text inside cards */
