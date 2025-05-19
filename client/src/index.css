@@ -17,16 +17,16 @@
   --border: 214 32% 91%;
   --input: 214 32% 91%;
 
-  /* Primary: Deep crimson red - more sophisticated and rich */
-  --primary: 354 70% 39%; /* JSS branded deep red */
+  /* Primary: Professional blue - elegant and trustworthy */
+  --primary: 210 100% 35%; /* Professional deep blue */
   --primary-foreground: 0 0% 100%;
   
-  /* Secondary: Royal gold with better contrast */
-  --secondary: 36 84% 42%; /* Rich gold with better visibility */
+  /* Secondary: Complementary teal with better contrast */
+  --secondary: 180 70% 35%; /* Rich teal with better visibility */
   --secondary-foreground: 0 0% 100%;
   
-  /* Accent: Deep teal for professional contrast */
-  --accent: 196 83% 32%; /* Deep teal */
+  /* Accent: Warm gold for professional contrast */
+  --accent: 38 95% 50%; /* Warm gold */
   --accent-foreground: 210 40% 98%;
   
   /* System colors */
@@ -49,16 +49,16 @@
   --border: 216 34% 17%;
   --input: 216 34% 17%;
   
-  /* Primary: Vibrant crimson for dark mode */
-  --primary: 354 74% 48%; /* Brighter red for dark mode */
+  /* Primary: Brighter blue for dark mode */
+  --primary: 210 100% 50%; /* Brighter blue for dark mode */
   --primary-foreground: 0 0% 100%;
   
-  /* Secondary: Brighter gold for dark mode */
-  --secondary: 36 94% 55%;
+  /* Secondary: Brighter teal for dark mode */
+  --secondary: 180 75% 45%;
   --secondary-foreground: 0 0% 100%;
   
-  /* Accent: Bright teal for dark mode */
-  --accent: 196 83% 45%;
+  /* Accent: Vibrant gold for dark mode */
+  --accent: 38 100% 60%;
   --accent-foreground: 0 0% 100%;
   
   /* System colors */
@@ -83,7 +83,7 @@
   }
   
   :root {
-    --primary-rgb: 163, 27, 42; /* RGB equivalent of the primary HSL color */
+    --primary-rgb: 0, 91, 178; /* RGB equivalent of the new blue primary HSL color */
   }
   
   /* Mobile menu scrolling fix */
