@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import Logo from './Logo';
+import { ImageLoader } from './Images';
 
 export default function SplashScreen() {
   return (
@@ -16,8 +17,17 @@ export default function SplashScreen() {
           repeatType: "mirror" 
         }}
       >
-        <div className="w-64 h-auto bg-white p-4 rounded-lg flex items-center justify-center">
-          <Logo className="w-full h-auto" />
+        <div className="w-auto h-auto bg-white p-5 rounded-lg flex flex-col items-center justify-center">
+          <div className="flex items-center justify-center gap-6 mb-4">
+            <div className="rounded-full overflow-hidden border-2 border-primary p-1 shadow-md">
+              <ImageLoader src="/images/jssmvp.png" alt="JSS Mahavidyapeetha" className="h-16 w-16 rounded-full object-contain" />
+            </div>
+            <div className="rounded-full overflow-hidden border-2 border-primary p-1 shadow-md">
+              <ImageLoader src="/images/jsspoly.png" alt="JSS Polytechnic" className="h-16 w-16 rounded-full object-contain" />
+            </div>
+          </div>
+          <h2 className="text-primary text-lg font-bold">JSS Polytechnic for Women</h2>
+          <p className="text-gray-600 text-xs">Mysore</p>
         </div>
       </motion.div>
       <p className="text-neutral-100 mt-2 text-sm">Building tomorrow's leaders</p>

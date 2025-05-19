@@ -223,9 +223,13 @@ export default function Header() {
       {/* College Logo and Name - Full Width */}
       <div className="w-full bg-white border-b border-gray-100 py-3">
         <div className="container mx-auto flex flex-col items-center justify-center">
-          <div className="flex items-center justify-center gap-6">
-            <ImageLoader src="/images/jssmvp.png" alt="JSS Mahavidyapeetha" className="h-20 w-auto" />
-            <ImageLoader src="/images/jsspoly.png" alt="JSS Polytechnic" className="h-20 w-auto" />
+          <div className="flex items-center justify-center gap-8">
+            <div className="rounded-full overflow-hidden border-2 border-primary p-1 shadow-md transform transition-transform duration-300 hover:scale-105">
+              <ImageLoader src="/images/jssmvp.png" alt="JSS Mahavidyapeetha" className="h-20 w-20 rounded-full object-contain" />
+            </div>
+            <div className="rounded-full overflow-hidden border-2 border-primary p-1 shadow-md transform transition-transform duration-300 hover:scale-105">
+              <ImageLoader src="/images/jsspoly.png" alt="JSS Polytechnic" className="h-20 w-20 rounded-full object-contain" />
+            </div>
           </div>
           <h1 className="mt-2 text-2xl md:text-3xl font-bold text-primary">JSS Polytechnic for Women, Mysore</h1>
           <p className="text-sm text-gray-600">Affiliated to Directorate of Technical Education, Karnataka</p>
