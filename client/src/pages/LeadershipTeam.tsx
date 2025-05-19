@@ -178,7 +178,7 @@ export default function LeadershipTeam() {
           <div className="mt-6 flex items-center justify-center">
             <a href="/about-jssmvp" className="inline-flex items-center text-primary hover:text-primary/80 font-medium">
               Learn more about our institution
-              <ArrowUp className="w-4 h-4 ml-1 transform rotate-45" />
+              <ArrowRight className="w-4 h-4 ml-1" />
             </a>
           </div>
         </div>
