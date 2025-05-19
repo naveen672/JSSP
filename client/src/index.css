@@ -18,15 +18,15 @@
   --input: 214 32% 91%;
 
   /* Primary: JSS Primary Red */
-  --primary: 0 68% 37%; /* #BC1F1F - dark red */
+  --primary: 0 100% 25%; /* #800000 - maroon red */
   --primary-foreground: 0 0% 100%;
   
   /* Secondary: JSS Gold */
-  --secondary: 45 76% 51%; /* #D4A81B - gold */
+  --secondary: 43 100% 50%; /* #ffc800 - bright gold */
   --secondary-foreground: 0 0% 20%;
   
   /* Accent: JSS Dark Blue */
-  --accent: 216 67% 29%; /* #15427C - navy blue */
+  --accent: 215 74% 21%; /* #0e3461 - dark navy blue */
   --accent-foreground: 210 40% 98%;
   
   /* System colors */
@@ -49,16 +49,16 @@
   --border: 216 34% 17%;
   --input: 216 34% 17%;
   
-  /* Primary: JSS Red for dark mode */
-  --primary: 0 68% 47%; /* Brighter #BC1F1F for dark mode */
+  /* Primary: JSS Maroon Red for dark mode */
+  --primary: 0 100% 35%; /* Brighter maroon for dark mode */
   --primary-foreground: 0 0% 100%;
   
   /* Secondary: JSS Gold for dark mode */
-  --secondary: 45 76% 61%;  /* Brighter #D4A81B for dark mode */
+  --secondary: 43 100% 60%;  /* Brighter gold for dark mode */
   --secondary-foreground: 0 0% 20%;
   
   /* Accent: JSS Dark Blue for dark mode */
-  --accent: 216 67% 39%; /* Brighter #15427C for dark mode */
+  --accent: 215 74% 31%; /* Brighter navy blue for dark mode */
   --accent-foreground: 0 0% 100%;
   
   /* System colors */
@@ -91,7 +91,7 @@
   }
   
   :root {
-    --primary-rgb: 188, 31, 31; /* RGB equivalent of #BC1F1F JSS red */
+    --primary-rgb: 128, 0, 0; /* RGB equivalent of #800000 JSS maroon red */
   }
   
   /* Mobile menu scrolling fix */
@@ -129,65 +129,72 @@
   
   /* Button enhancements */
   .btn-primary, button[class*="bg-primary"] {
-    @apply bg-primary text-white shadow-md hover:shadow-lg transition-all duration-300;
-    background-image: linear-gradient(135deg, #BC1F1F, #BC1F1F);
-    border-radius: 4px;
+    @apply bg-primary text-white shadow-sm hover:shadow transition-all duration-300;
+    background-color: #800000;
+    border-radius: 0;
     transform: translateY(0);
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 14px;
     border: none;
+    padding: 8px 16px;
   }
   
   .btn-primary:hover, button[class*="bg-primary"]:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px -5px rgba(188, 31, 31, 0.4), 0 8px 10px -6px rgba(188, 31, 31, 0.2);
-    background-image: linear-gradient(135deg, #BC1F1F, #D42626);
+    transform: translateY(0);
+    background-color: #990000;
+    box-shadow: none;
   }
   
   .btn-secondary, button[class*="bg-secondary"] {
-    @apply shadow-md hover:shadow-lg transition-all duration-300;
-    background-color: #D4A81B;
-    color: #222;
+    @apply shadow-sm hover:shadow transition-all duration-300;
+    background-color: #ffc800;
+    color: #000;
     font-weight: 600;
-    border-radius: 4px;
+    font-size: 14px;
+    border-radius: 0;
     transform: translateY(0);
     border: none;
+    padding: 8px 16px;
   }
   
   .btn-secondary:hover, button[class*="bg-secondary"]:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px -5px rgba(212, 168, 27, 0.5), 0 8px 10px -6px rgba(212, 168, 27, 0.3);
-    background-image: linear-gradient(135deg, #D4A81B, #E5B829);
+    transform: translateY(0);
+    background-color: #ffe066;
+    box-shadow: none;
   }
   
   .btn-accent, button[class*="bg-accent"] {
-    @apply shadow-md hover:shadow-lg transition-all duration-300;
-    background-color: #15427C;
+    @apply shadow-sm hover:shadow transition-all duration-300;
+    background-color: #0e3461;
     color: white;
     font-weight: 600;
-    border-radius: 4px;
+    font-size: 14px;
+    border-radius: 0;
     transform: translateY(0);
     border: none;
+    padding: 8px 16px;
   }
   
   .btn-accent:hover, button[class*="bg-accent"]:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px -5px rgba(21, 66, 124, 0.5), 0 8px 10px -6px rgba(21, 66, 124, 0.3);
-    background-image: linear-gradient(135deg, #15427C, #1B5294);
+    transform: translateY(0);
+    background-color: #154785;
+    box-shadow: none;
   }
   
   /* Card styling */
   .card, div[class*="bg-white rounded"] {
-    @apply rounded-md shadow-md border overflow-hidden;
+    @apply border overflow-hidden;
     background-color: white;
-    border-color: #e5e5e5; /* Light gray border like JSS site */
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.05), 0 1px 4px rgba(var(--primary-rgb), 0.03);
+    border-color: #e5e5e5;
+    border-radius: 0;
+    transition: all 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   }
   
   .card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 30px -6px rgba(var(--primary-rgb), 0.1), 0 10px 20px -8px rgba(var(--primary-rgb), 0.08);
-    border-color: rgba(var(--primary-rgb), 0.15); /* JSS red border on hover */
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(128, 0, 0, 0.1);
+    border-color: #800000; /* JSS maroon red border on hover */
   }
   
   /* Text inside cards */
