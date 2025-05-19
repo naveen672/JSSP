@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Quote } from "lucide-react";
 
 export default function DeptEE() {
   return (
@@ -81,6 +82,53 @@ export default function DeptEE() {
                 </p>
               </div>
             </section>
+            
+            {/* Student Testimonial Section */}
+            <section className="bg-white rounded-lg shadow-md p-6">
+              <h2 className="text-2xl font-bold text-primary border-b border-gray-200 pb-2 mb-4">
+                Student Testimonial
+              </h2>
+              <div className="flex flex-col md:flex-row gap-6 items-start">
+                <div className="w-full md:w-1/4 flex justify-center">
+                  <div className="rounded-lg overflow-hidden border-4 border-primary/20 shadow-md">
+                    <img 
+                      src="/attached_assets/image_1747619096145.png"
+                      alt="Trupti Ananth Jain"
+                      className="w-full h-auto object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="w-full md:w-3/4">
+                  <div className="relative">
+                    <Quote className="text-primary/20 absolute -top-4 -left-4 w-12 h-12" />
+                    <div className="pl-4 space-y-3 text-gray-700">
+                      <p className="italic">
+                        I am immensely proud and grateful to share my journey as a student of the Department of Electrical and Electronics Engineering at JSS Polytechnic, Mysore. These past three years have been a transformative chapter of my life—both academically and personally.
+                      </p>
+                      <p className="italic">
+                        From the very beginning, the department laid a strong foundation in core electrical and electronics concepts. I was not only taught the theory with clarity, but I also received hands-on practical exposure, which deepened my understanding and gave me confidence to apply knowledge in real-world situations.
+                      </p>
+                      <p className="italic">
+                        What truly sets this department apart is the unwavering support and dedication of the faculty and staff. They recognized my potential and consistently motivated me to push beyond my limits. The environment they created fostered both learning and leadership.
+                      </p>
+                      <p>
+                        With the constant encouragement and mentorship of the department—and the cooperation and teamwork of my talented colleagues—I had the honor of securing:
+                      </p>
+                      <ul className="list-disc pl-6 font-medium">
+                        <li>First Place in a National-Level Paper Presentation</li>
+                        <li>First Place Twice in State-Level Paper Presentations</li>
+                      </ul>
+                      <p className="italic">
+                        Because of the nurturing environment, technical knowledge, and continuous guidance I received from my mentors and peers, I was able to become a topper throughout the three years of my diploma journey.
+                      </p>
+                      <p className="text-right font-semibold pt-4">
+                        - Trupti Ananth Jain
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
 
           {/* Right Column - Faculty & Staff */}
@@ -144,6 +192,27 @@ export default function DeptEE() {
                   <p className="font-semibold text-lg">Prashanth H S</p>
                   <p className="text-primary">Helper</p>
                   <p className="text-sm text-gray-600">ITI</p>
+                </div>
+              </div>
+            </section>
+            
+            {/* Department Achievements Section */}
+            <section className="bg-white rounded-lg shadow-md p-6">
+              <h2 className="text-2xl font-bold text-primary border-b border-gray-200 pb-2 mb-4">
+                Department Achievements
+              </h2>
+              <div className="space-y-3">
+                <div className="bg-primary/5 p-3 rounded-md">
+                  <p className="font-medium">National Level Paper Presentation Winners</p>
+                </div>
+                <div className="bg-primary/5 p-3 rounded-md">
+                  <p className="font-medium">State Level Project Competition Finalists</p>
+                </div>
+                <div className="bg-primary/5 p-3 rounded-md">
+                  <p className="font-medium">High Placement Rate in Top Companies</p>
+                </div>
+                <div className="bg-primary/5 p-3 rounded-md">
+                  <p className="font-medium">Students Admitted to Leading Engineering Colleges</p>
                 </div>
               </div>
             </section>
