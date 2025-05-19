@@ -17,16 +17,16 @@
   --border: 214 32% 91%;
   --input: 214 32% 91%;
 
-  /* Primary: Modern indigo - sophisticated and educational */
-  --primary: 230 80% 40%; /* Modern indigo blue */
+  /* Primary: Sophisticated navy - professional and trustworthy */
+  --primary: 215 100% 25%; /* Deep navy blue */
   --primary-foreground: 0 0% 100%;
   
-  /* Secondary: Complementary emerald with elegant contrast */
-  --secondary: 160 84% 39%; /* Vibrant emerald green */
+  /* Secondary: Complementary slate blue with elegant contrast */
+  --secondary: 240 70% 45%; /* Slate blue */
   --secondary-foreground: 0 0% 100%;
   
-  /* Accent: Soft amber for warm highlights */
-  --accent: 43 96% 56%; /* Rich amber */
+  /* Accent: Rich coral for dynamic highlights */
+  --accent: 15 85% 55%; /* Coral accent */
   --accent-foreground: 210 40% 98%;
   
   /* System colors */
@@ -49,16 +49,16 @@
   --border: 216 34% 17%;
   --input: 216 34% 17%;
   
-  /* Primary: Vibrant indigo for dark mode */
-  --primary: 230 80% 55%; /* Brighter indigo for dark mode */
+  /* Primary: Brighter navy for dark mode */
+  --primary: 215 100% 40%; /* Brighter navy for dark mode */
   --primary-foreground: 0 0% 100%;
   
-  /* Secondary: Brighter emerald for dark mode */
-  --secondary: 160 84% 45%;
+  /* Secondary: Vibrant slate blue for dark mode */
+  --secondary: 240 80% 60%;
   --secondary-foreground: 0 0% 100%;
   
-  /* Accent: Glowing amber for dark mode */
-  --accent: 43 96% 65%;
+  /* Accent: Glowing coral for dark mode */
+  --accent: 15 95% 65%;
   --accent-foreground: 0 0% 100%;
   
   /* System colors */
@@ -81,9 +81,16 @@
     background-size: 40px 40px;
     background-attachment: fixed;
   }
+
+  /* Add pattern background class */
+  .bg-pattern {
+    background-image: url('/images/pattern-light.svg');
+    background-repeat: repeat;
+    background-size: 100px 100px;
+  }
   
   :root {
-    --primary-rgb: 41, 65, 171; /* RGB equivalent of the new indigo primary HSL color */
+    --primary-rgb: 0, 51, 102; /* RGB equivalent of the navy primary HSL color */
   }
   
   /* Mobile menu scrolling fix */
@@ -95,10 +102,11 @@
   
   h1 {
     @apply text-primary font-bold;
-    background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--secondary)));
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: -0.01em;
+    text-shadow: 0 2px 8px rgba(var(--primary-rgb), 0.1);
   }
   
   h2, h3, h4 {
