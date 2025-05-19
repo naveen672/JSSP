@@ -232,8 +232,8 @@ export default function Header() {
               <ImageLoader src="/images/jsspoly.png" alt="JSS Polytechnic" className="h-20 w-20 rounded-full object-contain" />
             </div>
           </div>
-          <h1 className="mt-3 text-2xl md:text-3xl font-bold text-primary">
-            <span className="relative inline-block">
+          <h1 className="mt-3 text-2xl md:text-3xl font-bold">
+            <span className="relative inline-block text-black">
               JSS Polytechnic, Mysore
               <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-amber-500 transform translate-y-1"></span>
             </span>
@@ -717,7 +717,7 @@ export default function Header() {
 
             {/* Mobile Menu Toggle Button */}
             <button
-              className="p-2 rounded-md text-white md:hidden focus:outline-none"
+              className="p-2 rounded-md text-primary md:hidden focus:outline-none"
               onClick={toggleMenu}
               aria-label="Toggle menu"
             >
