@@ -17,16 +17,16 @@
   --border: 214 32% 91%;
   --input: 214 32% 91%;
 
-  /* Primary: Dark Indigo */
-  --primary: 240 38% 23%; /* #2C2C54 - dark indigo */
+  /* Primary: Timeless Noir */
+  --primary: 0 0% 11%; /* #1B1B1B - timeless noir */
   --primary-foreground: 0 0% 100%;
   
-  /* Secondary: Deep Purple-Gray */
-  --secondary: 240 10% 39%; /* #474787 - deep purple-gray */
+  /* Secondary: Sophisticated Sage */
+  --secondary: 79 29% 43%; /* #5C5F39 - sophisticated sage */
   --secondary-foreground: 0 0% 100%;
   
-  /* Accent: Cool Gray */
-  --accent: 210 10% 70%; /* #AAABB8 - cool gray */
+  /* Accent: Muted Moss */
+  --accent: 84 27% 47%; /* #595F39 - muted moss */
   --accent-foreground: 210 40% 98%;
   
   /* System colors */
@@ -49,16 +49,16 @@
   --border: 216 34% 17%;
   --input: 216 34% 17%;
   
-  /* Primary: Dark Indigo for dark mode */
-  --primary: 240 38% 30%; /* Slightly brighter #2C2C54 for dark mode */
+  /* Primary: Timeless Noir for dark mode */
+  --primary: 0 0% 15%; /* Slightly lighter #1B1B1B for dark mode */
   --primary-foreground: 0 0% 100%;
   
-  /* Secondary: Deep Purple-Gray for dark mode */
-  --secondary: 240 15% 45%;  /* Slightly brighter #474787 for dark mode */
+  /* Secondary: Sophisticated Sage for dark mode */
+  --secondary: 79 29% 48%;  /* Slightly lighter #5C5F39 for dark mode */
   --secondary-foreground: 0 0% 100%;
   
-  /* Accent: Cool Gray for dark mode */
-  --accent: 210 15% 75%; /* Slightly brighter #AAABB8 for dark mode */
+  /* Accent: Muted Moss for dark mode */
+  --accent: 84 27% 52%; /* Slightly lighter #595F39 for dark mode */
   --accent-foreground: 0 0% 100%;
   
   /* System colors */
@@ -75,10 +75,10 @@
 
   body {
     @apply font-sans antialiased text-foreground;
-    background-color: #ECECEC; /* Light gray background */
+    background-color: #E4E4DE; /* Ethereal Ivory background */
     background-image: 
-      linear-gradient(to right, rgba(var(--primary-rgb), 0.03) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(var(--primary-rgb), 0.03) 1px, transparent 1px);
+      linear-gradient(to right, rgba(var(--primary-rgb), 0.02) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(var(--primary-rgb), 0.02) 1px, transparent 1px);
     background-size: 40px 40px;
     background-attachment: fixed;
   }
@@ -91,7 +91,7 @@
   }
   
   :root {
-    --primary-rgb: 44, 44, 84; /* RGB equivalent of #2C2C54 dark indigo */
+    --primary-rgb: 27, 27, 27; /* RGB equivalent of #1B1B1B timeless noir */
   }
   
   /* Mobile menu scrolling fix */
@@ -130,20 +130,20 @@
   /* Button enhancements */
   .btn-primary, button[class*="bg-primary"] {
     @apply bg-primary text-white shadow-md hover:shadow-lg transition-all duration-300;
-    background-image: linear-gradient(135deg, #2C2C54, #2C2C54);
+    background-image: linear-gradient(135deg, #1B1B1B, #1B1B1B);
     border-radius: 8px;
     transform: translateY(0);
   }
   
   .btn-primary:hover, button[class*="bg-primary"]:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px -5px rgba(44, 44, 84, 0.4), 0 8px 10px -6px rgba(44, 44, 84, 0.2);
-    background-image: linear-gradient(135deg, #2C2C54, #474787);
+    box-shadow: 0 10px 25px -5px rgba(27, 27, 27, 0.4), 0 8px 10px -6px rgba(27, 27, 27, 0.2);
+    background-image: linear-gradient(135deg, #1B1B1B, #2D2D2D);
   }
   
   .btn-secondary, button[class*="bg-secondary"] {
     @apply shadow-md hover:shadow-lg transition-all duration-300;
-    background-color: #474787;
+    background-color: #5C5F39;
     color: white;
     font-weight: 600;
     border-radius: 8px;
@@ -152,14 +152,14 @@
   
   .btn-secondary:hover, button[class*="bg-secondary"]:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px -5px rgba(71, 71, 135, 0.5), 0 8px 10px -6px rgba(71, 71, 135, 0.3);
-    background-image: linear-gradient(135deg, #474787, #5B5BA3);
+    box-shadow: 0 10px 25px -5px rgba(92, 95, 57, 0.5), 0 8px 10px -6px rgba(92, 95, 57, 0.3);
+    background-image: linear-gradient(135deg, #5C5F39, #6D7144);
   }
   
   .btn-accent, button[class*="bg-accent"] {
     @apply shadow-md hover:shadow-lg transition-all duration-300;
-    background-color: #AAABB8;
-    color: #2C2C54;
+    background-color: #C4C5BA;
+    color: #1B1B1B;
     font-weight: 600;
     border-radius: 8px;
     transform: translateY(0);
@@ -167,23 +167,23 @@
   
   .btn-accent:hover, button[class*="bg-accent"]:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px -5px rgba(170, 171, 184, 0.5), 0 8px 10px -6px rgba(170, 171, 184, 0.3);
-    background-image: linear-gradient(135deg, #AAABB8, #BDBDCA);
+    box-shadow: 0 10px 25px -5px rgba(196, 197, 186, 0.5), 0 8px 10px -6px rgba(196, 197, 186, 0.3);
+    background-image: linear-gradient(135deg, #C4C5BA, #D4D5CA);
   }
   
   /* Card styling */
   .card, div[class*="bg-white rounded"] {
     @apply rounded-xl shadow-md border overflow-hidden;
     background-color: white;
-    border-color: rgba(var(--primary-rgb), 0.15);
+    border-color: #C4C5BA; /* Sophisticated sage color for border */
     transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 18px rgba(var(--primary-rgb), 0.1), 0 1px 8px rgba(var(--primary-rgb), 0.08);
+    box-shadow: 0 4px 18px rgba(var(--primary-rgb), 0.08), 0 1px 8px rgba(var(--primary-rgb), 0.05);
   }
   
   .card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 30px -6px rgba(var(--primary-rgb), 0.2), 0 10px 20px -8px rgba(var(--primary-rgb), 0.15);
-    border-color: rgba(var(--primary-rgb), 0.25);
+    box-shadow: 0 15px 30px -6px rgba(92, 95, 57, 0.15), 0 10px 20px -8px rgba(92, 95, 57, 0.1);
+    border-color: #5C5F39; /* Sophisticated sage color for hover border */
   }
   
   /* Text inside cards */
