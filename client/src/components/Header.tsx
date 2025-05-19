@@ -219,20 +219,32 @@ export default function Header() {
   
   return (
     <header className="sticky top-0 z-50 shadow-md bg-white border-b border-gray-100">
+      {/* College Logo and Name - Full Width */}
+      <div className="w-full bg-white border-b border-gray-100 py-3">
+        <div className="container mx-auto flex flex-col items-center justify-center">
+          <div className="flex items-center justify-center gap-4">
+            <img src="/jss-mvp-logo.png" alt="JSS Mahavidyapeetha" className="h-16 w-auto" />
+            <img src="/jss-logo.png" alt="JSS Polytechnic" className="h-16 w-auto" />
+          </div>
+          <h1 className="mt-2 text-2xl md:text-3xl font-bold text-primary">JSS Polytechnic for Women, Mysore</h1>
+          <p className="text-sm text-gray-600">Affiliated to Directorate of Technical Education, Karnataka</p>
+        </div>
+      </div>
+
+      {/* Navigation Menu Below */}
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <Link href="/">
+        <div className="flex justify-between items-center py-2">
+          {/* Mobile Logo - Hidden on Desktop */}
+          <Link href="/" className="md:hidden">
             <div className="flex items-center space-x-3 cursor-pointer group">
-              <div className="h-12 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-                <Logo className="h-12 w-auto" />
+              <div className="h-10 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+                <Logo className="h-10 w-auto" />
               </div>
-              <div className="hidden"></div>
             </div>
           </Link>
           
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          {/* Desktop Navigation - Centered */}
+          <nav className="hidden md:flex items-center space-x-6 mx-auto">
             {navLinks.map((link) => 
               link.hasSubmenu ? (
                 <DropdownMenu key={link.path}>
