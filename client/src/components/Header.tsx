@@ -232,11 +232,16 @@ export default function Header() {
               <ImageLoader src="/images/jsspoly.png" alt="JSS Polytechnic" className="h-20 w-20 rounded-full object-contain" />
             </div>
           </div>
-          <h1 className="mt-3 text-2xl md:text-3xl font-extrabold">
-            <span className="relative inline-block" style={{color: "#000000"}}>
+          <h1 className="mt-3 text-3xl md:text-4xl" style={{fontWeight: 900}}>
+            <div style={{
+              color: "#000000", 
+              textShadow: "0px 0px 1px rgba(0,0,0,0.2)",
+              letterSpacing: "0.5px",
+              padding: "5px 10px",
+              borderBottom: "2px solid #f59e0b"
+            }}>
               JSS Polytechnic, Mysore
-              <span className="absolute -bottom-1 left-0 w-full h-1 bg-amber-500 transform translate-y-1"></span>
-            </span>
+            </div>
           </h1>
           <p className="mt-1 text-sm text-gray-600 font-medium">Affiliated to Directorate of Technical Education, Karnataka</p>
         </div>
