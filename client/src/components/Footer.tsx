@@ -15,9 +15,9 @@ export default function Footer() {
   ];
 
   const contactInfo = {
-    address: '123 Education Street, Mysore, Karnataka - 570006, India',
-    phone: '+91 8765432100',
-    email: 'info@jsspolytechnic.edu.in',
+    address: 'JSS Technical Institutions Campus, University of Mysuru, Manasagangothri, Mysuru - 570006, Karnataka, India',
+    phone: '+91 9876543210',
+    email: 'principal@jsspolytechnic.ac.in',
   };
 
   const handleSubscribe = (e: React.FormEvent<HTMLFormElement>) => {
@@ -36,7 +36,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-white/90 mb-4 text-center sm:text-left">
-              Empowering students with technical knowledge and skills for a successful career since 1990.
+              Established in 1986, JSS Polytechnic provides technical education and expertise for students pursuing diploma courses in various engineering disciplines.
             </p>
             <div className="flex space-x-4 justify-center sm:justify-start">
               <a href="#" className="text-white hover:text-secondary transition-all duration-300 bg-white/10 p-2 rounded-full hover:bg-white/20" aria-label="Facebook">

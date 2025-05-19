@@ -26,11 +26,11 @@ export default function SplashScreen() {
               <ImageLoader src="/images/jsspoly.png" alt="JSS Polytechnic" className="h-16 w-16 rounded-full object-contain" />
             </div>
           </div>
-          <h2 className="text-primary text-lg font-bold">JSS Polytechnic for Women</h2>
-          <p className="text-gray-600 text-xs">Mysore</p>
+          <h2 className="text-primary text-lg font-bold">JSS Polytechnic</h2>
+          <p className="text-gray-600 text-xs">Mysuru, Est. 1986</p>
         </div>
       </motion.div>
-      <p className="text-neutral-100 mt-2 text-sm">Building tomorrow's leaders</p>
+      <p className="text-neutral-100 mt-2 text-sm">Providing technical education since 1986</p>
       <div className="mt-8">
         <motion.div 
           className="w-16 h-1 bg-secondary rounded-full"

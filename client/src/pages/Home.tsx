@@ -6,6 +6,7 @@ import AboutSection from '@/components/AboutSection';
 import FacilitiesSection from '@/components/FacilitiesSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import CtaSection from '@/components/CtaSection';
+import HistorySection from '@/components/HistorySection';
 import Footer from '@/components/Footer';
 
 import { 
@@ -49,6 +50,7 @@ export default function Home() {
       <Header />
       <NewsTicker news={newsItems} />
       <HeroSlideshow slides={heroSlides} />
+      <HistorySection />
       <ProgramsSection programs={programs} />
       <AboutSection {...aboutInfo} />
       <FacilitiesSection facilities={facilitiesWithIcons} />
