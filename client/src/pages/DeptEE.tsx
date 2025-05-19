@@ -2,8 +2,7 @@ import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Quote } from "lucide-react";
-import StudentPhotoComponent from "@/components/StudentPhotoComponent";
-import StudentImage from "@/components/StudentImage";
+import { ImageLoader } from "@/components/Images";
 
 export default function DeptEE() {
   return (
@@ -94,7 +93,13 @@ export default function DeptEE() {
                 {/* Student Photo and Info */}
                 <div className="flex flex-col sm:flex-row items-center gap-4 p-4 bg-primary/5 rounded-lg">
                   <div className="w-full sm:w-1/6 flex justify-center">
-                    <StudentPhotoComponent />
+                    <div className="rounded-lg overflow-hidden border-4 border-primary/20 shadow-md">
+                      <ImageLoader 
+                        src="/images/student.png"
+                        alt="Trupti Ananth Jain"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   </div>
                   <div className="w-full sm:w-5/6">
                     <h3 className="text-xl font-bold text-primary">Trupti Ananth Jain</h3>
