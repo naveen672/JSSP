@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Quote } from "lucide-react";
+import StudentImage from "@/components/StudentImage";
 
 export default function DeptEE() {
   return (
@@ -88,17 +89,27 @@ export default function DeptEE() {
               <h2 className="text-2xl font-bold text-primary border-b border-gray-200 pb-2 mb-4">
                 Student Testimonial
               </h2>
-              <div className="flex flex-col md:flex-row gap-6 items-start">
-                <div className="w-full md:w-1/4 flex justify-center">
-                  <div className="rounded-lg overflow-hidden border-4 border-primary/20 shadow-md">
-                    <img 
-                      src="/student.png"
-                      alt="Trupti Ananth Jain"
-                      className="w-full h-auto object-cover"
-                    />
+              <div className="flex flex-col gap-6">
+                {/* Student Photo and Info */}
+                <div className="flex flex-col sm:flex-row items-center gap-4 p-4 bg-primary/5 rounded-lg">
+                  <div className="w-full sm:w-1/6 flex justify-center">
+                    <div className="h-[150px] w-[120px] bg-gradient-to-r from-primary/10 to-secondary/10 rounded-md flex items-center justify-center shadow-md">
+                      <div className="text-primary/70 text-center px-2 font-medium">Student Photo</div>
+                    </div>
+                  </div>
+                  <div className="w-full sm:w-5/6">
+                    <h3 className="text-xl font-bold text-primary">Trupti Ananth Jain</h3>
+                    <p className="text-sm text-gray-600 mb-2">Electrical & Electronics Engineering • 2019-2022 Batch</p>
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      <span className="bg-primary/10 text-primary text-xs px-2 py-1 rounded">Top Performer</span>
+                      <span className="bg-primary/10 text-primary text-xs px-2 py-1 rounded">National Paper Presenter</span>
+                      <span className="bg-primary/10 text-primary text-xs px-2 py-1 rounded">Academic Excellence</span>
+                    </div>
                   </div>
                 </div>
-                <div className="w-full md:w-3/4">
+
+                {/* Testimonial Content */}
+                <div className="bg-white rounded-lg p-5 shadow-sm border border-gray-100">
                   <div className="relative">
                     <Quote className="text-primary/20 absolute -top-4 -left-4 w-12 h-12" />
                     <div className="pl-4 space-y-3 text-gray-700">
