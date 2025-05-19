@@ -224,8 +224,8 @@ export default function Header() {
       <div className="w-full bg-white border-b border-gray-100 py-3">
         <div className="container mx-auto flex flex-col items-center justify-center">
           <div className="flex items-center justify-center gap-6">
-            <JSSMVPLogo />
-            <JSSPolytechnicLogo />
+            <img src="/jssmvp-logo.png" alt="JSS Mahavidyapeetha" className="h-20 w-auto" />
+            <img src="/jsspoly-logo.png" alt="JSS Polytechnic" className="h-20 w-auto" />
           </div>
           <h1 className="mt-2 text-2xl md:text-3xl font-bold text-primary">JSS Polytechnic for Women, Mysore</h1>
           <p className="text-sm text-gray-600">Affiliated to Directorate of Technical Education, Karnataka</p>
