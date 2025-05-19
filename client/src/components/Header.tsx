@@ -243,7 +243,7 @@ export default function Header() {
       </div>
 
       {/* Navigation Menu Below */}
-      <div className="bg-primary shadow-md">
+      <div className="bg-white shadow-md border-t border-gray-200">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-1">
             {/* Mobile Logo - Hidden on Desktop */}
@@ -262,8 +262,8 @@ export default function Header() {
                   <DropdownMenu key={link.path}>
                     <DropdownMenuTrigger className={`flex items-center transition-all duration-300 px-4 py-3
                       ${location === link.path 
-                        ? 'text-amber-400 bg-primary-foreground/10 font-semibold' 
-                        : 'text-white hover:text-amber-400 hover:bg-primary-foreground/10 font-medium'
+                        ? 'text-amber-600 bg-gray-100 font-semibold' 
+                        : 'text-primary hover:text-amber-600 hover:bg-gray-100 font-medium'
                       }
                       relative group
                     `}>
@@ -699,8 +699,8 @@ export default function Header() {
                     href={link.path}
                     className={`relative group px-4 py-3 transition-all duration-300
                       ${location === link.path 
-                        ? 'text-amber-400 bg-primary-foreground/10 font-semibold' 
-                        : 'text-white hover:text-amber-400 hover:bg-primary-foreground/10 font-medium'
+                        ? 'text-amber-600 bg-gray-100 font-semibold' 
+                        : 'text-primary hover:text-amber-600 hover:bg-gray-100 font-medium'
                       }
                     `}
                   >
