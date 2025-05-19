@@ -93,8 +93,12 @@ export default function DeptEE() {
                 {/* Student Photo and Info */}
                 <div className="flex flex-col sm:flex-row items-center gap-4 p-4 bg-primary/5 rounded-lg">
                   <div className="w-full sm:w-1/6 flex justify-center">
-                    <div className="h-[150px] w-[120px] bg-gradient-to-r from-primary/10 to-secondary/10 rounded-md flex items-center justify-center shadow-md">
-                      <div className="text-primary/70 text-center px-2 font-medium">Student Photo</div>
+                    <div className="h-[150px] w-[120px] rounded-md overflow-hidden shadow-md border-2 border-primary/20">
+                      <img 
+                        src="/student_photo.png"
+                        alt="Trupti Ananth Jain"
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   </div>
                   <div className="w-full sm:w-5/6">
