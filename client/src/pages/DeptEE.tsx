@@ -92,7 +92,7 @@ export default function DeptEE() {
                 <div className="w-full md:w-1/4 flex justify-center">
                   <div className="rounded-lg overflow-hidden border-4 border-primary/20 shadow-md">
                     <img 
-                      src="/student_photo.png"
+                      src="/student.png"
                       alt="Trupti Ananth Jain"
                       className="w-full h-auto object-cover"
                     />
