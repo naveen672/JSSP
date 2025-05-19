@@ -17,16 +17,16 @@
   --border: 214 32% 91%;
   --input: 214 32% 91%;
 
-  /* Primary: Deep Royal Blue */
-  --primary: 220 100% 27%; /* #002B7F - deep royal blue */
+  /* Primary: Timeless Noir */
+  --primary: 0 0% 11%; /* #1B1B1B - timeless noir */
   --primary-foreground: 0 0% 100%;
   
-  /* Secondary: Vibrant Teal */
-  --secondary: 175 100% 30%; /* #00998C - vibrant teal */
+  /* Secondary: Sophisticated Sage */
+  --secondary: 79 29% 43%; /* #5C5F39 - sophisticated sage */
   --secondary-foreground: 0 0% 100%;
   
-  /* Accent: Golden Yellow */
-  --accent: 45 100% 50%; /* #FFBF00 - golden yellow */
+  /* Accent: Muted Moss */
+  --accent: 84 27% 47%; /* #595F39 - muted moss */
   --accent-foreground: 210 40% 98%;
   
   /* System colors */
@@ -49,16 +49,16 @@
   --border: 216 34% 17%;
   --input: 216 34% 17%;
   
-  /* Primary: Brighter Royal Blue for dark mode */
-  --primary: 220 100% 40%; /* Brighter #002B7F for dark mode */
+  /* Primary: Timeless Noir for dark mode */
+  --primary: 0 0% 15%; /* Slightly lighter #1B1B1B for dark mode */
   --primary-foreground: 0 0% 100%;
   
-  /* Secondary: Brighter Teal for dark mode */
-  --secondary: 175 100% 40%;  /* Brighter #00998C for dark mode */
+  /* Secondary: Sophisticated Sage for dark mode */
+  --secondary: 79 29% 48%;  /* Slightly lighter #5C5F39 for dark mode */
   --secondary-foreground: 0 0% 100%;
   
-  /* Accent: Brighter Golden Yellow for dark mode */
-  --accent: 45 100% 60%; /* Brighter #FFBF00 for dark mode */
+  /* Accent: Muted Moss for dark mode */
+  --accent: 84 27% 52%; /* Slightly lighter #595F39 for dark mode */
   --accent-foreground: 0 0% 100%;
   
   /* System colors */
@@ -75,10 +75,10 @@
 
   body {
     @apply font-sans antialiased text-foreground;
-    background-color: #F8F9FA; /* Crisp white background */
+    background-color: #E4E4DE; /* Ethereal Ivory background */
     background-image: 
-      linear-gradient(to right, rgba(var(--primary-rgb), 0.03) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(var(--primary-rgb), 0.03) 1px, transparent 1px);
+      linear-gradient(to right, rgba(var(--primary-rgb), 0.02) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(var(--primary-rgb), 0.02) 1px, transparent 1px);
     background-size: 40px 40px;
     background-attachment: fixed;
   }
@@ -91,7 +91,7 @@
   }
   
   :root {
-    --primary-rgb: 0, 43, 127; /* RGB equivalent of #002B7F deep royal blue */
+    --primary-rgb: 27, 27, 27; /* RGB equivalent of #1B1B1B timeless noir */
   }
   
   /* Mobile menu scrolling fix */
@@ -130,134 +130,60 @@
   /* Button enhancements */
   .btn-primary, button[class*="bg-primary"] {
     @apply bg-primary text-white shadow-md hover:shadow-lg transition-all duration-300;
-    background-image: linear-gradient(135deg, #002B7F, #003AAF);
+    background-image: linear-gradient(135deg, #1B1B1B, #1B1B1B);
     border-radius: 8px;
     transform: translateY(0);
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-  }
-  
-  .btn-primary:before, button[class*="bg-primary"]:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: 0.5s;
-    z-index: -1;
-  }
-  
-  .btn-primary:hover:before, button[class*="bg-primary"]:hover:before {
-    left: 100%;
   }
   
   .btn-primary:hover, button[class*="bg-primary"]:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px -5px rgba(0, 43, 127, 0.5), 0 8px 10px -6px rgba(0, 43, 127, 0.3);
-    background-image: linear-gradient(135deg, #002B7F, #0046D5);
+    box-shadow: 0 10px 25px -5px rgba(27, 27, 27, 0.4), 0 8px 10px -6px rgba(27, 27, 27, 0.2);
+    background-image: linear-gradient(135deg, #1B1B1B, #2D2D2D);
   }
   
   .btn-secondary, button[class*="bg-secondary"] {
     @apply shadow-md hover:shadow-lg transition-all duration-300;
-    background-color: #00998C;
+    background-color: #5C5F39;
     color: white;
     font-weight: 600;
     border-radius: 8px;
     transform: translateY(0);
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-  }
-  
-  .btn-secondary:before, button[class*="bg-secondary"]:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: 0.5s;
-    z-index: -1;
-  }
-  
-  .btn-secondary:hover:before, button[class*="bg-secondary"]:hover:before {
-    left: 100%;
   }
   
   .btn-secondary:hover, button[class*="bg-secondary"]:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px -5px rgba(0, 153, 140, 0.5), 0 8px 10px -6px rgba(0, 153, 140, 0.3);
-    background-image: linear-gradient(135deg, #00998C, #00B3A3);
+    box-shadow: 0 10px 25px -5px rgba(92, 95, 57, 0.5), 0 8px 10px -6px rgba(92, 95, 57, 0.3);
+    background-image: linear-gradient(135deg, #5C5F39, #6D7144);
   }
   
   .btn-accent, button[class*="bg-accent"] {
     @apply shadow-md hover:shadow-lg transition-all duration-300;
-    background-color: #FFBF00;
-    color: #002B7F;
+    background-color: #C4C5BA;
+    color: #1B1B1B;
     font-weight: 600;
     border-radius: 8px;
     transform: translateY(0);
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-  }
-  
-  .btn-accent:before, button[class*="bg-accent"]:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    transition: 0.5s;
-    z-index: -1;
-  }
-  
-  .btn-accent:hover:before, button[class*="bg-accent"]:hover:before {
-    left: 100%;
   }
   
   .btn-accent:hover, button[class*="bg-accent"]:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px -5px rgba(255, 191, 0, 0.5), 0 8px 10px -6px rgba(255, 191, 0, 0.3);
-    background-image: linear-gradient(135deg, #FFBF00, #FFCF40);
+    box-shadow: 0 10px 25px -5px rgba(196, 197, 186, 0.5), 0 8px 10px -6px rgba(196, 197, 186, 0.3);
+    background-image: linear-gradient(135deg, #C4C5BA, #D4D5CA);
   }
   
   /* Card styling */
   .card, div[class*="bg-white rounded"] {
-    @apply rounded-xl overflow-hidden;
+    @apply rounded-xl shadow-md border overflow-hidden;
     background-color: white;
-    border: none;
+    border-color: #C4C5BA; /* Sophisticated sage color for border */
     transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 5px 20px rgba(var(--primary-rgb), 0.05), 0 2px 12px rgba(var(--primary-rgb), 0.03);
-    position: relative;
-  }
-  
-  .card:before, div[class*="bg-white rounded"]:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 4px;
-    height: 100%;
-    background: linear-gradient(180deg, #002B7F, #00998C);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  .card:hover:before, div[class*="bg-white rounded"]:hover:before {
-    opacity: 1;
+    box-shadow: 0 4px 18px rgba(var(--primary-rgb), 0.08), 0 1px 8px rgba(var(--primary-rgb), 0.05);
   }
   
   .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(var(--primary-rgb), 0.1), 0 15px 25px rgba(var(--primary-rgb), 0.07);
-    border-color: #002B7F; 
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px -6px rgba(92, 95, 57, 0.15), 0 10px 20px -8px rgba(92, 95, 57, 0.1);
+    border-color: #5C5F39; /* Sophisticated sage color for hover border */
   }
   
   /* Text inside cards */
