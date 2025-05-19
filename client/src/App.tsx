@@ -33,6 +33,7 @@ import ProfBodyEE from "@/pages/ProfBodyEE";
 import ProfBodyME from "@/pages/ProfBodyME";
 import ProfBodyMT from "@/pages/ProfBodyMT";
 import ProfBodyCE from "@/pages/ProfBodyCE";
+import LeadershipTeam from "@/pages/LeadershipTeam";
 
 // Employee Benefits pages
 import StudentAccidentPolicy from "@/pages/StudentAccidentPolicy";
@@ -148,6 +149,7 @@ function Router() {
       <Route path="/infrastructure" component={Infrastructure} />
       <Route path="/placements" component={Placements} />
       <Route path="/internships" component={Internships} />
+      <Route path="/leadership-team" component={LeadershipTeam} />
       
       {/* Infrastructure Department Routes */}
       <Route path="/infrastructure/dept-cs" component={InfrastructureDeptCS} />
