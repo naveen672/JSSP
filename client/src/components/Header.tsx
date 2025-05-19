@@ -232,7 +232,7 @@ export default function Header() {
               <ImageLoader src="/images/jsspoly.png" alt="JSS Polytechnic" className="h-20 w-20 rounded-full object-contain" />
             </div>
           </div>
-          <h1 className="mt-2 text-2xl md:text-3xl font-bold text-primary">JSS Polytechnic for Women, Mysore</h1>
+          <h1 className="mt-2 text-2xl md:text-3xl font-bold text-primary">JSS Polytechnic, Mysore</h1>
           <p className="text-sm text-gray-600">Affiliated to Directorate of Technical Education, Karnataka</p>
         </div>
       </div>

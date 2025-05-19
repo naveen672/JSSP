@@ -36,7 +36,7 @@ export default function LeadershipTeam() {
     <>
       <Helmet>
         <title>Leadership Team - JSS Polytechnic</title>
-        <meta name="description" content="Meet the leadership team of JSS Polytechnic for Women, Mysore." />
+        <meta name="description" content="Meet the leadership team of JSS Polytechnic, Mysore." />
       </Helmet>
 
       <Header />
@@ -86,7 +86,7 @@ export default function LeadershipTeam() {
         <div className="mt-12 text-center bg-primary/5 rounded-lg p-8">
           <h2 className="text-2xl font-bold text-primary mb-4">Our Vision</h2>
           <p className="text-gray-700 max-w-3xl mx-auto">
-            Under the guidance of our esteemed leadership team, JSS Polytechnic for Women strives to provide quality technical education 
+            Under the guidance of our esteemed leadership team, JSS Polytechnic strives to provide quality technical education 
             that prepares students for industry needs while emphasizing holistic development, ethics, and innovation.
           </p>
         </div>
