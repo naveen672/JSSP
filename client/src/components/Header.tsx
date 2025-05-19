@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'wouter';
 import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react';
 import Logo from './Logo';
+import CollegeLogo, { JSSMVPLogo, JSSPolytechnicLogo } from './CollegeLogo';
 
 // Define types for menu items
 interface SubmenuItem {
@@ -222,9 +223,9 @@ export default function Header() {
       {/* College Logo and Name - Full Width */}
       <div className="w-full bg-white border-b border-gray-100 py-3">
         <div className="container mx-auto flex flex-col items-center justify-center">
-          <div className="flex items-center justify-center gap-4">
-            <img src="/jss-mvp-logo.png" alt="JSS Mahavidyapeetha" className="h-16 w-auto" />
-            <img src="/jss-logo.png" alt="JSS Polytechnic" className="h-16 w-auto" />
+          <div className="flex items-center justify-center gap-6">
+            <JSSMVPLogo />
+            <JSSPolytechnicLogo />
           </div>
           <h1 className="mt-2 text-2xl md:text-3xl font-bold text-primary">JSS Polytechnic for Women, Mysore</h1>
           <p className="text-sm text-gray-600">Affiliated to Directorate of Technical Education, Karnataka</p>
