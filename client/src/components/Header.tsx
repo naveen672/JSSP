@@ -66,6 +66,7 @@ export default function Header() {
   const homeSubmenus: SubmenuItem[] = [
     { path: '/about-jssmvp', label: 'About JSSMVP' },
     { path: '/vision-mission', label: 'Vision Mission of the Institute' },
+    { path: '/leadership-team', label: 'Leadership Team' },
     { path: '/messages', label: 'Messages' },
     { path: '/governance', label: 'Governance' },
     { path: '/aicte', label: 'All India Council for Technical Education (AICTE) and EOA' },
