@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'wouter';
-import { Menu, X, ChevronDown, ChevronRight, Bell } from 'lucide-react';
+import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react';
 import Logo from './Logo';
 import { ImageLoader } from './Images';
 
@@ -260,7 +260,7 @@ export default function Header() {
               {navLinks.map((link) => 
                 link.hasSubmenu ? (
                   <DropdownMenu key={link.path}>
-                    <DropdownMenuTrigger className={`flex items-center font-medium transition-all duration-300 px-4 py-3
+                    <DropdownMenuTrigger className={`flex items-center transition-all duration-300 px-4 py-3
                       ${location === link.path 
                         ? 'text-amber-400 bg-primary-foreground/10 font-semibold' 
                         : 'text-white hover:text-amber-400 hover:bg-primary-foreground/10 font-medium'
@@ -731,23 +731,7 @@ export default function Header() {
         </div>
       </div>
       
-      {/* News Ticker Below Navigation */}
-      <div className="bg-amber-50 border-b border-amber-100 py-1 shadow-sm">
-        <div className="container mx-auto px-4 flex items-center">
-          <div className="flex items-center justify-center bg-amber-500 text-white px-3 py-1 rounded-sm mr-4">
-            <Bell className="h-4 w-4 mr-1" />
-            <span className="text-sm font-semibold">News</span>
-          </div>
-          <div className="overflow-hidden relative flex-1">
-            <div className="news-ticker whitespace-nowrap animate-marquee">
-              <span className="inline-block mr-8 text-gray-700">Admission open for 2023-24 academic year</span>
-              <span className="inline-block mr-8 text-gray-700">NBA Accreditation for CSE, ECE and ME departments</span>
-              <span className="inline-block mr-8 text-gray-700">Special coaching classes for competitive exams</span>
-              <span className="inline-block mr-8 text-gray-700">Placement drive scheduled for final year students</span>
-            </div>
-          </div>
-        </div>
-      </div>
+
 
       {/* Mobile Menu */}
       <div 
