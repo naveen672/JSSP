@@ -83,7 +83,7 @@ export const programs = [
     id: 1,
     title: 'Diploma in Mechanical Engineering',
     description: 'Learn design, manufacturing, and maintenance of mechanical systems with hands-on training.',
-    image: 'https://img.freepik.com/free-photo/industry-workers-engineer-discussing-about-motor-parts-that-need-produce-factory_642221-300.jpg?w=740&t=st=1716113260~exp=1716113860~hmac=a0bb8f0fa1a1b6a2dcfd2f4e1e339a85747ab0a9f55bf3845a37a47cc00d12b4',
+    image: '/images/departments/mechanical_image.jpg',
     duration: '3 Years',
     type: 'Full-time',
     departmentLink: '/dept-me'
@@ -101,7 +101,7 @@ export const programs = [
     id: 3,
     title: 'Diploma in Electrical Engineering',
     description: 'Study power systems, electrical machines, and control systems with practical applications.',
-    image: 'https://img.freepik.com/free-photo/close-up-male-electrician-works-with-cable-electric-shield_169016-16684.jpg?w=740&t=st=1716113310~exp=1716113910~hmac=28ac8dc5b13c81f7e9c47a4d0d8d5e9f6faea20cb2ae4c03cfc86f60cc25c66c',
+    image: '/images/departments/electrical_image.jpg',
     duration: '3 Years',
     type: 'Full-time',
     departmentLink: '/dept-ee'
@@ -110,7 +110,7 @@ export const programs = [
     id: 4,
     title: 'Diploma in Electronics & Communication',
     description: 'Explore electronic circuits, communication systems, and signal processing technologies.',
-    image: 'https://img.freepik.com/free-photo/professional-circuit-board-repair_23-2149134776.jpg?w=740&t=st=1716113333~exp=1716113933~hmac=1df8ab1e1a23d5a7e87c99ce32a272ed0c2517b64b5d3d0a7e6a94bee9db6f20',
+    image: '/images/departments/ec_image.jpg',
     duration: '3 Years',
     type: 'Full-time',
     departmentLink: '/dept-ec'
@@ -128,7 +128,7 @@ export const programs = [
     id: 6,
     title: 'Diploma in Civil Engineering',
     description: 'Learn structural design, construction management, and infrastructure development.',
-    image: 'https://img.freepik.com/free-photo/engineering-team-working-building-site_23-2148102397.jpg?w=740&t=st=1716113357~exp=1716113957~hmac=cfd877cc42aeba86c7d2d14991ff8e4dba1d06d7cd1d70a5bb7db01ea3fd0254',
+    image: '/images/departments/civil_image.jpg',
     duration: '3 Years',
     type: 'Full-time',
     departmentLink: '/dept-ce'
