@@ -83,7 +83,7 @@ export const programs = [
     id: 1,
     title: 'Diploma in Mechanical Engineering',
     description: 'Learn design, manufacturing, and maintenance of mechanical systems with hands-on training.',
-    image: '/images/departments/mechanical_image.jpg',
+    image: '/mechanical_image.jpg',
     duration: '3 Years',
     type: 'Full-time',
     departmentLink: '/dept-me'
@@ -101,7 +101,7 @@ export const programs = [
     id: 3,
     title: 'Diploma in Electrical Engineering',
     description: 'Study power systems, electrical machines, and control systems with practical applications.',
-    image: '/images/departments/electrical_image.jpg',
+    image: '/electrical_image.jpg',
     duration: '3 Years',
     type: 'Full-time',
     departmentLink: '/dept-ee'
@@ -110,7 +110,7 @@ export const programs = [
     id: 4,
     title: 'Diploma in Electronics & Communication',
     description: 'Explore electronic circuits, communication systems, and signal processing technologies.',
-    image: '/images/departments/ec_image.jpg',
+    image: '/ec_image.jpg',
     duration: '3 Years',
     type: 'Full-time',
     departmentLink: '/dept-ec'
@@ -128,7 +128,7 @@ export const programs = [
     id: 6,
     title: 'Diploma in Civil Engineering',
     description: 'Learn structural design, construction management, and infrastructure development.',
-    image: '/images/departments/civil_image.jpg',
+    image: '/civil_image.jpg',
     duration: '3 Years',
     type: 'Full-time',
     departmentLink: '/dept-ce'
