@@ -100,40 +100,40 @@ export default function ProgramsSection({ programs }: ProgramsSectionProps) {
                       )}
                       {program.departmentLink && program.departmentLink.includes('ee') && (
                         <DropdownMenuItem asChild>
-                          <Link href="/prof-body-ee" className="cursor-pointer flex items-center">
-                            <ExternalLink className="h-4 w-4 mr-2" />
+                          <Link href="/prof-body-ee" className="cursor-pointer flex items-center text-xs sm:text-sm">
+                            <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
                             <span>Professional Body</span>
                           </Link>
                         </DropdownMenuItem>
                       )}
                       {program.departmentLink && program.departmentLink.includes('me') && (
                         <DropdownMenuItem asChild>
-                          <Link href="/prof-body-me" className="cursor-pointer flex items-center">
-                            <ExternalLink className="h-4 w-4 mr-2" />
+                          <Link href="/prof-body-me" className="cursor-pointer flex items-center text-xs sm:text-sm">
+                            <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
                             <span>Professional Body</span>
                           </Link>
                         </DropdownMenuItem>
                       )}
                       {program.departmentLink && program.departmentLink.includes('mt') && (
                         <DropdownMenuItem asChild>
-                          <Link href="/prof-body-mt" className="cursor-pointer flex items-center">
-                            <ExternalLink className="h-4 w-4 mr-2" />
+                          <Link href="/prof-body-mt" className="cursor-pointer flex items-center text-xs sm:text-sm">
+                            <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
                             <span>Professional Body</span>
                           </Link>
                         </DropdownMenuItem>
                       )}
                       {program.departmentLink && program.departmentLink.includes('ce') && (
                         <DropdownMenuItem asChild>
-                          <Link href="/prof-body-ce" className="cursor-pointer flex items-center">
-                            <ExternalLink className="h-4 w-4 mr-2" />
+                          <Link href="/prof-body-ce" className="cursor-pointer flex items-center text-xs sm:text-sm">
+                            <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
                             <span>Professional Body</span>
                           </Link>
                         </DropdownMenuItem>
                       )}
                       {program.departmentLink && program.departmentLink.includes('is') && (
                         <DropdownMenuItem asChild>
-                          <Link href="/academics" className="cursor-pointer flex items-center">
-                            <School className="h-4 w-4 mr-2" />
+                          <Link href="/academics" className="cursor-pointer flex items-center text-xs sm:text-sm">
+                            <School className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
                             <span>Program Details</span>
                           </Link>
                         </DropdownMenuItem>
