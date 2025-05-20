@@ -83,7 +83,7 @@ export const programs = [
     id: 1,
     title: 'Diploma in Mechanical Engineering',
     description: 'Learn design, manufacturing, and maintenance of mechanical systems with hands-on training.',
-    image: 'https://img.freepik.com/free-photo/young-student-during-mechanical-engineering-lab_23-2149348676.jpg?w=740&t=st=1716112937~exp=1716113537~hmac=71f1f89a9a01d14f9e11b2e622b0ed95def633dc70acbe9fe79d54dedc909dbb',
+    image: 'https://img.freepik.com/free-photo/industry-workers-engineer-discussing-about-motor-parts-that-need-produce-factory_642221-300.jpg?w=740&t=st=1716113260~exp=1716113860~hmac=a0bb8f0fa1a1b6a2dcfd2f4e1e339a85747ab0a9f55bf3845a37a47cc00d12b4',
     duration: '3 Years',
     type: 'Full-time',
     departmentLink: '/dept-me'
@@ -101,7 +101,7 @@ export const programs = [
     id: 3,
     title: 'Diploma in Electrical Engineering',
     description: 'Study power systems, electrical machines, and control systems with practical applications.',
-    image: 'https://img.freepik.com/free-photo/electrical-engineer-measuring-voltage-current-electrical-outlet_1150-14406.jpg?w=740&t=st=1716113091~exp=1716113691~hmac=98c1f56e3b0bf73e5d5a17bb94b70d43f1b6d7e26a94afa2aa8b56ceb7cae2ed',
+    image: 'https://img.freepik.com/free-photo/close-up-male-electrician-works-with-cable-electric-shield_169016-16684.jpg?w=740&t=st=1716113310~exp=1716113910~hmac=28ac8dc5b13c81f7e9c47a4d0d8d5e9f6faea20cb2ae4c03cfc86f60cc25c66c',
     duration: '3 Years',
     type: 'Full-time',
     departmentLink: '/dept-ee'
@@ -110,7 +110,7 @@ export const programs = [
     id: 4,
     title: 'Diploma in Electronics & Communication',
     description: 'Explore electronic circuits, communication systems, and signal processing technologies.',
-    image: 'https://img.freepik.com/free-photo/technician-examining-electronic-circuit-board-with-multimeter_23-2148168285.jpg?w=740&t=st=1716113081~exp=1716113681~hmac=c90efaa8c3ba82339fb553da7e8389a3da7f7265057a1cec3e975e5d90eba9fe',
+    image: 'https://img.freepik.com/free-photo/professional-circuit-board-repair_23-2149134776.jpg?w=740&t=st=1716113333~exp=1716113933~hmac=1df8ab1e1a23d5a7e87c99ce32a272ed0c2517b64b5d3d0a7e6a94bee9db6f20',
     duration: '3 Years',
     type: 'Full-time',
     departmentLink: '/dept-ec'
@@ -128,7 +128,7 @@ export const programs = [
     id: 6,
     title: 'Diploma in Civil Engineering',
     description: 'Learn structural design, construction management, and infrastructure development.',
-    image: 'https://img.freepik.com/free-photo/construction-site-site-construction-workers-are-laying-foundation-house_1150-14253.jpg?w=740&t=st=1716113107~exp=1716113707~hmac=1a4a60f4f24c1b158ce58b2e84f75af82c35f5b0de724c5e96a4d24fdb07ac29',
+    image: 'https://img.freepik.com/free-photo/engineering-team-working-building-site_23-2148102397.jpg?w=740&t=st=1716113357~exp=1716113957~hmac=cfd877cc42aeba86c7d2d14991ff8e4dba1d06d7cd1d70a5bb7db01ea3fd0254',
     duration: '3 Years',
     type: 'Full-time',
     departmentLink: '/dept-ce'
