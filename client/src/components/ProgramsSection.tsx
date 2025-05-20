@@ -46,7 +46,10 @@ export default function ProgramsSection({ programs }: ProgramsSectionProps) {
             >
               <div 
                 className="w-full h-48 bg-cover bg-center"
-                style={{ backgroundImage: `url('${program.image}')` }}
+                style={{ backgroundImage: typeof program.image === 'string' && program.image.startsWith('http') 
+                  ? `url(${program.image})` 
+                  : `url('${program.image}')`
+                }}
               ></div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-heading font-bold text-primary mb-2">{program.title}</h3>
