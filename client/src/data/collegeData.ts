@@ -7,12 +7,14 @@ export const newsItems = [
   '100% placement record for the 5th consecutive year'
 ];
 
-// Import images for Hero Slideshow
+// Import images for Hero Slideshow and other sections
 import image10 from '@assets/10.jpg';
 import image11 from '@assets/11.jpg';
 import image12 from '@assets/12.jpg';
 import image13 from '@assets/13.jpg';
 import jssLogo from '@assets/jsslogo.png';
+import ecImage from '@assets/image_1747620347406.png';
+import isImage from '@assets/image_1747621477155.png';
 
 // Hero Slideshow Data
 export const heroSlides = [
@@ -103,7 +105,7 @@ export const programs = [
     id: 4,
     title: 'Diploma in Electronics & Communication',
     description: 'Explore electronic circuits, communication systems, and signal processing technologies.',
-    image: 'https://images.unsplash.com/photo-1563770557593-e11b79937af8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=400&q=80',
+    image: ecImage,
     duration: '3 Years',
     type: 'Full-time',
     departmentLink: '/dept-ec'
@@ -112,7 +114,7 @@ export const programs = [
     id: 5,
     title: 'Diploma in Information Science',
     description: 'Study information systems, data management, and computing technologies.',
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=400&q=80',
+    image: isImage,
     duration: '3 Years',
     type: 'Full-time',
     departmentLink: '/dept-is'
