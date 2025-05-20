@@ -50,9 +50,9 @@ export default function Home() {
       <Header />
       <NewsTicker news={newsItems} />
       <HeroSlideshow slides={heroSlides} />
+      <AboutSection {...aboutInfo} />
       <HistorySection />
       <ProgramsSection programs={programs} />
-      <AboutSection {...aboutInfo} />
       <FacilitiesSection facilities={facilitiesWithIcons} />
       <TestimonialsSection testimonials={testimonials} />
       <CtaSection {...ctaInfo} />
