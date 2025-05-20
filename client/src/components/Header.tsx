@@ -224,15 +224,15 @@ export default function Header() {
       {/* College Logo and Name - Full Width */}
       <div className="w-full bg-gradient-to-r from-white via-white to-white py-4 border-b border-gray-200">
         <div className="container mx-auto flex flex-col items-center justify-center">
-          <div className="flex items-center justify-center gap-10">
+          <div className="flex items-center justify-center gap-4 md:gap-10">
             <div className="rounded-full overflow-hidden border-2 border-primary p-1 shadow-lg transform transition-transform duration-300 hover:scale-105 bg-white">
-              <ImageLoader src="/images/jssmvp.png" alt="JSS Mahavidyapeetha" className="h-20 w-20 rounded-full object-contain" />
+              <ImageLoader src="/images/jssmvp.png" alt="JSS Mahavidyapeetha" className="h-14 w-14 md:h-20 md:w-20 rounded-full object-contain" />
             </div>
             <div className="rounded-full overflow-hidden border-2 border-primary p-1 shadow-lg transform transition-transform duration-300 hover:scale-105 bg-white">
-              <ImageLoader src="/images/jsspoly.png" alt="JSS Polytechnic" className="h-20 w-20 rounded-full object-contain" />
+              <ImageLoader src="/images/jsspoly.png" alt="JSS Polytechnic" className="h-14 w-14 md:h-20 md:w-20 rounded-full object-contain" />
             </div>
           </div>
-          <h1 className="mt-3 text-3xl md:text-4xl" style={{fontWeight: 900}}>
+          <h1 className="mt-3 text-xl sm:text-2xl md:text-4xl text-center" style={{fontWeight: 900}}>
             <div style={{
               color: "#000000", 
               textShadow: "0px 0px 1px rgba(0,0,0,0.2)",
@@ -243,7 +243,7 @@ export default function Header() {
               JSS Polytechnic, Mysore
             </div>
           </h1>
-          <p className="mt-1 text-sm text-gray-600 font-medium">Affiliated to Directorate of Technical Education, Karnataka</p>
+          <p className="mt-1 text-xs sm:text-sm text-gray-600 font-medium text-center">Affiliated to Directorate of Technical Education, Karnataka</p>
         </div>
       </div>
 
@@ -251,12 +251,10 @@ export default function Header() {
       <div className="bg-white shadow-md border-t border-gray-200">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-1">
-            {/* Mobile Logo - Hidden on Desktop */}
+            {/* Mobile College Name - Hidden on Desktop */}
             <Link href="/" className="md:hidden">
               <div className="flex items-center space-x-3 cursor-pointer group">
-                <div className="h-10 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-                  <Logo className="h-10 w-auto" />
-                </div>
+                <span className="text-lg font-bold text-primary">JSS Polytechnic</span>
               </div>
             </Link>
             
