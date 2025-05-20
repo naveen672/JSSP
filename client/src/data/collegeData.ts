@@ -15,6 +15,11 @@ import image13 from '@assets/13.jpg';
 import jssLogo from '@assets/jsslogo.png';
 import ecImage from '@assets/image_1747620347406.png';
 import isImage from '@assets/image_1747621477155.png';
+import csImage from '@assets/image_1747621497744.png';
+import eeImage from '@assets/image_1747621805604.png';
+import meImage from '@assets/image_1747621810106.png';
+import ceImage from '@assets/image_1747623137655.png';
+import truptiImage from '@assets/image_1747623150899.png';
 
 // Hero Slideshow Data
 export const heroSlides = [
@@ -78,7 +83,7 @@ export const programs = [
     id: 1,
     title: 'Diploma in Mechanical Engineering',
     description: 'Learn design, manufacturing, and maintenance of mechanical systems with hands-on training.',
-    image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=400&q=80',
+    image: meImage,
     duration: '3 Years',
     type: 'Full-time',
     departmentLink: '/dept-me'
@@ -87,7 +92,7 @@ export const programs = [
     id: 2,
     title: 'Diploma in Computer Science',
     description: 'Master programming, database management, and software development skills.',
-    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=400&q=80',
+    image: csImage,
     duration: '3 Years',
     type: 'Full-time',
     departmentLink: '/dept-cs'
@@ -96,7 +101,7 @@ export const programs = [
     id: 3,
     title: 'Diploma in Electrical Engineering',
     description: 'Study power systems, electrical machines, and control systems with practical applications.',
-    image: 'https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=400&q=80',
+    image: eeImage,
     duration: '3 Years',
     type: 'Full-time',
     departmentLink: '/dept-ee'
@@ -123,7 +128,7 @@ export const programs = [
     id: 6,
     title: 'Diploma in Civil Engineering',
     description: 'Learn structural design, construction management, and infrastructure development.',
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=400&q=80',
+    image: ceImage,
     duration: '3 Years',
     type: 'Full-time',
     departmentLink: '/dept-ce'
@@ -182,27 +187,11 @@ export const facilities = [
 export const testimonials = [
   {
     id: 1,
-    quote: 'JSS Polytechnic has provided me with not just technical knowledge but also practical skills that helped me secure a job immediately after graduation. The faculty support was exceptional.',
-    name: 'Rahul Singh',
-    program: 'Mechanical Engineering',
-    year: '2020',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&h=100&q=80'
-  },
-  {
-    id: 2,
-    quote: 'The industry partnerships at JSS Polytechnic gave me opportunities for internships that helped me understand real-world applications of what we learned in classrooms.',
-    name: 'Anjali Patel',
-    program: 'Computer Science',
-    year: '2021',
-    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&h=100&q=80'
-  },
-  {
-    id: 3,
-    quote: 'The hands-on training in well-equipped laboratories at JSS Polytechnic has been the highlight of my education. It prepared me well for my current job as an electrical supervisor.',
-    name: 'Vikram Rao',
-    program: 'Electrical Engineering',
+    quote: 'JSS Polytechnic provided me with both technical knowledge and practical skills that helped me succeed in my career. The supportive faculty and excellent infrastructure made my learning experience outstanding.',
+    name: 'Trupti Ananth Jain',
+    program: 'Computer Science Engineering',
     year: '2019',
-    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&h=100&q=80'
+    avatar: truptiImage
   }
 ];
 
