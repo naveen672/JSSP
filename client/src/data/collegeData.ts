@@ -19,7 +19,7 @@ import csImage from '@assets/image_1747621497744.png';
 import eeImage from '@assets/image_1747621805604.png';
 import meImage from '@assets/image_1747621810106.png';
 import ceImage from '@assets/image_1747623137655.png';
-import truptiImage from '@assets/image_1747623150899.png';
+import truptiImage from '@assets/image_1747737669295.png';
 
 // Hero Slideshow Data
 export const heroSlides = [
@@ -83,7 +83,7 @@ export const programs = [
     id: 1,
     title: 'Diploma in Mechanical Engineering',
     description: 'Learn design, manufacturing, and maintenance of mechanical systems with hands-on training.',
-    image: meImage,
+    image: 'https://img.freepik.com/free-photo/engineer-working-with-metal-lathe-workshop_23-2149051673.jpg?w=740&t=st=1716112779~exp=1716113379~hmac=03dba96ec1b31da67abe7a6ff4db0f8ae29fb84683e6fdca30ca0cef7aadb2c8',
     duration: '3 Years',
     type: 'Full-time',
     departmentLink: '/dept-me'
@@ -92,7 +92,7 @@ export const programs = [
     id: 2,
     title: 'Diploma in Computer Science',
     description: 'Master programming, database management, and software development skills.',
-    image: csImage,
+    image: 'https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg?w=740&t=st=1716112801~exp=1716113401~hmac=8ea84de9e1b5fb80ea4a4f15dc4dc0ed01bc4c33fcfa05f5b5ff55b1c89da53e',
     duration: '3 Years',
     type: 'Full-time',
     departmentLink: '/dept-cs'
@@ -101,7 +101,7 @@ export const programs = [
     id: 3,
     title: 'Diploma in Electrical Engineering',
     description: 'Study power systems, electrical machines, and control systems with practical applications.',
-    image: eeImage,
+    image: 'https://img.freepik.com/free-photo/electrical-equipment-with-wires-buttons_23-2149141996.jpg?w=740&t=st=1716112816~exp=1716113416~hmac=1b0f34cf88b4ff5e639e3ce33c0c06fceb7aeb3ebb01cdea2b75f39cba0a18ee',
     duration: '3 Years',
     type: 'Full-time',
     departmentLink: '/dept-ee'
@@ -110,7 +110,7 @@ export const programs = [
     id: 4,
     title: 'Diploma in Electronics & Communication',
     description: 'Explore electronic circuits, communication systems, and signal processing technologies.',
-    image: ecImage,
+    image: 'https://img.freepik.com/free-photo/professional-programmer-working-late-dark-office_1098-18705.jpg?w=740&t=st=1716112837~exp=1716113437~hmac=3ba29eee15f93f7f9afa40cd70a41c9e61e9df9e16ab9dfe3089de0c97a20c5d',
     duration: '3 Years',
     type: 'Full-time',
     departmentLink: '/dept-ec'
@@ -119,7 +119,7 @@ export const programs = [
     id: 5,
     title: 'Diploma in Information Science',
     description: 'Study information systems, data management, and computing technologies.',
-    image: isImage,
+    image: 'https://img.freepik.com/free-photo/rear-view-programmer-working-all-night-long_1098-18697.jpg?w=740&t=st=1716112855~exp=1716113455~hmac=5fc697d58c4ff2f11a3e5d9d3f2eee4e2ab09ffc3d8c03f15c4daaf80ae0c4f2',
     duration: '3 Years',
     type: 'Full-time',
     departmentLink: '/dept-is'
@@ -128,7 +128,7 @@ export const programs = [
     id: 6,
     title: 'Diploma in Civil Engineering',
     description: 'Learn structural design, construction management, and infrastructure development.',
-    image: ceImage,
+    image: 'https://img.freepik.com/free-photo/architect-working-construction-site_23-2148188447.jpg?w=740&t=st=1716112878~exp=1716113478~hmac=e2ebc4e351f59a94fbbb78bbf564c1be2febd02a03eef9e6d2c3e87fd2232edb',
     duration: '3 Years',
     type: 'Full-time',
     departmentLink: '/dept-ce'
