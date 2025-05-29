@@ -140,24 +140,93 @@ export default function CampusLife() {
             </TabsContent>
             
             <TabsContent value="sports" className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-8">
+              {/* Sports Overview */}
+              <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-lg p-6 mb-8">
+                <h3 className="text-xl font-bold text-primary mb-3">Sports at JSS Polytechnic, Mysuru</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  JSS Polytechnic, Mysuru has been giving equal importance to both Curricular, Co-curricular and extracurricular activities. 
+                  To encourage the students to participate in sports activities, the institute has created all the necessary sports facilities. 
+                  Our college Sports department has been organizing many sports events.
+                </p>
+              </div>
+
+              {/* Sports Facilities Images */}
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <Card className="overflow-hidden">
+                  <div className="h-48 overflow-hidden">
+                    <img 
+                      src="@assets/image_1748525684931.png" 
+                      alt="JSS Polytechnic Sports Ground"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <CardContent className="p-4">
+                    <h4 className="font-semibold text-primary">Sports Ground</h4>
+                    <p className="text-sm text-gray-600">Spacious outdoor sports facility for various activities</p>
+                  </CardContent>
+                </Card>
+
+                <Card className="overflow-hidden">
+                  <div className="h-48 overflow-hidden">
+                    <img 
+                      src="@assets/image_1748525698149.png" 
+                      alt="Volleyball Tournament"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <CardContent className="p-4">
+                    <h4 className="font-semibold text-primary">Volleyball Courts</h4>
+                    <p className="text-sm text-gray-600">Active volleyball tournaments and training sessions</p>
+                  </CardContent>
+                </Card>
+
+                <Card className="overflow-hidden">
+                  <div className="h-48 overflow-hidden">
+                    <img 
+                      src="@assets/image_1748525704187.png" 
+                      alt="District Level Volleyball Competition"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <CardContent className="p-4">
+                    <h4 className="font-semibold text-primary">Competitive Events</h4>
+                    <p className="text-sm text-gray-600">District level volleyball and throwball competitions</p>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Sports Achievements */}
+              <div className="grid md:grid-cols-2 gap-8 mb-8">
                 <Card>
                   <CardHeader>
-                    <CardTitle>Competitive Sports</CardTitle>
+                    <CardTitle className="flex items-center space-x-2">
+                      <Dumbbell className="h-5 w-5 text-accent" />
+                      <span>Recent Achievements</span>
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <Badge className="w-full justify-center">Basketball</Badge>
-                        <Badge className="w-full justify-center">Football</Badge>
-                        <Badge className="w-full justify-center">Tennis</Badge>
-                        <Badge className="w-full justify-center">Swimming</Badge>
+                    <div className="space-y-4">
+                      <div className="flex items-center space-x-3">
+                        <img 
+                          src="@assets/image_1748525709166.png" 
+                          alt="Volleyball Champions"
+                          className="w-16 h-16 rounded object-cover"
+                        />
+                        <div>
+                          <h5 className="font-semibold text-primary">Volleyball Championship</h5>
+                          <p className="text-sm text-gray-600">District level volleyball winners 2024</p>
+                        </div>
                       </div>
-                      <div className="space-y-2">
-                        <Badge className="w-full justify-center">Track & Field</Badge>
-                        <Badge className="w-full justify-center">Volleyball</Badge>
-                        <Badge className="w-full justify-center">Cricket</Badge>
-                        <Badge className="w-full justify-center">Badminton</Badge>
+                      <div className="flex items-center space-x-3">
+                        <img 
+                          src="@assets/image_1748525749249.png" 
+                          alt="Women's Volleyball Team"
+                          className="w-16 h-16 rounded object-cover"
+                        />
+                        <div>
+                          <h5 className="font-semibold text-primary">Women's Volleyball</h5>
+                          <p className="text-sm text-gray-600">Excellence in women's sports competitions</p>
+                        </div>
                       </div>
                     </div>
                   </CardContent>
@@ -165,30 +234,70 @@ export default function CampusLife() {
 
                 <Card>
                   <CardHeader>
-                    <CardTitle>Recreational Activities</CardTitle>
+                    <CardTitle className="flex items-center space-x-2">
+                      <Users className="h-5 w-5 text-accent" />
+                      <span>Sports Events</span>
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-3">
                       <div className="flex items-center space-x-2">
-                        <Dumbbell className="h-4 w-4 text-accent" />
-                        <span className="text-sm">Fitness Center & Gym</span>
+                        <Badge className="bg-primary/10 text-primary">Volleyball</Badge>
+                        <span className="text-sm">District level competitions</span>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <Heart className="h-4 w-4 text-accent" />
-                        <span className="text-sm">Yoga & Meditation Classes</span>
+                        <Badge className="bg-primary/10 text-primary">Throwball</Badge>
+                        <span className="text-sm">Inter-polytechnic tournaments</span>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <Users className="h-4 w-4 text-accent" />
-                        <span className="text-sm">Intramural Leagues</span>
+                        <Badge className="bg-primary/10 text-primary">Athletics</Badge>
+                        <span className="text-sm">Track and field events</span>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <MapPin className="h-4 w-4 text-accent" />
-                        <span className="text-sm">Outdoor Adventure Club</span>
+                        <Badge className="bg-primary/10 text-primary">Team Sports</Badge>
+                        <span className="text-sm">Various competitive activities</span>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
               </div>
+
+              {/* Sports Gallery */}
+              <Card>
+                <CardHeader>
+                  <CardTitle>Sports Events Gallery</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <img 
+                      src="@assets/image_1748525692491.png" 
+                      alt="Sports Event Opening Ceremony"
+                      className="w-full h-24 object-cover rounded"
+                    />
+                    <img 
+                      src="@assets/image_1748525754447.png" 
+                      alt="Male Athletes with Certificates"
+                      className="w-full h-24 object-cover rounded"
+                    />
+                    <img 
+                      src="@assets/image_1748525760048.png" 
+                      alt="Women's Team Award Ceremony"
+                      className="w-full h-24 object-cover rounded"
+                    />
+                    <img 
+                      src="@assets/image_1748525764816.png" 
+                      alt="Group Photo Sports Event"
+                      className="w-full h-24 object-cover rounded"
+                    />
+                  </div>
+                  <div className="mt-4 p-3 bg-accent/10 rounded">
+                    <p className="text-sm text-gray-700">
+                      <strong>2024 District Level Volleyball & Throwball Meet:</strong> JSS Polytechnic hosted a successful 
+                      district-level competition showcasing talent from various polytechnics across the region.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
             </TabsContent>
             
             <TabsContent value="arts" className="space-y-6">
