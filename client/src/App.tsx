@@ -13,6 +13,9 @@ import Admissions from "@/pages/admissions";
 import About from "@/pages/about";
 import AboutJSSMVP from "@/pages/about-jssmvp";
 import Messages from "@/pages/messages";
+import Governance from "@/pages/governance";
+import AICTEEOA from "@/pages/aicte-eoa";
+import NBA from "@/pages/nba";
 import CampusLife from "@/pages/campus-life";
 import Infrastructure from "@/pages/infrastructure";
 import Contact from "@/pages/contact";
@@ -38,6 +41,9 @@ function Router() {
           <Route path="/about" component={About} />
           <Route path="/about-jssmvp" component={AboutJSSMVP} />
           <Route path="/messages" component={Messages} />
+          <Route path="/governance" component={Governance} />
+          <Route path="/aicte-eoa" component={AICTEEOA} />
+          <Route path="/nba" component={NBA} />
           <Route path="/campus-life" component={CampusLife} />
           <Route path="/infrastructure" component={Infrastructure} />
           <Route path="/contact" component={Contact} />
