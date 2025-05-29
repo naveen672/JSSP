@@ -1,8 +1,13 @@
 import { Link } from "wouter";
-import { University, Facebook, Twitter, Linkedin, Youtube, BookOpen, Users, Calendar, ExternalLink, MapPin, Phone, Mail } from "lucide-react";
+import { University, Facebook, Twitter, Linkedin, Youtube, BookOpen, Users, Calendar, ExternalLink, MapPin, Phone, Mail, Eye } from "lucide-react";
+import { useQuery } from "@tanstack/react-query";
 import jssLogo1 from "@assets/image_1748508966675.png";
 
 export default function Footer() {
+  const { data: visitorStats } = useQuery({
+    queryKey: ["/api/visitor-stats"],
+  });
+
   return (
     <footer className="bg-primary text-white">
       <div className="container mx-auto px-4 py-12">
@@ -10,11 +15,13 @@ export default function Footer() {
           {/* Institution Info */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <img 
-                src={jssLogo1} 
-                alt="JSS Logo" 
-                className="h-12 w-12 object-contain"
-              />
+              <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-accent">
+                <img 
+                  src={jssLogo1} 
+                  alt="JSS Logo" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <h3 className="text-xl font-bold">JSS POLYTECHNIC</h3>
             </div>
             <p className="text-gray-300 mb-4">
@@ -129,20 +136,36 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-600 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-300 text-sm">
-            &copy; 2024 JSS Polytechnic, Mysore. All rights reserved.
-          </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-300 hover:text-accent text-sm transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-gray-300 hover:text-accent text-sm transition-colors">
-              Terms of Service
-            </a>
-            <a href="#" className="text-gray-300 hover:text-accent text-sm transition-colors">
-              Accessibility
-            </a>
+        <div className="border-t border-gray-600 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center mb-4">
+            <p className="text-gray-300 text-sm">
+              &copy; 2024 JSS Polytechnic, Mysore. All rights reserved.
+            </p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <a href="#" className="text-gray-300 hover:text-accent text-sm transition-colors">
+                Privacy Policy
+              </a>
+              <a href="#" className="text-gray-300 hover:text-accent text-sm transition-colors">
+                Terms of Service
+              </a>
+              <a href="#" className="text-gray-300 hover:text-accent text-sm transition-colors">
+                Accessibility
+              </a>
+            </div>
+          </div>
+          
+          {/* Visitor Counter */}
+          <div className="flex justify-center">
+            <div className="bg-accent/10 rounded-lg px-4 py-2 flex items-center space-x-2">
+              <Eye className="h-4 w-4 text-accent" />
+              <span className="text-sm text-gray-300">
+                Total Visitors: <span className="text-accent font-semibold">{(visitorStats as any)?.total || "Loading..."}</span>
+              </span>
+              <span className="text-gray-500">|</span>
+              <span className="text-sm text-gray-300">
+                Today: <span className="text-accent font-semibold">{(visitorStats as any)?.today || "0"}</span>
+              </span>
+            </div>
           </div>
         </div>
       </div>

@@ -40,20 +40,24 @@ export default function Header() {
         <div className="container mx-auto px-4">
           <Link href="/">
             <div className="flex items-center justify-center space-x-6">
-              <img 
-                src={jssLogo1} 
-                alt="JSS Maha Vidyapeetha Logo" 
-                className="h-20 w-20 object-contain"
-              />
+              <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-primary shadow-lg">
+                <img 
+                  src={jssLogo1} 
+                  alt="JSS Maha Vidyapeetha Logo" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <div className="text-center">
                 <h1 className="text-3xl font-bold text-primary">JSS POLYTECHNIC</h1>
                 <p className="text-lg text-gray-600">Excellence in Technical Education</p>
               </div>
-              <img 
-                src={jssLogo2} 
-                alt="JSS Polytechnic Logo" 
-                className="h-20 w-20 object-contain"
-              />
+              <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-primary shadow-lg">
+                <img 
+                  src={jssLogo2} 
+                  alt="JSS Polytechnic Logo" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </Link>
         </div>
@@ -199,11 +203,13 @@ export default function Header() {
               <nav className="flex flex-col space-y-4">
                 <Link href="/">
                   <div className="flex items-center space-x-3 pb-4">
-                    <img 
-                      src={jssLogo1} 
-                      alt="JSS Logo" 
-                      className="h-8 w-8 object-contain"
-                    />
+                    <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-primary">
+                      <img 
+                        src={jssLogo1} 
+                        alt="JSS Logo" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                     <span className="font-bold text-primary">JSS POLYTECHNIC</span>
                   </div>
                 </Link>
