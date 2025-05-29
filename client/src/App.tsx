@@ -25,6 +25,7 @@ import InformationScienceEngineering from "@/pages/information-science-engineeri
 import ComputerScienceEngineering from "@/pages/computer-science-engineering";
 import CivilEngineering from "@/pages/civil-engineering";
 import ElectricalElectronicsEngineering from "@/pages/electrical-electronics-engineering";
+import ElectronicsCommunicationEngineering from "@/pages/electronics-communication-engineering";
 import CampusLife from "@/pages/campus-life";
 import Infrastructure from "@/pages/infrastructure";
 import Contact from "@/pages/contact";
@@ -62,6 +63,7 @@ function Router() {
           <Route path="/computer-science-engineering" component={ComputerScienceEngineering} />
           <Route path="/civil-engineering" component={CivilEngineering} />
           <Route path="/electrical-electronics-engineering" component={ElectricalElectronicsEngineering} />
+          <Route path="/electronics-communication-engineering" component={ElectronicsCommunicationEngineering} />
           <Route path="/campus-life" component={CampusLife} />
           <Route path="/infrastructure" component={Infrastructure} />
           <Route path="/contact" component={Contact} />
