@@ -29,21 +29,31 @@ export default function AboutJSS() {
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <Card className="h-full">
             <CardContent className="p-8">
-              <h3 className="text-xl font-semibold text-primary mb-4">Our Mission</h3>
+              <h3 className="text-xl font-semibold text-primary mb-4">Vision of the Institute</h3>
               <p className="text-gray-600 leading-relaxed">
-                To provide quality technical education that bridges the gap between academic learning and industry requirements, 
-                fostering innovation, creativity, and professional excellence among our students.
+                Vision of the institute to be recognized as a prestigious academic Centre for excellence in 
+                technical education and to meet the needs of Academia, Industry & Society.
               </p>
             </CardContent>
           </Card>
 
           <Card className="h-full">
             <CardContent className="p-8">
-              <h3 className="text-xl font-semibold text-primary mb-4">Our Vision</h3>
-              <p className="text-gray-600 leading-relaxed">
-                To be a globally recognized institution that shapes competent technocrats and entrepreneurs who contribute 
-                meaningfully to society through their technical expertise and ethical leadership.
-              </p>
+              <h3 className="text-xl font-semibold text-primary mb-4">Mission of the Institute</h3>
+              <div className="space-y-3 text-gray-600 text-sm">
+                <div className="flex items-start space-x-2">
+                  <span className="font-semibold text-accent">M1:</span>
+                  <span>To impart holistic outcome based education in both technical and non technical programs through state of the art curriculum and effective teaching-learning process.</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <span className="font-semibold text-accent">M2:</span>
+                  <span>To promote industry institutional collaboration through MOUs and internship programs.</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <span className="font-semibold text-accent">M3:</span>
+                  <span>To infuse ethical and responsible engineering practices to create successful professionals.</span>
+                </div>
+              </div>
             </CardContent>
           </Card>
         </div>

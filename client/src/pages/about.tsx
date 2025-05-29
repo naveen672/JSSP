@@ -164,27 +164,35 @@ export default function About() {
           <div className="grid lg:grid-cols-2 gap-12">
             <Card>
               <CardHeader>
-                <CardTitle className="text-2xl text-primary">Our Mission</CardTitle>
+                <CardTitle className="text-2xl text-primary">Vision of the Institute</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 leading-relaxed">
-                  Excellence University is committed to providing transformative educational experiences that foster intellectual growth, 
-                  critical thinking, and ethical leadership. We strive to create an inclusive learning environment where students from 
-                  diverse backgrounds can thrive academically, personally, and professionally while contributing meaningfully to society.
+                  Vision of the institute to be recognized as a prestigious academic Centre for excellence in 
+                  technical education and to meet the needs of Academia, Industry & Society.
                 </p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-2xl text-primary">Our Vision</CardTitle>
+                <CardTitle className="text-2xl text-primary">Mission of the Institute</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 leading-relaxed">
-                  To be a globally recognized institution of higher learning that shapes tomorrow's leaders through innovation in 
-                  education, groundbreaking research, and community engagement. We envision a future where our graduates serve as 
-                  catalysts for positive change in their communities and fields of expertise.
-                </p>
+                <ul className="space-y-3 text-gray-600">
+                  <li className="flex items-start space-x-2">
+                    <span className="font-semibold text-accent">M1:</span>
+                    <span>To impart holistic outcome based education in both technical and non technical programs through state of the art curriculum and effective teaching-learning process.</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="font-semibold text-accent">M2:</span>
+                    <span>To promote industry institutional collaboration through MOUs and internship programs.</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="font-semibold text-accent">M3:</span>
+                    <span>To infuse ethical and responsible engineering practices to create successful professionals.</span>
+                  </li>
+                </ul>
               </CardContent>
             </Card>
           </div>

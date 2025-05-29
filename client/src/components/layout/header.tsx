@@ -130,7 +130,7 @@ export default function Header() {
                   <DropdownLink href="/about-jssmvp" icon={University}>About JSSMVP</DropdownLink>
                   <DropdownLink href="/about" icon={Award}>Vision Mission of the Institute</DropdownLink>
                   <DropdownLink href="/about" icon={Users}>Leadership Team</DropdownLink>
-                  <DropdownLink href="/about" icon={FileText}>Messages</DropdownLink>
+                  <DropdownLink href="/messages" icon={FileText}>Messages</DropdownLink>
                   <DropdownLink href="/about" icon={Shield}>Governance</DropdownLink>
                   <DropdownLink href="/about" icon={Award}>All India Council for Technical Education (AICTE) and EOA</DropdownLink>
                   <DropdownLink href="/about" icon={Trophy}>NBA</DropdownLink>
