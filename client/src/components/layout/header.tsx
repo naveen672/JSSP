@@ -228,7 +228,7 @@ export default function Header() {
                   
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Higher Education</div>
                   <DropdownLink href="/higher-education" icon={GraduationCap}>Higher Education</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={FileText}>Exam</DropdownLink>
+                  <DropdownLink href="/exam" icon={FileText}>Exam</DropdownLink>
                   <DropdownLink href="/fee-payment" icon={Settings}>Fee Payment</DropdownLink>
                   <DropdownLink href="/cultural-activities" icon={Users}>Cultural Crew</DropdownLink>
                   <DropdownLink href="/social-outreach" icon={Heart}>Social Outreach Programs</DropdownLink>
@@ -441,7 +441,7 @@ export default function Header() {
                         
                         <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Higher Education</div>
                         <Link href="/higher-education" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Higher Education</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Exam</Link>
+                        <Link href="/exam" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Exam</Link>
                         <Link href="/fee-payment" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Fee Payment</Link>
                         <Link href="/cultural-activities" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Cultural Crew</Link>
                         <Link href="/social-outreach" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Social Outreach Programs</Link>
