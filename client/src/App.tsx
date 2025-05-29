@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Switch, Route } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
@@ -19,6 +20,8 @@ import NotFound from "@/pages/not-found";
 // Layout components
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
+import SplashScreen from "@/components/ui/splash-screen";
+import ScrollToTop from "@/components/ui/scroll-to-top";
 
 function Router() {
   return (
@@ -38,17 +41,28 @@ function Router() {
         </Switch>
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }
 
 function App() {
+  const [showSplash, setShowSplash] = useState(true);
+
+  const handleSplashComplete = () => {
+    setShowSplash(false);
+  };
+
   return (
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
         <TooltipProvider>
           <Toaster />
-          <Router />
+          {showSplash ? (
+            <SplashScreen onComplete={handleSplashComplete} />
+          ) : (
+            <Router />
+          )}
         </TooltipProvider>
       </AuthProvider>
     </QueryClientProvider>
