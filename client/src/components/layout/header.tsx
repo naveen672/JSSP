@@ -10,7 +10,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { Menu, University, ChevronDown } from "lucide-react";
+import { Menu, University, ChevronDown, BookOpen, Users, GraduationCap, Calendar, FileText, Trophy, Home, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function Header() {
@@ -60,7 +60,10 @@ export default function Header() {
                   <div className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
                     <Link href="/academics">
                       <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Departments</div>
+                        <div className="text-sm font-medium leading-none flex items-center">
+                          <BookOpen className="h-4 w-4 mr-2" />
+                          Departments
+                        </div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Explore our academic departments and programs
                         </p>
@@ -68,7 +71,10 @@ export default function Header() {
                     </Link>
                     <Link href="/academics">
                       <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Faculty</div>
+                        <div className="text-sm font-medium leading-none flex items-center">
+                          <Users className="h-4 w-4 mr-2" />
+                          Faculty
+                        </div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Meet our distinguished faculty members
                         </p>
@@ -76,7 +82,10 @@ export default function Header() {
                     </Link>
                     <Link href="/academics">
                       <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Programs</div>
+                        <div className="text-sm font-medium leading-none flex items-center">
+                          <GraduationCap className="h-4 w-4 mr-2" />
+                          Programs
+                        </div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Undergraduate and graduate programs
                         </p>
@@ -84,7 +93,10 @@ export default function Header() {
                     </Link>
                     <Link href="/academics">
                       <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Academic Calendar</div>
+                        <div className="text-sm font-medium leading-none flex items-center">
+                          <Calendar className="h-4 w-4 mr-2" />
+                          Academic Calendar
+                        </div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Important dates and schedules
                         </p>
@@ -169,30 +181,35 @@ export default function Header() {
                 
                 <Link href="/academics">
                   <Button variant="ghost" className="w-full justify-start" onClick={() => setMobileOpen(false)}>
+                    <BookOpen className="h-4 w-4 mr-2" />
                     Academics
                   </Button>
                 </Link>
                 
                 <Link href="/admissions">
                   <Button variant="ghost" className="w-full justify-start" onClick={() => setMobileOpen(false)}>
+                    <GraduationCap className="h-4 w-4 mr-2" />
                     Admissions
                   </Button>
                 </Link>
                 
                 <Link href="/about">
                   <Button variant="ghost" className="w-full justify-start" onClick={() => setMobileOpen(false)}>
+                    <University className="h-4 w-4 mr-2" />
                     About
                   </Button>
                 </Link>
                 
                 <Link href="/campus-life">
                   <Button variant="ghost" className="w-full justify-start" onClick={() => setMobileOpen(false)}>
+                    <Trophy className="h-4 w-4 mr-2" />
                     Campus Life
                   </Button>
                 </Link>
                 
                 <Link href="/contact">
                   <Button variant="ghost" className="w-full justify-start" onClick={() => setMobileOpen(false)}>
+                    <Phone className="h-4 w-4 mr-2" />
                     Contact
                   </Button>
                 </Link>

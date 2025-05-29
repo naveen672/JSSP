@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { University, Facebook, Twitter, Linkedin, Youtube } from "lucide-react";
+import { University, Facebook, Twitter, Linkedin, Youtube, BookOpen, Users, Calendar, ExternalLink, MapPin, Phone, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -40,26 +40,41 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="/about">
-                  <span className="text-gray-300 hover:text-accent transition-colors">About Us</span>
+                  <span className="text-gray-300 hover:text-accent transition-colors flex items-center">
+                    <University className="h-4 w-4 mr-2" />
+                    About Us
+                  </span>
                 </Link>
               </li>
               <li>
                 <Link href="/academics">
-                  <span className="text-gray-300 hover:text-accent transition-colors">Academic Programs</span>
+                  <span className="text-gray-300 hover:text-accent transition-colors flex items-center">
+                    <BookOpen className="h-4 w-4 mr-2" />
+                    Academic Programs
+                  </span>
                 </Link>
               </li>
               <li>
                 <Link href="/academics">
-                  <span className="text-gray-300 hover:text-accent transition-colors">Faculty</span>
+                  <span className="text-gray-300 hover:text-accent transition-colors flex items-center">
+                    <Users className="h-4 w-4 mr-2" />
+                    Faculty
+                  </span>
                 </Link>
               </li>
               <li>
                 <Link href="/campus-life">
-                  <span className="text-gray-300 hover:text-accent transition-colors">Campus Life</span>
+                  <span className="text-gray-300 hover:text-accent transition-colors flex items-center">
+                    <Calendar className="h-4 w-4 mr-2" />
+                    Campus Life
+                  </span>
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-accent transition-colors">Research</a>
+                <a href="#" className="text-gray-300 hover:text-accent transition-colors flex items-center">
+                  <ExternalLink className="h-4 w-4 mr-2" />
+                  Research
+                </a>
               </li>
             </ul>
           </div>
@@ -91,13 +106,22 @@ export default function Footer() {
           {/* Contact Info */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
-            <div className="space-y-2 text-gray-300">
-              <p>
-                <span className="block">📍 123 Excellence Drive</span>
-                <span className="block">University City, State 12345</span>
-              </p>
-              <p>📞 (555) 123-4567</p>
-              <p>✉️ info@excellenceuniversity.edu</p>
+            <div className="space-y-3 text-gray-300">
+              <div className="flex items-start">
+                <MapPin className="h-4 w-4 mr-2 mt-0.5 text-accent" />
+                <div>
+                  <span className="block">123 Excellence Drive</span>
+                  <span className="block">University City, State 12345</span>
+                </div>
+              </div>
+              <div className="flex items-center">
+                <Phone className="h-4 w-4 mr-2 text-accent" />
+                <span>(555) 123-4567</span>
+              </div>
+              <div className="flex items-center">
+                <Mail className="h-4 w-4 mr-2 text-accent" />
+                <span>info@excellenceuniversity.edu</span>
+              </div>
             </div>
           </div>
         </div>
