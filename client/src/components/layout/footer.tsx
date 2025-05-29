@@ -1,7 +1,9 @@
 import { Link } from "wouter";
-import { University, Facebook, Twitter, Linkedin, Youtube, BookOpen, Users, Calendar, ExternalLink, MapPin, Phone, Mail, Eye } from "lucide-react";
+import { University, Facebook, Twitter, Linkedin, Youtube, BookOpen, Users, Calendar, ExternalLink, MapPin, Phone, Mail, Eye, Smartphone } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import jssLogo1 from "@assets/image_1748508966675.png";
+import qrCodeImage from "@assets/image_1748554546191.png";
+import socialQRCodes from "@assets/image_1748554552757.png";
 
 export default function Footer() {
   const { data: visitorStats } = useQuery({
@@ -120,17 +122,49 @@ export default function Footer() {
               <div className="flex items-start">
                 <MapPin className="h-4 w-4 mr-2 mt-0.5 text-accent" />
                 <div>
-                  <span className="block">123 Excellence Drive</span>
-                  <span className="block">University City, State 12345</span>
+                  <span className="block">JSS TI's Campus</span>
+                  <span className="block">Mysuru-570006</span>
+                  <span className="block">Karnataka</span>
                 </div>
               </div>
               <div className="flex items-center">
                 <Phone className="h-4 w-4 mr-2 text-accent" />
-                <span>(555) 123-4567</span>
+                <span>0821-2548318</span>
+              </div>
+              <div className="flex items-center">
+                <Smartphone className="h-4 w-4 mr-2 text-accent" />
+                <span>+91-9686677237</span>
               </div>
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2 text-accent" />
-                <span>info@excellenceuniversity.edu</span>
+                <span>jssp418@yahoo.co.in</span>
+              </div>
+              <div className="flex items-center">
+                <ExternalLink className="h-4 w-4 mr-2 text-accent" />
+                <span>Timings: 08:00 AM to 05:45 PM</span>
+              </div>
+            </div>
+          </div>
+
+          {/* QR Codes */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Connect With Us</h4>
+            <div className="space-y-4">
+              <div>
+                <p className="text-gray-300 text-sm mb-2">Scan for Quick Access</p>
+                <img 
+                  src={qrCodeImage} 
+                  alt="QR Code for Quick Access"
+                  className="w-24 h-24 mx-auto bg-white p-2 rounded-lg"
+                />
+              </div>
+              <div>
+                <p className="text-gray-300 text-sm mb-2">Social Media</p>
+                <img 
+                  src={socialQRCodes} 
+                  alt="Social Media QR Codes - LinkedIn, Instagram, Facebook, YouTube"
+                  className="w-full max-w-xs mx-auto bg-white p-2 rounded-lg"
+                />
               </div>
             </div>
           </div>

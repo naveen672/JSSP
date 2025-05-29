@@ -11,7 +11,9 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { insertContactSubmissionSchema } from "@shared/schema";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Smartphone } from "lucide-react";
+import qrCodeImage from "@assets/image_1748554546191.png";
+import socialQRCodes from "@assets/image_1748554552757.png";
 import type { z } from "zod";
 
 type ContactFormData = z.infer<typeof insertContactSubmissionSchema>;
@@ -87,9 +89,9 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold text-primary mb-1">Address</h3>
                       <p className="text-gray-600">
-                        123 Excellence Drive<br />
-                        University City, State 12345<br />
-                        United States
+                        JSS TI's Campus<br />
+                        Mysuru-570006<br />
+                        Karnataka
                       </p>
                     </div>
                   </div>
@@ -101,9 +103,19 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold text-primary mb-1">Phone</h3>
                       <p className="text-gray-600">
-                        Main: (555) 123-4567<br />
-                        Admissions: (555) 123-4568<br />
-                        Emergency: (555) 123-4569
+                        Office: 0821-2548318
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-accent text-primary w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Smartphone className="h-6 w-6" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-primary mb-1">Mobile</h3>
+                      <p className="text-gray-600">
+                        +91-9686677237
                       </p>
                     </div>
                   </div>
@@ -115,9 +127,7 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold text-primary mb-1">Email</h3>
                       <p className="text-gray-600">
-                        info@excellenceuniversity.edu<br />
-                        admissions@excellenceuniversity.edu<br />
-                        support@excellenceuniversity.edu
+                        jssp418@yahoo.co.in
                       </p>
                     </div>
                   </div>
@@ -129,41 +139,39 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold text-primary mb-1">Office Hours</h3>
                       <p className="text-gray-600">
-                        Monday - Friday: 8:00 AM - 6:00 PM<br />
-                        Saturday: 9:00 AM - 2:00 PM<br />
-                        Sunday: Closed
+                        Timings: 08:00 AM to 05:45 PM
                       </p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              {/* Department Contacts */}
+              {/* QR Codes */}
               <Card>
                 <CardHeader>
-                  <CardTitle>Department Contacts</CardTitle>
+                  <CardTitle>Connect With Us</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-4">
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div>
-                        <h4 className="font-semibold text-primary mb-2">Academic Departments</h4>
-                        <ul className="space-y-1 text-sm text-gray-600">
-                          <li>Engineering: ext. 101</li>
-                          <li>Business: ext. 102</li>
-                          <li>Sciences: ext. 103</li>
-                          <li>Arts: ext. 104</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-primary mb-2">Student Services</h4>
-                        <ul className="space-y-1 text-sm text-gray-600">
-                          <li>Registrar: ext. 201</li>
-                          <li>Financial Aid: ext. 202</li>
-                          <li>Student Life: ext. 203</li>
-                          <li>Career Services: ext. 204</li>
-                        </ul>
-                      </div>
+                  <div className="space-y-6">
+                    <div className="text-center">
+                      <h4 className="font-semibold text-primary mb-3">Scan for Quick Access</h4>
+                      <img 
+                        src={qrCodeImage} 
+                        alt="QR Code for Quick Access"
+                        className="w-32 h-32 mx-auto bg-white p-3 rounded-lg shadow-md border"
+                      />
+                    </div>
+                    
+                    <div className="text-center">
+                      <h4 className="font-semibold text-primary mb-3">Social Media Platforms</h4>
+                      <img 
+                        src={socialQRCodes} 
+                        alt="Social Media QR Codes - LinkedIn, Instagram, Facebook, YouTube"
+                        className="w-full max-w-md mx-auto bg-white p-4 rounded-lg shadow-md border"
+                      />
+                      <p className="text-sm text-gray-600 mt-2">
+                        Scan the respective QR codes to follow us on LinkedIn, Instagram, Facebook, and YouTube
+                      </p>
                     </div>
                   </div>
                 </CardContent>
@@ -274,10 +282,11 @@ export default function Contact() {
               <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
                 <div className="text-center text-gray-500">
                   <MapPin className="h-16 w-16 mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold mb-2">Interactive Map</h3>
+                  <h3 className="text-lg font-semibold mb-2">Campus Location</h3>
                   <p className="text-sm">
-                    Campus map and directions would be integrated here.<br />
-                    Visit our campus at 123 Excellence Drive, University City.
+                    JSS TI's Campus<br />
+                    Mysuru-570006, Karnataka<br />
+                    Interactive map integration available upon request.
                   </p>
                 </div>
               </div>
