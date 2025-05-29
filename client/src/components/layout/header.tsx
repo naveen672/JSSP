@@ -134,7 +134,7 @@ export default function Header() {
                   <DropdownLink href="/governance" icon={Shield}>Governance</DropdownLink>
                   <DropdownLink href="/aicte-eoa" icon={Award}>All India Council for Technical Education (AICTE) and EOA</DropdownLink>
                   <DropdownLink href="/nba" icon={Trophy}>NBA</DropdownLink>
-                  <DropdownLink href="/about" icon={UserCheck}>Internal Quality Assurance Cell (IQAC)</DropdownLink>
+                  <DropdownLink href="/iqac" icon={UserCheck}>Internal Quality Assurance Cell (IQAC)</DropdownLink>
                   
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Employee Benefits</div>
                   <DropdownLink href="/campus-life" icon={Shield}>Student Group Accident Policy</DropdownLink>
