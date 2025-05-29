@@ -26,6 +26,9 @@ import womenTeamAward from "@assets/image_1748525760048.png";
 import groupPhotoSports from "@assets/image_1748525764816.png";
 import sportsAudience from "@assets/image_1748525773925.png";
 
+// Hostel image
+import hostelBuilding from "@assets/image_1748544237646.png";
+
 export default function CampusLife() {
   return (
     <div className="w-full">
@@ -42,7 +45,7 @@ export default function CampusLife() {
       {/* Campus Overview */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Life at Excellence University</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Life at JSS Polytechnic</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="text-center card-hover">
@@ -426,15 +429,24 @@ export default function CampusLife() {
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
                     <Home className="h-8 w-8 text-accent flex-shrink-0 mt-1" />
-                    <div>
-                      <h3 className="text-lg font-semibold text-primary mb-2">Student Housing</h3>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold text-primary mb-2">Student Hostel</h3>
                       <p className="text-gray-600 text-sm mb-3">
-                        Modern residence halls with single and double occupancy rooms, common areas, study lounges, and 24/7 security.
+                        The Polytechnic has a separate hostel facility for boys within the campus. The hostel runs mess on sharing basis with modern kitchen to ensure adequate hygiene. 
+                        Since, the hostel facilities are limited, the allotment of the seats for the hostel is done based on the needs of the candidates.
                       </p>
+                      <div className="mb-3">
+                        <img 
+                          src={hostelBuilding} 
+                          alt="JSS Polytechnic Hostel Building"
+                          className="w-full h-32 object-cover rounded"
+                        />
+                      </div>
                       <div className="flex flex-wrap gap-1">
-                        <Badge variant="outline" className="text-xs">Air Conditioning</Badge>
-                        <Badge variant="outline" className="text-xs">High-Speed WiFi</Badge>
-                        <Badge variant="outline" className="text-xs">Laundry Facilities</Badge>
+                        <Badge variant="outline" className="text-xs">Boys Hostel</Badge>
+                        <Badge variant="outline" className="text-xs">Shared Mess</Badge>
+                        <Badge variant="outline" className="text-xs">Modern Kitchen</Badge>
+                        <Badge variant="outline" className="text-xs">Within Campus</Badge>
                       </div>
                     </div>
                   </div>
