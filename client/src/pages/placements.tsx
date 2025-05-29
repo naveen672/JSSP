@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Briefcase, Users, Building, FileText, Target, MapPin, Award, Phone } from "lucide-react";
+import organizationChartImage from "@assets/image_1748552815200.png";
 
 export default function Placements() {
   const placementCoordinators = [
@@ -128,16 +129,11 @@ export default function Placements() {
           </CardHeader>
           <CardContent>
             <div className="text-center mb-8">
-              <div className="bg-blue-100 border-2 border-blue-300 rounded-lg p-4 inline-block mb-6">
-                <h3 className="text-xl font-bold text-blue-800">The Principal</h3>
-              </div>
-              <div className="flex justify-center mb-4">
-                <div className="w-1 h-12 bg-blue-300"></div>
-              </div>
-              <div className="bg-indigo-100 border-2 border-indigo-300 rounded-lg p-4 inline-block mb-8">
-                <h3 className="text-lg font-semibold text-indigo-800">Chief Placement Officer</h3>
-                <p className="text-indigo-600">Roopesh Kumar B</p>
-              </div>
+              <img 
+                src={organizationChartImage} 
+                alt="Training and Placement Cell Organizational Chart showing Principal at top, followed by Chief Placement Officer Roopesh Kumar B, and seven department coordinators below"
+                className="w-full max-w-4xl mx-auto rounded-lg shadow-lg border border-gray-200"
+              />
             </div>
             
             <p className="text-gray-700 leading-relaxed text-lg mb-6">
