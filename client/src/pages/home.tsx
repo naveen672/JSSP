@@ -3,7 +3,6 @@ import StatsCounter from "@/components/home/stats-counter";
 import NewsTicker from "@/components/home/news-ticker";
 import AboutJSS from "@/components/home/about-jss";
 import FacultyHighlights from "@/components/home/faculty-highlights";
-import FacilitiesShowcase from "@/components/home/facilities-showcase";
 import IndustryPartners from "@/components/home/industry-partners";
 import NewsSection from "@/components/home/news-section";
 
@@ -15,7 +14,6 @@ export default function Home() {
       <StatsCounter />
       <AboutJSS />
       <FacultyHighlights />
-      <FacilitiesShowcase />
       <IndustryPartners />
       <NewsSection />
     </div>
