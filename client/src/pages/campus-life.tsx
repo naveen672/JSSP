@@ -29,6 +29,9 @@ import sportsAudience from "@assets/image_1748525773925.png";
 // Hostel image
 import hostelBuilding from "@assets/image_1748544237646.png";
 
+// Library image
+import libraryInterior from "@assets/image_1748544359934.png";
+
 export default function CampusLife() {
   return (
     <div className="w-full">
@@ -75,8 +78,8 @@ export default function CampusLife() {
             <Card className="text-center card-hover">
               <CardContent className="p-6">
                 <Book className="h-12 w-12 text-accent mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-primary mb-2">Library</h3>
-                <p className="text-sm text-gray-600">24/7 access to extensive collections and study spaces</p>
+                <h3 className="text-lg font-semibold text-primary mb-2">Library & Information Centre</h3>
+                <p className="text-sm text-gray-600">Resource centre with 13,500 volumes and digital collections</p>
               </CardContent>
             </Card>
           </div>
@@ -508,6 +511,189 @@ export default function CampusLife() {
                   <MapPin className="h-4 w-4 text-accent" />
                   <span className="text-sm">Starting Point: Visitor Center</span>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Library & Information Centre */}
+      <section className="bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Library & Information Centre</h2>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="space-y-6">
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  The library is a resource centre for both teaching and learning. It is housed nearly 13,500 volumes 
+                  covering all streams of Science and Engineering, and allied subjects. It has updated collection to 
+                  the information need of the user community from time to time.
+                </p>
+                <img 
+                  src={libraryInterior} 
+                  alt="JSS Polytechnic Library Interior"
+                  className="w-full h-48 object-cover rounded mb-4"
+                />
+                <p className="text-gray-700 text-sm">
+                  The library and reference section consist of textbooks, reference books, dictionaries, project reports, 
+                  previous question papers, newspapers, journals, magazines and CD/DVDs related to curriculum also provides 
+                  internet facility. JSSP Library is a member of The National Digital Library of India (NDLI).
+                </p>
+              </div>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle>Library Sections</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid grid-cols-1 gap-2 text-sm">
+                    <div className="flex items-center space-x-2">
+                      <Badge variant="outline" className="text-xs">Circulation Section</Badge>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Badge variant="outline" className="text-xs">Stock Area Section</Badge>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Badge variant="outline" className="text-xs">Periodical & Newspaper Section</Badge>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Badge variant="outline" className="text-xs">Reference Section</Badge>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Badge variant="outline" className="text-xs">Digital Resource Center</Badge>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="space-y-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Library Details</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-3 text-sm">
+                    <div className="grid grid-cols-2 gap-2">
+                      <span className="font-medium">Carpet Area:</span>
+                      <span>44 SQMTS</span>
+                    </div>
+                    <div className="grid grid-cols-2 gap-2">
+                      <span className="font-medium">Reading Space:</span>
+                      <span>144/108.36/51.64 SQMTS</span>
+                    </div>
+                    <div className="grid grid-cols-2 gap-2">
+                      <span className="font-medium">Reading Seats:</span>
+                      <span>20</span>
+                    </div>
+                    <div className="grid grid-cols-2 gap-2">
+                      <span className="font-medium">Monthly Users (Books):</span>
+                      <span>100-120</span>
+                    </div>
+                    <div className="grid grid-cols-2 gap-2">
+                      <span className="font-medium">Monthly Users (Reading):</span>
+                      <span>600</span>
+                    </div>
+                    <div className="grid grid-cols-2 gap-2">
+                      <span className="font-medium">Timings:</span>
+                      <span>Mon-Fri: 10AM-5:30PM<br/>Sat: 10AM-2PM</span>
+                    </div>
+                    <div className="grid grid-cols-2 gap-2">
+                      <span className="font-medium">Library Staff:</span>
+                      <span>2 (1 with Library degree)</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle>Digital Collections</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex justify-between">
+                      <span>E-books:</span>
+                      <span className="font-semibold">11,600</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>CDs:</span>
+                      <span className="font-semibold">50</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Technical Magazines:</span>
+                      <span className="font-semibold">5</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>General Magazines:</span>
+                      <span className="font-semibold">3</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Newspapers:</span>
+                      <span className="font-semibold">2</span>
+                    </div>
+                  </div>
+                  <div className="mt-4 p-3 bg-accent/10 rounded">
+                    <p className="text-xs text-gray-700">
+                      <strong>Internet Facility:</strong> 10 PCs available for browsing
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle>Library Staff</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex justify-between items-center">
+                      <div>
+                        <p className="font-medium">Yogeesha K S</p>
+                        <p className="text-gray-600">Library Assistant</p>
+                      </div>
+                      <Badge>MLib Sc</Badge>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <div>
+                        <p className="font-medium">Ramesh M</p>
+                        <p className="text-gray-600">Attender</p>
+                      </div>
+                      <Badge variant="outline">SSLC</Badge>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          <div className="mt-12 bg-white rounded-lg p-6 shadow-sm">
+            <h3 className="text-xl font-semibold text-primary mb-4">Services & Facilities</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="font-semibold mb-2">Current Awareness Service (CAS)</h4>
+                <p className="text-sm text-gray-600 mb-4">
+                  Provides the latest information to users in the area of Science and Technology and Engineering.
+                </p>
+                
+                <h4 className="font-semibold mb-2">New Arrival Display</h4>
+                <p className="text-sm text-gray-600">
+                  One copy of new titles or new editions is displayed for one month to attract students and staff 
+                  members for effective library usage and knowledge updates.
+                </p>
+              </div>
+              
+              <div>
+                <h4 className="font-semibold mb-2">Key Rules & Regulations</h4>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Register name in Login Register upon entry</li>
+                  <li>• Maintain silence and discipline</li>
+                  <li>• Mobile phones on silent mode</li>
+                  <li>• Return borrowed books before due date</li>
+                  <li>• Report damaged books immediately</li>
+                  <li>• Lost books must be replaced or paid for</li>
+                </ul>
               </div>
             </div>
           </div>
