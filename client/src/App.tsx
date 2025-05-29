@@ -28,6 +28,7 @@ import ElectricalElectronicsEngineering from "@/pages/electrical-electronics-eng
 import ElectronicsCommunicationEngineering from "@/pages/electronics-communication-engineering";
 import IQAC from "@/pages/iqac";
 import TrainingPlacements from "@/pages/training-placements";
+import Placements from "@/pages/placements";
 import CampusLife from "@/pages/campus-life";
 import Infrastructure from "@/pages/infrastructure";
 import Contact from "@/pages/contact";
@@ -68,6 +69,7 @@ function Router() {
           <Route path="/electronics-communication-engineering" component={ElectronicsCommunicationEngineering} />
           <Route path="/iqac" component={IQAC} />
           <Route path="/training-placements" component={TrainingPlacements} />
+          <Route path="/placements" component={Placements} />
           <Route path="/campus-life" component={CampusLife} />
           <Route path="/infrastructure" component={Infrastructure} />
           <Route path="/contact" component={Contact} />
