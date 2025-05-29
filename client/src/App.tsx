@@ -33,6 +33,7 @@ import CulturalActivities from "@/pages/cultural-activities";
 import FeePayment from "@/pages/fee-payment";
 import HigherEducation from "@/pages/higher-education";
 import AntiRagging from "@/pages/anti-ragging";
+import SocialOutreach from "@/pages/social-outreach";
 import CampusLife from "@/pages/campus-life";
 import Infrastructure from "@/pages/infrastructure";
 import Contact from "@/pages/contact";
@@ -78,6 +79,7 @@ function Router() {
           <Route path="/fee-payment" component={FeePayment} />
           <Route path="/higher-education" component={HigherEducation} />
           <Route path="/anti-ragging" component={AntiRagging} />
+          <Route path="/social-outreach" component={SocialOutreach} />
           <Route path="/campus-life" component={CampusLife} />
           <Route path="/infrastructure" component={Infrastructure} />
           <Route path="/contact" component={Contact} />

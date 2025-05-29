@@ -231,7 +231,7 @@ export default function Header() {
                   <DropdownLink href="/campus-life" icon={FileText}>Exam</DropdownLink>
                   <DropdownLink href="/fee-payment" icon={Settings}>Fee Payment</DropdownLink>
                   <DropdownLink href="/cultural-activities" icon={Users}>Cultural Crew</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Heart}>Social Outreach Programs</DropdownLink>
+                  <DropdownLink href="/social-outreach" icon={Heart}>Social Outreach Programs</DropdownLink>
                 </DropdownContent>
               </div>
 
@@ -444,7 +444,7 @@ export default function Header() {
                         <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Exam</Link>
                         <Link href="/fee-payment" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Fee Payment</Link>
                         <Link href="/cultural-activities" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Cultural Crew</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Social Outreach Programs</Link>
+                        <Link href="/social-outreach" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Social Outreach Programs</Link>
                       </div>
                     )}
                   </div>
