@@ -279,16 +279,28 @@ export default function Contact() {
           
           <Card>
             <CardContent className="p-6">
-              <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <MapPin className="h-16 w-16 mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold mb-2">Campus Location</h3>
-                  <p className="text-sm">
-                    JSS TI's Campus<br />
-                    Mysuru-570006, Karnataka<br />
-                    Interactive map integration available upon request.
-                  </p>
-                </div>
+              <div className="rounded-lg h-96 overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.56865488817!2d76.54652873051756!3d12.29463604498936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf65db6cb23e5d%3A0x93b6e4b4b4b4b4b4!2sJSS%20Polytechnic%2C%20Mysuru!5e0!3m2!1sen!2sin!4v1678901234567!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="JSS Polytechnic Location"
+                ></iframe>
+              </div>
+              <div className="mt-4 text-center">
+                <a 
+                  href="https://maps.app.goo.gl/PBpB4sY456WdkQjG6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
+                >
+                  <MapPin className="h-4 w-4 mr-2" />
+                  Open in Google Maps
+                </a>
               </div>
             </CardContent>
           </Card>
