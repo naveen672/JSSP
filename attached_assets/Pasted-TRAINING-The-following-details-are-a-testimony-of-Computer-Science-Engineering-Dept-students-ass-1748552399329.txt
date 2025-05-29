@@ -1,0 +1,40 @@
+TRAINING
+The following details are a testimony of Computer Science& Engineering Dept. students’ association withvarious Placement related activities:
+List of Training and Placement Cell Activities
+            2023-2024
+Sl No	Activities	Date Month- Year	Resource Person with designation	Mode	No. of students present	Relevance to POs& PSOs
+ 1	Seminar on“You are Responsible-Data Security”	  05/08/2023	Karthik B.K	Offline	45	PO5
+ 2	Reactjs	13/09/2023	Ravi Kumar S CEO, Infotise IT Solutions,Mysuru	Offline	58	PO2-PO7
+ 3	Seminar on “IPV6 and Virtual LANS”	19/09/23	Ganesh Prasad HOD , CSE, JSSP,Nanjungud	Offline	50	PO7, PSO1,PSO2
+ 4	Advancement In software testing in AI Era	9/10/2023	Akshatha K.C Senior software Engg. Excelsoft Technologies Mysuru & Chandrakanth M.G Software Specialist Robert Bosch	Offline	40	PO2-PO7
+ 5	Software Testing	16/10/2023	Akshatha JupiterKing Kuvempunagar Mysuru	Offline	58	PO2-PO7
+ 6	NOSQL, Bigdata, Indexing (3 sem)	21/10/2023	Susan Koshy Senior Analyst Infosys Limited Mysuru	Online	50	PO1,PO2
+ 7	1 day workshop  on “Rest API”	21/10/2023	Ravi Kumar S CEO, Infotise IT Solutions,Mysuru	Offline	58	PO2-PO7
+ 8	1 day workshop on “AI & Robotics”	24/01/2024  	ComedKares, Mysuru	Offline	70	PO1-PO7
+ 9	1 day workshop on “AI & Robotics”	25/01/2024	ComedKares, Mysuru	Offline	60	PO1-PO7
+10 	Webinar on “Data Science”	01/02/2024	PRAWTECH	online	50	PO1-PO7
+ 11	Career orientation & IT Industry awareness	21/2/2024	Akshatha K.C CEO,MD JupiterKing Infotech Mysuru	Offline	44	PO2-PO7
+ 12	Industry visit “KGTTI”  	21/2/2024	Near premier studio,mysuru	Onsite	65	PO5
+ 13	Data Science with python	22/02/2024	Srinivas Nayak, IPCS Global, Mysuru	Offline	64	PO5
+14 	Career Guidance	26/02/2024	Sampath Kumar P Founder CEO Shano corporation, mysuru	Offline	60	PO2-PO7
+15 	Alumni Talk “Opportunities in abroad”	    02/02/22	  Anirudh S Research Scholar in Germany  	offline	50	PO7
+ 16	Industrial visit	  21/02/2022	Sai soft Technologies	offline	55	PO7
+ 17	Workshop on “IOT Application”	09/05/2022	Eclesia Advanced Computer Technology	Offline	55	PO2-PO7
+ 18	Industrial visit	30/05/2022 & 31/05/2022	Mysore city Traffic department	Offline	50	PO2
+ 19	2 day workshop on “Interview skills”	29/6/2022 &  30/6/2022	Saisofsol, Mysuru	Offline	60	PO2-PO7
+ 20	Seminar on  “Network Management in Linux”	16/7/2022	Ravi Kumar S CEO, Infotise IT Solutions,Mysuru	Offline	50	PO2
+ 21	Software Engineering	21/07/2022	Vani H.Y Asst. Professor SJCE Mysuru	Offline	48	PO2
+GUEST LECTURING ORGANIZED BY THE Electrical & Electronics Engineering Department Students DURING THE YEAR CAY 2021-22
+SL
+NO	Name of the Invited Speaker	Title of the Lecture
+Delivered	Persentage of students
+attended	Date of the Lecture	Outcome
+1	Hasha Kumar, Lecturer in MC, JSS Polytechnic, Mysuru	NCC	37	01-07-2022	PO5,PO6
+2	K S Bhakthavatsala, Lecturer in ME, JSS Polytechnic, Mysuru	Placement Activities	37	02-07-2022	PO5,PO6
+3	Sadhana M V, Lecturer in EE, JSS Polytechnic, Mysuru  	Awareness on Student Scholarship	37	02-07-2022	PO5,PO6
+4	Dr. Raveesh, Psychiatrist, Mysore Medical College, Mysuru	Personality Development, Character Building, Motivational, Environmental Concern, Public Health and rural Sanitation	37	04-07-2022	PO5,PO6
+5	A S Nagaraj, Lecturer in ME, JSS Polytechnic, Mysuru	Personality Development Program and Human Values	05-07-2022	 	PO5,PO6
+6	Rakesh M D, Assistant Professor, JSSTU, Mysuru	IOT	14-07-2022	 	PO7
+7	Nanadan N, Lecturer in CS, Goverment Polytechnic, Soraba	Basic Web Design	14-07-2022-16-07-	 	PO7
+8	ShashiKiran, Vidyut, Automation, Mysuru	SCADA and PLC Application	29-07-2022	 	PO2,PO4
+

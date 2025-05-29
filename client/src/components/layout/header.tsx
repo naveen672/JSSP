@@ -235,15 +235,11 @@ export default function Header() {
                 </DropdownContent>
               </div>
 
-              {/* Training & Placements Dropdown */}
-              <div className="relative">
-                <DropdownButton name="placements" icon={Briefcase}>Training & Placements</DropdownButton>
-                <DropdownContent name="placements" className="left-[-150px]">
-                  <DropdownLink href="/campus-life" icon={Settings}>Internships</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Settings}>Training</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Briefcase}>Placements</DropdownLink>
-                </DropdownContent>
-              </div>
+              {/* Training & Placements Link */}
+              <NavLink href="/training-placements">
+                <Briefcase className="h-4 w-4 mr-1" />
+                Training & Placements
+              </NavLink>
 
               {/* IQAC */}
               <NavLink href="/about">
@@ -449,26 +445,11 @@ export default function Header() {
                     )}
                   </div>
 
-                  {/* Mobile Training & Placements Section */}
-                  <div>
-                    <button 
-                      onClick={() => toggleMobileDropdown("mobile-placements")}
-                      className="flex items-center justify-between w-full p-2 rounded-md hover:bg-gray-100"
-                    >
-                      <div className="flex items-center space-x-2">
-                        <Briefcase className="h-4 w-4" />
-                        <span>Training & Placements</span>
-                      </div>
-                      <ChevronDown className={cn("h-4 w-4 transition-transform", mobileActiveDropdown === "mobile-placements" && "rotate-180")} />
-                    </button>
-                    {mobileActiveDropdown === "mobile-placements" && (
-                      <div className="pl-6 mt-2 space-y-1 max-h-80 overflow-y-auto">
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Internships</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Training</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Placements</Link>
-                      </div>
-                    )}
-                  </div>
+                  {/* Mobile Training & Placements Link */}
+                  <Link href="/training-placements" onClick={() => closeMobileMenu()} className="flex items-center p-2 rounded-md hover:bg-gray-100">
+                    <Briefcase className="h-4 w-4 mr-2" />
+                    <span>Training & Placements</span>
+                  </Link>
 
                   <Link href="/about" onClick={() => closeMobileMenu()} className="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-100">
                     <UserCheck className="h-4 w-4" />
