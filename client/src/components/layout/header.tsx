@@ -74,8 +74,8 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex h-14 items-center justify-between">
           {/* Desktop Navigation */}
-          <NavigationMenu className="hidden lg:flex mx-auto relative">
-            <NavigationMenuList className="flex space-x-1">
+          <NavigationMenu className="hidden lg:flex mx-auto relative w-full">
+            <NavigationMenuList className="flex justify-center space-x-1 w-full">
               {/* Home Dropdown */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-gray-700 hover:text-primary">
@@ -341,8 +341,8 @@ export default function Header() {
                   <Briefcase className="h-4 w-4 mr-1" />
                   Training & Placements
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className="min-w-[300px] left-[-150px]">
-                  <div className="grid w-[300px] gap-3 p-4">
+                <NavigationMenuContent className="min-w-[400px] left-[-200px]">
+                  <div className="grid w-[400px] gap-3 p-4">
                     <NavigationMenuLink asChild>
                       <Link href="/campus-life" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                         <div className="text-sm font-medium leading-none flex items-center">

@@ -199,7 +199,7 @@
 }
 
 /* Navigation Menu Dropdown Positioning Fix */
-.navigation-menu-viewport {
+[data-radix-navigation-menu-viewport] {
   position: absolute;
   top: 100%;
   left: 0;
@@ -207,9 +207,18 @@
   transform-origin: top center;
 }
 
-.navigation-menu-content {
+[data-radix-navigation-menu-content] {
   position: relative;
   left: auto !important;
   right: auto !important;
-  transform: none !important;
+  transform: translateX(-50%) !important;
+}
+
+/* Specific fixes for Training & Placements and More dropdowns */
+.navigation-menu-item:nth-last-child(3) [data-radix-navigation-menu-content] {
+  transform: translateX(-75%) !important;
+}
+
+.navigation-menu-item:nth-last-child(2) [data-radix-navigation-menu-content] {
+  transform: translateX(-85%) !important;
 }
