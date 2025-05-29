@@ -222,9 +222,7 @@ export default function Header() {
                   <DropdownLink href="/anti-ragging" icon={Shield}>Anti Ragging</DropdownLink>
                   
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Committees</div>
-                  <DropdownLink href="/campus-life" icon={Settings}>MOOC's Committee</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Users}>Internal Complaint Committee</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Shield}>SC/ST Committee</DropdownLink>
+                  <DropdownLink href="/committees" icon={Users}>All Committees</DropdownLink>
                   
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Higher Education</div>
                   <DropdownLink href="/higher-education" icon={GraduationCap}>Higher Education</DropdownLink>
@@ -435,9 +433,7 @@ export default function Header() {
                         <Link href="/anti-ragging" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Anti Ragging</Link>
                         
                         <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Committees</div>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">MOOC's Committee</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Internal Complaint Committee</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">SC/ST Committee</Link>
+                        <Link href="/committees" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">All Committees</Link>
                         
                         <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Higher Education</div>
                         <Link href="/higher-education" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Higher Education</Link>
