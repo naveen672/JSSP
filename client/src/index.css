@@ -197,3 +197,19 @@
   transform: scale(1.1);
   color: hsl(var(--accent));
 }
+
+/* Navigation Menu Dropdown Positioning Fix */
+.navigation-menu-viewport {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  transform-origin: top center;
+}
+
+.navigation-menu-content {
+  position: relative;
+  left: auto !important;
+  right: auto !important;
+  transform: none !important;
+}
