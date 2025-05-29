@@ -11,6 +11,7 @@ import Home from "@/pages/home";
 import Academics from "@/pages/academics";
 import Admissions from "@/pages/admissions";
 import About from "@/pages/about";
+import AboutJSSMVP from "@/pages/about-jssmvp";
 import CampusLife from "@/pages/campus-life";
 import Infrastructure from "@/pages/infrastructure";
 import Contact from "@/pages/contact";
@@ -34,6 +35,7 @@ function Router() {
           <Route path="/academics" component={Academics} />
           <Route path="/admissions" component={Admissions} />
           <Route path="/about" component={About} />
+          <Route path="/about-jssmvp" component={AboutJSSMVP} />
           <Route path="/campus-life" component={CampusLife} />
           <Route path="/infrastructure" component={Infrastructure} />
           <Route path="/contact" component={Contact} />

@@ -127,7 +127,7 @@ export default function Header() {
                 <DropdownButton name="home" icon={Home}>Home</DropdownButton>
                 <DropdownContent name="home">
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">About Section</div>
-                  <DropdownLink href="/about" icon={University}>About JSSMVP</DropdownLink>
+                  <DropdownLink href="/about-jssmvp" icon={University}>About JSSMVP</DropdownLink>
                   <DropdownLink href="/about" icon={Award}>Vision Mission of the Institute</DropdownLink>
                   <DropdownLink href="/about" icon={Users}>Leadership Team</DropdownLink>
                   <DropdownLink href="/about" icon={FileText}>Messages</DropdownLink>
