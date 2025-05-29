@@ -9,7 +9,7 @@ import { useEffect } from "react";
 
 export default function Home() {
   const incrementVisitor = useMutation({
-    mutationFn: () => apiRequest("/api/visitor-count", { method: "POST" }),
+    mutationFn: () => apiRequest("POST", "/api/visitor-count"),
   });
 
   useEffect(() => {
