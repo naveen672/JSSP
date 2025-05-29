@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Award, Users, Globe, BookOpen } from "lucide-react";
+import jssMainBuilding from "@assets/b1.jpg";
 
 export default function AboutJSS() {
   return (
@@ -11,6 +12,18 @@ export default function AboutJSS() {
             JSS Polytechnic is a premier technical education institution committed to excellence in education, research, and innovation. 
             Established with a vision to nurture skilled technicians and engineers, we have been at the forefront of technical education for over three decades.
           </p>
+        </div>
+
+        {/* Campus Image */}
+        <div className="mb-12">
+          <div className="relative rounded-lg overflow-hidden shadow-lg">
+            <img 
+              src={jssMainBuilding} 
+              alt="JSS Polytechnic Main Building" 
+              className="w-full h-64 md:h-80 object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
