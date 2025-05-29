@@ -5,6 +5,7 @@ import AboutJSS from "@/components/home/about-jss";
 import DepartmentCards from "@/components/home/department-cards";
 import FacultyHighlights from "@/components/home/faculty-highlights";
 import FacilitiesShowcase from "@/components/home/facilities-showcase";
+import IndustryPartners from "@/components/home/industry-partners";
 import NewsSection from "@/components/home/news-section";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <DepartmentCards />
       <FacultyHighlights />
       <FacilitiesShowcase />
+      <IndustryPartners />
       <NewsSection />
     </div>
   );
