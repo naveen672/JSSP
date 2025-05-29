@@ -114,7 +114,7 @@ export default function Header() {
                   <DropdownLink href="/about" icon={Users}>Leadership Team</DropdownLink>
                   <DropdownLink href="/about" icon={FileText}>Messages</DropdownLink>
                   <DropdownLink href="/about" icon={Shield}>Governance</DropdownLink>
-                  <DropdownLink href="/about" icon={Award}>AICTE and EOA</DropdownLink>
+                  <DropdownLink href="/about" icon={Award}>All India Council for Technical Education (AICTE) and EOA</DropdownLink>
                   <DropdownLink href="/about" icon={Trophy}>NBA</DropdownLink>
                   <DropdownLink href="/about" icon={UserCheck}>Internal Quality Assurance Cell (IQAC)</DropdownLink>
                   
@@ -190,6 +190,7 @@ export default function Header() {
                   <DropdownLink href="/campus-life" icon={Wrench}>Mechanical Engineering</DropdownLink>
                   <DropdownLink href="/campus-life" icon={Zap}>Electrical & Electronics</DropdownLink>
                   <DropdownLink href="/campus-life" icon={Cog}>Mechatronics</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={Database}>Information Science & Engineering</DropdownLink>
                   <DropdownLink href="/campus-life" icon={Building}>Civil Engineering</DropdownLink>
                 </DropdownContent>
               </div>
