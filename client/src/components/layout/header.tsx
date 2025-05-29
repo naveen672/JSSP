@@ -30,7 +30,11 @@ export default function Header() {
   }, []);
 
   const toggleDropdown = (dropdownName: string) => {
-    setActiveDropdown(activeDropdown === dropdownName ? null : dropdownName);
+    if (activeDropdown === dropdownName) {
+      setActiveDropdown(null);
+    } else {
+      setActiveDropdown(dropdownName);
+    }
   };
 
   const NavLink = ({ href, children, className }: { href: string; children: React.ReactNode; className?: string }) => (
@@ -263,10 +267,10 @@ export default function Header() {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="w-[300px] sm:w-[400px]">
+            <SheetContent side="left" className="w-[300px] sm:w-[400px] overflow-y-auto">
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <SheetDescription className="sr-only">Main navigation menu for JSS Polytechnic website</SheetDescription>
-              <nav className="flex flex-col space-y-4">
+              <nav className="flex flex-col space-y-4 pb-8">
                 <div className="flex items-center space-x-2 pb-4 border-b">
                   <div className="w-10 h-10 rounded-full overflow-hidden">
                     <img src={jssLogo1} alt="JSS Logo" className="w-full h-full object-cover" />
@@ -277,7 +281,7 @@ export default function Header() {
                   </div>
                 </div>
                 
-                <div className="space-y-2">
+                <div className="space-y-2 max-h-screen overflow-y-auto">
                   {/* Mobile Home Section */}
                   <div>
                     <button 
@@ -291,12 +295,17 @@ export default function Header() {
                       <ChevronDown className={cn("h-4 w-4 transition-transform", activeDropdown === "mobile-home" && "rotate-180")} />
                     </button>
                     {activeDropdown === "mobile-home" && (
-                      <div className="pl-6 mt-2 space-y-1">
-                        <Link href="/about" className="block p-2 text-sm hover:bg-gray-50 rounded">About JSSMVP</Link>
-                        <Link href="/about" className="block p-2 text-sm hover:bg-gray-50 rounded">Vision Mission</Link>
-                        <Link href="/about" className="block p-2 text-sm hover:bg-gray-50 rounded">Leadership Team</Link>
-                        <Link href="/about" className="block p-2 text-sm hover:bg-gray-50 rounded">NBA</Link>
-                        <Link href="/about" className="block p-2 text-sm hover:bg-gray-50 rounded">IQAC</Link>
+                      <div className="pl-6 mt-2 space-y-1 max-h-60 overflow-y-auto">
+                        <Link href="/about" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">About JSSMVP</Link>
+                        <Link href="/about" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Vision Mission</Link>
+                        <Link href="/about" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Leadership Team</Link>
+                        <Link href="/about" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Messages</Link>
+                        <Link href="/about" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Governance</Link>
+                        <Link href="/about" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">AICTE and EOA</Link>
+                        <Link href="/about" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">NBA</Link>
+                        <Link href="/about" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">IQAC</Link>
+                        <Link href="/campus-life" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Employee Benefits</Link>
+                        <Link href="/campus-life" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Reports & Downloads</Link>
                       </div>
                     )}
                   </div>
@@ -314,12 +323,17 @@ export default function Header() {
                       <ChevronDown className={cn("h-4 w-4 transition-transform", activeDropdown === "mobile-academics" && "rotate-180")} />
                     </button>
                     {activeDropdown === "mobile-academics" && (
-                      <div className="pl-6 mt-2 space-y-1">
-                        <Link href="/academics" className="block p-2 text-sm hover:bg-gray-50 rounded">Computer Science & Engineering</Link>
-                        <Link href="/academics" className="block p-2 text-sm hover:bg-gray-50 rounded">Electronics & Communication</Link>
-                        <Link href="/academics" className="block p-2 text-sm hover:bg-gray-50 rounded">Mechanical Engineering</Link>
-                        <Link href="/academics" className="block p-2 text-sm hover:bg-gray-50 rounded">Civil Engineering</Link>
-                        <Link href="/admissions" className="block p-2 text-sm hover:bg-gray-50 rounded">Admissions</Link>
+                      <div className="pl-6 mt-2 space-y-1 max-h-60 overflow-y-auto">
+                        <Link href="/academics" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Computer Science & Engineering</Link>
+                        <Link href="/academics" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Electronics & Communication</Link>
+                        <Link href="/academics" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Mechanical Engineering</Link>
+                        <Link href="/academics" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Electrical & Electronics</Link>
+                        <Link href="/academics" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Mechatronics Engineering</Link>
+                        <Link href="/academics" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Information Science & Engineering</Link>
+                        <Link href="/academics" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Civil Engineering</Link>
+                        <Link href="/academics" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Science Department</Link>
+                        <Link href="/academics" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Calendar of Events</Link>
+                        <Link href="/admissions" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Admissions</Link>
                       </div>
                     )}
                   </div>
@@ -337,11 +351,13 @@ export default function Header() {
                       <ChevronDown className={cn("h-4 w-4 transition-transform", activeDropdown === "mobile-facilities" && "rotate-180")} />
                     </button>
                     {activeDropdown === "mobile-facilities" && (
-                      <div className="pl-6 mt-2 space-y-1">
-                        <Link href="/campus-life" className="block p-2 text-sm hover:bg-gray-50 rounded">Library</Link>
-                        <Link href="/campus-life" className="block p-2 text-sm hover:bg-gray-50 rounded">Hostel</Link>
-                        <Link href="/campus-life" className="block p-2 text-sm hover:bg-gray-50 rounded">Sports</Link>
-                        <Link href="/campus-life" className="block p-2 text-sm hover:bg-gray-50 rounded">Infrastructure</Link>
+                      <div className="pl-6 mt-2 space-y-1 max-h-60 overflow-y-auto">
+                        <Link href="/campus-life" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Library & Information Centre</Link>
+                        <Link href="/campus-life" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Hostel</Link>
+                        <Link href="/campus-life" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Sports</Link>
+                        <Link href="/campus-life" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Placements</Link>
+                        <Link href="/campus-life" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Internships & Training</Link>
+                        <Link href="/campus-life" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Infrastructure</Link>
                       </div>
                     )}
                   </div>
@@ -359,19 +375,46 @@ export default function Header() {
                       <ChevronDown className={cn("h-4 w-4 transition-transform", activeDropdown === "mobile-support" && "rotate-180")} />
                     </button>
                     {activeDropdown === "mobile-support" && (
-                      <div className="pl-6 mt-2 space-y-1">
-                        <Link href="/campus-life" className="block p-2 text-sm hover:bg-gray-50 rounded">Scholarships</Link>
-                        <Link href="/campus-life" className="block p-2 text-sm hover:bg-gray-50 rounded">Anti Ragging</Link>
-                        <Link href="/campus-life" className="block p-2 text-sm hover:bg-gray-50 rounded">Committees</Link>
+                      <div className="pl-6 mt-2 space-y-1 max-h-60 overflow-y-auto">
+                        <Link href="/campus-life" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Scholarships</Link>
+                        <Link href="/campus-life" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Mentoring Scheme</Link>
+                        <Link href="/campus-life" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Anti Ragging</Link>
+                        <Link href="/campus-life" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">MOOC's Committee</Link>
+                        <Link href="/campus-life" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Internal Complaint Committee</Link>
+                        <Link href="/campus-life" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">SC/ST Committee</Link>
+                        <Link href="/campus-life" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Higher Education</Link>
+                        <Link href="/campus-life" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Exam</Link>
+                        <Link href="/campus-life" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Cultural Crew</Link>
                       </div>
                     )}
                   </div>
 
-                  <Link href="/about" className="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-100">
+                  {/* Mobile Training & Placements Section */}
+                  <div>
+                    <button 
+                      onClick={() => toggleDropdown("mobile-placements")}
+                      className="flex items-center justify-between w-full p-2 rounded-md hover:bg-gray-100"
+                    >
+                      <div className="flex items-center space-x-2">
+                        <Briefcase className="h-4 w-4" />
+                        <span>Training & Placements</span>
+                      </div>
+                      <ChevronDown className={cn("h-4 w-4 transition-transform", activeDropdown === "mobile-placements" && "rotate-180")} />
+                    </button>
+                    {activeDropdown === "mobile-placements" && (
+                      <div className="pl-6 mt-2 space-y-1 max-h-60 overflow-y-auto">
+                        <Link href="/campus-life" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Internships</Link>
+                        <Link href="/campus-life" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Training</Link>
+                        <Link href="/campus-life" onClick={() => setMobileOpen(false)} className="block p-2 text-sm hover:bg-gray-50 rounded">Placements</Link>
+                      </div>
+                    )}
+                  </div>
+
+                  <Link href="/about" onClick={() => setMobileOpen(false)} className="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-100">
                     <UserCheck className="h-4 w-4" />
                     <span>IQAC</span>
                   </Link>
-                  <Link href="/contact" className="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-100">
+                  <Link href="/contact" onClick={() => setMobileOpen(false)} className="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-100">
                     <Phone className="h-4 w-4" />
                     <span>Contact</span>
                   </Link>
