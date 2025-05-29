@@ -12,6 +12,7 @@ import Academics from "@/pages/academics";
 import Admissions from "@/pages/admissions";
 import About from "@/pages/about";
 import CampusLife from "@/pages/campus-life";
+import Infrastructure from "@/pages/infrastructure";
 import Contact from "@/pages/contact";
 import AdminLogin from "@/pages/admin/login";
 import AdminDashboard from "@/pages/admin/dashboard";
@@ -34,6 +35,7 @@ function Router() {
           <Route path="/admissions" component={Admissions} />
           <Route path="/about" component={About} />
           <Route path="/campus-life" component={CampusLife} />
+          <Route path="/infrastructure" component={Infrastructure} />
           <Route path="/contact" component={Contact} />
           <Route path="/admin/login" component={AdminLogin} />
           <Route path="/admin/dashboard" component={AdminDashboard} />
