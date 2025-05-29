@@ -43,7 +43,7 @@ export default function Header() {
                 <University className="h-6 w-6" />
               </div>
               <div>
-                <h1 className="text-xl font-bold text-primary">Excellence University</h1>
+                <h1 className="text-xl font-bold text-primary">JSS POLYTECHNIC</h1>
                 <p className="text-xs text-gray-600">Mysore - 570009</p>
               </div>
             </div>
