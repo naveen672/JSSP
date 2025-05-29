@@ -246,7 +246,7 @@ export default function Header() {
               </div>
 
               {/* IQAC */}
-              <NavLink href="/about">
+              <NavLink href="/iqac">
                 <UserCheck className="h-4 w-4 mr-1" />
                 IQAC
               </NavLink>
@@ -468,7 +468,7 @@ export default function Header() {
                     )}
                   </div>
 
-                  <Link href="/about" onClick={() => closeMobileMenu()} className="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-100">
+                  <Link href="/iqac" onClick={() => closeMobileMenu()} className="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-100">
                     <UserCheck className="h-4 w-4" />
                     <span>IQAC</span>
                   </Link>
