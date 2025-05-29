@@ -122,6 +122,28 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Get visitor statistics for footer
+  app.get("/api/visitor-stats", async (req, res) => {
+    try {
+      const stats = await storage.getVisitorStats();
+      res.json(stats);
+    } catch (error) {
+      console.error("Error fetching visitor stats:", error);
+      res.status(500).json({ message: "Internal server error" });
+    }
+  });
+
+  // Increment visitor count
+  app.post("/api/visitor-count", async (req, res) => {
+    try {
+      await storage.incrementVisitorCount();
+      res.json({ message: "Visitor count incremented" });
+    } catch (error) {
+      console.error("Error incrementing visitor count:", error);
+      res.status(500).json({ message: "Internal server error" });
+    }
+  });
+
   // Submit contact form
   app.post("/api/contact", async (req, res) => {
     try {
