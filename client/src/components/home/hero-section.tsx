@@ -107,10 +107,7 @@ export default function HeroSection() {
                     <Button 
                       key={index}
                       size="lg" 
-                      className={button.primary 
-                        ? "bg-accent text-primary hover:bg-yellow-300 font-semibold flex items-center space-x-2"
-                        : "border-2 border-white text-white hover:bg-white hover:text-primary font-semibold flex items-center space-x-2"
-                      }
+                      className="justify-center gap-2 whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-background h-11 rounded-md px-8 border-2 border-white hover:bg-white hover:text-primary flex items-center space-x-2 text-[#153156] font-normal"
                       variant={button.primary ? "default" : "outline"}
                     >
                       <Icon className="h-5 w-5" />
@@ -123,7 +120,6 @@ export default function HeroSection() {
           </div>
         </motion.div>
       </AnimatePresence>
-
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
@@ -137,7 +133,6 @@ export default function HeroSection() {
       >
         <ChevronRight className="h-6 w-6" />
       </button>
-
       {/* Slide Indicators */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {slides.map((_, index) => (
