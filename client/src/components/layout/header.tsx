@@ -154,7 +154,7 @@ export default function Header() {
                 <DropdownButton name="academics" icon={GraduationCap}>Academics</DropdownButton>
                 <DropdownContent name="academics">
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Departments</div>
-                  <DropdownLink href="/academics" icon={Computer}>Computer Science & Engineering</DropdownLink>
+                  <DropdownLink href="/computer-science-engineering" icon={Computer}>Computer Science & Engineering</DropdownLink>
                   <DropdownLink href="/academics" icon={Cpu}>Electronics & Communication Engineering</DropdownLink>
                   <DropdownLink href="/mechanical-engineering" icon={Wrench}>Mechanical Engineering</DropdownLink>
                   <DropdownLink href="/academics" icon={Zap}>Electrical & Electronics Engineering</DropdownLink>
@@ -167,7 +167,7 @@ export default function Header() {
                   <DropdownLink href="/calendar-events" icon={Calendar}>Calendar of Events</DropdownLink>
                   
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Professional Bodies</div>
-                  <DropdownLink href="/academics" icon={Computer}>Computer Science & Engineering</DropdownLink>
+                  <DropdownLink href="/computer-science-engineering" icon={Computer}>Computer Science & Engineering</DropdownLink>
                   <DropdownLink href="/academics" icon={Cpu}>Electronics & Communication Engineering</DropdownLink>
                   <DropdownLink href="/mechanical-engineering" icon={Wrench}>Mechanical Engineering</DropdownLink>
                   <DropdownLink href="/academics" icon={Zap}>Electrical & Electronics Engineering</DropdownLink>
