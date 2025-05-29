@@ -1,56 +1,151 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
-import { GraduationCap, Users, ArrowRight, Play } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { GraduationCap, Users, ArrowRight, Play, ChevronLeft, ChevronRight, Building, TreePine, Shield } from "lucide-react";
+
+const slides = [
+  {
+    title: "Welcome to JSS Polytechnic",
+    description: "A premier institution dedicated to technical excellence and innovation",
+    buttons: [
+      { text: "Apply Now", icon: GraduationCap, primary: true },
+      { text: "Learn More", icon: ArrowRight, primary: false }
+    ],
+    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
+  },
+  {
+    title: "State-of-the-Art Campus",
+    description: "Modern infrastructure and facilities for comprehensive technical education",
+    buttons: [
+      { text: "Campus Tour", icon: Building, primary: true },
+      { text: "Our Facilities", icon: Play, primary: false }
+    ],
+    image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
+  },
+  {
+    title: "Lush Green Environment",
+    description: "Study in a beautiful campus with modern amenities and serene surroundings",
+    buttons: [
+      { text: "Explore Campus", icon: TreePine, primary: true },
+      { text: "Student Life", icon: Users, primary: false }
+    ],
+    image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
+  },
+  {
+    title: "NCC and Extracurricular Activities",
+    description: "Comprehensive development through various non-academic programs and activities",
+    buttons: [
+      { text: "Join Activities", icon: Shield, primary: true },
+      { text: "NCC at JSS", icon: Users, primary: false }
+    ],
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
+  }
+];
 
 export default function HeroSection() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
   return (
-    <section className="relative overflow-hidden">
-      <div 
-        className="bg-cover bg-center h-96 lg:h-[500px] relative"
-        style={{
-          backgroundImage: `linear-gradient(rgba(30, 58, 95, 0.7), rgba(30, 58, 95, 0.7)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080')`
-        }}
-      >
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center text-white max-w-4xl px-4">
-            <motion.h1 
-              className="text-4xl lg:text-6xl font-bold mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              Shaping Tomorrow's Leaders
-            </motion.h1>
-            <motion.p 
-              className="text-xl lg:text-2xl mb-8 opacity-90"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              Excellence in Education, Innovation in Research, Excellence in Character Development
-            </motion.p>
-            <motion.div 
-              className="flex flex-col sm:flex-row gap-4 justify-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              <Button size="lg" className="bg-accent text-primary hover:bg-yellow-300 font-semibold flex items-center space-x-2">
-                <GraduationCap className="h-5 w-5" />
-                <span>Apply Now</span>
-                <ArrowRight className="h-4 w-4" />
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold flex items-center space-x-2"
+    <section className="relative overflow-hidden h-96 lg:h-[500px]">
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={currentSlide}
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `linear-gradient(rgba(30, 58, 95, 0.7), rgba(30, 58, 95, 0.7)), url('${slides[currentSlide].image}')`
+          }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center text-white max-w-4xl px-4">
+              <motion.h1 
+                className="text-4xl lg:text-6xl font-bold mb-6"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
               >
-                <Play className="h-4 w-4" />
-                <span>Virtual Tour</span>
-              </Button>
-            </motion.div>
+                {slides[currentSlide].title}
+              </motion.h1>
+              <motion.p 
+                className="text-xl lg:text-2xl mb-8 opacity-90"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                {slides[currentSlide].description}
+              </motion.p>
+              <motion.div 
+                className="flex flex-col sm:flex-row gap-4 justify-center"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+                {slides[currentSlide].buttons.map((button, index) => {
+                  const Icon = button.icon;
+                  return (
+                    <Button 
+                      key={index}
+                      size="lg" 
+                      className={button.primary 
+                        ? "bg-accent text-primary hover:bg-yellow-300 font-semibold flex items-center space-x-2"
+                        : "border-2 border-white text-white hover:bg-white hover:text-primary font-semibold flex items-center space-x-2"
+                      }
+                      variant={button.primary ? "default" : "outline"}
+                    >
+                      <Icon className="h-5 w-5" />
+                      <span>{button.text}</span>
+                    </Button>
+                  );
+                })}
+              </motion.div>
+            </div>
           </div>
-        </div>
+        </motion.div>
+      </AnimatePresence>
+
+      {/* Navigation Arrows */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/20 hover:bg-black/40 text-white p-2 rounded-full transition-colors"
+      >
+        <ChevronLeft className="h-6 w-6" />
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/20 hover:bg-black/40 text-white p-2 rounded-full transition-colors"
+      >
+        <ChevronRight className="h-6 w-6" />
+      </button>
+
+      {/* Slide Indicators */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full transition-colors ${
+              index === currentSlide ? 'bg-accent' : 'bg-white/50'
+            }`}
+          />
+        ))}
       </div>
     </section>
   );
