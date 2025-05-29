@@ -73,10 +73,10 @@ export default function Header() {
     <Link 
       href={href}
       onClick={() => setActiveDropdown(null)}
-      className="flex items-center p-2 rounded-md hover:bg-gray-100 transition-colors"
+      className="flex items-center p-2 rounded-md hover:bg-yellow-50 hover:text-yellow-700 transition-colors group"
     >
-      <Icon className="h-4 w-4 mr-2 text-gray-600" />
-      <span className="text-sm font-medium text-gray-700">{children}</span>
+      <Icon className="h-4 w-4 mr-2 text-gray-600 group-hover:text-yellow-600" />
+      <span className="text-sm font-medium text-gray-700 group-hover:text-yellow-700">{children}</span>
     </Link>
   );
 
