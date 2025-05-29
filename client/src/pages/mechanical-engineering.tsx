@@ -263,11 +263,11 @@ export default function MechanicalEngineering() {
                           <img 
                             src={faculty.image} 
                             alt={faculty.name}
-                            className="w-12 h-12 rounded-full object-cover"
+                            className="w-16 h-16 rounded-full object-cover"
                           />
                         ) : (
-                          <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center">
-                            <Users className="h-6 w-6 text-gray-400" />
+                          <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
+                            <Users className="h-8 w-8 text-gray-400" />
                           </div>
                         )}
                       </td>
@@ -311,11 +311,11 @@ export default function MechanicalEngineering() {
                     <img 
                       src={faculty.image} 
                       alt={faculty.name}
-                      className="w-20 h-20 rounded-full mx-auto mb-4 object-cover"
+                      className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
                     />
                   ) : (
-                    <div className="w-20 h-20 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <Users className="h-10 w-10 text-gray-400" />
+                    <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+                      <Users className="h-12 w-12 text-gray-400" />
                     </div>
                   )}
                   <h3 className="text-lg font-semibold text-primary mb-2">{faculty.name}</h3>
@@ -356,11 +356,11 @@ export default function MechanicalEngineering() {
                           <img 
                             src={staff.image} 
                             alt={staff.name}
-                            className="w-12 h-12 rounded-full object-cover"
+                            className="w-16 h-16 rounded-full object-cover"
                           />
                         ) : (
-                          <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center">
-                            <Users className="h-6 w-6 text-gray-400" />
+                          <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
+                            <Users className="h-8 w-8 text-gray-400" />
                           </div>
                         )}
                       </td>
