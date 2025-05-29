@@ -341,10 +341,10 @@ export default function Header() {
                   <Briefcase className="h-4 w-4 mr-1" />
                   Training & Placements
                 </NavigationMenuTrigger>
-                <NavigationMenuContent>
+                <NavigationMenuContent className="left-0">
                   <div className="grid w-[300px] gap-3 p-4">
-                    <Link href="/campus-life">
-                      <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                    <NavigationMenuLink asChild>
+                      <Link href="/campus-life" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                         <div className="text-sm font-medium leading-none flex items-center">
                           <Settings className="h-4 w-4 mr-2" />
                           Internships
@@ -352,10 +352,10 @@ export default function Header() {
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Industry internship opportunities
                         </p>
-                      </NavigationMenuLink>
-                    </Link>
-                    <Link href="/campus-life">
-                      <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      </Link>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink asChild>
+                      <Link href="/campus-life" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                         <div className="text-sm font-medium leading-none flex items-center">
                           <BookOpen className="h-4 w-4 mr-2" />
                           Training
@@ -363,10 +363,10 @@ export default function Header() {
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Professional skill development
                         </p>
-                      </NavigationMenuLink>
-                    </Link>
-                    <Link href="/campus-life">
-                      <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      </Link>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink asChild>
+                      <Link href="/campus-life" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                         <div className="text-sm font-medium leading-none flex items-center">
                           <Briefcase className="h-4 w-4 mr-2" />
                           Placements
@@ -374,8 +374,8 @@ export default function Header() {
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Career placement services
                         </p>
-                      </NavigationMenuLink>
-                    </Link>
+                      </Link>
+                    </NavigationMenuLink>
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
@@ -394,10 +394,10 @@ export default function Header() {
                   <MoreHorizontal className="h-4 w-4 mr-1" />
                   More
                 </NavigationMenuTrigger>
-                <NavigationMenuContent>
+                <NavigationMenuContent className="right-0">
                   <div className="grid w-[400px] gap-3 p-4 md:grid-cols-2">
-                    <Link href="/about">
-                      <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                    <NavigationMenuLink asChild>
+                      <Link href="/about" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                         <div className="text-sm font-medium leading-none flex items-center">
                           <Users className="h-4 w-4 mr-2" />
                           Alumni
@@ -405,10 +405,10 @@ export default function Header() {
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Connect with our alumni network
                         </p>
-                      </NavigationMenuLink>
-                    </Link>
-                    <Link href="/about">
-                      <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      </Link>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink asChild>
+                      <Link href="/about" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                         <div className="text-sm font-medium leading-none flex items-center">
                           <Camera className="h-4 w-4 mr-2" />
                           Photo Gallery
@@ -416,10 +416,10 @@ export default function Header() {
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Campus life in pictures
                         </p>
-                      </NavigationMenuLink>
-                    </Link>
-                    <Link href="/about">
-                      <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      </Link>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink asChild>
+                      <Link href="/about" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                         <div className="text-sm font-medium leading-none flex items-center">
                           <FileText className="h-4 w-4 mr-2" />
                           Media Coverage
@@ -427,10 +427,10 @@ export default function Header() {
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Latest news and updates
                         </p>
-                      </NavigationMenuLink>
-                    </Link>
-                    <Link href="/contact">
-                      <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      </Link>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink asChild>
+                      <Link href="/contact" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                         <div className="text-sm font-medium leading-none flex items-center">
                           <Settings className="h-4 w-4 mr-2" />
                           Online Grievance
@@ -438,8 +438,8 @@ export default function Header() {
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Submit complaints and feedback
                         </p>
-                      </NavigationMenuLink>
-                    </Link>
+                      </Link>
+                    </NavigationMenuLink>
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
