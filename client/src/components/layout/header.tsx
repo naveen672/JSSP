@@ -159,7 +159,7 @@ export default function Header() {
                   <DropdownLink href="/mechanical-engineering" icon={Wrench}>Mechanical Engineering</DropdownLink>
                   <DropdownLink href="/academics" icon={Zap}>Electrical & Electronics Engineering</DropdownLink>
                   <DropdownLink href="/academics" icon={Cog}>Mechatronics Engineering</DropdownLink>
-                  <DropdownLink href="/academics" icon={Database}>Information Science & Engineering</DropdownLink>
+                  <DropdownLink href="/information-science-engineering" icon={Database}>Information Science & Engineering</DropdownLink>
                   <DropdownLink href="/academics" icon={Building}>Civil Engineering</DropdownLink>
                   <DropdownLink href="/science-department" icon={BookOpen}>Science Department</DropdownLink>
                   
@@ -172,7 +172,7 @@ export default function Header() {
                   <DropdownLink href="/mechanical-engineering" icon={Wrench}>Mechanical Engineering</DropdownLink>
                   <DropdownLink href="/academics" icon={Zap}>Electrical & Electronics Engineering</DropdownLink>
                   <DropdownLink href="/academics" icon={Cog}>Mechatronics Engineering</DropdownLink>
-                  <DropdownLink href="/academics" icon={Database}>Information Science & Engineering</DropdownLink>
+                  <DropdownLink href="/information-science-engineering" icon={Database}>Information Science & Engineering</DropdownLink>
                   <DropdownLink href="/academics" icon={Building}>Civil Engineering</DropdownLink>
                   <DropdownLink href="/science-department" icon={BookOpen}>Science Department</DropdownLink>
                   

@@ -21,6 +21,7 @@ import JSSCollaborationMOUs from "@/pages/jss-collaboration-mous";
 import MandatoryDisclosure from "@/pages/mandatory-disclosure";
 import ScienceDepartment from "@/pages/science-department";
 import MechanicalEngineering from "@/pages/mechanical-engineering";
+import InformationScienceEngineering from "@/pages/information-science-engineering";
 import CampusLife from "@/pages/campus-life";
 import Infrastructure from "@/pages/infrastructure";
 import Contact from "@/pages/contact";
@@ -54,6 +55,7 @@ function Router() {
           <Route path="/mandatory-disclosure" component={MandatoryDisclosure} />
           <Route path="/science-department" component={ScienceDepartment} />
           <Route path="/mechanical-engineering" component={MechanicalEngineering} />
+          <Route path="/information-science-engineering" component={InformationScienceEngineering} />
           <Route path="/campus-life" component={CampusLife} />
           <Route path="/infrastructure" component={Infrastructure} />
           <Route path="/contact" component={Contact} />
