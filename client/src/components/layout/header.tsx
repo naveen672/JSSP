@@ -26,15 +26,18 @@ export default function Header() {
   const isActive = (path: string) => location === path;
 
   const NavLink = ({ href, children, className }: { href: string; children: React.ReactNode; className?: string }) => (
-    <Link href={href}>
-      <NavigationMenuLink className={cn(
+    <NavigationMenuLink 
+      asChild
+      className={cn(
         "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50",
         isActive(href) && "bg-accent/50 text-accent-foreground",
         className
-      )}>
+      )}
+    >
+      <Link href={href}>
         {children}
-      </NavigationMenuLink>
-    </Link>
+      </Link>
+    </NavigationMenuLink>
   );
 
   return (
@@ -83,47 +86,47 @@ export default function Header() {
                   <div className="grid w-[600px] gap-3 p-4 md:grid-cols-3">
                     <div>
                       <h4 className="text-sm font-semibold text-primary mb-2">About Section</h4>
-                      <Link href="/about">
-                        <NavigationMenuLink className="block select-none space-y-1 rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                      <NavigationMenuLink asChild>
+                        <Link href="/about" className="block select-none space-y-1 rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
                           About JSSMVP
-                        </NavigationMenuLink>
-                      </Link>
-                      <Link href="/about">
-                        <NavigationMenuLink className="block select-none space-y-1 rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                        </Link>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink asChild>
+                        <Link href="/about" className="block select-none space-y-1 rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
                           Vision & Mission
-                        </NavigationMenuLink>
-                      </Link>
-                      <Link href="/about">
-                        <NavigationMenuLink className="block select-none space-y-1 rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                        </Link>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink asChild>
+                        <Link href="/about" className="block select-none space-y-1 rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
                           Leadership Team
-                        </NavigationMenuLink>
-                      </Link>
+                        </Link>
+                      </NavigationMenuLink>
                     </div>
                     <div>
                       <h4 className="text-sm font-semibold text-primary mb-2">Employee Benefits</h4>
-                      <Link href="/about">
-                        <NavigationMenuLink className="block select-none space-y-1 rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                      <NavigationMenuLink asChild>
+                        <Link href="/about" className="block select-none space-y-1 rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
                           Group Accident Policy
-                        </NavigationMenuLink>
-                      </Link>
-                      <Link href="/about">
-                        <NavigationMenuLink className="block select-none space-y-1 rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                        </Link>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink asChild>
+                        <Link href="/about" className="block select-none space-y-1 rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
                           JSS Health Scheme
-                        </NavigationMenuLink>
-                      </Link>
+                        </Link>
+                      </NavigationMenuLink>
                     </div>
                     <div>
                       <h4 className="text-sm font-semibold text-primary mb-2">Reports</h4>
-                      <Link href="/about">
-                        <NavigationMenuLink className="block select-none space-y-1 rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                      <NavigationMenuLink asChild>
+                        <Link href="/about" className="block select-none space-y-1 rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
                           NCC Annual Report
-                        </NavigationMenuLink>
-                      </Link>
-                      <Link href="/about">
-                        <NavigationMenuLink className="block select-none space-y-1 rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                        </Link>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink asChild>
+                        <Link href="/about" className="block select-none space-y-1 rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
                           Audit Reports
-                        </NavigationMenuLink>
-                      </Link>
+                        </Link>
+                      </NavigationMenuLink>
                     </div>
                   </div>
                 </NavigationMenuContent>
@@ -142,26 +145,26 @@ export default function Header() {
                         <Computer className="h-4 w-4 mr-1" />
                         Departments
                       </h4>
-                      <Link href="/academics">
-                        <NavigationMenuLink className="block select-none space-y-1 rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                      <NavigationMenuLink asChild>
+                        <Link href="/academics" className="block select-none space-y-1 rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
                           Computer Science & Engineering
-                        </NavigationMenuLink>
-                      </Link>
-                      <Link href="/academics">
-                        <NavigationMenuLink className="block select-none space-y-1 rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                        </Link>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink asChild>
+                        <Link href="/academics" className="block select-none space-y-1 rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
                           Electronics & Communication
-                        </NavigationMenuLink>
-                      </Link>
-                      <Link href="/academics">
-                        <NavigationMenuLink className="block select-none space-y-1 rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                        </Link>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink asChild>
+                        <Link href="/academics" className="block select-none space-y-1 rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
                           Mechanical Engineering
-                        </NavigationMenuLink>
-                      </Link>
-                      <Link href="/academics">
-                        <NavigationMenuLink className="block select-none space-y-1 rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                        </Link>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink asChild>
+                        <Link href="/academics" className="block select-none space-y-1 rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
                           Civil Engineering
-                        </NavigationMenuLink>
-                      </Link>
+                        </Link>
+                      </NavigationMenuLink>
                     </div>
                     <div>
                       <h4 className="text-sm font-semibold text-primary mb-2 flex items-center">
@@ -459,55 +462,188 @@ export default function Header() {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+            <SheetContent side="right" className="w-[300px] sm:w-[400px] overflow-y-auto">
               <nav className="flex flex-col space-y-4">
-                <Link href="/">
-                  <div className="flex items-center space-x-3 pb-4">
-                    <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-primary">
-                      <img 
-                        src={jssLogo1} 
-                        alt="JSS Logo" 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <span className="font-bold text-primary">JSS POLYTECHNIC</span>
+                <div className="flex items-center space-x-3 pb-4 border-b">
+                  <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-primary">
+                    <img 
+                      src={jssLogo1} 
+                      alt="JSS Logo" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                </Link>
+                  <span className="font-bold text-primary">JSS POLYTECHNIC</span>
+                </div>
                 
-                <Link href="/academics">
-                  <Button variant="ghost" className="w-full justify-start" onClick={() => setMobileOpen(false)}>
+                {/* Home Section */}
+                <div>
+                  <h3 className="text-sm font-semibold text-primary mb-2 flex items-center">
+                    <Home className="h-4 w-4 mr-2" />
+                    Home
+                  </h3>
+                  <div className="ml-6 space-y-2">
+                    <button 
+                      className="block text-sm text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      About JSSMVP
+                    </button>
+                    <button 
+                      className="block text-sm text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      Vision & Mission
+                    </button>
+                    <button 
+                      className="block text-sm text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      Leadership Team
+                    </button>
+                  </div>
+                </div>
+
+                {/* Academics Section */}
+                <div>
+                  <h3 className="text-sm font-semibold text-primary mb-2 flex items-center">
                     <BookOpen className="h-4 w-4 mr-2" />
                     Academics
-                  </Button>
-                </Link>
-                
-                <Link href="/admissions">
-                  <Button variant="ghost" className="w-full justify-start" onClick={() => setMobileOpen(false)}>
-                    <GraduationCap className="h-4 w-4 mr-2" />
-                    Admissions
-                  </Button>
-                </Link>
-                
-                <Link href="/about">
-                  <Button variant="ghost" className="w-full justify-start" onClick={() => setMobileOpen(false)}>
-                    <University className="h-4 w-4 mr-2" />
-                    About
-                  </Button>
-                </Link>
-                
-                <Link href="/campus-life">
-                  <Button variant="ghost" className="w-full justify-start" onClick={() => setMobileOpen(false)}>
-                    <Trophy className="h-4 w-4 mr-2" />
-                    Campus Life
-                  </Button>
-                </Link>
-                
-                <Link href="/contact">
-                  <Button variant="ghost" className="w-full justify-start" onClick={() => setMobileOpen(false)}>
+                  </h3>
+                  <div className="ml-6 space-y-2">
+                    <button 
+                      className="block text-sm text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      Computer Science & Engineering
+                    </button>
+                    <button 
+                      className="block text-sm text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      Electronics & Communication
+                    </button>
+                    <button 
+                      className="block text-sm text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      Mechanical Engineering
+                    </button>
+                    <button 
+                      className="block text-sm text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      Electrical Engineering
+                    </button>
+                    <button 
+                      className="block text-sm text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      Civil Engineering
+                    </button>
+                  </div>
+                </div>
+
+                {/* Facilities Section */}
+                <div>
+                  <h3 className="text-sm font-semibold text-primary mb-2 flex items-center">
+                    <Building className="h-4 w-4 mr-2" />
+                    Facilities
+                  </h3>
+                  <div className="ml-6 space-y-2">
+                    <button 
+                      className="block text-sm text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      Library & Information Centre
+                    </button>
+                    <button 
+                      className="block text-sm text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      Hostel
+                    </button>
+                    <button 
+                      className="block text-sm text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      Sports Complex
+                    </button>
+                  </div>
+                </div>
+
+                {/* Student Support Section */}
+                <div>
+                  <h3 className="text-sm font-semibold text-primary mb-2 flex items-center">
+                    <Users className="h-4 w-4 mr-2" />
+                    Student Support
+                  </h3>
+                  <div className="ml-6 space-y-2">
+                    <button 
+                      className="block text-sm text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      Scholarships
+                    </button>
+                    <button 
+                      className="block text-sm text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      Mentoring Scheme
+                    </button>
+                    <button 
+                      className="block text-sm text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      Anti Ragging
+                    </button>
+                  </div>
+                </div>
+
+                {/* Training & Placements Section */}
+                <div>
+                  <h3 className="text-sm font-semibold text-primary mb-2 flex items-center">
+                    <Briefcase className="h-4 w-4 mr-2" />
+                    Training & Placements
+                  </h3>
+                  <div className="ml-6 space-y-2">
+                    <button 
+                      className="block text-sm text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      Internships
+                    </button>
+                    <button 
+                      className="block text-sm text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      Training Programs
+                    </button>
+                    <button 
+                      className="block text-sm text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      Placements
+                    </button>
+                  </div>
+                </div>
+
+                {/* Direct Links */}
+                <div className="space-y-2 pt-4 border-t">
+                  <button 
+                    className="flex items-center text-sm font-medium text-primary hover:text-accent transition-colors"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    <Award className="h-4 w-4 mr-2" />
+                    IQAC
+                  </button>
+                  <button 
+                    className="flex items-center text-sm font-medium text-primary hover:text-accent transition-colors"
+                    onClick={() => setMobileOpen(false)}
+                  >
                     <Phone className="h-4 w-4 mr-2" />
                     Contact
-                  </Button>
-                </Link>
+                  </button>
+                </div>
               </nav>
             </SheetContent>
           </Sheet>

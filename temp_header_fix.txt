@@ -1,0 +1,1 @@
+Let me systematically fix all Link/NavigationMenuLink nesting issues by replacing all instances where Link wraps NavigationMenuLink with NavigationMenuLink asChild wrapping Link.
