@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { History, Award, Globe, Users } from "lucide-react";
+import { History, Award, Globe, Users, Computer, Cpu, Wrench, Zap, Cog, Database, Building, BookOpen, Calendar, Phone, Settings, FileText } from "lucide-react";
 
 export default function About() {
   return (
@@ -9,10 +9,152 @@ export default function About() {
       {/* Hero Section */}
       <section className="bg-primary text-white py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl lg:text-6xl font-bold mb-6">About Excellence University</h1>
+          <h1 className="text-4xl lg:text-6xl font-bold mb-6">About JSS Polytechnic</h1>
           <p className="text-xl lg:text-2xl opacity-90 max-w-3xl mx-auto">
-            Inspiring Excellence Since 1965 - A Legacy of Academic Achievement and Character Development
+            JSS Polytechnic is a premier technical education institution committed to excellence in education, research, and innovation. Established with a vision to nurture skilled technicians and engineers, we have been at the forefront of technical education for over three decades.
           </p>
+        </div>
+      </section>
+
+      {/* JSS Polytechnic Overview */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <p className="text-lg text-gray-600 leading-relaxed mb-8">
+              Our institution is equipped with state-of-the-art facilities, experienced faculty, and strong industry connections to provide students with a comprehensive learning experience that prepares them for successful careers.
+            </p>
+            
+            <div className="grid md:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary mb-2">30+</div>
+                <div className="text-gray-600">Years of Excellence</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary mb-2">800+</div>
+                <div className="text-gray-600">Experienced Faculty</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary mb-2">100+</div>
+                <div className="text-gray-600">Industry Partnerships</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary mb-2">Modern</div>
+                <div className="text-gray-600">Facilities</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Academic Departments */}
+      <section className="bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Our Academic Departments</h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 text-center">
+                <Computer className="h-12 w-12 text-primary mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-primary mb-2">Computer Science & Engineering</h3>
+                <p className="text-sm text-gray-600">Modern computing technologies and software development</p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 text-center">
+                <Cpu className="h-12 w-12 text-primary mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-primary mb-2">Electronics & Communication Engineering</h3>
+                <p className="text-sm text-gray-600">Electronic systems and communication technologies</p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 text-center">
+                <Wrench className="h-12 w-12 text-primary mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-primary mb-2">Mechanical Engineering</h3>
+                <p className="text-sm text-gray-600">Design, manufacturing, and mechanical systems</p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 text-center">
+                <Zap className="h-12 w-12 text-primary mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-primary mb-2">Electrical & Electronics Engineering</h3>
+                <p className="text-sm text-gray-600">Power systems and electrical technologies</p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 text-center">
+                <Cog className="h-12 w-12 text-primary mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-primary mb-2">Mechatronics Engineering</h3>
+                <p className="text-sm text-gray-600">Integration of mechanical, electrical, and computing systems</p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 text-center">
+                <Database className="h-12 w-12 text-primary mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-primary mb-2">Information Science & Engineering</h3>
+                <p className="text-sm text-gray-600">Information systems and data management</p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 text-center">
+                <Building className="h-12 w-12 text-primary mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-primary mb-2">Civil Engineering</h3>
+                <p className="text-sm text-gray-600">Infrastructure development and construction</p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 text-center">
+                <BookOpen className="h-12 w-12 text-primary mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-primary mb-2">Science Department</h3>
+                <p className="text-sm text-gray-600">Foundation sciences and research</p>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Additional Academic Information */}
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <Calendar className="h-5 w-5 mr-2" />
+                  Academic Calendar
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">Calendar of Events and important academic dates for the year</p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <Users className="h-5 w-5 mr-2" />
+                  Professional Bodies
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">Professional associations and industry connections for each department</p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <FileText className="h-5 w-5 mr-2" />
+                  Admissions
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">College prospectus, admission help desk, and detailed admission information</p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
