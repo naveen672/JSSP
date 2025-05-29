@@ -16,6 +16,9 @@ import Messages from "@/pages/messages";
 import Governance from "@/pages/governance";
 import AICTEEOA from "@/pages/aicte-eoa";
 import NBA from "@/pages/nba";
+import CalendarEvents from "@/pages/calendar-events";
+import JSSCollaborationMOUs from "@/pages/jss-collaboration-mous";
+import MandatoryDisclosure from "@/pages/mandatory-disclosure";
 import CampusLife from "@/pages/campus-life";
 import Infrastructure from "@/pages/infrastructure";
 import Contact from "@/pages/contact";
@@ -44,6 +47,9 @@ function Router() {
           <Route path="/governance" component={Governance} />
           <Route path="/aicte-eoa" component={AICTEEOA} />
           <Route path="/nba" component={NBA} />
+          <Route path="/calendar-events" component={CalendarEvents} />
+          <Route path="/jss-collaboration-mous" component={JSSCollaborationMOUs} />
+          <Route path="/mandatory-disclosure" component={MandatoryDisclosure} />
           <Route path="/campus-life" component={CampusLife} />
           <Route path="/infrastructure" component={Infrastructure} />
           <Route path="/contact" component={Contact} />
