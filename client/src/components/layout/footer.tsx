@@ -40,22 +40,22 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="/about">
-                  <a className="text-gray-300 hover:text-accent transition-colors">About Us</a>
+                  <span className="text-gray-300 hover:text-accent transition-colors">About Us</span>
                 </Link>
               </li>
               <li>
                 <Link href="/academics">
-                  <a className="text-gray-300 hover:text-accent transition-colors">Academic Programs</a>
+                  <span className="text-gray-300 hover:text-accent transition-colors">Academic Programs</span>
                 </Link>
               </li>
               <li>
                 <Link href="/academics">
-                  <a className="text-gray-300 hover:text-accent transition-colors">Faculty</a>
+                  <span className="text-gray-300 hover:text-accent transition-colors">Faculty</span>
                 </Link>
               </li>
               <li>
                 <Link href="/campus-life">
-                  <a className="text-gray-300 hover:text-accent transition-colors">Campus Life</a>
+                  <span className="text-gray-300 hover:text-accent transition-colors">Campus Life</span>
                 </Link>
               </li>
               <li>
@@ -76,7 +76,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/academics">
-                  <a className="text-gray-300 hover:text-accent transition-colors">Academic Calendar</a>
+                  <span className="text-gray-300 hover:text-accent transition-colors">Academic Calendar</span>
                 </Link>
               </li>
               <li>

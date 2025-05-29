@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { motion } from "framer-motion";
+import { Users, GraduationCap, Building, Calendar } from "lucide-react";
 
 interface StatCounterProps {
   end: number;
@@ -67,6 +68,14 @@ export default function StatsCounter() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
+              <div className="flex justify-center mb-4">
+                <div className="bg-primary text-white p-3 rounded-full">
+                  {index === 0 && <Users className="h-6 w-6" />}
+                  {index === 1 && <GraduationCap className="h-6 w-6" />}
+                  {index === 2 && <Building className="h-6 w-6" />}
+                  {index === 3 && <Calendar className="h-6 w-6" />}
+                </div>
+              </div>
               <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">
                 <StatCounter end={stat.value} suffix={stat.suffix} />
               </div>
