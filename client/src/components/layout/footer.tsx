@@ -9,14 +9,16 @@ export default function Footer() {
           {/* Institution Info */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="bg-accent text-primary w-10 h-10 rounded-lg flex items-center justify-center">
-                <University className="h-5 w-5" />
-              </div>
-              <h3 className="text-xl font-bold">Excellence University</h3>
+              <img 
+                src="/attached_assets/image_1748508467963.png" 
+                alt="JSS Logo" 
+                className="h-12 w-12 object-contain"
+              />
+              <h3 className="text-xl font-bold">JSS POLYTECHNIC</h3>
             </div>
             <p className="text-gray-300 mb-4">
-              Dedicated to academic excellence and character development since 1965. 
-              Shaping tomorrow's leaders through innovation and education.
+              Dedicated to technical excellence and innovation since 1963. 
+              Shaping tomorrow's engineers and technical professionals through quality education.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-accent transition-colors">
@@ -128,7 +130,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-600 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-300 text-sm">
-            &copy; 2024 Excellence University. All rights reserved.
+            &copy; 2024 JSS Polytechnic, Mysore. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-gray-300 hover:text-accent text-sm transition-colors">

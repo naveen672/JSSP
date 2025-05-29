@@ -38,14 +38,21 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/">
-            <div className="flex items-center space-x-3">
-              <div className="bg-primary text-white w-12 h-12 rounded-lg flex items-center justify-center">
-                <University className="h-6 w-6" />
+            <div className="flex items-center space-x-4">
+              <img 
+                src="/attached_assets/image_1748508467963.png" 
+                alt="JSS Maha Vidyapeetha Logo" 
+                className="h-16 w-16 object-contain"
+              />
+              <div className="text-center">
+                <h1 className="text-2xl font-bold text-primary">JSS POLYTECHNIC</h1>
+                <p className="text-sm text-gray-600">Excellence in Technical Education</p>
               </div>
-              <div>
-                <h1 className="text-xl font-bold text-primary">JSS POLYTECHNIC</h1>
-                <p className="text-xs text-gray-600">Mysore - 570009</p>
-              </div>
+              <img 
+                src="/attached_assets/image_1748508473227.png" 
+                alt="JSS Polytechnic Logo" 
+                className="h-16 w-16 object-contain"
+              />
             </div>
           </Link>
 
@@ -185,9 +192,13 @@ export default function Header() {
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <nav className="flex flex-col space-y-4">
                 <Link href="/">
-                  <div className="flex items-center space-x-2 pb-4">
-                    <University className="h-6 w-6 text-primary" />
-                    <span className="font-bold text-primary">Excellence University</span>
+                  <div className="flex items-center space-x-3 pb-4">
+                    <img 
+                      src="/attached_assets/image_1748508467963.png" 
+                      alt="JSS Logo" 
+                      className="h-8 w-8 object-contain"
+                    />
+                    <span className="font-bold text-primary">JSS POLYTECHNIC</span>
                   </div>
                 </Link>
                 
