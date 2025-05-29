@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import { 
   Menu, University, ChevronDown, BookOpen, Users, GraduationCap, Calendar, FileText, Trophy, 
   Home, Phone, Building, Award, Briefcase, Camera, Settings, UserCheck, Shield, Heart,
@@ -90,7 +90,7 @@ export default function Header() {
           </div>
           <div className="text-center">
             <h1 className="text-2xl font-bold text-primary">JSS POLYTECHNIC</h1>
-            <p className="text-sm text-gray-600">A Constituent Institution of JSS Science and Technology University</p>
+            <p className="text-sm text-gray-600">Mysore</p>
           </div>
           <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-primary">
             <img src={jssLogo2} alt="JSS Logo 2" className="w-full h-full object-cover" />
@@ -194,6 +194,8 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="w-[300px] sm:w-[400px]">
+              <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+              <SheetDescription className="sr-only">Main navigation menu for JSS Polytechnic website</SheetDescription>
               <nav className="flex flex-col space-y-4">
                 <div className="flex items-center space-x-2 pb-4 border-b">
                   <div className="w-10 h-10 rounded-full overflow-hidden">
