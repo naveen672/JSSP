@@ -196,39 +196,54 @@ export default function MechanicalEngineering() {
             
             <Card>
               <CardContent className="p-8">
-                <div className="space-y-4 text-gray-700">
-                  <p>
-                    Mechanical Engineering department is one of the oldest and evergreen engineering programmes, 
-                    established in the year 1987, recognised by DTE, Bengaluru and affiliated to AICTE, New Delhi. 
-                    The current intake is 60 students.
-                  </p>
-                  <p>
-                    The department has committed, experienced and highly qualified teaching faculty.
-                  </p>
-                  <p>
-                    It has very good supporting staff, with hands on experience in imparting practical training 
-                    in well-equipped laboratories, workshop and machine shop, with adequate and high end equipment's.
-                  </p>
-                  <p>
-                    The department has a very good track record of successful students who have passed with flying colours.
-                  </p>
-                  <p>
-                    Many students are either employees of prestigious organisations like Infosys, Toyota Kirloskar, 
-                    Wipro, L&T, to name a few or pursuing their higher studies in coveted institutions, 
-                    like RVCE, PESIT, SJCE, NIE.
-                  </p>
-                  <p>
-                    In addition, students are given one to one attention, for their all-round development, 
-                    be it academics, sports, placement or ethical engineering practices.
-                  </p>
-                  <p>
-                    Staff and students are provided with unlimited free internet access at e-Library during spare time, 
-                    so that they can develop and enhance their knowledge acquired in class rooms.
-                  </p>
-                  <p className="font-medium text-primary">
-                    Students express that their stay in the department is not only an experience to reckon with 
-                    but is an emotional attachment to be experienced.
-                  </p>
+                <div className="flex flex-col md:flex-row gap-6 mb-6">
+                  <div className="flex-shrink-0">
+                    <img 
+                      src={hodImage} 
+                      alt="Rajashekara. H.M - HOD"
+                      className="w-32 h-40 rounded-lg object-cover mx-auto md:mx-0"
+                    />
+                    <div className="text-center mt-3">
+                      <h4 className="font-semibold text-primary">Rajashekara. H.M</h4>
+                      <Badge className="mt-1">Head of Department</Badge>
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <div className="space-y-4 text-gray-700">
+                      <p>
+                        Mechanical Engineering department is one of the oldest and evergreen engineering programmes, 
+                        established in the year 1987, recognised by DTE, Bengaluru and affiliated to AICTE, New Delhi. 
+                        The current intake is 60 students.
+                      </p>
+                      <p>
+                        The department has committed, experienced and highly qualified teaching faculty.
+                      </p>
+                      <p>
+                        It has very good supporting staff, with hands on experience in imparting practical training 
+                        in well-equipped laboratories, workshop and machine shop, with adequate and high end equipment's.
+                      </p>
+                      <p>
+                        The department has a very good track record of successful students who have passed with flying colours.
+                      </p>
+                      <p>
+                        Many students are either employees of prestigious organisations like Infosys, Toyota Kirloskar, 
+                        Wipro, L&T, to name a few or pursuing their higher studies in coveted institutions, 
+                        like RVCE, PESIT, SJCE, NIE.
+                      </p>
+                      <p>
+                        In addition, students are given one to one attention, for their all-round development, 
+                        be it academics, sports, placement or ethical engineering practices.
+                      </p>
+                      <p>
+                        Staff and students are provided with unlimited free internet access at e-Library during spare time, 
+                        so that they can develop and enhance their knowledge acquired in class rooms.
+                      </p>
+                      <p className="font-medium text-primary">
+                        Students express that their stay in the department is not only an experience to reckon with 
+                        but is an emotional attachment to be experienced.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </CardContent>
             </Card>
