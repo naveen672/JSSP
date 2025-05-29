@@ -161,7 +161,7 @@ export default function Header() {
                   <DropdownLink href="/academics" icon={Cog}>Mechatronics Engineering</DropdownLink>
                   <DropdownLink href="/academics" icon={Database}>Information Science & Engineering</DropdownLink>
                   <DropdownLink href="/academics" icon={Building}>Civil Engineering</DropdownLink>
-                  <DropdownLink href="/academics" icon={BookOpen}>Science Department</DropdownLink>
+                  <DropdownLink href="/science-department" icon={BookOpen}>Science Department</DropdownLink>
                   
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Calendar</div>
                   <DropdownLink href="/calendar-events" icon={Calendar}>Calendar of Events</DropdownLink>
@@ -174,7 +174,7 @@ export default function Header() {
                   <DropdownLink href="/academics" icon={Cog}>Mechatronics Engineering</DropdownLink>
                   <DropdownLink href="/academics" icon={Database}>Information Science & Engineering</DropdownLink>
                   <DropdownLink href="/academics" icon={Building}>Civil Engineering</DropdownLink>
-                  <DropdownLink href="/academics" icon={BookOpen}>Science Department</DropdownLink>
+                  <DropdownLink href="/science-department" icon={BookOpen}>Science Department</DropdownLink>
                   
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Admission</div>
                   <DropdownLink href="/admissions" icon={FileText}>College Prospectus</DropdownLink>
