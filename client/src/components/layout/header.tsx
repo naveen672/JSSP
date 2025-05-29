@@ -58,8 +58,8 @@ export default function Header() {
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
-                    <Link href="/academics">
-                      <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                    <NavigationMenuLink asChild>
+                      <Link href="/academics" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                         <div className="text-sm font-medium leading-none flex items-center">
                           <BookOpen className="h-4 w-4 mr-2" />
                           Departments
@@ -67,10 +67,10 @@ export default function Header() {
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Explore our academic departments and programs
                         </p>
-                      </NavigationMenuLink>
-                    </Link>
-                    <Link href="/academics">
-                      <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      </Link>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink asChild>
+                      <Link href="/academics" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                         <div className="text-sm font-medium leading-none flex items-center">
                           <Users className="h-4 w-4 mr-2" />
                           Faculty
@@ -78,10 +78,10 @@ export default function Header() {
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Meet our distinguished faculty members
                         </p>
-                      </NavigationMenuLink>
-                    </Link>
-                    <Link href="/academics">
-                      <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      </Link>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink asChild>
+                      <Link href="/academics" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                         <div className="text-sm font-medium leading-none flex items-center">
                           <GraduationCap className="h-4 w-4 mr-2" />
                           Programs
@@ -89,10 +89,10 @@ export default function Header() {
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Undergraduate and graduate programs
                         </p>
-                      </NavigationMenuLink>
-                    </Link>
-                    <Link href="/academics">
-                      <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      </Link>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink asChild>
+                      <Link href="/academics" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                         <div className="text-sm font-medium leading-none flex items-center">
                           <Calendar className="h-4 w-4 mr-2" />
                           Academic Calendar
@@ -100,8 +100,8 @@ export default function Header() {
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Important dates and schedules
                         </p>
-                      </NavigationMenuLink>
-                    </Link>
+                      </Link>
+                    </NavigationMenuLink>
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
@@ -112,38 +112,50 @@ export default function Header() {
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
-                    <Link href="/admissions">
-                      <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Apply Online</div>
+                    <NavigationMenuLink asChild>
+                      <Link href="/admissions" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none flex items-center">
+                          <FileText className="h-4 w-4 mr-2" />
+                          Apply Online
+                        </div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Start your application process
                         </p>
-                      </NavigationMenuLink>
-                    </Link>
-                    <Link href="/admissions">
-                      <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Requirements</div>
+                      </Link>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink asChild>
+                      <Link href="/admissions" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none flex items-center">
+                          <BookOpen className="h-4 w-4 mr-2" />
+                          Requirements
+                        </div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Admission requirements and criteria
                         </p>
-                      </NavigationMenuLink>
-                    </Link>
-                    <Link href="/admissions">
-                      <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Scholarships</div>
+                      </Link>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink asChild>
+                      <Link href="/admissions" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none flex items-center">
+                          <Trophy className="h-4 w-4 mr-2" />
+                          Scholarships
+                        </div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Financial aid and scholarship opportunities
                         </p>
-                      </NavigationMenuLink>
-                    </Link>
-                    <Link href="/admissions">
-                      <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Important Dates</div>
+                      </Link>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink asChild>
+                      <Link href="/admissions" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none flex items-center">
+                          <Calendar className="h-4 w-4 mr-2" />
+                          Important Dates
+                        </div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Application deadlines and dates
                         </p>
-                      </NavigationMenuLink>
-                    </Link>
+                      </Link>
+                    </NavigationMenuLink>
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
