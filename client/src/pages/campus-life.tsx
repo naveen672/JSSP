@@ -14,6 +14,18 @@ import {
   Clock
 } from "lucide-react";
 
+// Sports images
+import sportsGround from "@assets/image_1748525684931.png";
+import volleyballEvent from "@assets/image_1748525692491.png";
+import volleyballTournament from "@assets/image_1748525698149.png";
+import volleyballCompetition from "@assets/image_1748525704187.png";
+import volleyballChampions from "@assets/image_1748525709166.png";
+import womenVolleyball from "@assets/image_1748525749249.png";
+import maleAthletes from "@assets/image_1748525754447.png";
+import womenTeamAward from "@assets/image_1748525760048.png";
+import groupPhotoSports from "@assets/image_1748525764816.png";
+import sportsAudience from "@assets/image_1748525773925.png";
+
 export default function CampusLife() {
   return (
     <div className="w-full">
@@ -155,7 +167,7 @@ export default function CampusLife() {
                 <Card className="overflow-hidden">
                   <div className="h-48 overflow-hidden">
                     <img 
-                      src="@assets/image_1748525684931.png" 
+                      src={sportsGround} 
                       alt="JSS Polytechnic Sports Ground"
                       className="w-full h-full object-cover"
                     />
@@ -169,7 +181,7 @@ export default function CampusLife() {
                 <Card className="overflow-hidden">
                   <div className="h-48 overflow-hidden">
                     <img 
-                      src="@assets/image_1748525698149.png" 
+                      src={volleyballTournament} 
                       alt="Volleyball Tournament"
                       className="w-full h-full object-cover"
                     />
@@ -183,7 +195,7 @@ export default function CampusLife() {
                 <Card className="overflow-hidden">
                   <div className="h-48 overflow-hidden">
                     <img 
-                      src="@assets/image_1748525704187.png" 
+                      src={volleyballCompetition} 
                       alt="District Level Volleyball Competition"
                       className="w-full h-full object-cover"
                     />
@@ -208,7 +220,7 @@ export default function CampusLife() {
                     <div className="space-y-4">
                       <div className="flex items-center space-x-3">
                         <img 
-                          src="@assets/image_1748525709166.png" 
+                          src={volleyballChampions} 
                           alt="Volleyball Champions"
                           className="w-16 h-16 rounded object-cover"
                         />
@@ -219,7 +231,7 @@ export default function CampusLife() {
                       </div>
                       <div className="flex items-center space-x-3">
                         <img 
-                          src="@assets/image_1748525749249.png" 
+                          src={womenVolleyball} 
                           alt="Women's Volleyball Team"
                           className="w-16 h-16 rounded object-cover"
                         />
@@ -270,22 +282,22 @@ export default function CampusLife() {
                 <CardContent>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     <img 
-                      src="@assets/image_1748525692491.png" 
+                      src={volleyballEvent} 
                       alt="Sports Event Opening Ceremony"
                       className="w-full h-24 object-cover rounded"
                     />
                     <img 
-                      src="@assets/image_1748525754447.png" 
+                      src={maleAthletes} 
                       alt="Male Athletes with Certificates"
                       className="w-full h-24 object-cover rounded"
                     />
                     <img 
-                      src="@assets/image_1748525760048.png" 
+                      src={womenTeamAward} 
                       alt="Women's Team Award Ceremony"
                       className="w-full h-24 object-cover rounded"
                     />
                     <img 
-                      src="@assets/image_1748525764816.png" 
+                      src={groupPhotoSports} 
                       alt="Group Photo Sports Event"
                       className="w-full h-24 object-cover rounded"
                     />
