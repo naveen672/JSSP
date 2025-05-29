@@ -1,0 +1,146 @@
+Project Name: Institutional Website Template
+
+Description: Create a comprehensive educational institution website with modern features and professional design.
+
+Technical Requirements
+Frontend:
+
+React.js with TypeScript for type safety
+Tailwind CSS for responsive styling
+Framer Motion for smooth animations
+Wouter for client-side routing
+React Query for data fetching
+React Hook Form for form handling
+Backend:
+
+Express.js server with TypeScript
+PostgreSQL database with Drizzle ORM
+Passport.js authentication system
+Nodemailer for email functionality
+Session-based user management
+UI Components:
+
+Radix UI components for accessibility
+Shadcn/ui component library
+Lucide React icons
+Professional theme with customizable colors
+Core Features to Implement
+1. Homepage
+Hero section with institution branding
+Statistics counter (students, faculty, departments, years)
+Flash news ticker with scrolling announcements
+Image carousel/slider for campus highlights
+Quick links to important sections
+2. Navigation System
+Responsive navbar with dropdown menus
+Mobile-friendly hamburger menu
+Breadcrumb navigation
+Sticky header with smooth scrolling
+3. Academic Pages
+Department pages with expandable accordion sections
+Faculty profiles with photos and qualifications
+Program information and course details
+Admissions process and requirements
+Academic calendar and important dates
+Examination information and results
+4. Administrative Pages
+About the institution and governing body
+Principal/Director message
+Committee information (Grievance, Anti-Ragging, IQAC, etc.)
+Governance structure and policies
+Mandatory disclosure documents
+5. Facilities & Services
+Library information with book collection details
+Sports facilities and activities
+Campus infrastructure details
+Hostel and accommodation information
+Laboratory and workshop details
+6. Student Support
+Scholarship information and applications
+Mentoring programs
+Student grievance redressal
+Career guidance and placement support
+7. Contact & Communication
+Contact forms with email integration
+Google Maps integration for location
+Multiple contact methods (phone, email, address)
+Inquiry forms for different departments
+8. Admin Dashboard
+Content management system
+News and announcements management
+User account management
+Visitor analytics and statistics
+Email system configuration
+Design Specifications
+Color Scheme:
+
+Primary: Deep blue (hsl(214, 60%, 21%))
+Accent: Amber/Yellow (#fbbf24)
+Background: Clean whites and light grays
+Success: Green variants
+Warning: Orange variants
+Error: Red variants
+Typography:
+
+Professional font family (Inter, Poppins)
+Clear hierarchy with proper headings
+Readable font sizes and line spacing
+Layout:
+
+Mobile-first responsive design
+Grid-based layout system
+Consistent spacing and margins
+Card-based content organization
+Database Schema
+Tables to Create:
+
+Users (admin authentication)
+News Items (announcements and flash news)
+Contact Submissions (form inquiries)
+Visitor Counter (analytics)
+Important Dates (academic calendar)
+Admissions Inquiries (admission forms)
+Key Fields:
+
+User management with roles
+Content with creation/update timestamps
+Form submissions with status tracking
+Analytics for visitor tracking
+Functionality Requirements
+Content Management
+CRUD operations for news and announcements
+File upload for documents and images
+Rich text editing for content
+Version control for important documents
+Communication
+Contact form with email notifications
+Newsletter subscription system
+Automated email responses
+Multi-language support preparation
+Analytics
+Visitor counter with real-time updates
+Page view tracking
+Popular content identification
+User engagement metrics
+Security
+Secure admin authentication
+Input validation and sanitization
+CSRF protection
+SQL injection prevention
+Secure session management
+Additional Features
+Interactive Elements
+Smooth scrolling and animations
+Image galleries with lightbox
+Interactive charts for statistics
+Hover effects and transitions
+Accessibility
+WCAG 2.1 compliance
+Keyboard navigation support
+Screen reader compatibility
+High contrast options
+Performance
+Optimized images and assets
+Lazy loading for content
+Efficient database queries
+Fast page load times
