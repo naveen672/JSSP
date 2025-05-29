@@ -10,7 +10,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <img 
-                src="/attached_assets/image_1748508467963.png" 
+                src="@assets/image_1748508467963.png" 
                 alt="JSS Logo" 
                 className="h-12 w-12 object-contain"
               />

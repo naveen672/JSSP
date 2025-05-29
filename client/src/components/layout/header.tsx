@@ -33,31 +33,35 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      {/* Main Navigation */}
-      <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
+      {/* Logo Section */}
+      <div className="bg-white py-4 border-b">
+        <div className="container mx-auto px-4">
           <Link href="/">
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center justify-center space-x-6">
               <img 
-                src="/attached_assets/image_1748508467963.png" 
+                src="@assets/image_1748508467963.png" 
                 alt="JSS Maha Vidyapeetha Logo" 
-                className="h-16 w-16 object-contain"
+                className="h-20 w-20 object-contain"
               />
               <div className="text-center">
-                <h1 className="text-2xl font-bold text-primary">JSS POLYTECHNIC</h1>
-                <p className="text-sm text-gray-600">Excellence in Technical Education</p>
+                <h1 className="text-3xl font-bold text-primary">JSS POLYTECHNIC</h1>
+                <p className="text-lg text-gray-600">Excellence in Technical Education</p>
               </div>
               <img 
-                src="/attached_assets/image_1748508473227.png" 
+                src="@assets/image_1748508473227.png" 
                 alt="JSS Polytechnic Logo" 
-                className="h-16 w-16 object-contain"
+                className="h-20 w-20 object-contain"
               />
             </div>
           </Link>
-
+        </div>
+      </div>
+      
+      {/* Navigation Section */}
+      <div className="container mx-auto px-4">
+        <div className="flex h-14 items-center justify-between">
           {/* Desktop Navigation */}
-          <NavigationMenu className="hidden md:flex">
+          <NavigationMenu className="hidden md:flex mx-auto">
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-gray-700 hover:text-primary">
@@ -194,7 +198,7 @@ export default function Header() {
                 <Link href="/">
                   <div className="flex items-center space-x-3 pb-4">
                     <img 
-                      src="/attached_assets/image_1748508467963.png" 
+                      src="@assets/image_1748508467963.png" 
                       alt="JSS Logo" 
                       className="h-8 w-8 object-contain"
                     />
