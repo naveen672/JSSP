@@ -311,17 +311,27 @@ export default function Header() {
                       <ChevronDown className={cn("h-4 w-4 transition-transform", mobileActiveDropdown === "mobile-home" && "rotate-180")} />
                     </button>
                     {mobileActiveDropdown === "mobile-home" && (
-                      <div className="pl-6 mt-2 space-y-1 max-h-60 overflow-y-auto">
-                        <Link href="/about" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">About JSSMVP</Link>
-                        <Link href="/about" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Vision Mission</Link>
-                        <Link href="/about" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Leadership Team</Link>
-                        <Link href="/about" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Messages</Link>
-                        <Link href="/about" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Governance</Link>
-                        <Link href="/about" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">AICTE and EOA</Link>
-                        <Link href="/about" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">NBA</Link>
-                        <Link href="/about" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">IQAC</Link>
-                        <Link href="/about" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Employee Benefits</Link>
-                        <Link href="/about" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Reports & Downloads</Link>
+                      <div className="pl-6 mt-2 space-y-1 max-h-80 overflow-y-auto">
+                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">About Section</div>
+                        <Link href="/about" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">About JSSMVP</Link>
+                        <Link href="/about" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Vision Mission of the Institute</Link>
+                        <Link href="/about" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Leadership Team</Link>
+                        <Link href="/about" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Messages</Link>
+                        <Link href="/about" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Governance</Link>
+                        <Link href="/about" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">All India Council for Technical Education (AICTE) and EOA</Link>
+                        <Link href="/about" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">NBA</Link>
+                        <Link href="/about" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Internal Quality Assurance Cell (IQAC)</Link>
+                        
+                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Employee Benefits</div>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Student Group Accident Policy</Link>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">JSS Health Scheme</Link>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Group Gratuity Saving Scheme</Link>
+                        
+                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Reports and Downloads</div>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">NCC Annual Report</Link>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Audit Report 2022-2023</Link>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Audit Report 2021-2022</Link>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Audit Report 2020-2021</Link>
                       </div>
                     )}
                   </div>
@@ -339,17 +349,33 @@ export default function Header() {
                       <ChevronDown className={cn("h-4 w-4 transition-transform", mobileActiveDropdown === "mobile-academics" && "rotate-180")} />
                     </button>
                     {mobileActiveDropdown === "mobile-academics" && (
-                      <div className="pl-6 mt-2 space-y-1 max-h-60 overflow-y-auto">
-                        <Link href="/academics" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Computer Science & Engineering</Link>
-                        <Link href="/academics" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Electronics & Communication</Link>
-                        <Link href="/academics" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Mechanical Engineering</Link>
-                        <Link href="/academics" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Electrical & Electronics</Link>
-                        <Link href="/academics" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Mechatronics Engineering</Link>
-                        <Link href="/academics" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Information Science & Engineering</Link>
-                        <Link href="/academics" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Civil Engineering</Link>
-                        <Link href="/academics" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Science Department</Link>
-                        <Link href="/academics" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Calendar of Events</Link>
-                        <Link href="/admissions" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Admissions</Link>
+                      <div className="pl-6 mt-2 space-y-1 max-h-80 overflow-y-auto">
+                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Departments</div>
+                        <Link href="/academics" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Computer Science & Engineering</Link>
+                        <Link href="/academics" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Electronics & Communication Engineering</Link>
+                        <Link href="/academics" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Mechanical Engineering</Link>
+                        <Link href="/academics" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Electrical & Electronics Engineering</Link>
+                        <Link href="/academics" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Mechatronics Engineering</Link>
+                        <Link href="/academics" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Information Science & Engineering</Link>
+                        <Link href="/academics" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Civil Engineering</Link>
+                        <Link href="/academics" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Science Department</Link>
+                        
+                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Calendar</div>
+                        <Link href="/academics" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Calendar of Events</Link>
+                        
+                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Professional Bodies</div>
+                        <Link href="/academics" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Computer Science & Engineering</Link>
+                        <Link href="/academics" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Electronics & Communication Engineering</Link>
+                        <Link href="/academics" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Mechanical Engineering</Link>
+                        <Link href="/academics" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Electrical & Electronics Engineering</Link>
+                        <Link href="/academics" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Mechatronics Engineering</Link>
+                        <Link href="/academics" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Information Science & Engineering</Link>
+                        <Link href="/academics" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Civil Engineering</Link>
+                        <Link href="/academics" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Science Department</Link>
+                        
+                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Admission</div>
+                        <Link href="/admissions" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">College Prospectus</Link>
+                        <Link href="/admissions" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Admission Details</Link>
                       </div>
                     )}
                   </div>
@@ -367,13 +393,25 @@ export default function Header() {
                       <ChevronDown className={cn("h-4 w-4 transition-transform", mobileActiveDropdown === "mobile-facilities" && "rotate-180")} />
                     </button>
                     {mobileActiveDropdown === "mobile-facilities" && (
-                      <div className="pl-6 mt-2 space-y-1 max-h-60 overflow-y-auto">
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Library & Information Centre</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Hostel</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Sports</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Placements</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Internships & Training</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Infrastructure</Link>
+                      <div className="pl-6 mt-2 space-y-1 max-h-80 overflow-y-auto">
+                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">General Facilities</div>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Library & Information Centre</Link>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Hostel</Link>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Sports</Link>
+                        
+                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Placements & Training</div>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Placements</Link>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Internships & Training</Link>
+                        
+                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Infrastructure</div>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Infrastructure (main)</Link>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Computer Science & Engineering</Link>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Electronics & Communication</Link>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Mechanical Engineering</Link>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Electrical & Electronics</Link>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Mechatronics</Link>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Information Science & Engineering</Link>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Civil Engineering</Link>
                       </div>
                     )}
                   </div>
@@ -391,16 +429,23 @@ export default function Header() {
                       <ChevronDown className={cn("h-4 w-4 transition-transform", mobileActiveDropdown === "mobile-support" && "rotate-180")} />
                     </button>
                     {mobileActiveDropdown === "mobile-support" && (
-                      <div className="pl-6 mt-2 space-y-1 max-h-60 overflow-y-auto">
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Scholarships</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Mentoring Scheme</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Anti Ragging</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">MOOC's Committee</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Internal Complaint Committee</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">SC/ST Committee</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Higher Education</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Exam</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Cultural Crew</Link>
+                      <div className="pl-6 mt-2 space-y-1 max-h-80 overflow-y-auto">
+                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Basic Support</div>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Scholarships</Link>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Mentoring Scheme</Link>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Anti Ragging</Link>
+                        
+                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Committees</div>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">MOOC's Committee</Link>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Internal Complaint Committee</Link>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">SC/ST Committee</Link>
+                        
+                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Higher Education</div>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Higher Education</Link>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Exam</Link>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Fee Payment</Link>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Cultural Crew</Link>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Social Outreach Programs</Link>
                       </div>
                     )}
                   </div>
@@ -418,10 +463,10 @@ export default function Header() {
                       <ChevronDown className={cn("h-4 w-4 transition-transform", mobileActiveDropdown === "mobile-placements" && "rotate-180")} />
                     </button>
                     {mobileActiveDropdown === "mobile-placements" && (
-                      <div className="pl-6 mt-2 space-y-1 max-h-60 overflow-y-auto">
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Internships</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Training</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Placements</Link>
+                      <div className="pl-6 mt-2 space-y-1 max-h-80 overflow-y-auto">
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Internships</Link>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Training</Link>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Placements</Link>
                       </div>
                     )}
                   </div>
