@@ -39,7 +39,7 @@ export default function Header() {
           <Link href="/">
             <div className="flex items-center justify-center space-x-6">
               <img 
-                src="@assets/image_1748508467963.png" 
+                src="/attached_assets/image_1748508467963.png" 
                 alt="JSS Maha Vidyapeetha Logo" 
                 className="h-20 w-20 object-contain"
               />
@@ -48,7 +48,7 @@ export default function Header() {
                 <p className="text-lg text-gray-600">Excellence in Technical Education</p>
               </div>
               <img 
-                src="@assets/image_1748508473227.png" 
+                src="/attached_assets/image_1748508473227.png" 
                 alt="JSS Polytechnic Logo" 
                 className="h-20 w-20 object-contain"
               />
@@ -198,7 +198,7 @@ export default function Header() {
                 <Link href="/">
                   <div className="flex items-center space-x-3 pb-4">
                     <img 
-                      src="@assets/image_1748508467963.png" 
+                      src="/attached_assets/image_1748508467963.png" 
                       alt="JSS Logo" 
                       className="h-8 w-8 object-contain"
                     />
