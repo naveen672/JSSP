@@ -278,25 +278,98 @@ export default function Header() {
                 </div>
                 
                 <div className="space-y-2">
-                  <Link href="/" className="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-100">
-                    <Home className="h-4 w-4" />
-                    <span>Home</span>
-                  </Link>
+                  {/* Mobile Home Section */}
+                  <div>
+                    <button 
+                      onClick={() => toggleDropdown("mobile-home")}
+                      className="flex items-center justify-between w-full p-2 rounded-md hover:bg-gray-100"
+                    >
+                      <div className="flex items-center space-x-2">
+                        <Home className="h-4 w-4" />
+                        <span>Home</span>
+                      </div>
+                      <ChevronDown className={cn("h-4 w-4 transition-transform", activeDropdown === "mobile-home" && "rotate-180")} />
+                    </button>
+                    {activeDropdown === "mobile-home" && (
+                      <div className="pl-6 mt-2 space-y-1">
+                        <Link href="/about" className="block p-2 text-sm hover:bg-gray-50 rounded">About JSSMVP</Link>
+                        <Link href="/about" className="block p-2 text-sm hover:bg-gray-50 rounded">Vision Mission</Link>
+                        <Link href="/about" className="block p-2 text-sm hover:bg-gray-50 rounded">Leadership Team</Link>
+                        <Link href="/about" className="block p-2 text-sm hover:bg-gray-50 rounded">NBA</Link>
+                        <Link href="/about" className="block p-2 text-sm hover:bg-gray-50 rounded">IQAC</Link>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Mobile Academics Section */}
+                  <div>
+                    <button 
+                      onClick={() => toggleDropdown("mobile-academics")}
+                      className="flex items-center justify-between w-full p-2 rounded-md hover:bg-gray-100"
+                    >
+                      <div className="flex items-center space-x-2">
+                        <GraduationCap className="h-4 w-4" />
+                        <span>Academics</span>
+                      </div>
+                      <ChevronDown className={cn("h-4 w-4 transition-transform", activeDropdown === "mobile-academics" && "rotate-180")} />
+                    </button>
+                    {activeDropdown === "mobile-academics" && (
+                      <div className="pl-6 mt-2 space-y-1">
+                        <Link href="/academics" className="block p-2 text-sm hover:bg-gray-50 rounded">Computer Science & Engineering</Link>
+                        <Link href="/academics" className="block p-2 text-sm hover:bg-gray-50 rounded">Electronics & Communication</Link>
+                        <Link href="/academics" className="block p-2 text-sm hover:bg-gray-50 rounded">Mechanical Engineering</Link>
+                        <Link href="/academics" className="block p-2 text-sm hover:bg-gray-50 rounded">Civil Engineering</Link>
+                        <Link href="/admissions" className="block p-2 text-sm hover:bg-gray-50 rounded">Admissions</Link>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Mobile Facilities Section */}
+                  <div>
+                    <button 
+                      onClick={() => toggleDropdown("mobile-facilities")}
+                      className="flex items-center justify-between w-full p-2 rounded-md hover:bg-gray-100"
+                    >
+                      <div className="flex items-center space-x-2">
+                        <Building className="h-4 w-4" />
+                        <span>Facilities</span>
+                      </div>
+                      <ChevronDown className={cn("h-4 w-4 transition-transform", activeDropdown === "mobile-facilities" && "rotate-180")} />
+                    </button>
+                    {activeDropdown === "mobile-facilities" && (
+                      <div className="pl-6 mt-2 space-y-1">
+                        <Link href="/campus-life" className="block p-2 text-sm hover:bg-gray-50 rounded">Library</Link>
+                        <Link href="/campus-life" className="block p-2 text-sm hover:bg-gray-50 rounded">Hostel</Link>
+                        <Link href="/campus-life" className="block p-2 text-sm hover:bg-gray-50 rounded">Sports</Link>
+                        <Link href="/campus-life" className="block p-2 text-sm hover:bg-gray-50 rounded">Infrastructure</Link>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Mobile Student Support Section */}
+                  <div>
+                    <button 
+                      onClick={() => toggleDropdown("mobile-support")}
+                      className="flex items-center justify-between w-full p-2 rounded-md hover:bg-gray-100"
+                    >
+                      <div className="flex items-center space-x-2">
+                        <Users className="h-4 w-4" />
+                        <span>Student Support</span>
+                      </div>
+                      <ChevronDown className={cn("h-4 w-4 transition-transform", activeDropdown === "mobile-support" && "rotate-180")} />
+                    </button>
+                    {activeDropdown === "mobile-support" && (
+                      <div className="pl-6 mt-2 space-y-1">
+                        <Link href="/campus-life" className="block p-2 text-sm hover:bg-gray-50 rounded">Scholarships</Link>
+                        <Link href="/campus-life" className="block p-2 text-sm hover:bg-gray-50 rounded">Anti Ragging</Link>
+                        <Link href="/campus-life" className="block p-2 text-sm hover:bg-gray-50 rounded">Committees</Link>
+                      </div>
+                    )}
+                  </div>
+
                   <Link href="/about" className="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-100">
-                    <University className="h-4 w-4" />
-                    <span>About</span>
-                  </Link>
-                  <Link href="/academics" className="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-100">
-                    <GraduationCap className="h-4 w-4" />
-                    <span>Academics</span>
-                  </Link>
-                  <Link href="/admissions" className="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-100">
-                    <FileText className="h-4 w-4" />
-                    <span>Admissions</span>
-                  </Link>
-                  <Link href="/campus-life" className="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-100">
-                    <Building className="h-4 w-4" />
-                    <span>Campus Life</span>
+                    <UserCheck className="h-4 w-4" />
+                    <span>IQAC</span>
                   </Link>
                   <Link href="/contact" className="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-100">
                     <Phone className="h-4 w-4" />
