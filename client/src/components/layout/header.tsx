@@ -320,8 +320,8 @@ export default function Header() {
                         <Link href="/about" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">AICTE and EOA</Link>
                         <Link href="/about" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">NBA</Link>
                         <Link href="/about" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">IQAC</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Employee Benefits</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Reports & Downloads</Link>
+                        <Link href="/about" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Employee Benefits</Link>
+                        <Link href="/about" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-gray-50 rounded">Reports & Downloads</Link>
                       </div>
                     )}
                   </div>
