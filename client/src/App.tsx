@@ -29,6 +29,10 @@ import ElectronicsCommunicationEngineering from "@/pages/electronics-communicati
 import IQAC from "@/pages/iqac";
 import TrainingPlacements from "@/pages/training-placements";
 import Placements from "@/pages/placements";
+import CulturalActivities from "@/pages/cultural-activities";
+import FeePayment from "@/pages/fee-payment";
+import HigherEducation from "@/pages/higher-education";
+import AntiRagging from "@/pages/anti-ragging";
 import CampusLife from "@/pages/campus-life";
 import Infrastructure from "@/pages/infrastructure";
 import Contact from "@/pages/contact";
@@ -70,6 +74,10 @@ function Router() {
           <Route path="/iqac" component={IQAC} />
           <Route path="/training-placements" component={TrainingPlacements} />
           <Route path="/placements" component={Placements} />
+          <Route path="/cultural-activities" component={CulturalActivities} />
+          <Route path="/fee-payment" component={FeePayment} />
+          <Route path="/higher-education" component={HigherEducation} />
+          <Route path="/anti-ragging" component={AntiRagging} />
           <Route path="/campus-life" component={CampusLife} />
           <Route path="/infrastructure" component={Infrastructure} />
           <Route path="/contact" component={Contact} />

@@ -219,7 +219,7 @@ export default function Header() {
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Basic Support</div>
                   <DropdownLink href="/campus-life" icon={Award}>Scholarships</DropdownLink>
                   <DropdownLink href="/campus-life" icon={Users}>Mentoring Scheme</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Shield}>Anti Ragging</DropdownLink>
+                  <DropdownLink href="/anti-ragging" icon={Shield}>Anti Ragging</DropdownLink>
                   
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Committees</div>
                   <DropdownLink href="/campus-life" icon={Settings}>MOOC's Committee</DropdownLink>
@@ -227,10 +227,10 @@ export default function Header() {
                   <DropdownLink href="/campus-life" icon={Shield}>SC/ST Committee</DropdownLink>
                   
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Higher Education</div>
-                  <DropdownLink href="/campus-life" icon={GraduationCap}>Higher Education</DropdownLink>
+                  <DropdownLink href="/higher-education" icon={GraduationCap}>Higher Education</DropdownLink>
                   <DropdownLink href="/campus-life" icon={FileText}>Exam</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Settings}>Fee Payment</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Users}>Cultural Crew</DropdownLink>
+                  <DropdownLink href="/fee-payment" icon={Settings}>Fee Payment</DropdownLink>
+                  <DropdownLink href="/cultural-activities" icon={Users}>Cultural Crew</DropdownLink>
                   <DropdownLink href="/campus-life" icon={Heart}>Social Outreach Programs</DropdownLink>
                 </DropdownContent>
               </div>

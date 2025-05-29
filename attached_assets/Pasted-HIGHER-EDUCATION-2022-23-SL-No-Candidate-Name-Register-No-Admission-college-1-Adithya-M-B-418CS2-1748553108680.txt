@@ -1,0 +1,57 @@
+HIGHER EDUCATION
+2022-23
+SL No	Candidate Name	Register No.	Admission college
+1	Adithya M B	418CS2001	MIT,Belavadi,Mysuru
+ 2	Akash M V	418CS2002	SJCE,Mysuru
+ 3	Akashith Aditya M	418CS2003	SJCE,Mysuru
+ 4	Akshay G	418CS2004	Working
+5  	Balaji R	418CS2006	Vidya Vikas,Mysuru
+ 6	Bharath N	418CS2007	MVJ College of Engg,Kaadugodi,Bengaluru
+ 7	Chandan R	418CS2008	SJCE,Mysuru
+ 8	Deekshith D	418CS2009	NIE,Mysuru
+ 9	Dhanush K M	418CS2010	SJCE,Mysuru
+ 10	Dhanush lal V	418CS2011	SJCE,Mysuru
+ 11	Darshan B M	418CS2011	NIE,Mysuru
+ 12	Durgesh Gowda H B	418CS2012	MIT,Belavadi,Mysuru
+ 13	Harshavardhan K S	418CS2013	MIT,Thandavapura,Mysuru
+ 14	Hemanth V	418CS2017	Mysore University
+ 15	Jayanth V	418CS2018	Mysore University
+ 16	Kaleem M	418CS2019	NIE,Mysuru
+ 17	Krishna B	418CS2021	NIE,Mysuru
+ 18	Manish K R	418CS2022	SJCE,Mysuru
+ 19	Manjunath B S	418CS2025	MIT,Belavadi,Mysuru
+ 20	Manmath Yashasvi M	418CS2026	VVCE,Mysuru
+ 21	Mohammed Rayyan Jameel	418CS2027	NIE,Mysuru
+ 22	Nisarga Revanna	418CS2029	ATME,Mysuru
+ 23	Nithin K S	418CS2031	ATME,Mysuru
+ 24	Pavan Kumar S	418CS2032	KLE,Bengaluru
+ 25	Rachana N	418CS2033	BMS,Bengaluru
+ 26	Ragahvendra M	418CS2034	SJCE,Mysuru
+ 27	Rishab R	418CS2035	RV College of Engg,Bengaluru
+ 28	Shravani B Bhat	418CS2036	MIT,Thandavapura,Mysuru
+ 29	Somashekar B	418CS2037	MIT,Thandavapura,Mysuru
+ 30	Sonika M N	418CS2038	BGSIT,Belluru Cross,Mandya
+ 31	Sudarshan N K	418CS2040	Vidya Vikas,Mysuru
+32 	Tejas MU	418CS2041	SJCE,Mysuru
+ 33	Ullas R Gowda	418CS2042	SJCE,Mysuru
+ 34	Usama Azeem	418CS2043	MIT,Belavadi,Mysuru
+ 35	Vijay H S	418CS2044	Working
+ 36	Vishal H Sortur	418CS2046	ATME,Mysuru
+ 37	Vishwas N	418CS2048	MIT,Belavadi,Mysuru
+ 38	Yashwanth G	418CS2049	DON Bosco,Bengaluru
+ 39	Amogh Kapil V	418CS21701	NIE,Mysuru
+ 40	Dhanyashree A Gowda	418CS21702	BGSIT,Belluru Cross.
+ 41	Druva S Urs	418CS21703	NIE,Mysuru
+2020-21
+ 1	Anand M  	Biotechnology	JSS Science and Technology University,Mysuru
+2 	Chethan mallik H M 	Mechanical Engg	JSS Science and Technology University,Mysuru
+3 	G M Ravi  Thejas 	Mechanical Engineering	Vidyavardaka college of engineering
+ 4	Jaikeerthi K	Mechanical Engineering	Vidyavardaka college of engineering, Mysuru
+5 	Lohith M R	Mechanical Engineering	Vidyavardaka college of engineering, Mysuru
+ 6	Madesh  R 	Mechanical Engineering	JSS Science and Technology University, Mysuru
+7 	Nagadarshan P A	Mechanical Engineering	The National Institute of Engineeering ,Mysuru
+ 8	Shivashankar Y M 	Computer Science and Engg	St Joseph Engineering College, Vamanjoor post Dharamagiri, Mangalore
+ 9	Shrikrishna Shridhar udupi 	Mechanical Engineering	  Dayananda Sagar College of Engineering, Bengaluru
+ 10	Siddarth 	Mechanical Engineering	The National Institute of Engineeering ,Mysuru
+ 11	Yogesh 	Information Science and Engg	MVJ College of Engineeering, Bengaluru
+
