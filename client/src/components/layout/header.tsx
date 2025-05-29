@@ -149,13 +149,14 @@ export default function Header() {
                   <DropdownLink href="/academics" icon={Calendar}>Calendar of Events</DropdownLink>
                   
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Professional Bodies</div>
-                  <DropdownLink href="/academics" icon={Users}>Professional Body - CSE</DropdownLink>
-                  <DropdownLink href="/academics" icon={Users}>Professional Body - ECE</DropdownLink>
-                  <DropdownLink href="/academics" icon={Users}>Professional Body - Mechanical</DropdownLink>
-                  <DropdownLink href="/academics" icon={Users}>Professional Body - Electrical</DropdownLink>
-                  <DropdownLink href="/academics" icon={Users}>Professional Body - Mechatronics</DropdownLink>
-                  <DropdownLink href="/academics" icon={Users}>Professional Body - Civil</DropdownLink>
-                  <DropdownLink href="/academics" icon={Users}>Professional Body - Science</DropdownLink>
+                  <DropdownLink href="/academics" icon={Computer}>Computer Science & Engineering</DropdownLink>
+                  <DropdownLink href="/academics" icon={Cpu}>Electronics & Communication Engineering</DropdownLink>
+                  <DropdownLink href="/academics" icon={Wrench}>Mechanical Engineering</DropdownLink>
+                  <DropdownLink href="/academics" icon={Zap}>Electrical & Electronics Engineering</DropdownLink>
+                  <DropdownLink href="/academics" icon={Cog}>Mechatronics Engineering</DropdownLink>
+                  <DropdownLink href="/academics" icon={Database}>Information Science & Engineering</DropdownLink>
+                  <DropdownLink href="/academics" icon={Building}>Civil Engineering</DropdownLink>
+                  <DropdownLink href="/academics" icon={BookOpen}>Science Department</DropdownLink>
                   
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Admission</div>
                   <DropdownLink href="/admissions" icon={FileText}>College Prospectus</DropdownLink>
