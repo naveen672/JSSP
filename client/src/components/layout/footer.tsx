@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { University, Facebook, Twitter, Linkedin, Youtube, BookOpen, Users, Calendar, ExternalLink, MapPin, Phone, Mail } from "lucide-react";
+import jssLogo1 from "@assets/image_1748508966675.png";
 
 export default function Footer() {
   return (
@@ -10,7 +11,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <img 
-                src="/attached_assets/image_1748508467963.png" 
+                src={jssLogo1} 
                 alt="JSS Logo" 
                 className="h-12 w-12 object-contain"
               />

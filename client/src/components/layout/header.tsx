@@ -12,6 +12,8 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Menu, University, ChevronDown, BookOpen, Users, GraduationCap, Calendar, FileText, Trophy, Home, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
+import jssLogo1 from "@assets/image_1748508966675.png";
+import jssLogo2 from "@assets/image_1748508969261.png";
 
 export default function Header() {
   const [location] = useLocation();
@@ -39,7 +41,7 @@ export default function Header() {
           <Link href="/">
             <div className="flex items-center justify-center space-x-6">
               <img 
-                src="/attached_assets/image_1748508467963.png" 
+                src={jssLogo1} 
                 alt="JSS Maha Vidyapeetha Logo" 
                 className="h-20 w-20 object-contain"
               />
@@ -48,7 +50,7 @@ export default function Header() {
                 <p className="text-lg text-gray-600">Excellence in Technical Education</p>
               </div>
               <img 
-                src="/attached_assets/image_1748508473227.png" 
+                src={jssLogo2} 
                 alt="JSS Polytechnic Logo" 
                 className="h-20 w-20 object-contain"
               />
@@ -198,7 +200,7 @@ export default function Header() {
                 <Link href="/">
                   <div className="flex items-center space-x-3 pb-4">
                     <img 
-                      src="/attached_assets/image_1748508467963.png" 
+                      src={jssLogo1} 
                       alt="JSS Logo" 
                       className="h-8 w-8 object-contain"
                     />
