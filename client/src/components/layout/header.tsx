@@ -160,7 +160,7 @@ export default function Header() {
                   <DropdownLink href="/academics" icon={Zap}>Electrical & Electronics Engineering</DropdownLink>
                   <DropdownLink href="/academics" icon={Cog}>Mechatronics Engineering</DropdownLink>
                   <DropdownLink href="/information-science-engineering" icon={Database}>Information Science & Engineering</DropdownLink>
-                  <DropdownLink href="/academics" icon={Building}>Civil Engineering</DropdownLink>
+                  <DropdownLink href="/civil-engineering" icon={Building}>Civil Engineering</DropdownLink>
                   <DropdownLink href="/science-department" icon={BookOpen}>Science Department</DropdownLink>
                   
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Calendar</div>
@@ -173,7 +173,7 @@ export default function Header() {
                   <DropdownLink href="/academics" icon={Zap}>Electrical & Electronics Engineering</DropdownLink>
                   <DropdownLink href="/academics" icon={Cog}>Mechatronics Engineering</DropdownLink>
                   <DropdownLink href="/information-science-engineering" icon={Database}>Information Science & Engineering</DropdownLink>
-                  <DropdownLink href="/academics" icon={Building}>Civil Engineering</DropdownLink>
+                  <DropdownLink href="/civil-engineering" icon={Building}>Civil Engineering</DropdownLink>
                   <DropdownLink href="/science-department" icon={BookOpen}>Science Department</DropdownLink>
                   
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Admission</div>
