@@ -74,7 +74,7 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex h-14 items-center justify-between">
           {/* Desktop Navigation */}
-          <NavigationMenu className="hidden lg:flex mx-auto">
+          <NavigationMenu className="hidden lg:flex mx-auto relative">
             <NavigationMenuList className="flex space-x-1">
               {/* Home Dropdown */}
               <NavigationMenuItem>
@@ -341,7 +341,7 @@ export default function Header() {
                   <Briefcase className="h-4 w-4 mr-1" />
                   Training & Placements
                 </NavigationMenuTrigger>
-                <NavigationMenuContent>
+                <NavigationMenuContent className="min-w-[300px] left-[-150px]">
                   <div className="grid w-[300px] gap-3 p-4">
                     <NavigationMenuLink asChild>
                       <Link href="/campus-life" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
@@ -394,7 +394,7 @@ export default function Header() {
                   <MoreHorizontal className="h-4 w-4 mr-1" />
                   More
                 </NavigationMenuTrigger>
-                <NavigationMenuContent>
+                <NavigationMenuContent className="min-w-[400px] right-0">
                   <div className="grid w-[400px] gap-3 p-4 md:grid-cols-2">
                     <NavigationMenuLink asChild>
                       <Link href="/about" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
