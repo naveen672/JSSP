@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { useQuery } from "@tanstack/react-query";
 import { Skeleton } from "@/components/ui/skeleton";
 import { motion } from "framer-motion";
-import { Users } from "lucide-react";
+import { Users, Award, BookOpen, Star } from "lucide-react";
 
 const defaultFaculty = [
   {
@@ -90,7 +90,7 @@ export default function FacultyHighlights() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {displayFaculty.slice(0, 4).map((member: any, index: number) => (
+          {Array.isArray(displayFaculty) ? displayFaculty.slice(0, 4).map((member: any, index: number) => (
             <motion.div
               key={member.id}
               initial={{ opacity: 0, y: 20 }}
@@ -114,11 +114,18 @@ export default function FacultyHighlights() {
                     )}
                   </div>
                   <h3 className="text-lg font-semibold text-primary mb-1">{member.name}</h3>
-                  <p className="text-accent font-medium mb-2">{member.title}</p>
-                  <p className="text-sm text-gray-600 mb-3">{member.qualifications}</p>
+                  <div className="flex items-center justify-center mb-2">
+                    <Award className="h-4 w-4 text-accent mr-1" />
+                    <p className="text-accent font-medium">{member.title}</p>
+                  </div>
+                  <div className="flex items-center justify-center mb-3">
+                    <BookOpen className="h-4 w-4 text-gray-500 mr-1" />
+                    <p className="text-sm text-gray-600">{member.qualifications}</p>
+                  </div>
                   <div className="flex justify-center flex-wrap gap-1">
                     {member.specializations?.slice(0, 2).map((spec: string, idx: number) => (
-                      <Badge key={idx} variant="secondary" className="text-xs">
+                      <Badge key={idx} variant="secondary" className="text-xs flex items-center">
+                        <Star className="h-3 w-3 mr-1" />
                         {spec}
                       </Badge>
                     ))}
@@ -126,7 +133,7 @@ export default function FacultyHighlights() {
                 </CardContent>
               </Card>
             </motion.div>
-          ))}
+          )) : []}
         </div>
       </div>
     </section>
