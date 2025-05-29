@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { GraduationCap, Users, ArrowRight, Play, ChevronLeft, ChevronRight, Building, TreePine, Shield } from "lucide-react";
+import campusImage1 from "@assets/45-scaled.jpg";
+import campusImage2 from "@assets/jssbuild1.jpg";
+import campusImage3 from "@assets/b1.jpg";
 
 const slides = [
   {
@@ -11,7 +14,7 @@ const slides = [
       { text: "Apply Now", icon: GraduationCap, primary: true },
       { text: "Learn More", icon: ArrowRight, primary: false }
     ],
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
+    image: campusImage1
   },
   {
     title: "State-of-the-Art Campus",
@@ -20,16 +23,16 @@ const slides = [
       { text: "Campus Tour", icon: Building, primary: true },
       { text: "Our Facilities", icon: Play, primary: false }
     ],
-    image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
+    image: campusImage2
   },
   {
-    title: "Lush Green Environment",
-    description: "Study in a beautiful campus with modern amenities and serene surroundings",
+    title: "Excellence in Technical Education",
+    description: "JSS Polytechnic - Building futures through quality education since decades",
     buttons: [
-      { text: "Explore Campus", icon: TreePine, primary: true },
+      { text: "Explore Programs", icon: GraduationCap, primary: true },
       { text: "Student Life", icon: Users, primary: false }
     ],
-    image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
+    image: campusImage3
   },
   {
     title: "NCC and Extracurricular Activities",
@@ -38,7 +41,7 @@ const slides = [
       { text: "Join Activities", icon: Shield, primary: true },
       { text: "NCC at JSS", icon: Users, primary: false }
     ],
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
+    image: campusImage1
   }
 ];
 
