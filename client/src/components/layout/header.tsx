@@ -44,7 +44,7 @@ export default function Header() {
               </div>
               <div>
                 <h1 className="text-xl font-bold text-primary">Excellence University</h1>
-                <p className="text-xs text-gray-600">Inspiring Excellence Since 1965</p>
+                <p className="text-xs text-gray-600">Mysore - 570009</p>
               </div>
             </div>
           </Link>
