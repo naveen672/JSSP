@@ -7,7 +7,7 @@ export default function NewsTicker() {
         <div className="flex items-center">
           <div className="flex items-center space-x-2 mr-8 flex-shrink-0 bg-primary z-10 pr-4">
             <Bell className="h-4 w-4 text-accent animate-pulse" />
-            <span className="text-sm font-medium text-accent whitespace-nowrap">Latest News:</span>
+            <span className="text-sm text-accent whitespace-nowrap font-bold">Latest News:</span>
           </div>
           <div className="flex-1 overflow-hidden">
             <div className="flex space-x-12 text-sm whitespace-nowrap animate-ticker ml-4">
