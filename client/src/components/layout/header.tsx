@@ -156,7 +156,7 @@ export default function Header() {
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Departments</div>
                   <DropdownLink href="/academics" icon={Computer}>Computer Science & Engineering</DropdownLink>
                   <DropdownLink href="/academics" icon={Cpu}>Electronics & Communication Engineering</DropdownLink>
-                  <DropdownLink href="/academics" icon={Wrench}>Mechanical Engineering</DropdownLink>
+                  <DropdownLink href="/mechanical-engineering" icon={Wrench}>Mechanical Engineering</DropdownLink>
                   <DropdownLink href="/academics" icon={Zap}>Electrical & Electronics Engineering</DropdownLink>
                   <DropdownLink href="/academics" icon={Cog}>Mechatronics Engineering</DropdownLink>
                   <DropdownLink href="/academics" icon={Database}>Information Science & Engineering</DropdownLink>
@@ -169,7 +169,7 @@ export default function Header() {
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Professional Bodies</div>
                   <DropdownLink href="/academics" icon={Computer}>Computer Science & Engineering</DropdownLink>
                   <DropdownLink href="/academics" icon={Cpu}>Electronics & Communication Engineering</DropdownLink>
-                  <DropdownLink href="/academics" icon={Wrench}>Mechanical Engineering</DropdownLink>
+                  <DropdownLink href="/mechanical-engineering" icon={Wrench}>Mechanical Engineering</DropdownLink>
                   <DropdownLink href="/academics" icon={Zap}>Electrical & Electronics Engineering</DropdownLink>
                   <DropdownLink href="/academics" icon={Cog}>Mechatronics Engineering</DropdownLink>
                   <DropdownLink href="/academics" icon={Database}>Information Science & Engineering</DropdownLink>
