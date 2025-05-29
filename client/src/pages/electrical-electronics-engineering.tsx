@@ -459,6 +459,68 @@ export default function ElectricalElectronicsEngineering() {
             </CardContent>
           </Card>
         </div>
+        {/* Curriculum Structure */}
+        <Card className="mt-12">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-blue-800">
+              <BookOpen className="h-6 w-6" />
+              Curriculum Structure & Syllabus
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid md:grid-cols-3 gap-6 mb-6">
+              <Card className="text-center p-4 bg-gradient-to-br from-blue-500 to-blue-600 text-white">
+                <h3 className="text-lg font-bold mb-2">1st Year</h3>
+                <p className="text-sm">Foundation Courses</p>
+                <a 
+                  href="/attached_assets/E&E 1st year.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block mt-2 px-3 py-1 bg-white text-blue-600 rounded text-sm hover:bg-blue-50"
+                >
+                  View Syllabus
+                </a>
+              </Card>
+              
+              <Card className="text-center p-4 bg-gradient-to-br from-indigo-500 to-indigo-600 text-white">
+                <h3 className="text-lg font-bold mb-2">2nd Year</h3>
+                <p className="text-sm">Core Electrical</p>
+                <a 
+                  href="/attached_assets/E&E 2nd year.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block mt-2 px-3 py-1 bg-white text-indigo-600 rounded text-sm hover:bg-indigo-50"
+                >
+                  View Syllabus
+                </a>
+              </Card>
+              
+              <Card className="text-center p-4 bg-gradient-to-br from-purple-500 to-purple-600 text-white">
+                <h3 className="text-lg font-bold mb-2">3rd Year</h3>
+                <p className="text-sm">Industrial Applications</p>
+                <a 
+                  href="/attached_assets/E&E 3rd year.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block mt-2 px-3 py-1 bg-white text-purple-600 rounded text-sm hover:bg-purple-50"
+                >
+                  View Syllabus
+                </a>
+              </Card>
+            </div>
+            
+            <div className="bg-blue-50 p-4 rounded-lg">
+              <h3 className="font-semibold text-blue-800 mb-2">Program Educational Objectives</h3>
+              <ul className="text-sm text-gray-700 space-y-1">
+                <li>• Excel in Electrical and Electronics Engineering field and apply knowledge in diverse fields</li>
+                <li>• Contribute Electrical and Electronics Engineering skills ethically</li>
+                <li>• Promote professional development, entrepreneurship and continuing education</li>
+                <li>• Create enthusiasm for life-long learning and career growth</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+
       </div>
     </div>
   );
