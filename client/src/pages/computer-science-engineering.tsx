@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Computer, Users, Award, TrendingUp, Building, BookOpen, Target, Lightbulb, Heart } from "lucide-react";
+import { Computer, Users, Award, TrendingUp, Building, BookOpen, Target, Lightbulb, Heart, Book } from "lucide-react";
 import csLabImage from "@assets/image_1748548855043.png";
 import shinuKoshyImage from "@assets/image_1748548869170.png";
 import sowmyashreeImage from "@assets/image_1748548879916.png";
@@ -448,6 +448,82 @@ export default function ComputerScienceEngineering() {
             </CardContent>
           </Card>
         </div>
+        {/* Curriculum Structure */}
+        <Card className="mt-12">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-blue-800">
+              <Book className="h-6 w-6" />
+              Curriculum Structure & Syllabus
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid md:grid-cols-3 gap-6 mb-6">
+              <Card className="text-center p-4 bg-gradient-to-br from-blue-500 to-blue-600 text-white">
+                <h3 className="text-lg font-bold mb-2">1st Year</h3>
+                <p className="text-sm">Foundation Courses</p>
+                <a 
+                  href="/attached_assets/CS 1st year.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block mt-2 px-3 py-1 bg-white text-blue-600 rounded text-sm hover:bg-blue-50"
+                >
+                  View Syllabus
+                </a>
+              </Card>
+              
+              <Card className="text-center p-4 bg-gradient-to-br from-indigo-500 to-indigo-600 text-white">
+                <h3 className="text-lg font-bold mb-2">2nd Year</h3>
+                <p className="text-sm">Core Programming</p>
+                <a 
+                  href="/attached_assets/CS 2nd year.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block mt-2 px-3 py-1 bg-white text-indigo-600 rounded text-sm hover:bg-indigo-50"
+                >
+                  View Syllabus
+                </a>
+              </Card>
+              
+              <Card className="text-center p-4 bg-gradient-to-br from-purple-500 to-purple-600 text-white">
+                <h3 className="text-lg font-bold mb-2">3rd Year</h3>
+                <p className="text-sm">Specialization Pathways</p>
+                <a 
+                  href="/attached_assets/CS 3rd year.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block mt-2 px-3 py-1 bg-white text-purple-600 rounded text-sm hover:bg-purple-50"
+                >
+                  View Syllabus
+                </a>
+              </Card>
+            </div>
+            
+            <div className="bg-blue-50 p-4 rounded-lg">
+              <h3 className="font-semibold text-blue-800 mb-2">Specialization Pathways (3rd Year)</h3>
+              <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-700">
+                <div>
+                  <h4 className="font-medium text-indigo-600 mb-1">Emerging Areas:</h4>
+                  <ul className="space-y-1">
+                    <li>• Artificial Intelligence and Machine Learning</li>
+                    <li>• Full Stack Development</li>
+                    <li>• Cloud Computing</li>
+                    <li>• Cyber Security</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-medium text-purple-600 mb-1">Program Outcomes:</h4>
+                  <ul className="space-y-1">
+                    <li>• Apply software development skills</li>
+                    <li>• Design computational systems</li>
+                    <li>• Modern engineering tools usage</li>
+                    <li>• Ethical practices in technology</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
       </div>
     </div>
   );

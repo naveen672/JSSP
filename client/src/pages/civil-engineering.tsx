@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Building, Users, Award, TrendingUp, Wrench, BookOpen, Target, Lightbulb, Heart } from "lucide-react";
+import { Building, Users, Award, TrendingUp, Wrench, BookOpen, Target, Lightbulb, Heart, Book } from "lucide-react";
 import mahadevaprabhuImage from "@assets/image_1748550145401.png";
 import bhavyaImage from "@assets/image_1748550149780.png";
 import akshaykumarImage from "@assets/image_1748550154217.png";
@@ -387,6 +387,71 @@ export default function CivilEngineering() {
             </CardContent>
           </Card>
         </div>
+        {/* Curriculum Structure */}
+        <Card className="mt-12">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-blue-800">
+              <Book className="h-6 w-6" />
+              Curriculum Structure & Syllabus
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid md:grid-cols-3 gap-6 mb-6">
+              <Card className="text-center p-4 bg-gradient-to-br from-blue-500 to-blue-600 text-white">
+                <h3 className="text-lg font-bold mb-2">1st Year</h3>
+                <p className="text-sm">Foundation Courses</p>
+                <a 
+                  href="/attached_assets/civil 1st year.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block mt-2 px-3 py-1 bg-white text-blue-600 rounded text-sm hover:bg-blue-50"
+                >
+                  View Syllabus
+                </a>
+              </Card>
+              
+              <Card className="text-center p-4 bg-gradient-to-br from-indigo-500 to-indigo-600 text-white">
+                <h3 className="text-lg font-bold mb-2">2nd Year</h3>
+                <p className="text-sm">Core Engineering</p>
+                <a 
+                  href="/attached_assets/civil 2nd year.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block mt-2 px-3 py-1 bg-white text-indigo-600 rounded text-sm hover:bg-indigo-50"
+                >
+                  View Syllabus
+                </a>
+              </Card>
+              
+              <Card className="text-center p-4 bg-gradient-to-br from-purple-500 to-purple-600 text-white">
+                <h3 className="text-lg font-bold mb-2">3rd Year</h3>
+                <p className="text-sm">Specialization</p>
+                <a 
+                  href="/attached_assets/civil 3rd year.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block mt-2 px-3 py-1 bg-white text-purple-600 rounded text-sm hover:bg-purple-50"
+                >
+                  View Syllabus
+                </a>
+              </Card>
+            </div>
+            
+            <div className="bg-blue-50 p-4 rounded-lg">
+              <h3 className="font-semibold text-blue-800 mb-2">Program Outcomes (POs)</h3>
+              <ul className="text-sm text-gray-700 space-y-1">
+                <li>• Apply knowledge of basic mathematics, science and engineering fundamentals</li>
+                <li>• Identify and analyze well-defined engineering problems using standard methods</li>
+                <li>• Design solutions for technical problems and assist with system design</li>
+                <li>• Apply modern engineering tools and conduct standard tests and measurements</li>
+                <li>• Apply appropriate technology in context of society, sustainability and environment</li>
+                <li>• Use engineering management principles and communicate effectively</li>
+                <li>• Engage in life-long learning and updating in the context of technological changes</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+
       </div>
     </div>
   );
