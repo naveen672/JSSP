@@ -202,14 +202,13 @@ export default function Header() {
                   <DropdownLink href="/campus-life" icon={Settings}>Internships & Training</DropdownLink>
                   
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Infrastructure</div>
-                  <DropdownLink href="/campus-life" icon={Building}>Infrastructure (main)</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Computer}>Computer Science & Engineering</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Cpu}>Electronics & Communication</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Wrench}>Mechanical Engineering</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Zap}>Electrical & Electronics</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Cog}>Mechatronics</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Database}>Information Science & Engineering</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Building}>Civil Engineering</DropdownLink>
+                  <DropdownLink href="/infrastructure" icon={Building}>Infrastructure Overview</DropdownLink>
+                  <DropdownLink href="/infrastructure" icon={Computer}>Computer Science & Engineering</DropdownLink>
+                  <DropdownLink href="/infrastructure" icon={Cpu}>Electronics & Communication</DropdownLink>
+                  <DropdownLink href="/infrastructure" icon={Wrench}>Mechanical Engineering</DropdownLink>
+                  <DropdownLink href="/infrastructure" icon={Zap}>Electrical & Electronics</DropdownLink>
+                  <DropdownLink href="/infrastructure" icon={Cog}>Mechatronics</DropdownLink>
+                  <DropdownLink href="/infrastructure" icon={Building}>Civil Engineering</DropdownLink>
                 </DropdownContent>
               </div>
 
