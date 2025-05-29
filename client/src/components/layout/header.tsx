@@ -59,11 +59,11 @@ export default function Header() {
 
   const DropdownContent = ({ name, children, className }: { name: string; children: React.ReactNode; className?: string }) => (
     <div className={cn(
-      "absolute top-full left-0 mt-1 w-80 bg-white border border-gray-200 rounded-md shadow-lg z-50 transition-all duration-200",
+      "absolute top-full left-0 mt-1 w-96 max-h-96 overflow-y-auto bg-white border border-gray-200 rounded-md shadow-lg z-50 transition-all duration-200",
       activeDropdown === name ? "opacity-100 visible" : "opacity-0 invisible",
       className
     )}>
-      <div className="p-4 grid gap-2">
+      <div className="p-4 grid gap-1">
         {children}
       </div>
     </div>
@@ -108,10 +108,26 @@ export default function Header() {
               <div className="relative">
                 <DropdownButton name="home" icon={Home}>Home</DropdownButton>
                 <DropdownContent name="home">
-                  <DropdownLink href="/" icon={Home}>Home Page</DropdownLink>
-                  <DropdownLink href="/about" icon={University}>About Us</DropdownLink>
-                  <DropdownLink href="/contact" icon={Phone}>Contact Us</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Building}>Campus Tour</DropdownLink>
+                  <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">About Section</div>
+                  <DropdownLink href="/about" icon={University}>About JSSMVP</DropdownLink>
+                  <DropdownLink href="/about" icon={Award}>Vision Mission of the Institute</DropdownLink>
+                  <DropdownLink href="/about" icon={Users}>Leadership Team</DropdownLink>
+                  <DropdownLink href="/about" icon={FileText}>Messages</DropdownLink>
+                  <DropdownLink href="/about" icon={Shield}>Governance</DropdownLink>
+                  <DropdownLink href="/about" icon={Award}>AICTE and EOA</DropdownLink>
+                  <DropdownLink href="/about" icon={Trophy}>NBA</DropdownLink>
+                  <DropdownLink href="/about" icon={UserCheck}>Internal Quality Assurance Cell (IQAC)</DropdownLink>
+                  
+                  <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Employee Benefits</div>
+                  <DropdownLink href="/campus-life" icon={Shield}>Student Group Accident Policy</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={Heart}>JSS Health Scheme</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={Award}>Group Gratuity Saving Scheme</DropdownLink>
+                  
+                  <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Reports and Downloads</div>
+                  <DropdownLink href="/campus-life" icon={FileText}>NCC Annual Report</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={FileText}>Audit Report 2022-2023</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={FileText}>Audit Report 2021-2022</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={FileText}>Audit Report 2020-2021</DropdownLink>
                 </DropdownContent>
               </div>
 
@@ -119,13 +135,37 @@ export default function Header() {
               <div className="relative">
                 <DropdownButton name="academics" icon={GraduationCap}>Academics</DropdownButton>
                 <DropdownContent name="academics">
-                  <DropdownLink href="/academics" icon={BookOpen}>Programs Overview</DropdownLink>
-                  <DropdownLink href="/academics" icon={Computer}>Computer Science Engineering</DropdownLink>
-                  <DropdownLink href="/academics" icon={Cpu}>Electronics & Communication</DropdownLink>
+                  <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Departments</div>
+                  <DropdownLink href="/academics" icon={Computer}>Computer Science & Engineering</DropdownLink>
+                  <DropdownLink href="/academics" icon={Cpu}>Electronics & Communication Engineering</DropdownLink>
                   <DropdownLink href="/academics" icon={Wrench}>Mechanical Engineering</DropdownLink>
-                  <DropdownLink href="/academics" icon={Zap}>Electrical Engineering</DropdownLink>
-                  <DropdownLink href="/academics" icon={Cog}>Civil Engineering</DropdownLink>
-                  <DropdownLink href="/academics" icon={Database}>Information Technology</DropdownLink>
+                  <DropdownLink href="/academics" icon={Zap}>Electrical & Electronics Engineering</DropdownLink>
+                  <DropdownLink href="/academics" icon={Cog}>Mechatronics Engineering</DropdownLink>
+                  <DropdownLink href="/academics" icon={Database}>Information Science & Engineering</DropdownLink>
+                  <DropdownLink href="/academics" icon={Building}>Civil Engineering</DropdownLink>
+                  <DropdownLink href="/academics" icon={BookOpen}>Science Department</DropdownLink>
+                  
+                  <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Calendar</div>
+                  <DropdownLink href="/academics" icon={Calendar}>Calendar of Events</DropdownLink>
+                  
+                  <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Professional Bodies</div>
+                  <DropdownLink href="/academics" icon={Users}>Professional Body - CSE</DropdownLink>
+                  <DropdownLink href="/academics" icon={Users}>Professional Body - ECE</DropdownLink>
+                  <DropdownLink href="/academics" icon={Users}>Professional Body - Mechanical</DropdownLink>
+                  <DropdownLink href="/academics" icon={Users}>Professional Body - Electrical</DropdownLink>
+                  <DropdownLink href="/academics" icon={Users}>Professional Body - Mechatronics</DropdownLink>
+                  <DropdownLink href="/academics" icon={Users}>Professional Body - Civil</DropdownLink>
+                  <DropdownLink href="/academics" icon={Users}>Professional Body - Science</DropdownLink>
+                  
+                  <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Admission</div>
+                  <DropdownLink href="/admissions" icon={FileText}>College Prospectus</DropdownLink>
+                  <DropdownLink href="/admissions" icon={Phone}>Admission Help desk</DropdownLink>
+                  <DropdownLink href="/admissions" icon={Settings}>Admission Details</DropdownLink>
+                  
+                  <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Other</div>
+                  <DropdownLink href="/academics" icon={BookOpen}>About Academics</DropdownLink>
+                  <DropdownLink href="/academics" icon={Award}>JSS Collaboration MOUs</DropdownLink>
+                  <DropdownLink href="/academics" icon={FileText}>Mandatory Disclosure</DropdownLink>
                 </DropdownContent>
               </div>
 
@@ -133,12 +173,23 @@ export default function Header() {
               <div className="relative">
                 <DropdownButton name="facilities" icon={Building}>Facilities</DropdownButton>
                 <DropdownContent name="facilities">
-                  <DropdownLink href="/campus-life" icon={Library}>Library</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Computer}>Computer Labs</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Settings}>Workshop</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Dumbbell}>Sports Complex</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Heart}>Medical Center</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={MapPin}>Campus Map</DropdownLink>
+                  <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">General Facilities</div>
+                  <DropdownLink href="/campus-life" icon={Library}>Library & Information Centre</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={Building}>Hostel</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={Dumbbell}>Sports</DropdownLink>
+                  
+                  <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Placements & Training</div>
+                  <DropdownLink href="/campus-life" icon={Briefcase}>Placements</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={Settings}>Internships & Training</DropdownLink>
+                  
+                  <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Infrastructure</div>
+                  <DropdownLink href="/campus-life" icon={Building}>Infrastructure (main)</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={Computer}>Computer Science & Engineering</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={Cpu}>Electronics & Communication</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={Wrench}>Mechanical Engineering</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={Zap}>Electrical & Electronics</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={Cog}>Mechatronics</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={Building}>Civil Engineering</DropdownLink>
                 </DropdownContent>
               </div>
 
@@ -146,11 +197,22 @@ export default function Header() {
               <div className="relative">
                 <DropdownButton name="student-support" icon={Users}>Student Support</DropdownButton>
                 <DropdownContent name="student-support">
-                  <DropdownLink href="/admissions" icon={FileText}>Admissions</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Users}>Student Services</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Shield}>Counseling</DropdownLink>
+                  <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Basic Support</div>
                   <DropdownLink href="/campus-life" icon={Award}>Scholarships</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Calendar}>Academic Calendar</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={Users}>Mentoring Scheme</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={Shield}>Anti Ragging</DropdownLink>
+                  
+                  <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Committees</div>
+                  <DropdownLink href="/campus-life" icon={Settings}>MOOC's Committee</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={Users}>Internal Complaint Committee</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={Shield}>SC/ST Committee</DropdownLink>
+                  
+                  <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Higher Education</div>
+                  <DropdownLink href="/campus-life" icon={GraduationCap}>Higher Education</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={FileText}>Exam</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={Settings}>Fee Payment</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={Users}>Cultural Crew</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={Heart}>Social Outreach Programs</DropdownLink>
                 </DropdownContent>
               </div>
 
@@ -158,11 +220,9 @@ export default function Header() {
               <div className="relative">
                 <DropdownButton name="placements" icon={Briefcase}>Training & Placements</DropdownButton>
                 <DropdownContent name="placements" className="left-[-150px]">
-                  <DropdownLink href="/campus-life" icon={Settings}>Training Programs</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Briefcase}>Placement Cell</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Trophy}>Success Stories</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Users}>Industry Partners</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Calendar}>Placement Calendar</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={Settings}>Internships</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={Settings}>Training</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={Briefcase}>Placements</DropdownLink>
                 </DropdownContent>
               </div>
 
@@ -176,12 +236,20 @@ export default function Header() {
               <div className="relative">
                 <DropdownButton name="more" icon={MoreHorizontal}>More</DropdownButton>
                 <DropdownContent name="more" className="left-[-200px]">
-                  <DropdownLink href="/campus-life" icon={Camera}>Gallery</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Calendar}>Events</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={FileText}>Downloads</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Trophy}>Achievements</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={Users}>Alumni</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={Camera}>Photo Gallery</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={FileText}>Media Coverage Update</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={Phone}>Online Grievance Support</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={Briefcase}>Career Opportunity</DropdownLink>
+                  <DropdownLink href="/campus-life" icon={FileText}>Service Rules</DropdownLink>
                 </DropdownContent>
               </div>
+
+              {/* Contact */}
+              <NavLink href="/contact">
+                <Phone className="h-4 w-4 mr-1" />
+                Contact
+              </NavLink>
             </div>
           </nav>
 

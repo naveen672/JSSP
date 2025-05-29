@@ -1,0 +1,113 @@
+1. Complete Navigation Structure
+Main Navigation Menu:
+Home (with dropdown)
+Academics (with dropdown)
+Facilities (with dropdown)
+Student Support (with dropdown)
+Training & Placements (with dropdown)
+IQAC (direct link)
+More (with dropdown)
+Contact (direct link)
+Home Dropdown Menu:
+About Section:
+
+About JSSMVP
+Vision Mission of the Institute
+Leadership Team
+Messages
+Governance
+All India Council for Technical Education (AICTE) and EOA
+NBA
+Internal Quality Assurance Cell (IQAC)
+Employee Benefits:
+
+Student Group Accident Policy
+JSS Health Scheme
+Group Gratuity Saving Scheme
+Reports and Downloads:
+
+NCC Annual Report
+Audit Report 2022-2023
+Audit Report 2021-2022
+Audit Report 2020-2021
+Academics Dropdown Menu:
+Departments:
+
+Computer Science & Engineering
+Electronics & Communication Engineering
+Mechanical Engineering
+Electrical & Electronics Engineering
+Mechatronics Engineering
+Information Science & Engineering
+Civil Engineering
+Science Department
+Calendar:
+
+Calendar of Events
+Professional Bodies:
+
+Computer Science & Engineering
+Electronics & Communication Engineering
+Mechanical Engineering
+Electrical & Electronics Engineering
+Mechatronics Engineering
+Civil Engineering
+Science Department
+Admission:
+
+College Prospectus
+Admission Help desk
+Admission Details
+Other:
+
+About Academics
+JSS Collaboration MOUs
+Mandatory Disclosure
+Facilities Dropdown Menu:
+General Facilities:
+
+Library & Information Centre
+Hostel
+Sports
+Placements & Training:
+
+Placements
+Internships & Training
+Infrastructure:
+
+Infrastructure (main)
+Computer Science & Engineering
+Electronics & Communication
+Mechanical Engineering
+Electrical & Electronics
+Mechatronics
+Civil Engineering
+Student Support Dropdown Menu:
+Basic Support:
+
+Scholarships
+Mentoring Scheme
+Anti Ragging
+Committees:
+
+MOOC's Committee
+Internal Complaint Committee
+SC/ST Committee
+Higher Education:
+
+Higher Education
+Exam
+Fee Payment
+Cultural Crew
+Social Outreach Programs
+Training & Placements Dropdown Menu:
+Internships
+Training
+Placements
+More Dropdown Menu:
+Alumni
+Photo Gallery
+Media Coverage Update
+Online Grievance Support
+Career Opportunity
+Service Rules
