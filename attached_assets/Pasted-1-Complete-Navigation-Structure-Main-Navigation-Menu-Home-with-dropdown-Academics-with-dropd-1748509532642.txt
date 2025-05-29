@@ -1,0 +1,171 @@
+1. Complete Navigation Structure
+Main Navigation Menu:
+Home (with dropdown)
+Academics (with dropdown)
+Facilities (with dropdown)
+Student Support (with dropdown)
+Training & Placements (with dropdown)
+IQAC (direct link)
+More (with dropdown)
+Contact (direct link)
+Home Dropdown Menu:
+About Section:
+
+About JSSMVP
+Vision Mission of the Institute
+Leadership Team
+Messages
+Governance
+All India Council for Technical Education (AICTE) and EOA
+NBA
+Internal Quality Assurance Cell (IQAC)
+Employee Benefits:
+
+Student Group Accident Policy
+JSS Health Scheme
+Group Gratuity Saving Scheme
+Reports and Downloads:
+
+NCC Annual Report
+Audit Report 2022-2023
+Audit Report 2021-2022
+Audit Report 2020-2021
+Academics Dropdown Menu:
+Departments:
+
+Computer Science & Engineering
+Electronics & Communication Engineering
+Mechanical Engineering
+Electrical & Electronics Engineering
+Mechatronics Engineering
+Information Science & Engineering
+Civil Engineering
+Science Department
+Calendar:
+
+Calendar of Events
+Professional Bodies:
+
+Computer Science & Engineering
+Electronics & Communication Engineering
+Mechanical Engineering
+Electrical & Electronics Engineering
+Mechatronics Engineering
+Civil Engineering
+Science Department
+Admission:
+
+College Prospectus
+Admission Help desk
+Admission Details
+Other:
+
+About Academics
+JSS Collaboration MOUs
+Mandatory Disclosure
+Facilities Dropdown Menu:
+General Facilities:
+
+Library & Information Centre
+Hostel
+Sports
+Placements & Training:
+
+Placements
+Internships & Training
+Infrastructure:
+
+Infrastructure (main)
+Computer Science & Engineering
+Electronics & Communication
+Mechanical Engineering
+Electrical & Electronics
+Mechatronics
+Civil Engineering
+Student Support Dropdown Menu:
+Basic Support:
+
+Scholarships
+Mentoring Scheme
+Anti Ragging
+Committees:
+
+MOOC's Committee
+Internal Complaint Committee
+SC/ST Committee
+Higher Education:
+
+Higher Education
+Exam
+Fee Payment
+Cultural Crew
+Social Outreach Programs
+Training & Placements Dropdown Menu:
+Internships
+Training
+Placements
+More Dropdown Menu:
+Alumni
+Photo Gallery
+Media Coverage Update
+Online Grievance Support
+Career Opportunity
+Service Rules
+2. Home Page Content
+News Ticker:
+Admissions open for 2023-24 academic year
+JSS Polytechnic wins Best Technical Institution Award
+Graduation ceremony scheduled for May 15th
+New Computer Science lab inaugurated by Education Minister
+100% placement record for the 5th consecutive year
+Hero Slideshow (4 slides):
+Welcome to JSS Polytechnic
+
+Description: A premier institution dedicated to technical excellence and innovation
+Buttons: Apply Now, Learn More
+State-of-the-Art Campus
+
+Description: Modern infrastructure and facilities for comprehensive technical education
+Buttons: Campus Tour, Our Facilities
+Lush Green Environment
+
+Description: Study in a beautiful campus with modern amenities and serene surroundings
+Buttons: Explore Campus, Student Life
+NCC and Extracurricular Activities
+
+Description: Comprehensive development through various non-academic programs and activities
+Buttons: Join Activities, NCC at JSS
+Academic Programs (6 diplomas):
+Diploma in Mechanical Engineering (3 Years)
+
+Learn design, manufacturing, and maintenance of mechanical systems
+Diploma in Computer Science (3 Years)
+
+Master programming, database management, and software development
+Diploma in Electrical Engineering (3 Years)
+
+Study power systems, electrical machines, and control systems
+Diploma in Electronics & Communication (3 Years)
+
+Explore electronic circuits, communication systems, and signal processing
+Diploma in Information Science (3 Years)
+
+Study information systems, data management, and computing technologies
+Diploma in Civil Engineering (3 Years)
+
+Learn structural design, construction management, and infrastructure development
+About Section:
+Description: JSS Polytechnic is a premier technical education institution with 30+ years of excellence
+Features: Experienced Faculty, Industry Partnerships, Modern Facilities
+Statistics: 98% Placement Rate
+Facilities Section:
+Computer Labs with advanced computing facilities
+Technical Workshops for hands-on training
+Digital Library with extensive resources
+Sports Complex for physical fitness
+Testimonials:
+Student testimonial from Trupti Ananth Jain (Computer Science Engineering, 2019)
+Call-to-Action Section:
+Title: Ready to Start Your Technical Journey?
+Description: Applications open for upcoming academic year
+Buttons: Apply Now, Schedule a Visit
