@@ -146,28 +146,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* QR Codes */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Connect With Us</h4>
-            <div className="space-y-4">
-              <div>
-                <p className="text-gray-300 text-sm mb-2">Scan for Quick Access</p>
-                <img 
-                  src={qrCodeImage} 
-                  alt="QR Code for Quick Access"
-                  className="w-24 h-24 mx-auto bg-white p-2 rounded-lg"
-                />
-              </div>
-              <div>
-                <p className="text-gray-300 text-sm mb-2">Social Media</p>
-                <img 
-                  src={socialQRCodes} 
-                  alt="Social Media QR Codes - LinkedIn, Instagram, Facebook, YouTube"
-                  className="w-full max-w-xs mx-auto bg-white p-2 rounded-lg"
-                />
-              </div>
-            </div>
-          </div>
+
         </div>
 
         <div className="border-t border-gray-600 mt-8 pt-8">
