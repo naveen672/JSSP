@@ -39,6 +39,11 @@ import Committees from "@/pages/committees";
 import CampusLife from "@/pages/campus-life";
 import StudentGroupAccidentPolicy from "@/pages/student-group-accident-policy";
 import JSSHealthScheme from "@/pages/jss-health-scheme";
+import GroupGratuitySavingScheme from "@/pages/group-gratuity-saving-scheme";
+import NCCAnnualReport from "@/pages/ncc-annual-report";
+import AuditReport2022_23 from "@/pages/audit-report-2022-23";
+import AuditReport2021_22 from "@/pages/audit-report-2021-22";
+import AuditReport2020_21 from "@/pages/audit-report-2020-21";
 import Infrastructure from "@/pages/infrastructure";
 import Contact from "@/pages/contact";
 import AdminLogin from "@/pages/admin/login";
@@ -89,6 +94,11 @@ function Router() {
           <Route path="/campus-life" component={CampusLife} />
           <Route path="/student-group-accident-policy" component={StudentGroupAccidentPolicy} />
           <Route path="/jss-health-scheme" component={JSSHealthScheme} />
+          <Route path="/group-gratuity-saving-scheme" component={GroupGratuitySavingScheme} />
+          <Route path="/ncc-annual-report" component={NCCAnnualReport} />
+          <Route path="/audit-report-2022-23" component={AuditReport2022_23} />
+          <Route path="/audit-report-2021-22" component={AuditReport2021_22} />
+          <Route path="/audit-report-2020-21" component={AuditReport2020_21} />
           <Route path="/infrastructure" component={Infrastructure} />
           <Route path="/contact" component={Contact} />
           <Route path="/admin/login" component={AdminLogin} />

@@ -141,13 +141,13 @@ export default function Header() {
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Employee Benefits</div>
                   <DropdownLink href="/student-group-accident-policy" icon={Shield}>Student Group Accident Policy</DropdownLink>
                   <DropdownLink href="/jss-health-scheme" icon={Heart}>JSS Health Scheme</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Award}>Group Gratuity Saving Scheme</DropdownLink>
+                  <DropdownLink href="/group-gratuity-saving-scheme" icon={Award}>Group Gratuity Saving Scheme</DropdownLink>
                   
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Reports and Downloads</div>
-                  <DropdownLink href="/campus-life" icon={FileText}>NCC Annual Report</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={FileText}>Audit Report 2022-2023</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={FileText}>Audit Report 2021-2022</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={FileText}>Audit Report 2020-2021</DropdownLink>
+                  <DropdownLink href="/ncc-annual-report" icon={FileText}>NCC Annual Report</DropdownLink>
+                  <DropdownLink href="/audit-report-2022-23" icon={FileText}>Audit Report 2022-2023</DropdownLink>
+                  <DropdownLink href="/audit-report-2021-22" icon={FileText}>Audit Report 2021-2022</DropdownLink>
+                  <DropdownLink href="/audit-report-2020-21" icon={FileText}>Audit Report 2020-2021</DropdownLink>
                 </DropdownContent>
               </div>
 
@@ -324,13 +324,13 @@ export default function Header() {
                         <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Employee Benefits</div>
                         <Link href="/student-group-accident-policy" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Student Group Accident Policy</Link>
                         <Link href="/jss-health-scheme" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">JSS Health Scheme</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Group Gratuity Saving Scheme</Link>
+                        <Link href="/group-gratuity-saving-scheme" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Group Gratuity Saving Scheme</Link>
                         
                         <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Reports and Downloads</div>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">NCC Annual Report</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Audit Report 2022-2023</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Audit Report 2021-2022</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Audit Report 2020-2021</Link>
+                        <Link href="/ncc-annual-report" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">NCC Annual Report</Link>
+                        <Link href="/audit-report-2022-23" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Audit Report 2022-2023</Link>
+                        <Link href="/audit-report-2021-22" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Audit Report 2021-2022</Link>
+                        <Link href="/audit-report-2020-21" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Audit Report 2020-2021</Link>
                       </div>
                     )}
                   </div>
