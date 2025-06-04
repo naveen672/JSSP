@@ -139,8 +139,8 @@ export default function Header() {
                   <DropdownLink href="/iqac" icon={UserCheck}>Internal Quality Assurance Cell (IQAC)</DropdownLink>
                   
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Employee Benefits</div>
-                  <DropdownLink href="/campus-life" icon={Shield}>Student Group Accident Policy</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Heart}>JSS Health Scheme</DropdownLink>
+                  <DropdownLink href="/student-group-accident-policy" icon={Shield}>Student Group Accident Policy</DropdownLink>
+                  <DropdownLink href="/jss-health-scheme" icon={Heart}>JSS Health Scheme</DropdownLink>
                   <DropdownLink href="/campus-life" icon={Award}>Group Gratuity Saving Scheme</DropdownLink>
                   
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Reports and Downloads</div>
@@ -322,8 +322,8 @@ export default function Header() {
                         <Link href="/iqac" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Internal Quality Assurance Cell (IQAC)</Link>
                         
                         <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Employee Benefits</div>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Student Group Accident Policy</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">JSS Health Scheme</Link>
+                        <Link href="/student-group-accident-policy" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Student Group Accident Policy</Link>
+                        <Link href="/jss-health-scheme" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">JSS Health Scheme</Link>
                         <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Group Gratuity Saving Scheme</Link>
                         
                         <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Reports and Downloads</div>

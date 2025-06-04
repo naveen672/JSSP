@@ -37,6 +37,8 @@ import SocialOutreach from "@/pages/social-outreach";
 import Exam from "@/pages/exam";
 import Committees from "@/pages/committees";
 import CampusLife from "@/pages/campus-life";
+import StudentGroupAccidentPolicy from "@/pages/student-group-accident-policy";
+import JSSHealthScheme from "@/pages/jss-health-scheme";
 import Infrastructure from "@/pages/infrastructure";
 import Contact from "@/pages/contact";
 import AdminLogin from "@/pages/admin/login";
@@ -85,6 +87,8 @@ function Router() {
           <Route path="/exam" component={Exam} />
           <Route path="/committees" component={Committees} />
           <Route path="/campus-life" component={CampusLife} />
+          <Route path="/student-group-accident-policy" component={StudentGroupAccidentPolicy} />
+          <Route path="/jss-health-scheme" component={JSSHealthScheme} />
           <Route path="/infrastructure" component={Infrastructure} />
           <Route path="/contact" component={Contact} />
           <Route path="/admin/login" component={AdminLogin} />
