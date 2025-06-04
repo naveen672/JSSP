@@ -13,6 +13,7 @@ import Admissions from "@/pages/admissions";
 import About from "@/pages/about";
 import AboutJSSMVP from "@/pages/about-jssmvp";
 import VisionMission from "@/pages/vision-mission";
+import ElectronicsCommunication from "@/pages/electronics-communication";
 import Messages from "@/pages/messages";
 import Governance from "@/pages/governance";
 import AICTEEOA from "@/pages/aicte-eoa";
@@ -82,7 +83,7 @@ function Router() {
           <Route path="/computer-science-engineering" component={ComputerScienceEngineering} />
           <Route path="/civil-engineering" component={CivilEngineering} />
           <Route path="/electrical-electronics-engineering" component={ElectricalElectronicsEngineering} />
-          <Route path="/electronics-communication-engineering" component={ElectronicsCommunicationEngineering} />
+          <Route path="/electronics-communication-engineering" component={ElectronicsCommunication} />
           <Route path="/iqac" component={IQAC} />
           <Route path="/training-placements" component={TrainingPlacements} />
           <Route path="/placements" component={Placements} />
