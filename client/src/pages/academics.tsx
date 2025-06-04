@@ -17,7 +17,10 @@ import {
   Target,
   Clock,
   Globe,
+  Download,
+  FileText,
 } from "lucide-react";
+import brochurePdf from "@assets/Brochure3_compressed.pdf";
 
 export default function Academics() {
   const { data: departments, isLoading } = useQuery({
@@ -252,18 +255,45 @@ export default function Academics() {
                 </ul>
               </div>
 
-              <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-                <p className="text-green-800 text-sm font-medium">
-                  <a
-                    href="/attached_assets/brochur or college prospector.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-800 underline"
-                  >
-                    Download College Prospectus
-                  </a>{" "}
-                  for complete academic information and admission details.
-                </p>
+              <div className="mt-6 space-y-4">
+                <div className="bg-gradient-to-r from-primary/10 to-accent/10 p-6 rounded-lg">
+                  <div className="flex items-center mb-4">
+                    <FileText className="h-6 w-6 text-primary mr-3" />
+                    <h3 className="text-xl font-semibold text-primary">College Prospectus</h3>
+                  </div>
+                  
+                  <div className="grid md:grid-cols-2 gap-4 mb-6">
+                    <div className="space-y-2">
+                      <h4 className="font-medium text-gray-800">Course Details</h4>
+                      <ul className="text-sm text-gray-700 space-y-1">
+                        <li>• <strong>Level:</strong> Diploma - Board of Technical Education, Government of Karnataka</li>
+                        <li>• <strong>Approval:</strong> AICTE, New Delhi</li>
+                        <li>• <strong>Duration:</strong> Six semesters (3 years)</li>
+                        <li>• <strong>Medium:</strong> English</li>
+                      </ul>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <h4 className="font-medium text-gray-800">Institution Vision</h4>
+                      <p className="text-sm text-gray-700">
+                        To be recognized as a prestigious academic center for excellence in technical education 
+                        and to meet the needs of Academia, Industry & Society.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center justify-center">
+                    <a 
+                      href={brochurePdf}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
+                    >
+                      <Download className="h-5 w-5 mr-2" />
+                      Download College Prospectus
+                    </a>
+                  </div>
+                </div>
               </div>
             </CardContent>
           </Card>
