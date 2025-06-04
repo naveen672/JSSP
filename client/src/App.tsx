@@ -23,6 +23,8 @@ import Scholarships from "@/pages/scholarships";
 import MentoringScheme from "@/pages/mentoring-scheme";
 import Alumni from "@/pages/alumni";
 import OnlineGrievanceSupport from "@/pages/online-grievance-support";
+import CareerOpportunity from "@/pages/career-opportunity";
+import MediaCoverageUpdate from "@/pages/media-coverage-update";
 import Messages from "@/pages/messages";
 import Governance from "@/pages/governance";
 import AICTEEOA from "@/pages/aicte-eoa";
@@ -89,6 +91,8 @@ function Router() {
           <Route path="/mentoring-scheme" component={MentoringScheme} />
           <Route path="/alumni" component={Alumni} />
           <Route path="/online-grievance-support" component={OnlineGrievanceSupport} />
+          <Route path="/career-opportunity" component={CareerOpportunity} />
+          <Route path="/media-coverage-update" component={MediaCoverageUpdate} />
           <Route path="/messages" component={Messages} />
           <Route path="/governance" component={Governance} />
           <Route path="/aicte-eoa" component={AICTEEOA} />

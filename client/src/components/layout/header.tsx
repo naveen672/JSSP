@@ -257,9 +257,9 @@ export default function Header() {
                 <DropdownContent name="more" className="left-[-200px]">
                   <DropdownLink href="/alumni" icon={Users}>Alumni</DropdownLink>
                   <DropdownLink href="/campus-life" icon={Camera}>Photo Gallery</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={FileText}>Media Coverage Update</DropdownLink>
+                  <DropdownLink href="/media-coverage-update" icon={FileText}>Media Coverage Update</DropdownLink>
                   <DropdownLink href="/online-grievance-support" icon={Phone}>Online Grievance Support</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Briefcase}>Career Opportunity</DropdownLink>
+                  <DropdownLink href="/career-opportunity" icon={Briefcase}>Career Opportunity</DropdownLink>
                   <DropdownLink href="/campus-life" icon={FileText}>Service Rules</DropdownLink>
                 </DropdownContent>
               </div>
