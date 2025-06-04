@@ -13,6 +13,7 @@ import Admissions from "@/pages/admissions";
 import About from "@/pages/about";
 import AboutJSSMVP from "@/pages/about-jssmvp";
 import VisionMission from "@/pages/vision-mission";
+import ECEProfessionalBodies from "@/pages/ece-professional-bodies";
 import Messages from "@/pages/messages";
 import Governance from "@/pages/governance";
 import AICTEEOA from "@/pages/aicte-eoa";
@@ -69,6 +70,7 @@ function Router() {
           <Route path="/about" component={VisionMission} />
           <Route path="/about-jssmvp" component={AboutJSSMVP} />
           <Route path="/vision-mission" component={VisionMission} />
+          <Route path="/ece-professional-bodies" component={ECEProfessionalBodies} />
           <Route path="/messages" component={Messages} />
           <Route path="/governance" component={Governance} />
           <Route path="/aicte-eoa" component={AICTEEOA} />
