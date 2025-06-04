@@ -305,44 +305,7 @@ export default function Contact() {
             </CardContent>
           </Card>
 
-          {/* Directions */}
-          <div className="grid md:grid-cols-3 gap-8 mt-8">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">By Car</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Take Highway 101 to Exit 15, then follow University Drive for 2 miles. 
-                  Visitor parking available in Lots A and B.
-                </p>
-              </CardContent>
-            </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">By Public Transit</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Metro Bus Routes 42 and 56 stop directly at the main campus entrance. 
-                  The University Metro Station is a 10-minute walk.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">By Air</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  City International Airport is 30 minutes away. 
-                  Airport shuttle service available. Taxi and ride-share services also available.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
         </div>
       </section>
     </div>
