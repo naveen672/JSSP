@@ -1,6 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, FileText, Clock, BookOpen } from "lucide-react";
+import { Calendar, FileText, Clock, BookOpen, Download } from "lucide-react";
+import calendar2024Pdf from "@assets/calender-of-events.doc-24-25-Ist-Sem.pdf";
+import calendar2023OddPdf from "@assets/Dept-calender-of-events-2023-24-odd-sem-1.pdf";
+import calendar2023EvenPdf from "@assets/calender-of-events.doc-2023-24-even1.pdf";
 
 export default function CalendarEvents() {
   const semesterCalendars = [
@@ -11,6 +14,7 @@ export default function CalendarEvents() {
       totalDays: "86 working days",
       theoryExams: "From 19-11-2024",
       practicalExams: "From 04-11-2024",
+      pdfLink: calendar2024Pdf,
       highlights: [
         "Skill Test-I: 05-08-2024 to 10-08-2024",
         "Skill Test-II: 19-08-2024 to 24-08-2024",
@@ -20,32 +24,35 @@ export default function CalendarEvents() {
       ]
     },
     {
-      title: "Academic Year 2023-24 (Even Semester - II Sem)",
-      duration: "January 8, 2024 to April 30, 2024",
-      totalWeeks: "17 weeks",
-      totalDays: "91 working days",
-      theoryExams: "From 17-05-2024",
-      practicalExams: "From 02-05-2024",
+      title: "Academic Year 2023-24 (Odd Semester - Mechatronics)",
+      duration: "July 3, 2023 to November 16, 2023",
+      totalWeeks: "16 weeks",
+      totalDays: "83 working days (III & V Sem), 95 working days (I Sem)",
+      theoryExams: "From 04-12-2023",
+      practicalExams: "From 20-11-2023",
+      pdfLink: calendar2023OddPdf,
       highlights: [
-        "MCQ and Skill Test-I: 12-02-2024 to 17-02-2024",
-        "Skill Test-II: 04-03-2024 to 09-03-2024",
-        "Open Book Test and Skill Test-III: 11-03-2024 to 16-03-2024",
-        "Parents Meeting: Every 2nd Saturday",
-        "Last Working Day: 30-04-2024"
+        "Skill Test-I: 04-09-2023 to 09-09-2023",
+        "Skill Test-II: 16-10-2023 to 21-10-2023",
+        "NSS/NCC/Red Cross Activities: Every Friday 2 PM to 5 PM",
+        "Technical talks/Seminars: 2nd and 4th Saturday",
+        "Last Working Day: 16-11-2023"
       ]
     },
     {
-      title: "Academic Year 2023-24 (Even Semester - IV & VI Sem)",
+      title: "Academic Year 2023-24 (Even Semester)",
       duration: "January 8, 2024 to April 30, 2024",
       totalWeeks: "17 weeks",
       totalDays: "91 working days",
       theoryExams: "From 17-05-2024",
       practicalExams: "From 02-05-2024",
+      pdfLink: calendar2023EvenPdf,
       highlights: [
-        "Skill Test-I: 26-02-2024 to 02-03-2024",
-        "Skill Test-II: 01-04-2024 to 06-04-2024",
+        "MCQ and Skill Test-I: 12-02-2024 to 17-02-2024 (II Sem)",
+        "Skill Test-I: 26-02-2024 to 02-03-2024 (IV & VI Sem)",
+        "Skill Test-II: 04-03-2024 to 09-03-2024 (II Sem)",
         "CIE Tests for VI Semester scheduled",
-        "ITI Lateral Entry students test calendar",
+        "Parents Meeting: Every 2nd Saturday",
         "Last Working Day: 30-04-2024"
       ]
     }
@@ -139,6 +146,18 @@ export default function CalendarEvents() {
                         <li>• Open Book Test: 02-09-2024 to 06-09-2024</li>
                       </ul>
                     </div>
+                    
+                    <div className="flex items-center justify-center">
+                      <a 
+                        href={calendar2024Pdf}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
+                      >
+                        <Download className="h-5 w-5 mr-2" />
+                        Download Calendar 2024-25
+                      </a>
+                    </div>
                   </div>
                 </div>
               </CardContent>
@@ -188,6 +207,18 @@ export default function CalendarEvents() {
                       <li>• Open Book Test: 11-03 to 16-03-2024</li>
                       <li>• Parents Meeting: Every 2nd Saturday</li>
                     </ul>
+                  </div>
+                  
+                  <div className="mt-4 flex items-center justify-center">
+                    <a 
+                      href={calendar2023EvenPdf}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-4 py-2 bg-primary text-white text-sm rounded-lg hover:bg-primary/90 transition-colors"
+                    >
+                      <Download className="h-4 w-4 mr-2" />
+                      Download Even Semester Calendar
+                    </a>
                   </div>
                 </div>
               </CardContent>
@@ -275,6 +306,18 @@ export default function CalendarEvents() {
                       <li>• Technical talks: 2nd and 4th Saturday</li>
                       <li>• Industrial Visits: Scheduled throughout semester</li>
                     </ul>
+                  </div>
+                  
+                  <div className="mt-4 flex items-center justify-center">
+                    <a 
+                      href={calendar2023OddPdf}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-4 py-2 bg-primary text-white text-sm rounded-lg hover:bg-primary/90 transition-colors"
+                    >
+                      <Download className="h-4 w-4 mr-2" />
+                      Download Mechatronics Calendar
+                    </a>
                   </div>
                 </div>
               </CardContent>
