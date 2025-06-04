@@ -8,6 +8,14 @@ import { Strategy as LocalStrategy } from "passport-local";
 import session from "express-session";
 import { sendContactConfirmationEmail, testEmailConnection } from "./email";
 
+// Authentication middleware
+function requireAuth(req: any, res: any, next: any) {
+  if (req.isAuthenticated && req.isAuthenticated()) {
+    return next();
+  }
+  res.status(401).json({ message: "Authentication required" });
+}
+
 export async function registerRoutes(app: Express): Promise<Server> {
   // Session configuration
   app.use(
@@ -196,6 +204,86 @@ export async function registerRoutes(app: Express): Promise<Server> {
         message: "Email test failed", 
         error: error.message 
       });
+    }
+  });
+
+  // Admin routes
+  app.get("/api/admin/news", requireAuth, async (req, res) => {
+    try {
+      const news = await storage.getAllNews();
+      res.json(news);
+    } catch (error: any) {
+      console.error("Error fetching admin news:", error);
+      res.status(500).json({ message: "Internal server error" });
+    }
+  });
+
+  app.post("/api/admin/news", requireAuth, async (req, res) => {
+    try {
+      const validatedData = insertNewsItemSchema.parse(req.body);
+      const newsItem = await storage.createNewsItem(validatedData);
+      res.status(201).json(newsItem);
+    } catch (error: any) {
+      console.error("Error creating news:", error);
+      if (error.name === "ZodError") {
+        res.status(400).json({ message: "Invalid form data", errors: error.errors });
+      } else {
+        res.status(500).json({ message: "Internal server error" });
+      }
+    }
+  });
+
+  app.patch("/api/admin/news/:id", requireAuth, async (req, res) => {
+    try {
+      const id = parseInt(req.params.id);
+      const updates = req.body;
+      const newsItem = await storage.updateNewsItem(id, updates);
+      if (!newsItem) {
+        return res.status(404).json({ message: "News item not found" });
+      }
+      res.json(newsItem);
+    } catch (error: any) {
+      console.error("Error updating news:", error);
+      res.status(500).json({ message: "Internal server error" });
+    }
+  });
+
+  app.delete("/api/admin/news/:id", requireAuth, async (req, res) => {
+    try {
+      const id = parseInt(req.params.id);
+      const deleted = await storage.deleteNewsItem(id);
+      if (!deleted) {
+        return res.status(404).json({ message: "News item not found" });
+      }
+      res.json({ message: "News item deleted successfully" });
+    } catch (error: any) {
+      console.error("Error deleting news:", error);
+      res.status(500).json({ message: "Internal server error" });
+    }
+  });
+
+  app.get("/api/admin/contacts", requireAuth, async (req, res) => {
+    try {
+      const contacts = await storage.getAllContactSubmissions();
+      res.json(contacts);
+    } catch (error: any) {
+      console.error("Error fetching contacts:", error);
+      res.status(500).json({ message: "Internal server error" });
+    }
+  });
+
+  app.patch("/api/admin/contacts/:id", requireAuth, async (req, res) => {
+    try {
+      const id = parseInt(req.params.id);
+      const { status } = req.body;
+      const contact = await storage.updateContactSubmissionStatus(id, status);
+      if (!contact) {
+        return res.status(404).json({ message: "Contact submission not found" });
+      }
+      res.json(contact);
+    } catch (error: any) {
+      console.error("Error updating contact status:", error);
+      res.status(500).json({ message: "Internal server error" });
     }
   });
 

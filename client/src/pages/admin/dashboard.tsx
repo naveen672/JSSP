@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLocation } from "wouter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -36,15 +36,35 @@ type NewsFormData = z.infer<typeof insertNewsItemSchema>;
 
 export default function AdminDashboard() {
   const [, setLocation] = useLocation();
-  const { user, logout, isAuthenticated } = useAuth();
+  const { user, logout, isAuthenticated, isLoading } = useAuth();
   const { toast } = useToast();
   const queryClient = useQueryClient();
   const [selectedNews, setSelectedNews] = useState<any>(null);
   const [isEditing, setIsEditing] = useState(false);
 
-  // Redirect if not authenticated
+  // Redirect if not authenticated using useEffect
+  useEffect(() => {
+    if (!isAuthenticated && !isLoading) {
+      setLocation("/admin/login");
+    }
+  }, [isAuthenticated, isLoading, setLocation]);
+
+  // Show loading while checking authentication
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="bg-primary text-white w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <University className="h-8 w-8" />
+          </div>
+          <p className="text-gray-600">Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Return null if not authenticated (will redirect via useEffect)
   if (!isAuthenticated) {
-    setLocation("/admin/login");
     return null;
   }
 
