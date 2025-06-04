@@ -6,6 +6,7 @@ import bcrypt from "bcrypt";
 import passport from "passport";
 import { Strategy as LocalStrategy } from "passport-local";
 import session from "express-session";
+import { sendContactConfirmationEmail, testEmailConnection } from "./email";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Session configuration
@@ -150,16 +151,51 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const validatedData = insertContactSubmissionSchema.parse(req.body);
       const submission = await storage.createContactSubmission(validatedData);
       
-      // TODO: Send email notification here using Nodemailer
+      // Send email notification
+      try {
+        const emailSent = await sendContactConfirmationEmail({
+          name: `${validatedData.firstName} ${validatedData.lastName}`,
+          email: validatedData.email,
+          phone: undefined, // Contact form doesn't have phone field
+          subject: validatedData.subject,
+          message: validatedData.message
+        });
+        
+        if (emailSent) {
+          console.log("Contact confirmation email sent successfully");
+        } else {
+          console.warn("Failed to send contact confirmation email");
+        }
+      } catch (emailError) {
+        console.error("Error sending contact email:", emailError);
+        // Don't fail the form submission if email fails
+      }
       
       res.status(201).json({ message: "Contact form submitted successfully", id: submission.id });
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error submitting contact form:", error);
       if (error.name === "ZodError") {
         res.status(400).json({ message: "Invalid form data", errors: error.errors });
       } else {
         res.status(500).json({ message: "Internal server error" });
       }
+    }
+  });
+
+  // Test email configuration
+  app.get("/api/test-email", async (req, res) => {
+    try {
+      const isConnected = await testEmailConnection();
+      res.json({ 
+        success: isConnected, 
+        message: isConnected ? "Email connection successful" : "Email connection failed" 
+      });
+    } catch (error: any) {
+      res.status(500).json({ 
+        success: false, 
+        message: "Email test failed", 
+        error: error.message 
+      });
     }
   });
 
