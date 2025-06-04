@@ -12,6 +12,7 @@ import Academics from "@/pages/academics";
 import Admissions from "@/pages/admissions";
 import About from "@/pages/about";
 import AboutJSSMVP from "@/pages/about-jssmvp";
+import VisionMission from "@/pages/vision-mission";
 import Messages from "@/pages/messages";
 import Governance from "@/pages/governance";
 import AICTEEOA from "@/pages/aicte-eoa";
@@ -65,8 +66,9 @@ function Router() {
           <Route path="/" component={Home} />
           <Route path="/academics" component={Academics} />
           <Route path="/admissions" component={Admissions} />
-          <Route path="/about" component={About} />
+          <Route path="/about" component={VisionMission} />
           <Route path="/about-jssmvp" component={AboutJSSMVP} />
+          <Route path="/vision-mission" component={VisionMission} />
           <Route path="/messages" component={Messages} />
           <Route path="/governance" component={Governance} />
           <Route path="/aicte-eoa" component={AICTEEOA} />
