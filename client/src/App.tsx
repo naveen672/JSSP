@@ -71,70 +71,77 @@ import ScrollToTop from "@/components/ui/scroll-to-top";
 
 function Router() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-1">
-        <Switch>
-          <Route path="/" component={Home} />
-          <Route path="/academics" component={Academics} />
-          <Route path="/admissions" component={Admissions} />
-          <Route path="/about" component={VisionMission} />
-          <Route path="/about-jssmvp" component={AboutJSSMVP} />
-          <Route path="/vision-mission" component={VisionMission} />
-          <Route path="/ece-professional-bodies" component={ECEProfessionalBodies} />
-          <Route path="/cs-professional-bodies" component={CSProfessionalBodies} />
-          <Route path="/mechatronics-professional-bodies" component={MechatronicsProfessionalBodies} />
-          <Route path="/mechanical-professional-bodies" component={MechanicalProfessionalBodies} />
-          <Route path="/eee-professional-bodies" component={EEEProfessionalBodies} />
-          <Route path="/civil-professional-bodies" component={CivilProfessionalBodies} />
-          <Route path="/scholarships" component={Scholarships} />
-          <Route path="/mentoring-scheme" component={MentoringScheme} />
-          <Route path="/alumni" component={Alumni} />
-          <Route path="/online-grievance-support" component={OnlineGrievanceSupport} />
-          <Route path="/career-opportunity" component={CareerOpportunity} />
-          <Route path="/media-coverage-update" component={MediaCoverageUpdate} />
-          <Route path="/messages" component={Messages} />
-          <Route path="/governance" component={Governance} />
-          <Route path="/aicte-eoa" component={AICTEEOA} />
-          <Route path="/nba" component={NBA} />
-          <Route path="/calendar-events" component={CalendarEvents} />
-          <Route path="/jss-collaboration-mous" component={JSSCollaborationMOUs} />
-          <Route path="/mandatory-disclosure" component={MandatoryDisclosure} />
-          <Route path="/science-department" component={ScienceDepartment} />
-          <Route path="/mechanical-engineering" component={MechanicalEngineering} />
-          <Route path="/information-science-engineering" component={InformationScienceEngineering} />
-          <Route path="/computer-science-engineering" component={ComputerScienceEngineering} />
-          <Route path="/civil-engineering" component={CivilEngineering} />
-          <Route path="/electrical-electronics-engineering" component={ElectricalElectronicsEngineering} />
-          <Route path="/electronics-communication-engineering" component={ElectronicsCommunicationEngineering} />
-          <Route path="/iqac" component={IQAC} />
-          <Route path="/training-placements" component={TrainingPlacements} />
-          <Route path="/placements" component={Placements} />
-          <Route path="/cultural-activities" component={CulturalActivities} />
-          <Route path="/fee-payment" component={FeePayment} />
-          <Route path="/higher-education" component={HigherEducation} />
-          <Route path="/anti-ragging" component={AntiRagging} />
-          <Route path="/social-outreach" component={SocialOutreach} />
-          <Route path="/exam" component={Exam} />
-          <Route path="/committees" component={Committees} />
-          <Route path="/campus-life" component={CampusLife} />
-          <Route path="/student-group-accident-policy" component={StudentGroupAccidentPolicy} />
-          <Route path="/jss-health-scheme" component={JSSHealthScheme} />
-          <Route path="/group-gratuity-saving-scheme" component={GroupGratuitySavingScheme} />
-          <Route path="/ncc-annual-report" component={NCCAnnualReport} />
-          <Route path="/audit-report-2022-23" component={AuditReport2022_23} />
-          <Route path="/audit-report-2021-22" component={AuditReport2021_22} />
-          <Route path="/audit-report-2020-21" component={AuditReport2020_21} />
-          <Route path="/infrastructure" component={Infrastructure} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/admin/login" component={AdminLogin} />
-          <Route path="/admin/dashboard" component={AdminDashboard} />
-          <Route component={NotFound} />
-        </Switch>
-      </main>
-      <Footer />
-      <ScrollToTop />
-    </div>
+    <Switch>
+      {/* Admin routes without main layout */}
+      <Route path="/admin/login" component={AdminLogin} />
+      <Route path="/admin/dashboard" component={AdminDashboard} />
+      
+      {/* Main site routes with layout */}
+      <Route>
+        <div className="min-h-screen flex flex-col">
+          <Header />
+          <main className="flex-1">
+            <Switch>
+              <Route path="/" component={Home} />
+              <Route path="/academics" component={Academics} />
+              <Route path="/admissions" component={Admissions} />
+              <Route path="/about" component={VisionMission} />
+              <Route path="/about-jssmvp" component={AboutJSSMVP} />
+              <Route path="/vision-mission" component={VisionMission} />
+              <Route path="/ece-professional-bodies" component={ECEProfessionalBodies} />
+              <Route path="/cs-professional-bodies" component={CSProfessionalBodies} />
+              <Route path="/mechatronics-professional-bodies" component={MechatronicsProfessionalBodies} />
+              <Route path="/mechanical-professional-bodies" component={MechanicalProfessionalBodies} />
+              <Route path="/eee-professional-bodies" component={EEEProfessionalBodies} />
+              <Route path="/civil-professional-bodies" component={CivilProfessionalBodies} />
+              <Route path="/scholarships" component={Scholarships} />
+              <Route path="/mentoring-scheme" component={MentoringScheme} />
+              <Route path="/alumni" component={Alumni} />
+              <Route path="/online-grievance-support" component={OnlineGrievanceSupport} />
+              <Route path="/career-opportunity" component={CareerOpportunity} />
+              <Route path="/media-coverage-update" component={MediaCoverageUpdate} />
+              <Route path="/messages" component={Messages} />
+              <Route path="/governance" component={Governance} />
+              <Route path="/aicte-eoa" component={AICTEEOA} />
+              <Route path="/nba" component={NBA} />
+              <Route path="/calendar-events" component={CalendarEvents} />
+              <Route path="/jss-collaboration-mous" component={JSSCollaborationMOUs} />
+              <Route path="/mandatory-disclosure" component={MandatoryDisclosure} />
+              <Route path="/science-department" component={ScienceDepartment} />
+              <Route path="/mechanical-engineering" component={MechanicalEngineering} />
+              <Route path="/information-science-engineering" component={InformationScienceEngineering} />
+              <Route path="/computer-science-engineering" component={ComputerScienceEngineering} />
+              <Route path="/civil-engineering" component={CivilEngineering} />
+              <Route path="/electrical-electronics-engineering" component={ElectricalElectronicsEngineering} />
+              <Route path="/electronics-communication-engineering" component={ElectronicsCommunicationEngineering} />
+              <Route path="/iqac" component={IQAC} />
+              <Route path="/training-placements" component={TrainingPlacements} />
+              <Route path="/placements" component={Placements} />
+              <Route path="/cultural-activities" component={CulturalActivities} />
+              <Route path="/fee-payment" component={FeePayment} />
+              <Route path="/higher-education" component={HigherEducation} />
+              <Route path="/anti-ragging" component={AntiRagging} />
+              <Route path="/social-outreach" component={SocialOutreach} />
+              <Route path="/exam" component={Exam} />
+              <Route path="/committees" component={Committees} />
+              <Route path="/campus-life" component={CampusLife} />
+              <Route path="/student-group-accident-policy" component={StudentGroupAccidentPolicy} />
+              <Route path="/jss-health-scheme" component={JSSHealthScheme} />
+              <Route path="/group-gratuity-saving-scheme" component={GroupGratuitySavingScheme} />
+              <Route path="/ncc-annual-report" component={NCCAnnualReport} />
+              <Route path="/audit-report-2022-23" component={AuditReport2022_23} />
+              <Route path="/audit-report-2021-22" component={AuditReport2021_22} />
+              <Route path="/audit-report-2020-21" component={AuditReport2020_21} />
+              <Route path="/infrastructure" component={Infrastructure} />
+              <Route path="/contact" component={Contact} />
+              <Route component={NotFound} />
+            </Switch>
+          </main>
+          <Footer />
+          <ScrollToTop />
+        </div>
+      </Route>
+    </Switch>
   );
 }
 
