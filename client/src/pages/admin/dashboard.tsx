@@ -216,7 +216,7 @@ export default function AdminDashboard() {
               </div>
               <div>
                 <h1 className="text-lg font-semibold text-primary">Admin Dashboard</h1>
-                <p className="text-xs text-gray-600">Excellence University</p>
+                <p className="text-xs text-gray-600">JSS Polytechnic</p>
               </div>
             </div>
             <div className="flex items-center space-x-4">
