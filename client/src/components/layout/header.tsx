@@ -225,6 +225,10 @@ export default function Header() {
                   
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Committees</div>
                   <DropdownLink href="/committees" icon={Users}>All Committees</DropdownLink>
+                  <DropdownLink href="/online-grievance-support" icon={Shield}>Online Grievance Support</DropdownLink>
+                  
+                  <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Alumni</div>
+                  <DropdownLink href="/alumni" icon={Award}>Alumni Network</DropdownLink>
                   
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Higher Education</div>
                   <DropdownLink href="/higher-education" icon={GraduationCap}>Higher Education</DropdownLink>
@@ -441,6 +445,10 @@ export default function Header() {
                         
                         <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Committees</div>
                         <Link href="/committees" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">All Committees</Link>
+                        <Link href="/online-grievance-support" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Online Grievance Support</Link>
+                        
+                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Alumni</div>
+                        <Link href="/alumni" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Alumni Network</Link>
                         
                         <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Higher Education</div>
                         <Link href="/higher-education" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Higher Education</Link>

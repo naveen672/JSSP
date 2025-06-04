@@ -21,6 +21,8 @@ import EEEProfessionalBodies from "@/pages/eee-professional-bodies";
 import CivilProfessionalBodies from "@/pages/civil-professional-bodies";
 import Scholarships from "@/pages/scholarships";
 import MentoringScheme from "@/pages/mentoring-scheme";
+import Alumni from "@/pages/alumni";
+import OnlineGrievanceSupport from "@/pages/online-grievance-support";
 import Messages from "@/pages/messages";
 import Governance from "@/pages/governance";
 import AICTEEOA from "@/pages/aicte-eoa";
@@ -85,6 +87,8 @@ function Router() {
           <Route path="/civil-professional-bodies" component={CivilProfessionalBodies} />
           <Route path="/scholarships" component={Scholarships} />
           <Route path="/mentoring-scheme" component={MentoringScheme} />
+          <Route path="/alumni" component={Alumni} />
+          <Route path="/online-grievance-support" component={OnlineGrievanceSupport} />
           <Route path="/messages" component={Messages} />
           <Route path="/governance" component={Governance} />
           <Route path="/aicte-eoa" component={AICTEEOA} />
