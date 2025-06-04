@@ -1,38 +1,45 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Award, CheckCircle, Calendar, BookOpen } from "lucide-react";
+import { Award, CheckCircle, Calendar, BookOpen, Download, FileText, Trophy, Phone, Building } from "lucide-react";
+import nbaPdf from "@assets/JSS-Polytechnic-Karnataka24_9_2024_14_42_50.pdf";
 
 export default function NBA() {
   const accreditedPrograms = [
     {
       id: 1,
       name: "Civil Engineering",
-      icon: "🏗️"
+      icon: "🏗️",
+      accredited: true
     },
     {
       id: 2,
       name: "Electronic and Communication Engineering",
-      icon: "📡"
+      icon: "📡",
+      accredited: true
     },
     {
       id: 3,
       name: "Electrical and Electronics Engineering",
-      icon: "⚡"
+      icon: "⚡",
+      accredited: true
     },
     {
       id: 4,
       name: "Computer Science and Engineering",
-      icon: "💻"
+      icon: "💻",
+      accredited: true
     },
     {
       id: 5,
       name: "Mechatronics Engineering",
-      icon: "🤖"
+      icon: "🤖",
+      accredited: true
     },
     {
       id: 6,
       name: "Mechanical Engineering",
-      icon: "⚙️"
+      icon: "⚙️",
+      accredited: true
     }
   ];
 
@@ -57,10 +64,21 @@ export default function NBA() {
             <div className="bg-gradient-to-r from-accent/10 to-primary/10 p-8 rounded-lg mb-8">
               <Award className="h-16 w-16 text-accent mx-auto mb-4" />
               <h2 className="text-3xl font-bold text-primary mb-4">Proud Achievement</h2>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
                 JSS Polytechnic proudly announces that following Six Programs of the Polytechnic has been 
                 accredited by NBA for three years (AY 2024-25, 2025-26 & 2026-27).
               </p>
+              <div className="flex items-center justify-center">
+                <a 
+                  href={nbaPdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
+                >
+                  <Download className="h-5 w-5 mr-2" />
+                  Download NBA Certificate
+                </a>
+              </div>
             </div>
           </div>
         </div>

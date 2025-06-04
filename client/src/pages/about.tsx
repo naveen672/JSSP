@@ -1,18 +1,38 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { History, Award, Globe, Users, Computer, Cpu, Wrench, Zap, Cog, Database, Building, BookOpen, Calendar, Phone, Settings, FileText } from "lucide-react";
+import { Eye, Compass, CheckCircle, Target, Award, Building, Phone } from "lucide-react";
 
 export default function About() {
+  const missionStatements = [
+    {
+      id: "M1",
+      title: "Holistic Education",
+      description: "To impart holistic outcome based education in both technical and non technical programs through state of the art curriculum and effective teaching-learning process."
+    },
+    {
+      id: "M2", 
+      title: "Industry Collaboration",
+      description: "To promote industry institutional collaboration through MOUs and internship programs."
+    },
+    {
+      id: "M3",
+      title: "Ethical Practices",
+      description: "To infuse ethical and responsible engineering practices to create successful professionals."
+    }
+  ];
+
   return (
-    <div className="w-full">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-primary text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl lg:text-6xl font-bold mb-6">About JSS Polytechnic</h1>
-          <p className="text-xl lg:text-2xl opacity-90 max-w-3xl mx-auto">
-            JSS Polytechnic is a premier technical education institution committed to excellence in education, research, and innovation. Established with a vision to nurture skilled technicians and engineers, we have been at the forefront of technical education for over three decades.
-          </p>
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-center mb-6">
+            <Target className="h-16 w-16 mr-4" />
+            <div className="text-center">
+              <h1 className="text-4xl font-bold mb-2">Vision Mission of the Institute</h1>
+              <p className="text-xl text-blue-100">Guiding Principles for Academic Excellence</p>
+            </div>
+          </div>
         </div>
       </section>
 
