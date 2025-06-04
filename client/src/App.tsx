@@ -14,6 +14,11 @@ import About from "@/pages/about";
 import AboutJSSMVP from "@/pages/about-jssmvp";
 import VisionMission from "@/pages/vision-mission";
 import ECEProfessionalBodies from "@/pages/ece-professional-bodies";
+import CSProfessionalBodies from "@/pages/cs-professional-bodies";
+import MechatronicsProfessionalBodies from "@/pages/mechatronics-professional-bodies";
+import MechanicalProfessionalBodies from "@/pages/mechanical-professional-bodies";
+import EEEProfessionalBodies from "@/pages/eee-professional-bodies";
+import CivilProfessionalBodies from "@/pages/civil-professional-bodies";
 import Messages from "@/pages/messages";
 import Governance from "@/pages/governance";
 import AICTEEOA from "@/pages/aicte-eoa";
@@ -71,6 +76,11 @@ function Router() {
           <Route path="/about-jssmvp" component={AboutJSSMVP} />
           <Route path="/vision-mission" component={VisionMission} />
           <Route path="/ece-professional-bodies" component={ECEProfessionalBodies} />
+          <Route path="/cs-professional-bodies" component={CSProfessionalBodies} />
+          <Route path="/mechatronics-professional-bodies" component={MechatronicsProfessionalBodies} />
+          <Route path="/mechanical-professional-bodies" component={MechanicalProfessionalBodies} />
+          <Route path="/eee-professional-bodies" component={EEEProfessionalBodies} />
+          <Route path="/civil-professional-bodies" component={CivilProfessionalBodies} />
           <Route path="/messages" component={Messages} />
           <Route path="/governance" component={Governance} />
           <Route path="/aicte-eoa" component={AICTEEOA} />
