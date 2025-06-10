@@ -204,7 +204,7 @@ export default function Header() {
                 <DropdownContent name="facilities">
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">General Facilities</div>
                   <DropdownLink href="/campus-life" icon={Library}>Library & Information Centre</DropdownLink>
-                  <DropdownLink href="/campus-life" icon={Building}>Hostel</DropdownLink>
+                  <DropdownLink href="/hostel" icon={Building}>Hostel</DropdownLink>
                   <DropdownLink href="/campus-life" icon={Dumbbell}>Sports</DropdownLink>
                   
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Placements & Training</div>

@@ -41,6 +41,7 @@ import CivilEngineering from "@/pages/civil-engineering";
 import ElectricalElectronicsEngineering from "@/pages/electrical-electronics-engineering";
 import ElectronicsCommunicationEngineering from "@/pages/electronics-communication-engineering";
 import OfficeStaff from "@/pages/office-staff";
+import Hostel from "@/pages/hostel";
 import IQAC from "@/pages/iqac";
 import TrainingPlacements from "@/pages/training-placements";
 import Placements from "@/pages/placements";
@@ -120,6 +121,7 @@ function Router() {
               <Route path="/electrical-electronics-engineering" component={ElectricalElectronicsEngineering} />
               <Route path="/electronics-communication-engineering" component={ElectronicsCommunicationEngineering} />
               <Route path="/office-staff" component={OfficeStaff} />
+              <Route path="/hostel" component={Hostel} />
               <Route path="/iqac" component={IQAC} />
               <Route path="/training-placements" component={TrainingPlacements} />
               <Route path="/placements" component={Placements} />
