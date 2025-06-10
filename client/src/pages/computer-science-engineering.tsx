@@ -19,50 +19,74 @@ export default function ComputerScienceEngineering() {
     {
       name: "Shinu Koshy",
       designation: "HOD",
-      qualification: "MTech",
+      qualification: "MTech (VLSI & Embedded Systems)",
       dateOfJoining: "30/7/2003",
       image: shinuKoshyImage,
-      experience: "20+ years"
+      experience: "24+ years Teaching, 2 years Industry",
+      phone: "8073817604",
+      email: "shinu@jsspolytechnic.org",
+      profilePdf: "/attached_assets/shinu_koshy_1749577541381.pdf",
+      specialization: "VLSI & Embedded Systems, IoT, Artificial Intelligence"
     },
     {
       name: "Sowmyashree H.G",
       designation: "Lecturer",
-      qualification: "MTech",
+      qualification: "MTech (ICT)",
       dateOfJoining: "14/7/2006",
       image: sowmyashreeImage,
-      experience: "17+ years"
+      experience: "18+ years Teaching",
+      phone: "9740661463",
+      email: "sowmyashreehg@gmail.com",
+      profilePdf: "/attached_assets/Sowmyashree_Profile_1749577541381.pdf",
+      specialization: "Information & Communication Technology, Cloud Computing"
     },
     {
       name: "Lokesha K.R",
       designation: "Lecturer", 
-      qualification: "MTech",
+      qualification: "MTech (Computer Network Engineering)",
       dateOfJoining: "17/7/2006",
       image: lokeshaImage,
-      experience: "17+ years"
+      experience: "18+ years Teaching",
+      phone: "9880855760",
+      email: "kr.lokesha@gmail.com",
+      profilePdf: "/attached_assets/Lokesha KR_Profile_1749577541380.pdf",
+      specialization: "Computer Networks, Network Security, Data Analytics"
     },
     {
       name: "Somaprabha S",
       designation: "Lecturer",
-      qualification: "BE",
+      qualification: "BE (Computer Science & Engineering)",
       dateOfJoining: "29/1/2008",
       image: somaprabhaImage,
-      experience: "15+ years"
+      experience: "16+ years Teaching",
+      phone: "9611392364",
+      email: "somaprabha@jsspolytechnic.org",
+      profilePdf: "/attached_assets/Somaprabha profile-23-24_1749577541380.pdf",
+      specialization: "Machine Learning, Data Science, Mobile App Development"
     },
     {
       name: "Shruthi S",
       designation: "Lecturer",
-      qualification: "MTech",
-      dateOfJoining: "10/03/2009",
+      qualification: "MTech (Computer Networks)",
+      dateOfJoining: "03/10/2009",
       image: shruthiImage,
-      experience: "14+ years"
+      experience: "14+ years Teaching",
+      phone: "9663121652",
+      email: "shruthi.s@jsspolytechnic.org",
+      profilePdf: "/attached_assets/Shruthi_Profile_1749577541379.pdf",
+      specialization: "Computer Networks, Database Management, Programming"
     },
     {
       name: "Keerthana M",
       designation: "Lecturer",
-      qualification: "BE",
-      dateOfJoining: "18/1/2024",
+      qualification: "BE (Computer Science & Engineering)",
+      dateOfJoining: "29/01/2008",
       image: keerthanaImage,
-      experience: "Fresh Graduate"
+      experience: "Fresher",
+      phone: "7259513202",
+      email: "Keerthyrani55@gmail.com",
+      profilePdf: "/attached_assets/keerthana_1749577541379.pdf",
+      specialization: "Indian Constitution, IT Skills, Multimedia and Animation"
     }
   ];
 
@@ -280,8 +304,8 @@ export default function ComputerScienceEngineering() {
                     <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-blue-900">Name</th>
                     <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-blue-900">Designation</th>
                     <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-blue-900">Qualification</th>
-                    <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-blue-900">Date of Joining</th>
                     <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-blue-900">Experience</th>
+                    <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-blue-900">Profile</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -295,11 +319,38 @@ export default function ComputerScienceEngineering() {
                           className="w-16 h-20 object-cover rounded mx-auto shadow-sm"
                         />
                       </td>
-                      <td className="border border-gray-300 px-4 py-3 font-medium">{faculty.name}</td>
+                      <td className="border border-gray-300 px-4 py-3 font-medium">
+                        <div>{faculty.name}</div>
+                        {faculty.email && (
+                          <div className="text-xs text-gray-600 mt-1">{faculty.email}</div>
+                        )}
+                        {faculty.phone && (
+                          <div className="text-xs text-gray-600">{faculty.phone}</div>
+                        )}
+                      </td>
                       <td className="border border-gray-300 px-4 py-3">{faculty.designation}</td>
-                      <td className="border border-gray-300 px-4 py-3">{faculty.qualification}</td>
-                      <td className="border border-gray-300 px-4 py-3">{faculty.dateOfJoining}</td>
+                      <td className="border border-gray-300 px-4 py-3">
+                        <div>{faculty.qualification}</div>
+                        {faculty.specialization && (
+                          <div className="text-xs text-gray-600 mt-1">{faculty.specialization}</div>
+                        )}
+                      </td>
                       <td className="border border-gray-300 px-4 py-3">{faculty.experience}</td>
+                      <td className="border border-gray-300 px-4 py-3 text-center">
+                        {faculty.profilePdf ? (
+                          <a
+                            href={faculty.profilePdf}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 px-3 py-1 bg-blue-600 text-white text-xs rounded hover:bg-blue-700 transition-colors"
+                          >
+                            <BookOpen className="h-3 w-3" />
+                            View Profile
+                          </a>
+                        ) : (
+                          <span className="text-gray-400 text-xs">Not Available</span>
+                        )}
+                      </td>
                     </tr>
                   ))}
                 </tbody>
