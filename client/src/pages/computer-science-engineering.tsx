@@ -1,7 +1,8 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Computer, Users, Award, TrendingUp, Building, BookOpen, Target, Lightbulb, Heart, Book } from "lucide-react";
+import { Computer, Users, Award, TrendingUp, Building, BookOpen, Target, Lightbulb, Heart, Book, ChevronLeft, ChevronRight, Briefcase } from "lucide-react";
+import { useState } from "react";
 import csLabImage from "@assets/image_1748548855043.png";
 import shinuKoshyImage from "@assets/image_1748548869170.png";
 import sowmyashreeImage from "@assets/image_1748548879916.png";
@@ -13,8 +14,41 @@ import achievementsImage from "@assets/image_1748548917310.png";
 import departmentActivitiesImage from "@assets/image_1748548923025.png";
 import studentSuccessImage from "@assets/image_1748548933226.png";
 import dcetRankersImage from "@assets/image_1748548940019.png";
+// Industrial visit images
+import csVisitImage1 from "@assets/WhatsApp Image 2024-06-07 at 3.11.28 PM (1)_1749581410979.jpeg";
+import csVisitImage2 from "@assets/WhatsApp Image 2024-06-07 at 3.11.28 PM_1749581414683.jpeg";
+import csVisitImage3 from "@assets/WhatsApp Image 2024-06-07 at 3.11.27 PM_1749581416722.jpeg";
+import csVisitImage4 from "@assets/WhatsApp Image 2024-06-07 at 3.11.26 PM_1749581418764.jpeg";
+import csVisitImage5 from "@assets/WhatsApp Image 2024-06-07 at 3.11.25 PM_1749581420584.jpeg";
+import csVisitImage6 from "@assets/WhatsApp Image 2024-06-07 at 3.11.19 PM_1749581422365.jpeg";
+import csVisitImage7 from "@assets/WhatsApp Image 2024-06-07 at 3.07.53 PM_1749581424005.jpeg";
+import csVisitImage8 from "@assets/WhatsApp Image 2024-06-07 at 3.07.52 PM_1749581425571.jpeg";
+import csVisitImage9 from "@assets/WhatsApp Image 2024-06-07 at 3.07.51 PM (1)_1749581426971.jpeg";
+import csVisitImage10 from "@assets/WhatsApp Image 2024-06-07 at 3.07.51 PM_1749581428559.jpeg";
+import csVisitImage11 from "@assets/WhatsApp Image 2024-06-07 at 3.07.50 PM (1)_1749581430187.jpeg";
+import csVisitImage12 from "@assets/WhatsApp Image 2024-06-07 at 3.07.50 PM_1749581431798.jpeg";
+import csVisitImage13 from "@assets/WhatsApp Image 2024-06-07 at 3.07.49 PM (1)_1749581433459.jpeg";
+import csVisitImage14 from "@assets/WhatsApp Image 2024-06-07 at 3.07.49 PM_1749581435096.jpeg";
+import csVisitImage15 from "@assets/WhatsApp Image 2024-06-07 at 3.07.48 PM (1)_1749581437446.jpeg";
+import csVisitImage16 from "@assets/WhatsApp Image 2024-06-07 at 3.07.48 PM_1749581439045.jpeg";
 
 export default function ComputerScienceEngineering() {
+  const [currentVisitImageIndex, setCurrentVisitImageIndex] = useState(0);
+  
+  const csVisitImages = [
+    csVisitImage1, csVisitImage2, csVisitImage3, csVisitImage4, csVisitImage5, csVisitImage6,
+    csVisitImage7, csVisitImage8, csVisitImage9, csVisitImage10, csVisitImage11, csVisitImage12,
+    csVisitImage13, csVisitImage14, csVisitImage15, csVisitImage16
+  ];
+
+  const nextVisitImage = () => {
+    setCurrentVisitImageIndex((prev) => (prev + 1) % csVisitImages.length);
+  };
+
+  const prevVisitImage = () => {
+    setCurrentVisitImageIndex((prev) => (prev - 1 + csVisitImages.length) % csVisitImages.length);
+  };
+
   const facultyMembers = [
     {
       name: "Shinu Koshy",
@@ -654,6 +688,142 @@ export default function ComputerScienceEngineering() {
             </div>
           </CardContent>
         </Card>
+
+        {/* Computer Science Industrial Visit Section */}
+        <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-16 mt-12 rounded-lg">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-12 text-blue-900">Industrial Visit Program</h2>
+            
+            <div className="max-w-4xl mx-auto mb-8">
+              <Card className="shadow-xl border-0 bg-white/90 backdrop-blur-sm">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2 text-blue-900 text-xl">
+                    <Briefcase className="h-6 w-6" />
+                    Technology & Innovation Exposure
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                    The Computer Science department organizes comprehensive industrial visits to leading technology 
+                    companies and innovation centers, providing students with real-world exposure to cutting-edge 
+                    software development practices, emerging technologies, and industry standards.
+                  </p>
+                  
+                  <div className="grid md:grid-cols-3 gap-6 mb-6">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-blue-600 mb-1">June 2024</div>
+                      <div className="text-gray-600 text-sm">Latest Visit</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-blue-600 mb-1">50+</div>
+                      <div className="text-gray-600 text-sm">Students Participated</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-blue-600 mb-1">100%</div>
+                      <div className="text-gray-600 text-sm">Tech Exposure</div>
+                    </div>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h3 className="font-semibold text-blue-900 mb-3">Visit Objectives</h3>
+                      <ul className="text-sm text-gray-700 space-y-1">
+                        <li>• Explore modern software development environments</li>
+                        <li>• Understand industry-standard coding practices</li>
+                        <li>• Learn about project management methodologies</li>
+                        <li>• Network with industry professionals and alumni</li>
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h3 className="font-semibold text-blue-900 mb-3">Learning Outcomes</h3>
+                      <ul className="text-sm text-gray-700 space-y-1">
+                        <li>• Practical understanding of software engineering</li>
+                        <li>• Knowledge of emerging technologies and trends</li>
+                        <li>• Career guidance and placement opportunities</li>
+                        <li>• Professional communication and teamwork skills</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="mt-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
+                    <p className="text-blue-800 text-sm">
+                      <strong>Highlight:</strong> Students experienced hands-on demonstrations of AI/ML applications, 
+                      cloud computing platforms, and agile development methodologies during their industry interactions.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Image Gallery */}
+            <div className="max-w-5xl mx-auto">
+              <h3 className="text-xl font-semibold text-center mb-6 text-blue-900">Industrial Visit Gallery</h3>
+              
+              {/* Main Image Slider */}
+              <div className="mb-6">
+                <div className="relative">
+                  <img 
+                    src={csVisitImages[currentVisitImageIndex]} 
+                    alt={`CS Industrial Visit - Image ${currentVisitImageIndex + 1}`}
+                    className="w-full h-64 md:h-80 object-cover rounded-lg shadow-xl"
+                  />
+                  
+                  {/* Navigation buttons */}
+                  <button 
+                    onClick={prevVisitImage}
+                    className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-all"
+                  >
+                    <ChevronLeft className="h-5 w-5" />
+                  </button>
+                  
+                  <button 
+                    onClick={nextVisitImage}
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-all"
+                  >
+                    <ChevronRight className="h-5 w-5" />
+                  </button>
+                  
+                  {/* Image counter */}
+                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm">
+                    {currentVisitImageIndex + 1} / {csVisitImages.length}
+                  </div>
+                </div>
+              </div>
+
+              {/* Thumbnail grid - showing 8 thumbnails per row */}
+              <div className="grid grid-cols-4 md:grid-cols-8 gap-2 max-w-4xl mx-auto">
+                {csVisitImages.map((image, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentVisitImageIndex(index)}
+                    className={`relative overflow-hidden rounded-lg aspect-square ${
+                      currentVisitImageIndex === index ? 'ring-2 ring-blue-500' : ''
+                    }`}
+                  >
+                    <img 
+                      src={image} 
+                      alt={`CS visit thumbnail ${index + 1}`}
+                      className="w-full h-full object-cover hover:scale-110 transition-transform"
+                    />
+                  </button>
+                ))}
+              </div>
+
+              <div className="text-center mt-8">
+                <p className="text-gray-600 text-sm mb-4">
+                  Students gained practical insights into software development lifecycle, modern programming 
+                  frameworks, and collaborative development through guided facility tours and interactive sessions.
+                </p>
+                <div className="flex justify-center gap-4">
+                  <Badge className="bg-blue-100 text-blue-800 px-3 py-1">16 Images</Badge>
+                  <Badge className="bg-indigo-100 text-indigo-800 px-3 py-1">Technology Focus</Badge>
+                  <Badge className="bg-purple-100 text-purple-800 px-3 py-1">Career Development</Badge>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
       </div>
     </div>
