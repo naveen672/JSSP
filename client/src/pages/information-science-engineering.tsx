@@ -20,13 +20,24 @@ import isVisitImage6 from "@assets/WhatsApp Image 2024-04-02 at 4.12.24 PM (3)_1
 import isVisitImage7 from "@assets/WhatsApp Image 2024-04-02 at 4.12.24 PM (2)_1749581757402.jpeg";
 import isVisitImage8 from "@assets/WhatsApp Image 2024-04-02 at 4.12.24 PM (1)_1749581758773.jpeg";
 import isVisitImage9 from "@assets/WhatsApp Image 2024-04-02 at 4.12.24 PM_1749581760331.jpeg";
+// ISRO images
+import isroImage1 from "@assets/WhatsApp Image 2025-02-18 at 10.43.38 AM (1)_1749581917681.jpeg";
+import isroImage2 from "@assets/WhatsApp Image 2025-02-18 at 10.43.38 AM_1749581919097.jpeg";
+import isroImage3 from "@assets/WhatsApp Image 2025-02-17 at 3.39.35 PM_1749581920338.jpeg";
+import isroImage4 from "@assets/WhatsApp Image 2025-02-17 at 3.39.34 PM_1749581921497.jpeg";
+import isroImage5 from "@assets/WhatsApp Image 2025-02-17 at 3.39.33 PM_1749581922928.jpeg";
 
 export default function InformationScienceEngineering() {
   const [currentVisitImageIndex, setCurrentVisitImageIndex] = useState(0);
+  const [currentIsroImageIndex, setCurrentIsroImageIndex] = useState(0);
   
   const visitImages = [
     isVisitImage1, isVisitImage2, isVisitImage3, isVisitImage4, isVisitImage5,
     isVisitImage6, isVisitImage7, isVisitImage8, isVisitImage9
+  ];
+
+  const isroImages = [
+    isroImage1, isroImage2, isroImage3, isroImage4, isroImage5
   ];
 
   const nextVisitImage = () => {
@@ -35,6 +46,14 @@ export default function InformationScienceEngineering() {
 
   const prevVisitImage = () => {
     setCurrentVisitImageIndex((prev) => (prev - 1 + visitImages.length) % visitImages.length);
+  };
+
+  const nextIsroImage = () => {
+    setCurrentIsroImageIndex((prev) => (prev + 1) % isroImages.length);
+  };
+
+  const prevIsroImage = () => {
+    setCurrentIsroImageIndex((prev) => (prev - 1 + isroImages.length) % isroImages.length);
   };
 
   const teachingFaculty = [
@@ -598,6 +617,141 @@ export default function InformationScienceEngineering() {
               </p>
               <Button className="bg-blue-600 hover:bg-blue-700 text-white">
                 Explore IS Department Programs
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ISRO Collaboration Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">ISRO Collaboration Program</h2>
+          
+          <div className="max-w-4xl mx-auto mb-8">
+            <Card className="shadow-lg">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-blue-900">
+                  <Target className="h-6 w-6" />
+                  Space Technology & Research Collaboration
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  The Information Science & Engineering department has established a prestigious collaboration 
+                  with the Indian Space Research Organisation (ISRO) to provide students with exposure to 
+                  cutting-edge space technology, satellite communication systems, and advanced research opportunities.
+                </p>
+                
+                <div className="grid md:grid-cols-3 gap-6 mb-6">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-orange-600 mb-1">Feb 2025</div>
+                    <div className="text-gray-600 text-sm">Latest Program</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-orange-600 mb-1">50+</div>
+                    <div className="text-gray-600 text-sm">Students Participated</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-orange-600 mb-1">100%</div>
+                    <div className="text-gray-600 text-sm">Research Excellence</div>
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h3 className="font-semibold text-blue-900 mb-3">Program Highlights</h3>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Advanced satellite communication technologies</li>
+                      <li>• Space mission planning and execution methodologies</li>
+                      <li>• Data processing and analysis for space applications</li>
+                      <li>• Research collaboration on space technology projects</li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h3 className="font-semibold text-blue-900 mb-3">Learning Outcomes</h3>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Understanding of space technology applications</li>
+                      <li>• Knowledge of satellite systems and ground stations</li>
+                      <li>• Research methodology in space science</li>
+                      <li>• Career opportunities in aerospace industry</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="mt-6 bg-orange-50 border border-orange-200 rounded-lg p-4">
+                  <p className="text-orange-800 text-sm">
+                    <strong>Achievement:</strong> This collaboration positions JSS Polytechnic as one of the 
+                    leading institutions providing hands-on experience in space technology and satellite 
+                    communication systems to diploma students.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* ISRO Image Gallery */}
+          <div className="max-w-5xl mx-auto">
+            <h3 className="text-xl font-semibold text-center mb-6">ISRO Program Gallery</h3>
+            
+            {/* Main Image Slider */}
+            <div className="mb-6">
+              <div className="relative">
+                <img 
+                  src={isroImages[currentIsroImageIndex]} 
+                  alt={`ISRO Program - Image ${currentIsroImageIndex + 1}`}
+                  className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
+                />
+                
+                {/* Navigation buttons */}
+                <button 
+                  onClick={prevIsroImage}
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-all"
+                >
+                  <ChevronLeft className="h-5 w-5" />
+                </button>
+                
+                <button 
+                  onClick={nextIsroImage}
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-all"
+                >
+                  <ChevronRight className="h-5 w-5" />
+                </button>
+                
+                {/* Image counter */}
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm">
+                  {currentIsroImageIndex + 1} / {isroImages.length}
+                </div>
+              </div>
+            </div>
+
+            {/* Thumbnail grid */}
+            <div className="grid grid-cols-5 gap-2 max-w-2xl mx-auto">
+              {isroImages.map((image, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIsroImageIndex(index)}
+                  className={`relative overflow-hidden rounded-lg aspect-square ${
+                    currentIsroImageIndex === index ? 'ring-2 ring-orange-500' : ''
+                  }`}
+                >
+                  <img 
+                    src={image} 
+                    alt={`ISRO thumbnail ${index + 1}`}
+                    className="w-full h-full object-cover hover:scale-110 transition-transform"
+                  />
+                </button>
+              ))}
+            </div>
+
+            <div className="text-center mt-8">
+              <p className="text-gray-600 text-sm mb-4">
+                Students gained unprecedented exposure to space technology and research methodologies 
+                through direct collaboration with ISRO scientists and engineers.
+              </p>
+              <Button className="bg-orange-600 hover:bg-orange-700 text-white">
+                Learn More About ISRO Collaboration
               </Button>
             </div>
           </div>
