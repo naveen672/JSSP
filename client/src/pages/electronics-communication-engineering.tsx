@@ -1,7 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { GraduationCap, Users, Award, Building2, Target, Eye, Book, UserCheck, Calendar, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { GraduationCap, Users, Award, Building2, Target, Eye, Book, UserCheck, Calendar, MapPin, Building, BookOpen, Mail, Phone } from "lucide-react";
 import ecLabImage from "@assets/image_1748550425145.png";
 import drAshaKulkarniImage from "@assets/image_1748550430744.png";
 import niranjanamurthyImage from "@assets/image_1748550435055.png";
@@ -180,9 +181,9 @@ export default function ElectronicsCommunicationEngineering() {
       <div className="container mx-auto px-4 py-12">
         {/* Vision and Mission */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <Card className="border-l-4 border-l-blue-600">
+          <Card className="border-l-4 border-l-blue-600 shadow-lg">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-blue-800">
+              <CardTitle className="flex items-center gap-2 text-blue-900">
                 <Eye className="h-6 w-6" />
                 Vision
               </CardTitle>
@@ -195,328 +196,278 @@ export default function ElectronicsCommunicationEngineering() {
             </CardContent>
           </Card>
 
-          <Card className="border-l-4 border-l-indigo-600">
+          <Card className="border-l-4 border-l-indigo-600 shadow-lg">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-indigo-800">
+              <CardTitle className="flex items-center gap-2 text-blue-900">
                 <Target className="h-6 w-6" />
                 Mission
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <ul className="space-y-3 text-gray-700">
+              <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start gap-2">
-                  <span className="font-semibold text-indigo-600">M1:</span>
-                  <span>Imparting quality technical education to the students by providing excellent teaching.</span>
+                  <span className="w-2 h-2 bg-indigo-600 rounded-full mt-2 flex-shrink-0"></span>
+                  To develop efficient Electronics and Communication Engineering professionals
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="font-semibold text-indigo-600">M2:</span>
-                  <span>Establishing Industry institute interaction to make students ready for the industrial environment.</span>
+                  <span className="w-2 h-2 bg-indigo-600 rounded-full mt-2 flex-shrink-0"></span>
+                  To serve competently in the industrial and societal environment
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="font-semibold text-indigo-600">M3:</span>
-                  <span>Inculcating ethical values and leadership abilities in the students so as to work towards the growth of the society.</span>
+                  <span className="w-2 h-2 bg-indigo-600 rounded-full mt-2 flex-shrink-0"></span>
+                  To provide quality education in emerging technologies
                 </li>
               </ul>
             </CardContent>
           </Card>
         </div>
 
-        {/* Program Educational Objectives */}
-        <Card className="mb-12">
+        {/* Department Laboratory */}
+        <Card className="mb-12 shadow-lg">
           <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-blue-800">
-              <Book className="h-6 w-6" />
-              Program Educational Objectives
+            <CardTitle className="flex items-center gap-2 text-blue-900">
+              <Building className="h-6 w-6" />
+              Electronics & Communication Laboratory
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="grid gap-4">
-              <div className="flex items-start gap-3 p-4 bg-blue-50 rounded-lg">
-                <span className="font-bold text-blue-600 text-lg">1</span>
-                <p className="text-gray-700">
-                  Demonstrate, update and adapt domain knowledge in the area of Electronics and Communication Engineering 
-                  and the allied fields to propose solutions for the core industry in the ever changing global enterprise 
-                  with ethical practices.
-                </p>
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <img 
+                  src={ecLabImage} 
+                  alt="Electronics & Communication Laboratory with advanced equipment"
+                  className="w-full h-64 object-cover rounded-lg shadow-md"
+                />
               </div>
-              <div className="flex items-start gap-3 p-4 bg-indigo-50 rounded-lg">
-                <span className="font-bold text-indigo-600 text-lg">2</span>
-                <p className="text-gray-700">
-                  Assume leadership roles and succeed in their chosen career path, in industry or public service through 
-                  engineering ability, life skills and multidisciplinary skill set acquired.
+              <div>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  Our advanced Electronics & Communication laboratory is equipped with cutting-edge instruments 
+                  and measurement devices that support comprehensive curriculum requirements. The lab provides 
+                  hands-on experience with modern electronics and communication systems.
                 </p>
-              </div>
-              <div className="flex items-start gap-3 p-4 bg-purple-50 rounded-lg">
-                <span className="font-bold text-purple-600 text-lg">3</span>
-                <p className="text-gray-700">
-                  Pursue higher education institutes of national level.
-                </p>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
+                    Advanced electronic measurement instruments
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
+                    Communication systems training kits
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
+                    Microprocessor and embedded systems lab
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
+                    Digital and analog circuit design facilities
+                  </li>
+                </ul>
               </div>
             </div>
           </CardContent>
         </Card>
 
-        {/* HOD's Message */}
-        <Card className="mb-12 bg-gradient-to-r from-blue-50 to-indigo-50">
+        {/* HOD Message */}
+        <Card className="mb-12 shadow-lg">
           <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-blue-800">
-              <UserCheck className="h-6 w-6" />
+            <CardTitle className="flex items-center gap-2 text-blue-900">
+              <Users className="h-6 w-6" />
               From HOD's Desk
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
-              <p>
-                The Electronics & Communication Engineering Department was established in year 1987, recognized by DTE, 
-                Bengaluru and affiliated to AICTE, New Delhi. The current intake is 60 students.
-              </p>
-              <p>
-                The department has modern, well-equipped Laboratories with adequate facilities, with high end electronic gadgets.
-              </p>
-              <p>
-                It is committed to provide students with an environment for overall development.
-              </p>
-              <p>
-                The department has consistent academic record and also provides excellent career opportunities in various 
-                sectors, through placement.
-              </p>
-              <p>
-                Many students are serving at reputed organizations like <span className="font-semibold text-blue-600">
-                ABB, Werth Electronics, AT&S, L&T Infotech</span> and those who are pursuing higher studies are studying 
-                in prestigious Engineering colleges, like <span className="font-semibold text-indigo-600">
-                PESIT, SJCE, NIE</span>.
-              </p>
-              <p>
-                Staff and students are provided with unlimited free internet access at e-Library during spare time, 
-                so that they can develop and enhance their knowledge acquired in class rooms.
-              </p>
+            <div className="grid md:grid-cols-4 gap-6 items-start">
+              <div className="text-center">
+                <img 
+                  src={drAshaKulkarniImage} 
+                  alt="Dr. Asha Kulkarni - Head of Department"
+                  className="w-32 h-40 object-cover rounded-lg shadow-md mx-auto mb-4"
+                />
+                <h3 className="font-semibold text-blue-900">Dr. Asha Kulkarni</h3>
+                <p className="text-sm text-gray-600">Head of Department</p>
+                <p className="text-sm text-gray-600">PhD, 27+ years experience</p>
+              </div>
+              <div className="md:col-span-3">
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  The Department of Electronics & Communication Engineering (ECE) was established in 1987. 
+                  It is recognized by DTE, Bengaluru and affiliated to AICTE, New Delhi. The current intake of students is 60. 
+                  The department has well-equipped laboratories with modern instruments and training kits.
+                </p>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  Our graduates excel in higher education, with many securing top ranks in DCET and pursuing 
+                  studies in prestigious engineering colleges. The department maintains strong industry connections 
+                  and focuses on practical learning through hands-on laboratory experiences.
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                  We are committed to developing competent professionals who can contribute effectively to the 
+                  rapidly evolving electronics and communication industry. Our faculty members are dedicated 
+                  to providing quality education and mentoring students for successful careers.
+                </p>
+              </div>
             </div>
           </CardContent>
         </Card>
 
-        {/* Faculty Section */}
-        <Card className="mb-12">
+        {/* Faculty Profiles Section */}
+        <Card className="mb-12 shadow-lg">
           <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-blue-800">
+            <CardTitle className="flex items-center gap-2 text-blue-900">
               <Users className="h-6 w-6" />
-              Faculty Members
+              Faculty Profiles - Electronics & Communication Engineering
             </CardTitle>
+            <p className="text-gray-600 mt-2">Click on "View Profile" to access detailed faculty information and achievements</p>
           </CardHeader>
           <CardContent>
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse border border-gray-300">
-                <thead>
-                  <tr className="bg-blue-600 text-white">
-                    <th className="border border-gray-300 px-4 py-3 text-left">SL No.</th>
-                    <th className="border border-gray-300 px-4 py-3 text-left">Image</th>
-                    <th className="border border-gray-300 px-4 py-3 text-left">Name</th>
-                    <th className="border border-gray-300 px-4 py-3 text-left">Designation</th>
-                    <th className="border border-gray-300 px-4 py-3 text-left">Qualification</th>
-                    <th className="border border-gray-300 px-4 py-3 text-left">Date of Joining</th>
-                    <th className="border border-gray-300 px-4 py-3 text-left">Profile</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {facultyMembers.map((faculty, index) => (
-                    <tr key={faculty.id} className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}>
-                      <td className="border border-gray-300 px-4 py-3 font-medium">{faculty.id}</td>
-                      <td className="border border-gray-300 px-4 py-3">
-                        {faculty.image ? (
-                          <img 
-                            src={faculty.image} 
-                            alt={faculty.name}
-                            className="w-16 h-20 object-cover rounded border"
-                          />
-                        ) : (
-                          <div className="w-16 h-20 bg-gray-200 rounded border flex items-center justify-center text-xs text-gray-500">
-                            No Image
-                          </div>
-                        )}
-                      </td>
-                      <td className="border border-gray-300 px-4 py-3 font-medium text-blue-800">{faculty.name}</td>
-                      <td className="border border-gray-300 px-4 py-3">{faculty.designation}</td>
-                      <td className="border border-gray-300 px-4 py-3">{faculty.qualification}</td>
-                      <td className="border border-gray-300 px-4 py-3">{faculty.dateOfJoining}</td>
-                      <td className="border border-gray-300 px-4 py-3">
-                        {faculty.hasProfile && (
-                          <span className="text-blue-600 hover:underline cursor-pointer">click here to view</span>
-                        )}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+              {facultyMembers.map((faculty, index) => (
+                <Card key={index} className="hover:shadow-lg transition-shadow">
+                  <CardContent className="p-6">
+                    <div className="text-center mb-4">
+                      <img 
+                        src={faculty.image || "/api/placeholder/150/180"} 
+                        alt={faculty.name}
+                        className="w-24 h-28 object-cover rounded-lg mx-auto shadow-md mb-3"
+                      />
+                      <h3 className="font-bold text-lg text-gray-800">{faculty.name}</h3>
+                      <p className="text-blue-600 font-medium">{faculty.designation}</p>
+                    </div>
+                    
+                    <div className="space-y-2 text-sm">
+                      <div>
+                        <span className="font-medium text-gray-700">Qualification:</span>
+                        <span className="text-gray-600 ml-1">{faculty.qualification}</span>
+                      </div>
+                      <div>
+                        <span className="font-medium text-gray-700">Experience:</span>
+                        <span className="text-gray-600 ml-1">{faculty.experience}</span>
+                      </div>
+                      {faculty.specialization && (
+                        <div>
+                          <span className="font-medium text-gray-700">Specialization:</span>
+                          <span className="text-gray-600 ml-1 text-xs">{faculty.specialization}</span>
+                        </div>
+                      )}
+                      {faculty.email && (
+                        <div>
+                          <span className="font-medium text-gray-700">Email:</span>
+                          <span className="text-gray-600 ml-1 text-xs">{faculty.email}</span>
+                        </div>
+                      )}
+                      {faculty.phone && (
+                        <div>
+                          <span className="font-medium text-gray-700">Phone:</span>
+                          <span className="text-gray-600 ml-1">{faculty.phone}</span>
+                        </div>
+                      )}
+                    </div>
+                    
+                    {faculty.profilePdf && (
+                      <div className="mt-4 text-center">
+                        <a
+                          href={faculty.profilePdf}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors shadow-md"
+                        >
+                          <BookOpen className="h-4 w-4" />
+                          View Profile
+                        </a>
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
+              ))}
             </div>
-            <p className="text-sm text-gray-600 mt-4 italic">
-              Note: All Employees nature of association is regular
-            </p>
+
+            {/* Faculty Summary Table */}
+            <div className="bg-gray-50 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">Faculty Summary</h3>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b border-gray-300">
+                      <th className="text-left py-2 font-medium text-gray-700">Name</th>
+                      <th className="text-left py-2 font-medium text-gray-700">Designation</th>
+                      <th className="text-left py-2 font-medium text-gray-700">Qualification</th>
+                      <th className="text-left py-2 font-medium text-gray-700">Experience</th>
+                      <th className="text-left py-2 font-medium text-gray-700">Joining Date</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {facultyMembers.map((faculty, index) => (
+                      <tr key={index} className="border-b border-gray-200">
+                        <td className="py-2 text-gray-800">{faculty.name}</td>
+                        <td className="py-2 text-gray-600">{faculty.designation}</td>
+                        <td className="py-2 text-gray-600">{faculty.qualification}</td>
+                        <td className="py-2 text-gray-600">{faculty.experience}</td>
+                        <td className="py-2 text-gray-600">{faculty.dateOfJoining}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </CardContent>
         </Card>
 
-        {/* Supporting Staff */}
-        <Card className="mb-12">
+        {/* Supporting Staff Section */}
+        <Card className="mb-12 shadow-lg">
           <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-blue-800">
-              <Building2 className="h-6 w-6" />
+            <CardTitle className="flex items-center gap-2 text-blue-900">
+              <UserCheck className="h-6 w-6" />
               Supporting Staff
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse border border-gray-300">
-                <thead>
-                  <tr className="bg-indigo-600 text-white">
-                    <th className="border border-gray-300 px-4 py-3 text-left">SL No.</th>
-                    <th className="border border-gray-300 px-4 py-3 text-left">Image</th>
-                    <th className="border border-gray-300 px-4 py-3 text-left">Name</th>
-                    <th className="border border-gray-300 px-4 py-3 text-left">Designation</th>
-                    <th className="border border-gray-300 px-4 py-3 text-left">Qualification</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {supportingStaff.map((staff, index) => (
-                    <tr key={staff.id} className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}>
-                      <td className="border border-gray-300 px-4 py-3 font-medium">{staff.id}</td>
-                      <td className="border border-gray-300 px-4 py-3">
-                        {staff.image ? (
-                          <img 
-                            src={staff.image} 
-                            alt={staff.name}
-                            className="w-16 h-20 object-cover rounded border"
-                          />
-                        ) : (
-                          <div className="w-16 h-20 bg-gray-200 rounded border flex items-center justify-center text-xs text-gray-500">
-                            No Image
-                          </div>
-                        )}
-                      </td>
-                      <td className="border border-gray-300 px-4 py-3 font-medium text-indigo-800">{staff.name}</td>
-                      <td className="border border-gray-300 px-4 py-3">{staff.designation}</td>
-                      <td className="border border-gray-300 px-4 py-3">{staff.qualification}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {supportingStaff.map((staff, index) => (
+                <Card key={index} className="hover:shadow-md transition-shadow">
+                  <CardContent className="p-4">
+                    <div className="text-center">
+                      <img 
+                        src={staff.image || "/api/placeholder/100/120"} 
+                        alt={staff.name}
+                        className="w-16 h-20 object-cover rounded-lg mx-auto shadow-sm mb-3"
+                      />
+                      <h3 className="font-semibold text-gray-800">{staff.name}</h3>
+                      <p className="text-blue-600 text-sm">{staff.designation}</p>
+                      <p className="text-gray-600 text-xs">{staff.qualification}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </CardContent>
         </Card>
 
-        {/* Department Highlights */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          <Card className="text-center p-6 bg-gradient-to-br from-blue-500 to-blue-600 text-white">
-            <Calendar className="h-12 w-12 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold mb-2">36+</h3>
-            <p>Years of Excellence</p>
+        {/* Department Statistics */}
+        <div className="grid md:grid-cols-4 gap-6">
+          <Card className="text-center shadow-lg">
+            <CardContent className="p-6">
+              <div className="text-3xl font-bold text-blue-600 mb-2">60</div>
+              <div className="text-gray-600">Student Intake</div>
+            </CardContent>
           </Card>
-          
-          <Card className="text-center p-6 bg-gradient-to-br from-indigo-500 to-indigo-600 text-white">
-            <Users className="h-12 w-12 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold mb-2">60</h3>
-            <p>Annual Intake</p>
+          <Card className="text-center shadow-lg">
+            <CardContent className="p-6">
+              <div className="text-3xl font-bold text-green-600 mb-2">6</div>
+              <div className="text-gray-600">Faculty Members</div>
+            </CardContent>
           </Card>
-          
-          <Card className="text-center p-6 bg-gradient-to-br from-purple-500 to-purple-600 text-white">
-            <Award className="h-12 w-12 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold mb-2">100%</h3>
-            <p>Placement Success</p>
+          <Card className="text-center shadow-lg">
+            <CardContent className="p-6">
+              <div className="text-3xl font-bold text-purple-600 mb-2">5</div>
+              <div className="text-gray-600">Support Staff</div>
+            </CardContent>
+          </Card>
+          <Card className="text-center shadow-lg">
+            <CardContent className="p-6">
+              <div className="text-3xl font-bold text-orange-600 mb-2">37+</div>
+              <div className="text-gray-600">Years of Excellence</div>
+            </CardContent>
           </Card>
         </div>
-
-        {/* Industry Partners */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-blue-800">
-              <Building2 className="h-6 w-6" />
-              Industry Partners & Higher Education
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="font-semibold text-indigo-600 mb-3">Placement Partners</h3>
-                <div className="flex flex-wrap gap-2">
-                  {["ABB", "Werth Electronics", "AT&S", "L&T Infotech"].map((company) => (
-                    <Badge key={company} variant="outline" className="bg-blue-50 text-blue-700 border-blue-200">
-                      {company}
-                    </Badge>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <h3 className="font-semibold text-purple-600 mb-3">Higher Education Institutes</h3>
-                <div className="flex flex-wrap gap-2">
-                  {["PESIT", "SJCE", "NIE"].map((institute) => (
-                    <Badge key={institute} variant="outline" className="bg-purple-50 text-purple-700 border-purple-200">
-                      {institute}
-                    </Badge>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-        {/* Curriculum Structure */}
-        <Card className="mt-12">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-blue-800">
-              <Book className="h-6 w-6" />
-              Curriculum Structure & Syllabus
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid md:grid-cols-3 gap-6 mb-6">
-              <Card className="text-center p-4 bg-gradient-to-br from-blue-500 to-blue-600 text-white">
-                <h3 className="text-lg font-bold mb-2">1st Year</h3>
-                <p className="text-sm">Foundation Courses</p>
-                <a 
-                  href="/attached_assets/EC 1st year.pdf" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-block mt-2 px-3 py-1 bg-white text-blue-600 rounded text-sm hover:bg-blue-50"
-                >
-                  View Syllabus
-                </a>
-              </Card>
-              
-              <Card className="text-center p-4 bg-gradient-to-br from-indigo-500 to-indigo-600 text-white">
-                <h3 className="text-lg font-bold mb-2">2nd Year</h3>
-                <p className="text-sm">Core Electronics</p>
-                <a 
-                  href="/attached_assets/EC 2nd year.pdf" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-block mt-2 px-3 py-1 bg-white text-indigo-600 rounded text-sm hover:bg-indigo-50"
-                >
-                  View Syllabus
-                </a>
-              </Card>
-              
-              <Card className="text-center p-4 bg-gradient-to-br from-purple-500 to-purple-600 text-white">
-                <h3 className="text-lg font-bold mb-2">3rd Year</h3>
-                <p className="text-sm">Communication Systems</p>
-                <a 
-                  href="/attached_assets/EC 3rd year.pdf" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-block mt-2 px-3 py-1 bg-white text-purple-600 rounded text-sm hover:bg-purple-50"
-                >
-                  View Syllabus
-                </a>
-              </Card>
-            </div>
-            
-            <div className="bg-blue-50 p-4 rounded-lg">
-              <h3 className="font-semibold text-blue-800 mb-2">Program Educational Objectives</h3>
-              <ul className="text-sm text-gray-700 space-y-1">
-                <li>• Demonstrate, update and adapt domain knowledge in Electronics and Communication Engineering</li>
-                <li>• Assume leadership roles and succeed in chosen career path in industry or public service</li>
-                <li>• Pursue higher education institutes of national level</li>
-                <li>• Apply ethical practices in the ever changing global enterprise</li>
-              </ul>
-            </div>
-          </CardContent>
-        </Card>
-
       </div>
     </div>
   );
