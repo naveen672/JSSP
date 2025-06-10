@@ -108,8 +108,13 @@ export default function Header() {
               <img src={jssLogo1} alt="JSS Logo 1" className="w-full h-full object-cover" />
             </div>
             <div className="text-center">
+              <p className="text-xs text-gray-500 mb-1">JSS MAHAVIDYAPEETHA</p>
               <h1 className="text-2xl font-bold text-primary">JSS POLYTECHNIC</h1>
-              <p className="text-sm text-gray-600">Mysore</p>
+              <div className="text-xs text-gray-600 mt-1 leading-tight">
+                <p>JSS Technical Institutions' Campus, Mysuru - 570006.</p>
+                <p>(Approved by Government of Karnataka & A.I.C.T.E. New Delhi)</p>
+                <p>Phone: 0821 - 2548318 , E-mail: jssp418@yahoo.co.in</p>
+              </div>
             </div>
             <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-primary">
               <img src={jssLogo2} alt="JSS Logo 2" className="w-full h-full object-cover" />
