@@ -1,7 +1,8 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Zap, Users, Award, TrendingUp, Wrench, BookOpen, Target, Lightbulb, Heart } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Zap, Users, Award, TrendingUp, Wrench, BookOpen, Target, Lightbulb, Heart, Building, UserCheck, Eye, Phone, Mail } from "lucide-react";
 import eeLabImage from "@assets/image_1748550277173.png";
 import prathibhaImage from "@assets/image_1748550345818.png";
 import sadhanaImage from "@assets/image_1748550350454.png";
@@ -17,52 +18,88 @@ import madhusudhanImage from "@assets/image_1749574066759.png";
 export default function ElectricalElectronicsEngineering() {
   const facultyMembers = [
     {
-      name: "Prathibha B",
+      id: 1,
+      name: "Prathibha D",
       designation: "HOD",
-      qualification: "MTech",
-      dateOfJoining: "01-01-2009",
+      qualification: "BE, MTech",
+      dateOfJoining: "Data not available",
+      experience: "16+ years Teaching",
+      phone: "Contact department",
+      email: "Contact department",
+      profilePdf: "/attached_assets/prathibha maam_1749579518162.pdf",
+      specialization: "Power Electronics, Digital Electronics, Embedded Systems",
       image: prathibhaImage,
-      experience: "15+ years"
+      hasProfile: true
     },
     {
-      name: "Sadhana M.V",
+      id: 2,
+      name: "Sadhana M V",
       designation: "Lecturer",
-      qualification: "MTech",
-      dateOfJoining: "01-01-2010",
+      qualification: "BE, MTech",
+      dateOfJoining: "Data not available",
+      experience: "14+ years Teaching",
+      phone: "Contact department",
+      email: "Contact department",
+      profilePdf: "/attached_assets/sadhana maam_1749579518162.pdf",
+      specialization: "Power Electronics, Analog & Digital Electronics, Power Systems",
       image: sadhanaImage,
-      experience: "14+ years"
+      hasProfile: true
     },
     {
+      id: 3,
       name: "Sneha S",
-      designation: "Lecturer", 
-      qualification: "MTech",
-      dateOfJoining: "29/7/2010",
-      image: snehaImage,
-      experience: "13+ years"
-    },
-    {
-      name: "Shwetha M.P",
       designation: "Lecturer",
-      qualification: "MTech",
-      dateOfJoining: "28/2/2011",
-      image: shwethaImage,
-      experience: "12+ years"
+      qualification: "BE, MTech",
+      dateOfJoining: "Data not available",
+      experience: "14+ years Teaching",
+      phone: "Contact department",
+      email: "Contact department",
+      profilePdf: "/attached_assets/sneha maam_1749579518162.pdf",
+      specialization: "DC Machines, Transformers, Transmission & Distribution",
+      image: snehaImage,
+      hasProfile: true
     },
     {
-      name: "Vidya",
+      id: 4,
+      name: "Shwetha M P",
+      designation: "Lecturer",
+      qualification: "BE, MTech",
+      dateOfJoining: "Data not available",
+      experience: "13+ years Teaching",
+      phone: "Contact department",
+      email: "Contact department",
+      profilePdf: "/attached_assets/shwetha M P_1749579518162.pdf",
+      specialization: "Electrical Circuits, Power Generation, Communication Networks",
+      image: shwethaImage,
+      hasProfile: true
+    },
+    {
+      id: 5,
+      name: "Vidya S K",
       designation: "Lecturer",
       qualification: "BE",
-      dateOfJoining: "01-10-2023",
+      dateOfJoining: "Data not available",
+      experience: "9+ years Teaching",
+      phone: "Contact department",
+      email: "Contact department",
+      profilePdf: "/attached_assets/vidya_1749579518161.pdf",
+      specialization: "Power Electronics, Industrial Drives, Transmission & Distribution",
       image: vidyaImage,
-      experience: "Fresh Graduate"
+      hasProfile: true
     },
     {
+      id: 6,
       name: "Ashwini",
       designation: "Lecturer",
       qualification: "BE",
-      dateOfJoining: "22-07-2011",
+      dateOfJoining: "22/07/2011",
+      experience: "12+ years Teaching",
+      phone: "Contact department",
+      email: "Contact department",
+      profilePdf: null,
+      specialization: "Electrical Engineering",
       image: ashwiniImage,
-      experience: "12+ years"
+      hasProfile: false
     }
   ];
 
@@ -286,49 +323,112 @@ export default function ElectricalElectronicsEngineering() {
           </CardContent>
         </Card>
 
-        {/* Teaching Faculty */}
+        {/* Faculty Profiles Section */}
         <Card className="mb-12 shadow-lg">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-blue-900">
               <Users className="h-6 w-6" />
-              List of Teaching Faculty
+              Faculty Profiles - Electrical & Electronics Engineering
             </CardTitle>
-            <p className="text-gray-600 mt-2">Well qualified and experienced teaching faculty</p>
+            <p className="text-gray-600 mt-2">Click on "View Profile" to access detailed faculty information and achievements</p>
           </CardHeader>
           <CardContent>
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse">
-                <thead>
-                  <tr className="bg-blue-50">
-                    <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-blue-900">Sl No</th>
-                    <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-blue-900">Image</th>
-                    <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-blue-900">Name</th>
-                    <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-blue-900">Designation</th>
-                    <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-blue-900">Qualification</th>
-                    <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-blue-900">Date of Joining</th>
-                    <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-blue-900">Experience</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {facultyMembers.map((faculty, index) => (
-                    <tr key={index} className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}>
-                      <td className="border border-gray-300 px-4 py-3 text-center">{index + 1}</td>
-                      <td className="border border-gray-300 px-4 py-3 text-center">
-                        <img 
-                          src={faculty.image} 
-                          alt={faculty.name}
-                          className="w-16 h-20 object-cover rounded mx-auto shadow-sm"
-                        />
-                      </td>
-                      <td className="border border-gray-300 px-4 py-3 font-medium">{faculty.name}</td>
-                      <td className="border border-gray-300 px-4 py-3">{faculty.designation}</td>
-                      <td className="border border-gray-300 px-4 py-3">{faculty.qualification}</td>
-                      <td className="border border-gray-300 px-4 py-3">{faculty.dateOfJoining}</td>
-                      <td className="border border-gray-300 px-4 py-3">{faculty.experience}</td>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+              {facultyMembers.map((faculty, index) => (
+                <Card key={index} className="hover:shadow-lg transition-shadow">
+                  <CardContent className="p-6">
+                    <div className="text-center mb-4">
+                      <img 
+                        src={faculty.image || "/api/placeholder/150/180"} 
+                        alt={faculty.name}
+                        className="w-24 h-28 object-cover rounded-lg mx-auto shadow-md mb-3"
+                      />
+                      <h3 className="font-bold text-lg text-gray-800">{faculty.name}</h3>
+                      <p className="text-blue-600 font-medium">{faculty.designation}</p>
+                    </div>
+                    
+                    <div className="space-y-2 text-sm">
+                      <div>
+                        <span className="font-medium text-gray-700">Qualification:</span>
+                        <span className="text-gray-600 ml-1">{faculty.qualification}</span>
+                      </div>
+                      <div>
+                        <span className="font-medium text-gray-700">Experience:</span>
+                        <span className="text-gray-600 ml-1">{faculty.experience}</span>
+                      </div>
+                      {faculty.specialization && (
+                        <div>
+                          <span className="font-medium text-gray-700">Specialization:</span>
+                          <span className="text-gray-600 ml-1 text-xs">{faculty.specialization}</span>
+                        </div>
+                      )}
+                      {faculty.email && (
+                        <div>
+                          <span className="font-medium text-gray-700">Email:</span>
+                          <span className="text-gray-600 ml-1 text-xs">{faculty.email}</span>
+                        </div>
+                      )}
+                      {faculty.phone && (
+                        <div>
+                          <span className="font-medium text-gray-700">Phone:</span>
+                          <span className="text-gray-600 ml-1">{faculty.phone}</span>
+                        </div>
+                      )}
+                    </div>
+                    
+                    <div className="mt-4 text-center">
+                      {faculty.profilePdf ? (
+                        <a
+                          href={faculty.profilePdf}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors shadow-md"
+                        >
+                          <BookOpen className="h-4 w-4" />
+                          View Profile
+                        </a>
+                      ) : (
+                        <Button
+                          disabled
+                          className="inline-flex items-center gap-2 px-4 py-2 bg-gray-400 text-white text-sm rounded-lg cursor-not-allowed"
+                        >
+                          <BookOpen className="h-4 w-4" />
+                          Profile Coming Soon
+                        </Button>
+                      )}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            {/* Faculty Summary Table */}
+            <div className="bg-gray-50 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">Faculty Summary</h3>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b border-gray-300">
+                      <th className="text-left py-2 font-medium text-gray-700">Name</th>
+                      <th className="text-left py-2 font-medium text-gray-700">Designation</th>
+                      <th className="text-left py-2 font-medium text-gray-700">Qualification</th>
+                      <th className="text-left py-2 font-medium text-gray-700">Experience</th>
+                      <th className="text-left py-2 font-medium text-gray-700">Joining Date</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {facultyMembers.map((faculty, index) => (
+                      <tr key={index} className="border-b border-gray-200">
+                        <td className="py-2 text-gray-800">{faculty.name}</td>
+                        <td className="py-2 text-gray-600">{faculty.designation}</td>
+                        <td className="py-2 text-gray-600">{faculty.qualification}</td>
+                        <td className="py-2 text-gray-600">{faculty.experience}</td>
+                        <td className="py-2 text-gray-600">{faculty.dateOfJoining}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </CardContent>
         </Card>
