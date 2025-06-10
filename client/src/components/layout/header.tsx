@@ -139,6 +139,7 @@ export default function Header() {
                   <DropdownLink href="/about" icon={Users}>Leadership Team</DropdownLink>
                   <DropdownLink href="/messages" icon={FileText}>Messages</DropdownLink>
                   <DropdownLink href="/governance" icon={Shield}>Governance</DropdownLink>
+                  <DropdownLink href="/office-staff" icon={Users}>Office Staff</DropdownLink>
                   <DropdownLink href="/aicte-eoa" icon={Award}>All India Council for Technical Education (AICTE) and EOA</DropdownLink>
                   <DropdownLink href="/nba" icon={Trophy}>NBA</DropdownLink>
                   <DropdownLink href="/iqac" icon={UserCheck}>Internal Quality Assurance Cell (IQAC)</DropdownLink>
