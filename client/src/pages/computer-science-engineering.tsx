@@ -285,12 +285,92 @@ export default function ComputerScienceEngineering() {
           </CardContent>
         </Card>
 
-        {/* Faculty Members */}
+        {/* Faculty Profiles Section */}
         <Card className="mb-12 shadow-lg">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-blue-900">
               <Users className="h-6 w-6" />
-              Teaching Faculty
+              Faculty Profiles - Computer Science & Engineering
+            </CardTitle>
+            <p className="text-gray-600 mt-2">Click on "View Profile" to access detailed faculty information and achievements</p>
+          </CardHeader>
+          <CardContent>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+              {facultyMembers.map((faculty, index) => (
+                <Card key={index} className="hover:shadow-lg transition-shadow">
+                  <CardContent className="p-6">
+                    <div className="text-center mb-4">
+                      <img 
+                        src={faculty.image} 
+                        alt={faculty.name}
+                        className="w-24 h-28 object-cover rounded-lg mx-auto shadow-md mb-3"
+                      />
+                      <h3 className="font-bold text-lg text-gray-800">{faculty.name}</h3>
+                      <p className="text-blue-600 font-medium">{faculty.designation}</p>
+                    </div>
+                    
+                    <div className="space-y-2 text-sm">
+                      <div>
+                        <span className="font-medium text-gray-700">Qualification:</span>
+                        <span className="text-gray-600 ml-1">{faculty.qualification}</span>
+                      </div>
+                      <div>
+                        <span className="font-medium text-gray-700">Experience:</span>
+                        <span className="text-gray-600 ml-1">{faculty.experience}</span>
+                      </div>
+                      {faculty.specialization && (
+                        <div>
+                          <span className="font-medium text-gray-700">Specialization:</span>
+                          <span className="text-gray-600 ml-1 text-xs">{faculty.specialization}</span>
+                        </div>
+                      )}
+                      {faculty.email && (
+                        <div>
+                          <span className="font-medium text-gray-700">Email:</span>
+                          <span className="text-gray-600 ml-1 text-xs">{faculty.email}</span>
+                        </div>
+                      )}
+                      {faculty.phone && (
+                        <div>
+                          <span className="font-medium text-gray-700">Phone:</span>
+                          <span className="text-gray-600 ml-1">{faculty.phone}</span>
+                        </div>
+                      )}
+                    </div>
+                    
+                    {faculty.profilePdf && (
+                      <div className="mt-4 text-center">
+                        <a
+                          href={faculty.profilePdf}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors shadow-md"
+                        >
+                          <BookOpen className="h-4 w-4" />
+                          View Profile
+                        </a>
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            
+            <div className="bg-blue-50 p-4 rounded-lg">
+              <p className="text-blue-800 text-sm text-center">
+                <strong>Note:</strong> Profile PDFs contain complete faculty information including education history, 
+                workshops attended, courses handled, NPTEL certifications, and professional achievements.
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Faculty Table Overview */}
+        <Card className="mb-12 shadow-lg">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-blue-900">
+              <Users className="h-6 w-6" />
+              Faculty Overview
             </CardTitle>
             <p className="text-gray-600 mt-2">All faculty members are regular employees with extensive experience</p>
           </CardHeader>
