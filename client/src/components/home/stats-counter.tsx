@@ -50,9 +50,9 @@ export default function StatsCounter() {
 
   const statsData = [
     { label: "Students", value: 15000, suffix: "+" },
-    { label: "Faculty", value: 800, suffix: "+" },
-    { label: "Departments", value: 25, suffix: "" },
-    { label: "Years Legacy", value: 59, suffix: "" },
+    { label: "Faculty", value: 80, suffix: "+" },
+    { label: "Departments", value: 7, suffix: "" },
+    { label: "Years Legacy", value: 39, suffix: "" },
   ];
 
   return (
