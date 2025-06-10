@@ -3,92 +3,81 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { GraduationCap, Users, Award, Building2, Target, Eye, Book, UserCheck, Calendar, MapPin, Building, BookOpen, Mail, Phone } from "lucide-react";
+import meLabImage from "@assets/ME.jpg";
 
 export default function MechanicalEngineering() {
   const facultyMembers = [
     {
-      id: 1,
-      image: null,
       name: "Prashanthkumar N Malavade",
       designation: "Lecturer",
       qualification: "MTech (Engineering Management), BE (Mechanical Engineering)",
       dateOfJoining: "25/03/1998",
+      image: null,
       experience: "26+ years Teaching",
       phone: "9980265133",
       email: "pnm@jsspolytechnic.org",
       profilePdf: "/attached_assets/PNM sir_1749578783714.pdf",
-      specialization: "Engineering Management, Mechanical Systems Design",
-      hasProfile: true
+      specialization: "Engineering Management, Mechanical Systems Design"
     },
     {
-      id: 2,
-      image: null,
       name: "Chandrashekhara Murthy K B",
       designation: "Lecturer",
       qualification: "BE (Mechanical Engineering), Diploma (Mechanical Engineering)",
       dateOfJoining: "01/01/2009",
+      image: null,
       experience: "15+ years Teaching, 5 years Industry",
       phone: "9448558571",
       email: "kbc@jsspolytechnic.org",
       profilePdf: "/attached_assets/Chandrashekhara Murthy K B_1749578783713.pdf",
-      specialization: "Manufacturing Processes, Engineering Metrology",
-      hasProfile: true
+      specialization: "Manufacturing Processes, Engineering Metrology"
     },
     {
-      id: 3,
-      image: null,
       name: "Uday R",
       designation: "Lecturer",
       qualification: "MTech (Maintenance & Engineering), BE (Industrial & Production Engineering)",
       dateOfJoining: "26/02/2024",
+      image: null,
       experience: "New Faculty Member",
       phone: "7892235595",
       email: "udayraj987654@gmail.com",
       profilePdf: "/attached_assets/Uday_1749578783714.pdf",
-      specialization: "Industrial Engineering, Production Systems, Maintenance Engineering",
-      hasProfile: true
+      specialization: "Industrial Engineering, Production Systems, Maintenance Engineering"
     },
     {
-      id: 4,
-      image: null,
       name: "Faculty Member 4",
       designation: "Lecturer",
       qualification: "To be updated",
       dateOfJoining: "To be updated",
+      image: null,
       experience: "Profile will be added soon",
       phone: "To be updated",
       email: "To be updated",
       profilePdf: null,
-      specialization: "To be updated",
-      hasProfile: false
+      specialization: "To be updated"
     },
     {
-      id: 5,
-      image: null,
       name: "Faculty Member 5",
       designation: "Lecturer",
       qualification: "To be updated",
       dateOfJoining: "To be updated",
+      image: null,
       experience: "Profile will be added soon",
       phone: "To be updated",
       email: "To be updated",
       profilePdf: null,
-      specialization: "To be updated",
-      hasProfile: false
+      specialization: "To be updated"
     },
     {
-      id: 6,
-      image: null,
       name: "Faculty Member 6",
       designation: "Lecturer",
       qualification: "To be updated",
       dateOfJoining: "To be updated",
+      image: null,
       experience: "Profile will be added soon",
       phone: "To be updated",
       email: "To be updated",
       profilePdf: null,
-      specialization: "To be updated",
-      hasProfile: false
+      specialization: "To be updated"
     }
   ];
 
@@ -148,7 +137,7 @@ export default function MechanicalEngineering() {
             </div>
             <div className="relative">
               <img 
-                src="/api/placeholder/600/400" 
+                src={meLabImage} 
                 alt="Mechanical Engineering Laboratory"
                 className="rounded-lg shadow-2xl w-full"
               />
@@ -215,7 +204,7 @@ export default function MechanicalEngineering() {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <img 
-                  src="/api/placeholder/600/400" 
+                  src={meLabImage} 
                   alt="Mechanical Engineering Laboratory with advanced machinery"
                   className="w-full h-64 object-cover rounded-lg shadow-md"
                 />
@@ -261,7 +250,7 @@ export default function MechanicalEngineering() {
             <div className="grid md:grid-cols-4 gap-6 items-start">
               <div className="text-center">
                 <img 
-                  src="/api/placeholder/200/240" 
+                  src={meLabImage} 
                   alt="Head of Department - Mechanical Engineering"
                   className="w-32 h-40 object-cover rounded-lg shadow-md mx-auto mb-4"
                 />
@@ -306,7 +295,7 @@ export default function MechanicalEngineering() {
                   <CardContent className="p-6">
                     <div className="text-center mb-4">
                       <img 
-                        src={faculty.image || "/api/placeholder/150/180"} 
+                        src={faculty.image || meLabImage} 
                         alt={faculty.name}
                         className="w-24 h-28 object-cover rounded-lg mx-auto shadow-md mb-3"
                       />
