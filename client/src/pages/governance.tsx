@@ -6,53 +6,69 @@ export default function Governance() {
   const governingCouncilMembers = [
     {
       sl: 1,
-      name: "His Holiness Jagadguru Sri Shivarathri Deshikendra Mahaswamigalavaru President, JSS Mahavidyapeetha, Mysuru",
+      name: "His Holiness Jagaduru Sri Sri Sri Shivarathri Deshikendra Mahaswamiji",
+      designation: "President, JSS Mahavidyapeetha, Mysuru",
       position: "Chairman"
     },
     {
       sl: 2,
-      name: "Dr.C G Betsurmath Executive Secretary JSS Mahavidyapeetha, Mysuru",
-      position: "Member Management Nominee"
+      name: "Dr. C.G. Betsurmath",
+      designation: "Executive Secretary, JSSMVP, Mysuru",
+      position: "Member"
     },
     {
       sl: 3,
-      name: "Dr. B. Suresh, Director (TED), JSSMVP, Mysuru",
-      position: "Member Management Nominee"
+      name: "Prof. M.H. Dhananjaya",
+      designation: "Advisor TED, JSSMVP, Mysuru",
+      position: "Member"
     },
     {
       sl: 4,
-      name: "Sri Prasanna H Director, Directorate of Technical Examination, Bengaluru",
+      name: "Dr. B. Suresh",
+      designation: "Director (TED), JSSMVP, Mysuru",
       position: "Member"
     },
     {
       sl: 5,
-      name: "Dr. H.R. Mahadevaswamy, Joint Director (TED), JSS MVP, Mysuru",
-      position: "Member (Nominee of the State Govt.)(Ex-Officio)"
+      name: "Sri K M Sureshkumar, K.A.S",
+      designation: "Director, Directorate of Technical Education, Bengaluru",
+      position: "Member"
     },
     {
       sl: 6,
-      name: "Sri AchuthaBachalli K, M/s. Unilog Content Solutions, Mysuru",
+      name: "Sri Nagabhushan K G",
+      designation: "Joint Director(Exam), Board of Technical Examinations, Bengaluru",
       position: "Member"
     },
     {
       sl: 7,
-      name: "Sri Prakash, Principal, CPC(Govt.)Polytechnic, Mysuru",
-      position: "Special Invitee"
+      name: "Dr. H.R. Mahadevaswamy",
+      designation: "Joint Director (TED), JSS MVP, Mysuru",
+      position: "Member"
     },
     {
       sl: 8,
-      name: "Smt. Asha Kulkarni, HOD, E&C Dept., JSSP, Mysuru",
+      name: "Sri Achutha Bachalli K",
+      designation: "M/s. Unilog Content Solutions, Mysuru",
       position: "Member"
     },
     {
       sl: 9,
-      name: "Sri. K.S. Bhakthavatsala, Principal, JSS Polytechnic, Mysuru",
-      position: "Member Secretary"
+      name: "Sri Prakash",
+      designation: "Principal, CPC(Govt.)Polytechnic, Mysuru",
+      position: "Special Invitee"
     },
     {
       sl: 10,
-      name: "Sri Srikanth G Joint Director(Exam),Board of Technical Examinations,Bengaluru",
+      name: "Dr. Asha Kulkarni",
+      designation: "HOD, E&C Dept., JSSP, Mysuru",
       position: "Member"
+    },
+    {
+      sl: 11,
+      name: "Sri. K.S. Bhakthavatsala",
+      designation: "Principal",
+      position: "Member Secretary"
     }
   ];
 
@@ -119,7 +135,7 @@ export default function Governance() {
                 <thead className="bg-primary text-white">
                   <tr>
                     <th className="px-6 py-4 text-left">Sl. No.</th>
-                    <th className="px-6 py-4 text-left">Name of the Member</th>
+                    <th className="px-6 py-4 text-left">Name & Designation</th>
                     <th className="px-6 py-4 text-left">Position</th>
                   </tr>
                 </thead>
@@ -127,7 +143,12 @@ export default function Governance() {
                   {governingCouncilMembers.map((member, index) => (
                     <tr key={member.sl} className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}>
                       <td className="px-6 py-4 font-medium text-primary">{member.sl}</td>
-                      <td className="px-6 py-4 text-gray-700">{member.name}</td>
+                      <td className="px-6 py-4 text-gray-700">
+                        <div>
+                          <div className="font-semibold text-gray-900">{member.name}</div>
+                          <div className="text-sm text-gray-600">{member.designation}</div>
+                        </div>
+                      </td>
                       <td className="px-6 py-4">
                         <Badge variant={member.position.includes("Chairman") ? "default" : member.position.includes("Secretary") ? "secondary" : "outline"}>
                           {member.position}
