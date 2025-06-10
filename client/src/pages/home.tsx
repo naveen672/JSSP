@@ -2,6 +2,7 @@ import HeroSection from "@/components/home/hero-section";
 import StatsCounter from "@/components/home/stats-counter";
 import NewsTicker from "@/components/home/news-ticker";
 import AboutJSS from "@/components/home/about-jss";
+import VideoShowcase from "@/components/home/video-showcase";
 import IndustryPartners from "@/components/home/industry-partners";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
@@ -27,6 +28,7 @@ export default function Home() {
       <HeroSection />
       <StatsCounter />
       <AboutJSS />
+      <VideoShowcase />
       <IndustryPartners />
     </div>
   );
