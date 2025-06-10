@@ -104,19 +104,19 @@ export default function Header() {
       <div className="container mx-auto px-4 py-3">
         <Link href="/" className="block">
           <div className="flex items-center justify-center space-x-6 cursor-pointer hover:opacity-90 transition-opacity">
-            <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-primary">
+            <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-primary">
               <img src={jssLogo1} alt="JSS Logo 1" className="w-full h-full object-cover" />
             </div>
             <div className="text-center">
-              <p className="text-xs text-gray-500 mb-1">JSS MAHAVIDYAPEETHA</p>
-              <h1 className="text-2xl font-bold text-primary">JSS POLYTECHNIC</h1>
-              <div className="text-xs text-gray-600 mt-1 leading-tight">
+              <p className="text-sm text-gray-500 mb-1">JSS MAHAVIDYAPEETHA</p>
+              <h1 className="text-3xl font-bold text-primary">JSS POLYTECHNIC</h1>
+              <div className="text-sm text-gray-600 mt-2 leading-relaxed">
                 <p>JSS Technical Institutions' Campus, Mysuru - 570006.</p>
                 <p>(Approved by Government of Karnataka & A.I.C.T.E. New Delhi)</p>
                 <p>Phone: 0821 - 2548318 , E-mail: jssp418@yahoo.co.in</p>
               </div>
             </div>
-            <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-primary">
+            <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-primary">
               <img src={jssLogo2} alt="JSS Logo 2" className="w-full h-full object-cover" />
             </div>
           </div>
