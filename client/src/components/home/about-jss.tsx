@@ -9,9 +9,42 @@ export default function AboutJSS() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-primary mb-4">About JSS Polytechnic</h2>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            JSS Polytechnic is a premier technical education institution committed to excellence in education, research, and innovation. 
-            Established with a vision to nurture skilled technicians and engineers, we have been at the forefront of technical education for over three decades.
+            One of the premier and oldest Polytechnics under JSS Mahavidyapeetha, established in 1954. 
+            We are committed to excellence in technical education with over 300 educational institutions 
+            across the country, serving more than 1,00,000 students from kindergarten to post-doctoral courses.
           </p>
+        </div>
+
+        {/* JSS Mahavidyapeetha Background */}
+        <div className="mb-12 bg-white rounded-lg p-8 shadow-sm">
+          <h3 className="text-2xl font-bold text-primary mb-6 text-center">JSS Mahavidyapeetha Heritage</h3>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h4 className="text-lg font-semibold text-gray-800 mb-3">Institutional Legacy</h4>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Jagadguru Sri Shivarathreeshwara Mahavidyapeetha (JSSMVP) was established in 1954 by 
+                His Holiness Jagadguru Dr. Sri Shivarathri Rajendra Mahaswamiji. Registered under the 
+                Societies Registration Act 1960, it has witnessed enormous growth in education.
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                The Mahavidyapeetha continues to play a vital role in expanding educational activities 
+                across several branches of knowledge, welfare, and culture, spanning from crèches for 
+                toddlers to advanced research centers.
+              </p>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold text-gray-800 mb-3">Suttur Math Connection</h4>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Suttur Math, a pilgrim center with over a thousand years of history, is situated on the 
+                banks of River Kapila in Nanjangud Taluk, Mysuru District. Located 170 km from Bengaluru 
+                and 28 km south of Mysuru, it houses the holy shrine of Adi Jagadguru Sri Shivarathreeshwara Shivayogiji.
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                The Math has grown over centuries as a multi-dimensional religious, social, cultural, and 
+                educational movement, contributing immensely to societal advancement.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Campus Image */}
