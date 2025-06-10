@@ -9,6 +9,10 @@ import snehaImage from "@assets/image_1748550355128.png";
 import shwethaImage from "@assets/image_1748550359272.png";
 import vidyaImage from "@assets/image_1748550364015.png";
 import prashanthImage from "@assets/image_1748550368847.png";
+import ashwiniImage from "@assets/image_1749574037427.png";
+import raviSkImage from "@assets/image_1749574049944.png";
+import somashekaraImage from "@assets/image_1749574058431.png";
+import madhusudhanImage from "@assets/image_1749574066759.png";
 
 export default function ElectricalElectronicsEngineering() {
   const facultyMembers = [
@@ -51,6 +55,14 @@ export default function ElectricalElectronicsEngineering() {
       dateOfJoining: "01-10-2023",
       image: vidyaImage,
       experience: "Fresh Graduate"
+    },
+    {
+      name: "Ashwini",
+      designation: "Lecturer",
+      qualification: "BE",
+      dateOfJoining: "22-07-2011",
+      image: ashwiniImage,
+      experience: "12+ years"
     }
   ];
 
@@ -59,19 +71,19 @@ export default function ElectricalElectronicsEngineering() {
       name: "Madhusudhan N B",
       designation: "Instructor",
       qualification: "BE",
-      image: null
+      image: madhusudhanImage
     },
     {
       name: "Ravi S K",
-      designation: "Mechanic",
+      designation: "Non Teaching Staff",
       qualification: "ITI",
-      image: null
+      image: raviSkImage
     },
     {
       name: "Somashekara A N",
-      designation: "Helper",
+      designation: "Non Teaching Staff",
       qualification: "ITI",
-      image: null
+      image: somashekaraImage
     },
     {
       name: "Prashanth H S",

@@ -7,6 +7,7 @@ import drAshaKulkarniImage from "@assets/image_1748550430744.png";
 import niranjanamurthyImage from "@assets/image_1748550435055.png";
 import yogithaImage from "@assets/image_1748550439012.png";
 import shilpaImage from "@assets/image_1748550443402.png";
+import chandrashekara from "@assets/image_1749574090140.png";
 
 export default function ElectronicsCommunicationEngineering() {
   const facultyMembers = [
@@ -85,7 +86,7 @@ export default function ElectronicsCommunicationEngineering() {
     },
     {
       id: 2,
-      image: null,
+      image: chandrashekara,
       name: "Chandrashekara M P",
       designation: "Instructor",
       qualification: "DEC"

@@ -8,6 +8,7 @@ import akshaykumarImage from "@assets/image_1748550154217.png";
 import roopeshkumarImage from "@assets/image_1748550159645.png";
 import yogithaImage from "@assets/image_1748550164280.png";
 import manjuImage from "@assets/image_1748550170498.png";
+import basavannaImage from "@assets/image_1749574013992.png";
 
 export default function CivilEngineering() {
   const facultyMembers = [
@@ -62,9 +63,9 @@ export default function CivilEngineering() {
     },
     {
       name: "Basavanna",
-      designation: "Lab helper",
+      designation: "Non Teaching Staff",
       qualification: "ITI",
-      image: null
+      image: basavannaImage
     }
   ];
 
