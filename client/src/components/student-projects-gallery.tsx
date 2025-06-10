@@ -20,7 +20,7 @@ export default function StudentProjectsGallery({
       title: "Advanced Engineering Experiments",
       department: "General Engineering",
       description: "Students conducting advanced laboratory experiments",
-      videoPath: "WhatsApp Video 2025-06-06 at 10.33.10_5867aa06_1749575036616.mp4",
+      videoPath: "/attached_assets/WhatsApp Video 2025-06-06 at 10.33.10_5867aa06_1749575036616.mp4",
       category: "Laboratory Work"
     },
     {
@@ -28,7 +28,7 @@ export default function StudentProjectsGallery({
       title: "Practical Engineering Solutions",
       department: "Applied Engineering",
       description: "Innovative project development and testing",
-      videoPath: "WhatsApp Video 2025-06-06 at 10.33.23_dd5f2f0b_1749575047727.mp4",
+      videoPath: "/attached_assets/WhatsApp Video 2025-06-06 at 10.33.23_dd5f2f0b_1749575047727.mp4",
       category: "Project Development"
     },
     {
@@ -36,7 +36,7 @@ export default function StudentProjectsGallery({
       title: "Technical Skills Development",
       department: "Engineering Technology",
       description: "Students mastering technical skills through practice",
-      videoPath: "WhatsApp Video 2025-06-06 at 10.33.23_b8153a15_1749575057854.mp4",
+      videoPath: "/attached_assets/WhatsApp Video 2025-06-06 at 10.33.23_b8153a15_1749575057854.mp4",
       category: "Skill Building"
     },
     {
@@ -44,7 +44,7 @@ export default function StudentProjectsGallery({
       title: "Research & Innovation",
       department: "Research Division",
       description: "Student-led research and innovation projects",
-      videoPath: "WhatsApp Video 2025-06-06 at 10.33.23_6d19bc0d_1749575070874.mp4",
+      videoPath: "/attached_assets/WhatsApp Video 2025-06-06 at 10.33.23_6d19bc0d_1749575070874.mp4",
       category: "Research"
     },
     {
@@ -52,7 +52,7 @@ export default function StudentProjectsGallery({
       title: "Engineering Applications",
       department: "Applied Sciences",
       description: "Real-world engineering applications in action",
-      videoPath: "WhatsApp Video 2025-06-06 at 10.36.17_34ba724e_1749575083580.mp4",
+      videoPath: "/attached_assets/WhatsApp Video 2025-06-06 at 10.36.17_34ba724e_1749575083580.mp4",
       category: "Applications"
     },
     {
@@ -60,7 +60,7 @@ export default function StudentProjectsGallery({
       title: "Collaborative Learning",
       department: "Team Projects",
       description: "Students working together on complex engineering challenges",
-      videoPath: "WhatsApp Video 2025-06-06 at 10.36.17_009995ca_1749575106009.mp4",
+      videoPath: "/attached_assets/WhatsApp Video 2025-06-06 at 10.36.17_009995ca_1749575106009.mp4",
       category: "Team Work"
     },
     {
@@ -68,7 +68,7 @@ export default function StudentProjectsGallery({
       title: "Advanced Methodology",
       department: "Advanced Engineering",
       description: "Implementation of advanced engineering methodologies",
-      videoPath: "WhatsApp Video 2025-06-06 at 10.36.17_8594f643_1749575120679.mp4",
+      videoPath: "/attached_assets/WhatsApp Video 2025-06-06 at 10.36.17_8594f643_1749575120679.mp4",
       category: "Advanced Studies"
     }
   ];
@@ -134,7 +134,7 @@ export default function StudentProjectsGallery({
                   controls
                   preload="metadata"
                 >
-                  <source src={`/@assets/attached_assets/${video.videoPath}`} type="video/mp4" />
+                  <source src={video.videoPath} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
