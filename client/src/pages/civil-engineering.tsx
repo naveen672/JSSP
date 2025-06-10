@@ -1,7 +1,8 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Building, Users, Award, TrendingUp, Wrench, BookOpen, Target, Lightbulb, Heart, Book } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Building, Users, Award, TrendingUp, Wrench, BookOpen, Target, Lightbulb, Heart, Book, Phone, Mail } from "lucide-react";
 import mahadevaprabhuImage from "@assets/image_1748550145401.png";
 import bhavyaImage from "@assets/image_1748550149780.png";
 import akshaykumarImage from "@assets/image_1748550154217.png";
@@ -13,44 +14,79 @@ import basavannaImage from "@assets/image_1749574013992.png";
 export default function CivilEngineering() {
   const facultyMembers = [
     {
+      id: 1,
       name: "Mahadevaprabhu K M",
-      designation: "HOD",
-      qualification: "BE",
-      dateOfJoining: "13/7/2009",
+      designation: "HOD (Head of Department)",
+      qualification: "BE (Civil Engineering)",
+      dateOfJoining: "13/07/2009",
+      experience: "15+ years Teaching (4 years as HOD)",
+      phone: "9448601503",
+      email: "Mahadevaprabhu1968@gmail.com",
+      profilePdf: "/attached_assets/Mahadev PRABHU  CE 2024_1749580150654.pdf",
+      specialization: "Civil Engineering, Construction Management",
       image: mahadevaprabhuImage,
-      experience: "14+ years"
+      hasProfile: true,
+      positions: "HOD (2020-present), Lecturer (2009-2020)"
     },
     {
+      id: 2,
       name: "Bhavya M",
       designation: "Lecturer",
-      qualification: "MTech",
-      dateOfJoining: "03-10-2011",
+      qualification: "BE (Civil Engineering), MTech (Industrial Structures)",
+      dateOfJoining: "22/07/2011",
+      experience: "13+ years Teaching",
+      phone: "6363719856",
+      email: "Bhavyaprasana2010@gmail.com",
+      profilePdf: "/attached_assets/bhavya maam_1749580150654.pdf",
+      specialization: "Civil Engineering, Industrial Structures",
       image: bhavyaImage,
-      experience: "12+ years"
+      hasProfile: true,
+      positions: "Lecturer (2011-present)"
     },
     {
-      name: "Akshay kumar S",
-      designation: "Lecturer", 
-      qualification: "MTech",
-      dateOfJoining: "10-10-2013",
+      id: 3,
+      name: "Akshay Kumar S",
+      designation: "Lecturer",
+      qualification: "BE (Civil Engineering), MTech (Industrial Structures)",
+      dateOfJoining: "10/10/2013",
+      experience: "11+ years Teaching",
+      phone: "9480191606",
+      email: "sakshyakumar@jsspolytechnic.org",
+      profilePdf: "/attached_assets/AKSHAY_1749580150653.pdf",
+      specialization: "Civil Engineering, Industrial Structures, Geotechnical Engineering",
       image: akshaykumarImage,
-      experience: "10+ years"
+      hasProfile: true,
+      positions: "Lecturer, Warden (Boys Hostel 2022-present)"
     },
     {
+      id: 4,
       name: "Roopeshkumar B",
       designation: "Lecturer",
-      qualification: "MTech",
-      dateOfJoining: "16/7/2014",
+      qualification: "BE (Civil Engineering), MTech (Industrial Structures)",
+      dateOfJoining: "16/07/2014",
+      experience: "10+ years Teaching",
+      phone: "8618827079",
+      email: "roopesh@jsspolytechnic.org",
+      profilePdf: "/attached_assets/roopesh_1749580150653.pdf",
+      specialization: "Civil Engineering, Industrial Structures, Geospatial Technologies",
       image: roopeshkumarImage,
-      experience: "9+ years"
+      hasProfile: true,
+      positions: "Lecturer (2014-present)"
     },
     {
+      id: 5,
       name: "Yogitha H M",
       designation: "Lecturer",
-      qualification: "BE",
-      dateOfJoining: "02-04-2016",
+      qualification: "BE (Civil Engineering)",
+      dateOfJoining: "04/02/2016",
+      experience: "8+ years Teaching",
+      phone: "8884191079",
+      email: "yogitha@jsspolytechnic.org",
+      profilePdf: "/attached_assets/yogitha CE_1749580150652.pdf",
+      specialization: "Civil Engineering, GIS Applications, Municipal Solid Waste Management",
       image: yogithaImage,
-      experience: "7+ years"
+      hasProfile: true,
+      positions: "Lecturer (2016-present)"
     }
   ];
 
@@ -219,49 +255,118 @@ export default function CivilEngineering() {
           </CardContent>
         </Card>
 
-        {/* Teaching Faculty */}
+        {/* Faculty Profiles Section */}
         <Card className="mb-12 shadow-lg">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-blue-900">
               <Users className="h-6 w-6" />
-              List of Teaching Faculty
+              Faculty Profiles - Civil Engineering
             </CardTitle>
-            <p className="text-gray-600 mt-2">All faculty members are regular employees with extensive experience</p>
+            <p className="text-gray-600 mt-2">Click on "View Profile" to access detailed faculty information and achievements</p>
           </CardHeader>
           <CardContent>
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse">
-                <thead>
-                  <tr className="bg-blue-50">
-                    <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-blue-900">Sl No</th>
-                    <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-blue-900">Image</th>
-                    <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-blue-900">Name</th>
-                    <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-blue-900">Designation</th>
-                    <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-blue-900">Qualification</th>
-                    <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-blue-900">Date of Joining</th>
-                    <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-blue-900">Experience</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {facultyMembers.map((faculty, index) => (
-                    <tr key={index} className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}>
-                      <td className="border border-gray-300 px-4 py-3 text-center">{index + 1}</td>
-                      <td className="border border-gray-300 px-4 py-3 text-center">
-                        <img 
-                          src={faculty.image} 
-                          alt={faculty.name}
-                          className="w-16 h-20 object-cover rounded mx-auto shadow-sm"
-                        />
-                      </td>
-                      <td className="border border-gray-300 px-4 py-3 font-medium">{faculty.name}</td>
-                      <td className="border border-gray-300 px-4 py-3">{faculty.designation}</td>
-                      <td className="border border-gray-300 px-4 py-3">{faculty.qualification}</td>
-                      <td className="border border-gray-300 px-4 py-3">{faculty.dateOfJoining}</td>
-                      <td className="border border-gray-300 px-4 py-3">{faculty.experience}</td>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+              {facultyMembers.map((faculty, index) => (
+                <Card key={faculty.id} className="hover:shadow-lg transition-shadow">
+                  <CardContent className="p-6">
+                    <div className="text-center mb-4">
+                      <img 
+                        src={faculty.image || "/api/placeholder/150/180"} 
+                        alt={faculty.name}
+                        className="w-24 h-28 object-cover rounded-lg mx-auto shadow-md mb-3"
+                      />
+                      <h3 className="font-bold text-lg text-gray-800">{faculty.name}</h3>
+                      <p className="text-blue-600 font-medium">{faculty.designation}</p>
+                    </div>
+                    
+                    <div className="space-y-2 text-sm">
+                      <div>
+                        <span className="font-medium text-gray-700">Qualification:</span>
+                        <span className="text-gray-600 ml-1 text-xs">{faculty.qualification}</span>
+                      </div>
+                      <div>
+                        <span className="font-medium text-gray-700">Experience:</span>
+                        <span className="text-gray-600 ml-1">{faculty.experience}</span>
+                      </div>
+                      {faculty.specialization && (
+                        <div>
+                          <span className="font-medium text-gray-700">Specialization:</span>
+                          <span className="text-gray-600 ml-1 text-xs">{faculty.specialization}</span>
+                        </div>
+                      )}
+                      {faculty.email && (
+                        <div>
+                          <span className="font-medium text-gray-700">Email:</span>
+                          <span className="text-gray-600 ml-1 text-xs">{faculty.email}</span>
+                        </div>
+                      )}
+                      {faculty.phone && (
+                        <div>
+                          <span className="font-medium text-gray-700">Phone:</span>
+                          <span className="text-gray-600 ml-1">{faculty.phone}</span>
+                        </div>
+                      )}
+                      {faculty.positions && (
+                        <div>
+                          <span className="font-medium text-gray-700">Positions:</span>
+                          <span className="text-gray-600 ml-1 text-xs">{faculty.positions}</span>
+                        </div>
+                      )}
+                    </div>
+                    
+                    <div className="mt-4 text-center">
+                      {faculty.profilePdf ? (
+                        <a
+                          href={faculty.profilePdf}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors shadow-md"
+                        >
+                          <BookOpen className="h-4 w-4" />
+                          View Profile
+                        </a>
+                      ) : (
+                        <Button
+                          disabled
+                          className="inline-flex items-center gap-2 px-4 py-2 bg-gray-400 text-white text-sm rounded-lg cursor-not-allowed"
+                        >
+                          <BookOpen className="h-4 w-4" />
+                          Profile Coming Soon
+                        </Button>
+                      )}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            {/* Faculty Summary Table */}
+            <div className="bg-gray-50 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">Faculty Summary</h3>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b border-gray-300">
+                      <th className="text-left py-2 font-medium text-gray-700">Name</th>
+                      <th className="text-left py-2 font-medium text-gray-700">Designation</th>
+                      <th className="text-left py-2 font-medium text-gray-700">Qualification</th>
+                      <th className="text-left py-2 font-medium text-gray-700">Experience</th>
+                      <th className="text-left py-2 font-medium text-gray-700">Joining Date</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {facultyMembers.map((faculty, index) => (
+                      <tr key={faculty.id} className="border-b border-gray-200">
+                        <td className="py-2 text-gray-800">{faculty.name}</td>
+                        <td className="py-2 text-gray-600">{faculty.designation}</td>
+                        <td className="py-2 text-gray-600">{faculty.qualification}</td>
+                        <td className="py-2 text-gray-600">{faculty.experience}</td>
+                        <td className="py-2 text-gray-600">{faculty.dateOfJoining}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </CardContent>
         </Card>
