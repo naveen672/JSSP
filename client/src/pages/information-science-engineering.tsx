@@ -1,7 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Users, BookOpen, Calendar, ExternalLink, GraduationCap, Target, Eye, Building, UserCheck, Phone, Mail } from "lucide-react";
+import { Users, BookOpen, Calendar, ExternalLink, GraduationCap, Target, Eye, Building, UserCheck, Phone, Mail, ChevronLeft, ChevronRight, Briefcase } from "lucide-react";
+import { useState } from "react";
 import computerLabImage from "@assets/image_1748548333376.png";
 import hodImage from "@assets/image_1748548354011.png";
 import shruthiImage from "@assets/image_1748548358487.png";
@@ -9,8 +10,33 @@ import sowrabhaImage from "@assets/image_1748548362909.png";
 import jayarajeshwariImage from "@assets/image_1748548368465.png";
 import nagakanyaImage from "@assets/image_1748548373860.png";
 import mahadevaswamyImage from "@assets/image_1748548378323.png";
+// Industrial visit images
+import isVisitImage1 from "@assets/WhatsApp Image 2024-04-02 at 4.12.24 PM (8)_1749581748895.jpeg";
+import isVisitImage2 from "@assets/WhatsApp Image 2024-04-02 at 4.12.24 PM (7)_1749581750578.jpeg";
+import isVisitImage3 from "@assets/WhatsApp Image 2024-04-02 at 4.12.24 PM (6)_1749581751949.jpeg";
+import isVisitImage4 from "@assets/WhatsApp Image 2024-04-02 at 4.12.24 PM (5)_1749581753187.jpeg";
+import isVisitImage5 from "@assets/WhatsApp Image 2024-04-02 at 4.12.24 PM (4)_1749581754564.jpeg";
+import isVisitImage6 from "@assets/WhatsApp Image 2024-04-02 at 4.12.24 PM (3)_1749581755936.jpeg";
+import isVisitImage7 from "@assets/WhatsApp Image 2024-04-02 at 4.12.24 PM (2)_1749581757402.jpeg";
+import isVisitImage8 from "@assets/WhatsApp Image 2024-04-02 at 4.12.24 PM (1)_1749581758773.jpeg";
+import isVisitImage9 from "@assets/WhatsApp Image 2024-04-02 at 4.12.24 PM_1749581760331.jpeg";
 
 export default function InformationScienceEngineering() {
+  const [currentVisitImageIndex, setCurrentVisitImageIndex] = useState(0);
+  
+  const visitImages = [
+    isVisitImage1, isVisitImage2, isVisitImage3, isVisitImage4, isVisitImage5,
+    isVisitImage6, isVisitImage7, isVisitImage8, isVisitImage9
+  ];
+
+  const nextVisitImage = () => {
+    setCurrentVisitImageIndex((prev) => (prev + 1) % visitImages.length);
+  };
+
+  const prevVisitImage = () => {
+    setCurrentVisitImageIndex((prev) => (prev - 1 + visitImages.length) % visitImages.length);
+  };
+
   const teachingFaculty = [
     {
       id: 1,
@@ -446,6 +472,133 @@ export default function InformationScienceEngineering() {
                 <div className="text-3xl font-bold text-primary mb-2">2</div>
                 <div className="text-gray-600">Supporting Staff</div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Industrial Visit Section */}
+      <section className="bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Industrial Visit Program</h2>
+          
+          <div className="max-w-4xl mx-auto mb-8">
+            <Card className="shadow-lg">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-blue-900">
+                  <Briefcase className="h-6 w-6" />
+                  Industry Exposure & Technology Learning
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  The Information Science & Engineering department organizes comprehensive industrial visits 
+                  to provide students with hands-on exposure to cutting-edge information technologies, 
+                  data centers, software development practices, and emerging trends in the IT industry.
+                </p>
+                
+                <div className="grid md:grid-cols-3 gap-6 mb-6">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-blue-600 mb-1">April 2024</div>
+                    <div className="text-gray-600 text-sm">Latest Visit</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-blue-600 mb-1">90+</div>
+                    <div className="text-gray-600 text-sm">Students Participated</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-blue-600 mb-1">95%</div>
+                    <div className="text-gray-600 text-sm">Learning Satisfaction</div>
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h3 className="font-semibold text-blue-900 mb-3">Visit Objectives</h3>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Explore modern data centers and cloud infrastructure</li>
+                      <li>• Understand software development lifecycle and agile methodologies</li>
+                      <li>• Learn about database management and data analytics tools</li>
+                      <li>• Gain insights into cybersecurity practices and protocols</li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h3 className="font-semibold text-blue-900 mb-3">Learning Outcomes</h3>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Practical understanding of enterprise IT systems</li>
+                      <li>• Knowledge of emerging technologies and industry trends</li>
+                      <li>• Career guidance and skill development insights</li>
+                      <li>• Professional networking with industry experts</li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Image Gallery */}
+          <div className="max-w-5xl mx-auto">
+            <h3 className="text-xl font-semibold text-center mb-6">Visit Gallery</h3>
+            
+            {/* Main Image Slider */}
+            <div className="mb-6">
+              <div className="relative">
+                <img 
+                  src={visitImages[currentVisitImageIndex]} 
+                  alt={`IS Industrial Visit - Image ${currentVisitImageIndex + 1}`}
+                  className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
+                />
+                
+                {/* Navigation buttons */}
+                <button 
+                  onClick={prevVisitImage}
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-all"
+                >
+                  <ChevronLeft className="h-5 w-5" />
+                </button>
+                
+                <button 
+                  onClick={nextVisitImage}
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-all"
+                >
+                  <ChevronRight className="h-5 w-5" />
+                </button>
+                
+                {/* Image counter */}
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm">
+                  {currentVisitImageIndex + 1} / {visitImages.length}
+                </div>
+              </div>
+            </div>
+
+            {/* Thumbnail grid */}
+            <div className="grid grid-cols-3 md:grid-cols-9 gap-2 max-w-4xl mx-auto">
+              {visitImages.map((image, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentVisitImageIndex(index)}
+                  className={`relative overflow-hidden rounded-lg aspect-square ${
+                    currentVisitImageIndex === index ? 'ring-2 ring-blue-500' : ''
+                  }`}
+                >
+                  <img 
+                    src={image} 
+                    alt={`IS visit thumbnail ${index + 1}`}
+                    className="w-full h-full object-cover hover:scale-110 transition-transform"
+                  />
+                </button>
+              ))}
+            </div>
+
+            <div className="text-center mt-8">
+              <p className="text-gray-600 text-sm mb-4">
+                Students experienced firsthand the practical applications of information science concepts 
+                through interactive demonstrations and technical discussions with industry professionals.
+              </p>
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+                Explore IS Department Programs
+              </Button>
             </div>
           </div>
         </div>
