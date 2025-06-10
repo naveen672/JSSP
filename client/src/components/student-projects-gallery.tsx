@@ -143,9 +143,6 @@ export default function StudentProjectsGallery({
                   <source src={video.videoPath} type="video/mp4" />
                   <p>Your browser does not support the video tag or the video file is not accessible.</p>
                 </video>
-                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <Play className="h-12 w-12 text-white" />
-                </div>
               </div>
               
               <CardHeader className="pb-2">
