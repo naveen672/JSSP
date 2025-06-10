@@ -4,6 +4,25 @@ import { Briefcase, Users, Building, FileText, Target, MapPin, Award, Phone } fr
 import organizationChartImage from "@assets/image_1748552815200.png";
 
 export default function Placements() {
+  // Placement statistics from PPT data
+  const placementStats = {
+    current: {
+      year: "2023-2024",
+      totalStudents: "100+",
+      placedStudents: "85+",
+      placementRate: "85%",
+      partnerCompanies: "50+",
+      averagePackage: "₹3.5 LPA",
+      highestPackage: "₹12 LPA"
+    },
+    historical: {
+      period: "2018-2021 Batch",
+      overallPlacementRate: "85%",
+      coreEngineeringJobs: "60%",
+      itSectorPlacements: "40%"
+    }
+  };
+
   const placementCoordinators = [
     {
       slNo: 1,
@@ -119,6 +138,140 @@ export default function Placements() {
       </div>
 
       <div className="container mx-auto px-4 py-12">
+        {/* Placement Statistics Dashboard */}
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Placement Excellence Statistics</h2>
+          
+          {/* Current Year Statistics */}
+          <Card className="mb-8 shadow-lg">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-blue-800 text-2xl">
+                <Award className="h-8 w-8" />
+                Placement Achievements {placementStats.current.year}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid md:grid-cols-4 gap-6">
+                <div className="text-center bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg">
+                  <Users className="h-12 w-12 text-blue-600 mx-auto mb-3" />
+                  <div className="text-2xl font-bold text-blue-800">{placementStats.current.placedStudents}</div>
+                  <div className="text-sm text-blue-600">Students Placed</div>
+                </div>
+                <div className="text-center bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg">
+                  <Target className="h-12 w-12 text-green-600 mx-auto mb-3" />
+                  <div className="text-2xl font-bold text-green-800">{placementStats.current.placementRate}</div>
+                  <div className="text-sm text-green-600">Placement Rate</div>
+                </div>
+                <div className="text-center bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg">
+                  <Building className="h-12 w-12 text-purple-600 mx-auto mb-3" />
+                  <div className="text-2xl font-bold text-purple-800">{placementStats.current.partnerCompanies}</div>
+                  <div className="text-sm text-purple-600">Partner Companies</div>
+                </div>
+                <div className="text-center bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg">
+                  <Award className="h-12 w-12 text-orange-600 mx-auto mb-3" />
+                  <div className="text-2xl font-bold text-orange-800">{placementStats.current.highestPackage}</div>
+                  <div className="text-sm text-orange-600">Highest Package</div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Historical Performance */}
+          <Card className="mb-8 shadow-lg">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-green-800 text-2xl">
+                <FileText className="h-8 w-8" />
+                Historical Placement Performance ({placementStats.historical.period})
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="text-center bg-gradient-to-br from-indigo-50 to-indigo-100 p-6 rounded-lg">
+                  <div className="text-3xl font-bold text-indigo-800 mb-2">{placementStats.historical.overallPlacementRate}</div>
+                  <div className="text-sm text-indigo-600 font-medium">Overall Placement Rate</div>
+                  <div className="text-xs text-indigo-500 mt-1">Consistent high performance across batches</div>
+                </div>
+                <div className="text-center bg-gradient-to-br from-teal-50 to-teal-100 p-6 rounded-lg">
+                  <div className="text-3xl font-bold text-teal-800 mb-2">{placementStats.historical.coreEngineeringJobs}</div>
+                  <div className="text-sm text-teal-600 font-medium">Core Engineering Jobs</div>
+                  <div className="text-xs text-teal-500 mt-1">Strong technical placements</div>
+                </div>
+                <div className="text-center bg-gradient-to-br from-rose-50 to-rose-100 p-6 rounded-lg">
+                  <div className="text-3xl font-bold text-rose-800 mb-2">{placementStats.historical.itSectorPlacements}</div>
+                  <div className="text-sm text-rose-600 font-medium">IT Sector Placements</div>
+                  <div className="text-xs text-rose-500 mt-1">Growing technology sector presence</div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Placement Process Overview */}
+          <Card className="mb-8 shadow-lg">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-purple-800 text-2xl">
+                <Target className="h-8 w-8" />
+                Comprehensive Placement Support System
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Training & Development</h3>
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+                      <div>
+                        <h4 className="font-medium text-gray-700">Technical Skills Enhancement</h4>
+                        <p className="text-sm text-gray-600">Comprehensive training programs to bridge industry-academia gap</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                      <div>
+                        <h4 className="font-medium text-gray-700">Soft Skills Development</h4>
+                        <p className="text-sm text-gray-600">Communication, interview, and professional skills training</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <div>
+                        <h4 className="font-medium text-gray-700">Industry Exposure</h4>
+                        <p className="text-sm text-gray-600">Regular industry visits and guest lectures from professionals</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Career Guidance</h3>
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
+                      <div>
+                        <h4 className="font-medium text-gray-700">Personalized Counseling</h4>
+                        <p className="text-sm text-gray-600">One-on-one career guidance sessions with experienced faculty</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
+                      <div>
+                        <h4 className="font-medium text-gray-700">Resume Building</h4>
+                        <p className="text-sm text-gray-600">Professional resume and portfolio development support</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-indigo-500 rounded-full mt-2"></div>
+                      <div>
+                        <h4 className="font-medium text-gray-700">Mock Interviews</h4>
+                        <p className="text-sm text-gray-600">Rigorous interview preparation with industry experts</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
         {/* Organizational Structure */}
         <Card className="mb-12 shadow-lg">
           <CardHeader>
