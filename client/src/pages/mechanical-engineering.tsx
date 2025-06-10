@@ -1,7 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Users, BookOpen, Calendar, ExternalLink, GraduationCap, Target, Eye, Building, UserCheck, Award, Phone, Mail } from "lucide-react";
+import { Users, BookOpen, Calendar, ExternalLink, GraduationCap, Target, Eye, Building, UserCheck, Award, Phone, Mail, ChevronLeft, ChevronRight, Briefcase } from "lucide-react";
+import { useState } from "react";
 import classroomImage from "@assets/image_1748547541718.png";
 import hodImage from "@assets/image_1748547564485.png";
 import prashanthImage from "@assets/image_1748547571826.png";
@@ -9,8 +10,27 @@ import principalImage from "@assets/image_1748547577741.png";
 import udayImage from "@assets/image_1748547583155.png";
 import thirumaleshImage from "@assets/image_1748547591250.png";
 import supportStaffImage from "@assets/image_1748547597996.png";
+// Badravathi industrial visit images
+import badravathiImage1 from "@assets/WhatsApp Image 2025-02-25 at 10.06.27 AM_1749582010868.jpeg";
+import badravathiImage2 from "@assets/WhatsApp Image 2025-02-25 at 10.06.25 AM_1749582013552.jpeg";
+import badravathiImage3 from "@assets/WhatsApp Image 2025-02-25 at 10.06.24 AM_1749582014967.jpeg";
+import badravathiImage4 from "@assets/WhatsApp Image 2025-02-25 at 10.06.23 AM_1749582016779.jpeg";
 
 export default function MechanicalEngineering() {
+  const [currentBadravathiImageIndex, setCurrentBadravathiImageIndex] = useState(0);
+  
+  const badravathiImages = [
+    badravathiImage1, badravathiImage2, badravathiImage3, badravathiImage4
+  ];
+
+  const nextBadravathiImage = () => {
+    setCurrentBadravathiImageIndex((prev) => (prev + 1) % badravathiImages.length);
+  };
+
+  const prevBadravathiImage = () => {
+    setCurrentBadravathiImageIndex((prev) => (prev - 1 + badravathiImages.length) % badravathiImages.length);
+  };
+
   const facultyMembers = [
     {
       id: 1,
@@ -475,6 +495,140 @@ export default function MechanicalEngineering() {
                 <div className="text-3xl font-bold text-primary mb-2">4</div>
                 <div className="text-gray-600">Supporting Staff</div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Badravathi Industrial Visit Section */}
+      <section className="bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Industrial Visit to Badravathi</h2>
+          
+          <div className="max-w-4xl mx-auto mb-8">
+            <Card className="shadow-lg">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-blue-900">
+                  <Briefcase className="h-6 w-6" />
+                  Manufacturing Excellence & Industry Exposure
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  The Mechanical Engineering department organized a comprehensive industrial visit to Badravathi, 
+                  providing students with hands-on exposure to large-scale manufacturing processes, industrial 
+                  machinery, and modern production techniques in the steel and engineering sector.
+                </p>
+                
+                <div className="grid md:grid-cols-3 gap-6 mb-6">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-green-600 mb-1">Feb 2025</div>
+                    <div className="text-gray-600 text-sm">Latest Visit</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-green-600 mb-1">60+</div>
+                    <div className="text-gray-600 text-sm">Students Participated</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-green-600 mb-1">100%</div>
+                    <div className="text-gray-600 text-sm">Industry Exposure</div>
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h3 className="font-semibold text-blue-900 mb-3">Visit Objectives</h3>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Understand large-scale steel manufacturing processes</li>
+                      <li>• Explore heavy machinery and industrial equipment operations</li>
+                      <li>• Learn about quality control and production management</li>
+                      <li>• Gain insights into safety protocols in industrial environments</li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h3 className="font-semibold text-blue-900 mb-3">Learning Outcomes</h3>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Practical understanding of manufacturing engineering</li>
+                      <li>• Knowledge of industrial automation and control systems</li>
+                      <li>• Career opportunities in manufacturing and production sector</li>
+                      <li>• Professional networking with industry experts</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="mt-6 bg-green-50 border border-green-200 rounded-lg p-4">
+                  <p className="text-green-800 text-sm">
+                    <strong>Highlight:</strong> Students experienced firsthand the integration of traditional 
+                    manufacturing with modern technology at one of Karnataka's prominent industrial hubs.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Image Gallery */}
+          <div className="max-w-5xl mx-auto">
+            <h3 className="text-xl font-semibold text-center mb-6">Badravathi Visit Gallery</h3>
+            
+            {/* Main Image Slider */}
+            <div className="mb-6">
+              <div className="relative">
+                <img 
+                  src={badravathiImages[currentBadravathiImageIndex]} 
+                  alt={`Badravathi Industrial Visit - Image ${currentBadravathiImageIndex + 1}`}
+                  className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
+                />
+                
+                {/* Navigation buttons */}
+                <button 
+                  onClick={prevBadravathiImage}
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-all"
+                >
+                  <ChevronLeft className="h-5 w-5" />
+                </button>
+                
+                <button 
+                  onClick={nextBadravathiImage}
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-all"
+                >
+                  <ChevronRight className="h-5 w-5" />
+                </button>
+                
+                {/* Image counter */}
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm">
+                  {currentBadravathiImageIndex + 1} / {badravathiImages.length}
+                </div>
+              </div>
+            </div>
+
+            {/* Thumbnail grid */}
+            <div className="grid grid-cols-4 gap-2 max-w-2xl mx-auto">
+              {badravathiImages.map((image, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentBadravathiImageIndex(index)}
+                  className={`relative overflow-hidden rounded-lg aspect-square ${
+                    currentBadravathiImageIndex === index ? 'ring-2 ring-green-500' : ''
+                  }`}
+                >
+                  <img 
+                    src={image} 
+                    alt={`Badravathi visit thumbnail ${index + 1}`}
+                    className="w-full h-full object-cover hover:scale-110 transition-transform"
+                  />
+                </button>
+              ))}
+            </div>
+
+            <div className="text-center mt-8">
+              <p className="text-gray-600 text-sm mb-4">
+                Students gained valuable insights into modern manufacturing processes and industrial 
+                operations through guided tours and interactive sessions with plant engineers.
+              </p>
+              <Button className="bg-green-600 hover:bg-green-700 text-white">
+                Explore Mechanical Engineering Programs
+              </Button>
             </div>
           </div>
         </div>
