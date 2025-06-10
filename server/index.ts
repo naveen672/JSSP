@@ -37,8 +37,18 @@ app.use((req, res, next) => {
   next();
 });
 
-// Serve attached assets (videos, images, etc.)
-app.use('/attached_assets', express.static(path.resolve(process.cwd(), 'attached_assets')));
+// Serve attached assets (videos, images, etc.) with proper headers
+app.use('/attached_assets', (req, res, next) => {
+  // Set proper headers for video files
+  if (req.path.endsWith('.mp4')) {
+    res.set({
+      'Content-Type': 'video/mp4',
+      'Accept-Ranges': 'bytes',
+      'Cache-Control': 'public, max-age=3600'
+    });
+  }
+  next();
+}, express.static(path.resolve(process.cwd(), 'attached_assets')));
 
 (async () => {
   const server = await registerRoutes(app);
