@@ -2,15 +2,36 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
-import { GraduationCap, Users, Award, Building2, Target, Eye, Book, UserCheck, Calendar, MapPin, Building, BookOpen, Mail, Phone } from "lucide-react";
+import { GraduationCap, Users, Award, Building2, Target, Eye, Book, UserCheck, Calendar, MapPin, Building, BookOpen, Mail, Phone, ChevronLeft, ChevronRight, Briefcase } from "lucide-react";
+import { useState } from "react";
 import ecLabImage from "@assets/image_1748550425145.png";
 import drAshaKulkarniImage from "@assets/image_1748550430744.png";
 import niranjanamurthyImage from "@assets/image_1748550435055.png";
 import yogithaImage from "@assets/image_1748550439012.png";
 import shilpaImage from "@assets/image_1748550443402.png";
 import chandrashekara from "@assets/image_1749574090140.png";
+// Industrial visit images
+import ecVisitImage1 from "@assets/WhatsApp Image 2024-03-07 at 3.34.02 PM (1)_1749581625987.jpeg";
+import ecVisitImage2 from "@assets/WhatsApp Image 2024-03-07 at 3.34.02 PM_1749581628658.jpeg";
+import ecVisitImage3 from "@assets/WhatsApp Image 2024-03-07 at 3.34.00 PM (1)_1749581630196.jpeg";
+import ecVisitImage4 from "@assets/WhatsApp Image 2024-03-07 at 3.34.00 PM_1749581631874.jpeg";
+import ecVisitImage5 from "@assets/WhatsApp Image 2024-03-07 at 3.33.58 PM_1749581633399.jpeg";
 
 export default function ElectronicsCommunicationEngineering() {
+  const [currentVisitImageIndex, setCurrentVisitImageIndex] = useState(0);
+  
+  const visitImages = [
+    ecVisitImage1, ecVisitImage2, ecVisitImage3, ecVisitImage4, ecVisitImage5
+  ];
+
+  const nextVisitImage = () => {
+    setCurrentVisitImageIndex((prev) => (prev + 1) % visitImages.length);
+  };
+
+  const prevVisitImage = () => {
+    setCurrentVisitImageIndex((prev) => (prev - 1 + visitImages.length) % visitImages.length);
+  };
+
   const facultyMembers = [
     {
       id: 1,
@@ -469,6 +490,134 @@ export default function ElectronicsCommunicationEngineering() {
           </Card>
         </div>
       </div>
+
+      {/* Industrial Visit Section */}
+      <section className="bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Industrial Visit Program</h2>
+          
+          <div className="max-w-4xl mx-auto mb-8">
+            <Card className="shadow-lg">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-blue-900">
+                  <Briefcase className="h-6 w-6" />
+                  Industry Exposure & Learning
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  The Electronics & Communication Engineering department organizes comprehensive industrial visits 
+                  to provide students with real-world exposure to telecommunications, electronics manufacturing, 
+                  and communication systems. These visits bridge the gap between theoretical knowledge and 
+                  practical industry applications.
+                </p>
+                
+                <div className="grid md:grid-cols-3 gap-6 mb-6">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-blue-600 mb-1">March 2024</div>
+                    <div className="text-gray-600 text-sm">Latest Visit</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-blue-600 mb-1">80+</div>
+                    <div className="text-gray-600 text-sm">Students Participated</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-blue-600 mb-1">100%</div>
+                    <div className="text-gray-600 text-sm">Positive Feedback</div>
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h3 className="font-semibold text-blue-900 mb-3">Visit Objectives</h3>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Understand telecommunication infrastructure and network systems</li>
+                      <li>• Explore electronic manufacturing processes and quality control</li>
+                      <li>• Learn about RF and microwave communication technologies</li>
+                      <li>• Gain insights into industry standards and regulatory compliance</li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h3 className="font-semibold text-blue-900 mb-3">Learning Outcomes</h3>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Practical understanding of communication protocols</li>
+                      <li>• Exposure to advanced testing and measurement equipment</li>
+                      <li>• Knowledge of career opportunities in electronics industry</li>
+                      <li>• Professional networking with industry experts</li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Image Gallery */}
+          <div className="max-w-5xl mx-auto">
+            <h3 className="text-xl font-semibold text-center mb-6">Visit Gallery</h3>
+            
+            {/* Main Image Slider */}
+            <div className="mb-6">
+              <div className="relative">
+                <img 
+                  src={visitImages[currentVisitImageIndex]} 
+                  alt={`EC Industrial Visit - Image ${currentVisitImageIndex + 1}`}
+                  className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
+                />
+                
+                {/* Navigation buttons */}
+                <button 
+                  onClick={prevVisitImage}
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-all"
+                >
+                  <ChevronLeft className="h-5 w-5" />
+                </button>
+                
+                <button 
+                  onClick={nextVisitImage}
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-all"
+                >
+                  <ChevronRight className="h-5 w-5" />
+                </button>
+                
+                {/* Image counter */}
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm">
+                  {currentVisitImageIndex + 1} / {visitImages.length}
+                </div>
+              </div>
+            </div>
+
+            {/* Thumbnail grid */}
+            <div className="grid grid-cols-5 gap-2 max-w-2xl mx-auto">
+              {visitImages.map((image, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentVisitImageIndex(index)}
+                  className={`relative overflow-hidden rounded-lg aspect-square ${
+                    currentVisitImageIndex === index ? 'ring-2 ring-blue-500' : ''
+                  }`}
+                >
+                  <img 
+                    src={image} 
+                    alt={`EC visit thumbnail ${index + 1}`}
+                    className="w-full h-full object-cover hover:scale-110 transition-transform"
+                  />
+                </button>
+              ))}
+            </div>
+
+            <div className="text-center mt-8">
+              <p className="text-gray-600 text-sm mb-4">
+                Students gained valuable insights into modern electronics and communication systems 
+                through hands-on demonstrations and interactive sessions with industry professionals.
+              </p>
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+                Learn More About EC Department
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
