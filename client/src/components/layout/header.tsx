@@ -227,6 +227,7 @@ export default function Header() {
                 <DropdownButton name="student-support" icon={Users}>Student Support</DropdownButton>
                 <DropdownContent name="student-support">
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Basic Support</div>
+                  <DropdownLink href="/induction-program" icon={GraduationCap}>Induction Program 2024</DropdownLink>
                   <DropdownLink href="/scholarships" icon={Award}>Scholarships</DropdownLink>
                   <DropdownLink href="/mentoring-scheme" icon={Users}>Mentoring Scheme</DropdownLink>
                   <DropdownLink href="/anti-ragging" icon={Shield}>Anti Ragging</DropdownLink>
