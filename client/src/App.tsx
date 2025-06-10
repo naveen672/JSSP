@@ -47,6 +47,8 @@ import CulturalActivities from "@/pages/cultural-activities";
 import FeePayment from "@/pages/fee-payment";
 import HigherEducation from "@/pages/higher-education";
 import AntiRagging from "@/pages/anti-ragging";
+import Achievements from "@/pages/achievements";
+import Curriculum from "@/pages/curriculum";
 import SocialOutreach from "@/pages/social-outreach";
 import Exam from "@/pages/exam";
 import Committees from "@/pages/committees";
@@ -123,6 +125,8 @@ function Router() {
               <Route path="/fee-payment" component={FeePayment} />
               <Route path="/higher-education" component={HigherEducation} />
               <Route path="/anti-ragging" component={AntiRagging} />
+              <Route path="/achievements" component={Achievements} />
+              <Route path="/curriculum" component={Curriculum} />
               <Route path="/social-outreach" component={SocialOutreach} />
               <Route path="/exam" component={Exam} />
               <Route path="/committees" component={Committees} />

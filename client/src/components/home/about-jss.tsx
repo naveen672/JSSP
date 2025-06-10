@@ -91,36 +91,67 @@ export default function AboutJSS() {
           </Card>
         </div>
 
+        {/* Institutional Highlights from PPT */}
+        <div className="mb-12 bg-white rounded-lg p-8 shadow-sm">
+          <h3 className="text-2xl font-bold text-primary mb-6 text-center">Institutional Highlights</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-blue-50 p-4 rounded-lg">
+              <h4 className="font-semibold text-blue-800 mb-2">Green Campus Initiative</h4>
+              <p className="text-sm text-blue-700">Building enclosed with rooftop solar panels and rainwater harvesting systems</p>
+            </div>
+            <div className="bg-green-50 p-4 rounded-lg">
+              <h4 className="font-semibold text-green-800 mb-2">Higher Education Support</h4>
+              <p className="text-sm text-green-700">Special DCET cell for higher education aspirants with dedicated guidance</p>
+            </div>
+            <div className="bg-purple-50 p-4 rounded-lg">
+              <h4 className="font-semibold text-purple-800 mb-2">Technical Excellence</h4>
+              <p className="text-sm text-purple-700">Organized National level Technical Seminars and modern laboratory facilities</p>
+            </div>
+            <div className="bg-orange-50 p-4 rounded-lg">
+              <h4 className="font-semibold text-orange-800 mb-2">Student Welfare</h4>
+              <p className="text-sm text-orange-700">Hostel facility provided with comprehensive student support services</p>
+            </div>
+            <div className="bg-red-50 p-4 rounded-lg">
+              <h4 className="font-semibold text-red-800 mb-2">Industry Placement</h4>
+              <p className="text-sm text-red-700">Best at industry placements with strong corporate partnerships</p>
+            </div>
+            <div className="bg-indigo-50 p-4 rounded-lg">
+              <h4 className="font-semibold text-indigo-800 mb-2">Quality Assurance</h4>
+              <p className="text-sm text-indigo-700">Internal Quality Assurance Cell (IQAC) and Program Assessment Committee</p>
+            </div>
+          </div>
+        </div>
+
         <div className="grid md:grid-cols-4 gap-6">
           <div className="text-center">
             <div className="bg-white rounded-lg p-6 shadow-sm">
               <Award className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h4 className="font-semibold text-primary mb-2">30+ Years</h4>
-              <p className="text-gray-600 text-sm">of Excellence in Education</p>
+              <h4 className="font-semibold text-primary mb-2">300+ Institutions</h4>
+              <p className="text-gray-600 text-sm">Under JSS Mahavidyapeetha</p>
             </div>
           </div>
 
           <div className="text-center">
             <div className="bg-white rounded-lg p-6 shadow-sm">
               <Users className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h4 className="font-semibold text-primary mb-2">Experienced Faculty</h4>
-              <p className="text-gray-600 text-sm">Dedicated to Student Success</p>
+              <h4 className="font-semibold text-primary mb-2">1,00,000+ Students</h4>
+              <p className="text-gray-600 text-sm">From kindergarten to post-doctoral</p>
             </div>
           </div>
 
           <div className="text-center">
             <div className="bg-white rounded-lg p-6 shadow-sm">
               <Globe className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h4 className="font-semibold text-primary mb-2">Industry Partnerships</h4>
-              <p className="text-gray-600 text-sm">Strong Corporate Connections</p>
+              <h4 className="font-semibold text-primary mb-2">10,000+ Employees</h4>
+              <p className="text-gray-600 text-sm">Dedicated Academic Workforce</p>
             </div>
           </div>
 
           <div className="text-center">
             <div className="bg-white rounded-lg p-6 shadow-sm">
               <BookOpen className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h4 className="font-semibold text-primary mb-2">Modern Facilities</h4>
-              <p className="text-gray-600 text-sm">State-of-the-art Infrastructure</p>
+              <h4 className="font-semibold text-primary mb-2">NBA Accreditation</h4>
+              <p className="text-gray-600 text-sm">Quality Assured Programs</p>
             </div>
           </div>
         </div>

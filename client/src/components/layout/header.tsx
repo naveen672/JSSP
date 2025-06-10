@@ -190,6 +190,8 @@ export default function Header() {
                   
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Other</div>
                   <DropdownLink href="/academics" icon={BookOpen}>About Academics</DropdownLink>
+                  <DropdownLink href="/curriculum" icon={BookOpen}>Curriculum Framework</DropdownLink>
+                  <DropdownLink href="/achievements" icon={Award}>Achievements & Recognitions</DropdownLink>
                   <DropdownLink href="/jss-collaboration-mous" icon={Award}>JSS Collaboration MOUs</DropdownLink>
                   <DropdownLink href="/mandatory-disclosure" icon={FileText}>Mandatory Disclosure</DropdownLink>
                 </DropdownContent>
