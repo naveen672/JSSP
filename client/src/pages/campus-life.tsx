@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import StudentProjectsGallery from "@/components/student-projects-gallery";
 import { 
   Home, 
   Utensils, 
@@ -780,6 +781,12 @@ export default function CampusLife() {
           </div>
         </div>
       </section>
+
+      {/* Student Projects & Laboratory Activities */}
+      <StudentProjectsGallery 
+        title="Student Projects & Laboratory Activities"
+        subtitle="Experience hands-on learning through practical experiments and innovative projects across all engineering departments"
+      />
     </div>
   );
 }
