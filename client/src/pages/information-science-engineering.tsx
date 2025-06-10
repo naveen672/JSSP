@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Users, BookOpen, Calendar, ExternalLink, GraduationCap, Target, Eye } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Users, BookOpen, Calendar, ExternalLink, GraduationCap, Target, Eye, Building, UserCheck, Phone, Mail } from "lucide-react";
 import computerLabImage from "@assets/image_1748548333376.png";
 import hodImage from "@assets/image_1748548354011.png";
 import shruthiImage from "@assets/image_1748548358487.png";
@@ -12,40 +13,64 @@ import mahadevaswamyImage from "@assets/image_1748548378323.png";
 export default function InformationScienceEngineering() {
   const teachingFaculty = [
     {
-      slNo: 1,
+      id: 1,
       name: "Tejaswini M P",
-      designation: "HOD",
-      qualification: "MTech",
-      dateOfJoining: "07-12-2007",
-      profileLink: "#",
-      image: hodImage
+      designation: "HOD (Head of Department)",
+      qualification: "BE, MTech",
+      dateOfJoining: "12/07/2007",
+      experience: "17+ years Teaching",
+      phone: "9066229953",
+      email: "tejaswinimp@jsspolytechnic.org",
+      profilePdf: "/attached_assets/Tejaswini MP_1749579887244.pdf",
+      specialization: "Computer Science & Engineering, Computer Networks",
+      image: hodImage,
+      hasProfile: true,
+      positions: "Entrepreneur cell Coordinator, Grievance cell Coordinator, Cultural cell Coordinator"
     },
     {
-      slNo: 2,
+      id: 2,
       name: "Shruthi M",
       designation: "Lecturer",
-      qualification: "MTech",
-      dateOfJoining: "08-06-2009",
-      profileLink: "#",
-      image: shruthiImage
+      qualification: "BE (Instrumentation Technology), MTech (Information Science)",
+      dateOfJoining: "06/08/2009",
+      experience: "16+ years Teaching",
+      phone: "9482584695",
+      email: "Shruthi.m@jsspolytechnic.org",
+      profilePdf: "/attached_assets/shruthi M_1749579887244.pdf",
+      specialization: "Information Science & Engineering, IoT Applications, Python Programming",
+      image: shruthiImage,
+      hasProfile: true,
+      positions: "Workshop Organizer (IT Skills Lab, Social IoT, Pervasive Computing)"
     },
     {
-      slNo: 3,
-      name: "Sowrabha MC",
+      id: 3,
+      name: "Sowrabha M C",
       designation: "Lecturer",
-      qualification: "BE",
-      dateOfJoining: "11-07-2022",
-      profileLink: "#",
-      image: sowrabhaImage
+      qualification: "BE (Computer Science & Engineering)",
+      dateOfJoining: "11/07/2022",
+      experience: "2+ years Teaching",
+      phone: "9535481888",
+      email: "Sowrabha@jsspolytechnic.org",
+      profilePdf: "/attached_assets/sowrabha_1749579887243.pdf",
+      specialization: "Computer Science & Engineering, Full Stack Development, Machine Learning",
+      image: sowrabhaImage,
+      hasProfile: true,
+      positions: "Alumni Coordinator, Website Coordinator, Industry Interaction cell member, Innovation Cell Member"
     },
     {
-      slNo: 4,
+      id: 4,
       name: "Jayarajeshwari K",
       designation: "Lecturer",
-      qualification: "BE",
-      dateOfJoining: "18/1/2024",
-      profileLink: "#",
-      image: jayarajeshwariImage
+      qualification: "BE (Computer Science & Engineering)",
+      dateOfJoining: "19/01/2024",
+      experience: "1+ year Teaching",
+      phone: "6364681604",
+      email: "jayarajeshwari.k@jsspolytechnic.org",
+      profilePdf: "/attached_assets/jayarajseshwari_1749579887243.pdf",
+      specialization: "Computer Science & Engineering",
+      image: jayarajeshwariImage,
+      hasProfile: true,
+      positions: "Fresh Graduate with First Class Distinction"
     }
   ];
 
@@ -183,91 +208,123 @@ export default function InformationScienceEngineering() {
         </div>
       </section>
 
-      {/* Teaching Faculty */}
+      {/* Faculty Profiles Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">LIST OF TEACHING FACULTY</h2>
-          
-          <div className="max-w-6xl mx-auto">
-            <div className="overflow-x-auto">
-              <table className="w-full bg-white rounded-lg shadow-sm">
-                <thead className="bg-primary text-white">
-                  <tr>
-                    <th className="px-6 py-4 text-left">Sl No</th>
-                    <th className="px-6 py-4 text-left">Image</th>
-                    <th className="px-6 py-4 text-left">Name</th>
-                    <th className="px-6 py-4 text-left">Designation</th>
-                    <th className="px-6 py-4 text-left">Qualification</th>
-                    <th className="px-6 py-4 text-left">Date of Joining</th>
-                    <th className="px-6 py-4 text-left">Profile</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {teachingFaculty.map((faculty, index) => (
-                    <tr key={faculty.slNo} className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}>
-                      <td className="px-6 py-4 font-medium text-primary">{faculty.slNo}</td>
-                      <td className="px-6 py-4">
+          <Card className="mb-12 shadow-lg">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-blue-900">
+                <Users className="h-6 w-6" />
+                Faculty Profiles - Information Science & Engineering
+              </CardTitle>
+              <p className="text-gray-600 mt-2">Click on "View Profile" to access detailed faculty information and achievements</p>
+            </CardHeader>
+            <CardContent>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                {teachingFaculty.map((faculty, index) => (
+                  <Card key={faculty.id} className="hover:shadow-lg transition-shadow">
+                    <CardContent className="p-6">
+                      <div className="text-center mb-4">
                         <img 
-                          src={faculty.image} 
+                          src={faculty.image || "/api/placeholder/150/180"} 
                           alt={faculty.name}
-                          className="w-24 h-32 rounded-lg object-cover"
+                          className="w-24 h-28 object-cover rounded-lg mx-auto shadow-md mb-3"
                         />
-                      </td>
-                      <td className="px-6 py-4 font-semibold text-gray-700">{faculty.name}</td>
-                      <td className="px-6 py-4">
-                        <Badge variant={faculty.designation === "HOD" ? "default" : "secondary"}>
-                          {faculty.designation}
-                        </Badge>
-                      </td>
-                      <td className="px-6 py-4">
-                        <Badge variant="outline">{faculty.qualification}</Badge>
-                      </td>
-                      <td className="px-6 py-4 text-gray-600">{faculty.dateOfJoining}</td>
-                      <td className="px-6 py-4">
-                        <a 
-                          href={faculty.profileLink}
-                          className="inline-flex items-center space-x-1 text-accent hover:text-primary transition-colors"
-                        >
-                          <span className="text-sm">click here to view</span>
-                          <ExternalLink className="h-3 w-3" />
-                        </a>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </section>
+                        <h3 className="font-bold text-lg text-gray-800">{faculty.name}</h3>
+                        <p className="text-blue-600 font-medium">{faculty.designation}</p>
+                      </div>
+                      
+                      <div className="space-y-2 text-sm">
+                        <div>
+                          <span className="font-medium text-gray-700">Qualification:</span>
+                          <span className="text-gray-600 ml-1 text-xs">{faculty.qualification}</span>
+                        </div>
+                        <div>
+                          <span className="font-medium text-gray-700">Experience:</span>
+                          <span className="text-gray-600 ml-1">{faculty.experience}</span>
+                        </div>
+                        {faculty.specialization && (
+                          <div>
+                            <span className="font-medium text-gray-700">Specialization:</span>
+                            <span className="text-gray-600 ml-1 text-xs">{faculty.specialization}</span>
+                          </div>
+                        )}
+                        {faculty.email && (
+                          <div>
+                            <span className="font-medium text-gray-700">Email:</span>
+                            <span className="text-gray-600 ml-1 text-xs">{faculty.email}</span>
+                          </div>
+                        )}
+                        {faculty.phone && (
+                          <div>
+                            <span className="font-medium text-gray-700">Phone:</span>
+                            <span className="text-gray-600 ml-1">{faculty.phone}</span>
+                          </div>
+                        )}
+                        {faculty.positions && (
+                          <div>
+                            <span className="font-medium text-gray-700">Positions:</span>
+                            <span className="text-gray-600 ml-1 text-xs">{faculty.positions}</span>
+                          </div>
+                        )}
+                      </div>
+                      
+                      <div className="mt-4 text-center">
+                        {faculty.profilePdf ? (
+                          <a
+                            href={faculty.profilePdf}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors shadow-md"
+                          >
+                            <BookOpen className="h-4 w-4" />
+                            View Profile
+                          </a>
+                        ) : (
+                          <Button
+                            disabled
+                            className="inline-flex items-center gap-2 px-4 py-2 bg-gray-400 text-white text-sm rounded-lg cursor-not-allowed"
+                          >
+                            <BookOpen className="h-4 w-4" />
+                            Profile Coming Soon
+                          </Button>
+                        )}
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
 
-      {/* Faculty Cards */}
-      <section className="bg-gray-50 py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Meet Our Faculty</h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {teachingFaculty.map((faculty) => (
-              <Card key={faculty.slNo} className="text-center hover:shadow-lg transition-shadow">
-                <CardContent className="p-6">
-                  <img 
-                    src={faculty.image} 
-                    alt={faculty.name}
-                    className="w-32 h-40 rounded-lg mx-auto mb-4 object-cover"
-                  />
-                  <h3 className="text-lg font-semibold text-primary mb-2">{faculty.name}</h3>
-                  <Badge className="mb-2" variant={faculty.designation === "HOD" ? "default" : "secondary"}>
-                    {faculty.designation}
-                  </Badge>
-                  <p className="text-sm text-gray-600 mb-2">{faculty.qualification}</p>
-                  <div className="flex items-center justify-center space-x-1 text-xs text-gray-500">
-                    <Calendar className="h-3 w-3" />
-                    <span>Joined: {faculty.dateOfJoining}</span>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+              {/* Faculty Summary Table */}
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">Faculty Summary</h3>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="border-b border-gray-300">
+                        <th className="text-left py-2 font-medium text-gray-700">Name</th>
+                        <th className="text-left py-2 font-medium text-gray-700">Designation</th>
+                        <th className="text-left py-2 font-medium text-gray-700">Qualification</th>
+                        <th className="text-left py-2 font-medium text-gray-700">Experience</th>
+                        <th className="text-left py-2 font-medium text-gray-700">Joining Date</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {teachingFaculty.map((faculty, index) => (
+                        <tr key={faculty.id} className="border-b border-gray-200">
+                          <td className="py-2 text-gray-800">{faculty.name}</td>
+                          <td className="py-2 text-gray-600">{faculty.designation}</td>
+                          <td className="py-2 text-gray-600">{faculty.qualification}</td>
+                          <td className="py-2 text-gray-600">{faculty.experience}</td>
+                          <td className="py-2 text-gray-600">{faculty.dateOfJoining}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
