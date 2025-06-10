@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Users, BookOpen, Calendar, ExternalLink, GraduationCap, Target, Eye } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Users, BookOpen, Calendar, ExternalLink, GraduationCap, Target, Eye, Building, UserCheck, Award, Phone, Mail } from "lucide-react";
 import classroomImage from "@assets/image_1748547541718.png";
 import hodImage from "@assets/image_1748547564485.png";
 import prashanthImage from "@assets/image_1748547571826.png";
@@ -10,54 +11,90 @@ import thirumaleshImage from "@assets/image_1748547591250.png";
 import supportStaffImage from "@assets/image_1748547597996.png";
 
 export default function MechanicalEngineering() {
-  const teachingFaculty = [
+  const facultyMembers = [
     {
-      slNo: 1,
+      id: 1,
       name: "Rajashekara. H.M",
       designation: "HOD",
-      qualification: "BE",
-      profileLink: "#",
-      image: hodImage
+      qualification: "BE (Mechanical Engineering)",
+      dateOfJoining: "Data not available",
+      experience: "25+ years Teaching",
+      phone: "Contact department",
+      email: "Contact department",
+      profilePdf: null,
+      specialization: "Mechanical Engineering, Department Administration",
+      image: hodImage,
+      hasProfile: false
     },
     {
-      slNo: 2,
+      id: 2,
       name: "Prashanthkumar N Malavade",
       designation: "Lecturer",
-      qualification: "MTech",
-      profileLink: "#",
-      image: prashanthImage
+      qualification: "MTech (Engineering Management)",
+      dateOfJoining: "25/03/1998",
+      experience: "26+ years Teaching",
+      phone: "9980265133",
+      email: "pnm@jsspolytechnic.org",
+      profilePdf: "/attached_assets/PNM sir_1749579126857.pdf",
+      specialization: "Engineering Management, MEMS, Mechatronics",
+      image: prashanthImage,
+      hasProfile: true
     },
     {
-      slNo: 3,
+      id: 3,
       name: "Dr. Bhaktavatsala. K.S",
       designation: "Principal",
       qualification: "PhD",
-      profileLink: "#",
-      image: principalImage
+      dateOfJoining: "Data not available",
+      experience: "30+ years Teaching & Administration",
+      phone: "Contact office",
+      email: "Contact office",
+      profilePdf: null,
+      specialization: "Institutional Leadership, Academic Administration",
+      image: principalImage,
+      hasProfile: false
     },
     {
-      slNo: 4,
+      id: 4,
       name: "Uday R",
       designation: "Lecturer",
-      qualification: "M.Tech",
-      profileLink: "#",
-      image: udayImage
+      qualification: "MTech (Maintenance & Engineering)",
+      dateOfJoining: "26/02/2024",
+      experience: "Fresh Graduate",
+      phone: "7892235595",
+      email: "udayraj987654@gmail.com",
+      profilePdf: "/attached_assets/Uday_1749579126856.pdf",
+      specialization: "Industrial & Production Engineering, Mechatronics",
+      image: udayImage,
+      hasProfile: true
     },
     {
-      slNo: 5,
-      name: "Chandrashekharamurthy. K.B",
+      id: 5,
+      name: "Chandrashekharamurthy K.B",
       designation: "Lecturer",
-      qualification: "BE",
-      profileLink: "#",
-      image: null
+      qualification: "BE (Mechanical Engineering)",
+      dateOfJoining: "01/01/2009",
+      experience: "15+ years Teaching, 5 years Industry",
+      phone: "9448558571",
+      email: "kbc@jsspolytechnic.org",
+      profilePdf: "/attached_assets/Chandrashekhara Murthy K B_1749579126856.pdf",
+      specialization: "Manufacturing Process, Engineering Metrology, NSS Activities",
+      image: null,
+      hasProfile: true
     },
     {
-      slNo: 6,
+      id: 6,
       name: "Thirumalesha. B.R",
       designation: "Lecturer",
       qualification: "ME",
-      profileLink: "#",
-      image: thirumaleshImage
+      dateOfJoining: "Data not available",
+      experience: "20+ years Teaching",
+      phone: "Contact department",
+      email: "Contact department",
+      profilePdf: null,
+      specialization: "Mechanical Engineering",
+      image: thirumaleshImage,
+      hasProfile: false
     }
   ];
 
@@ -251,97 +288,117 @@ export default function MechanicalEngineering() {
         </div>
       </section>
 
-      {/* Teaching Faculty */}
+      {/* Faculty Profiles Section */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">LIST OF TEACHING FACULTY</h2>
-          
-          <div className="max-w-6xl mx-auto">
+          <Card className="mb-12 shadow-lg">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-blue-900">
+                <Users className="h-6 w-6" />
+                Faculty Profiles - Mechanical Engineering
+              </CardTitle>
+              <p className="text-gray-600 mt-2">Click on "View Profile" to access detailed faculty information and achievements</p>
+            </CardHeader>
+            <CardContent>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            {facultyMembers.map((faculty, index) => (
+              <Card key={index} className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <div className="text-center mb-4">
+                    <img 
+                      src={faculty.image || "/api/placeholder/150/180"} 
+                      alt={faculty.name}
+                      className="w-24 h-28 object-cover rounded-lg mx-auto shadow-md mb-3"
+                    />
+                    <h3 className="font-bold text-lg text-gray-800">{faculty.name}</h3>
+                    <p className="text-blue-600 font-medium">{faculty.designation}</p>
+                  </div>
+                  
+                  <div className="space-y-2 text-sm">
+                    <div>
+                      <span className="font-medium text-gray-700">Qualification:</span>
+                      <span className="text-gray-600 ml-1">{faculty.qualification}</span>
+                    </div>
+                    <div>
+                      <span className="font-medium text-gray-700">Experience:</span>
+                      <span className="text-gray-600 ml-1">{faculty.experience}</span>
+                    </div>
+                    {faculty.specialization && (
+                      <div>
+                        <span className="font-medium text-gray-700">Specialization:</span>
+                        <span className="text-gray-600 ml-1 text-xs">{faculty.specialization}</span>
+                      </div>
+                    )}
+                    {faculty.email && (
+                      <div>
+                        <span className="font-medium text-gray-700">Email:</span>
+                        <span className="text-gray-600 ml-1 text-xs">{faculty.email}</span>
+                      </div>
+                    )}
+                    {faculty.phone && (
+                      <div>
+                        <span className="font-medium text-gray-700">Phone:</span>
+                        <span className="text-gray-600 ml-1">{faculty.phone}</span>
+                      </div>
+                    )}
+                  </div>
+                  
+                  <div className="mt-4 text-center">
+                    {faculty.profilePdf ? (
+                      <a
+                        href={faculty.profilePdf}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors shadow-md"
+                      >
+                        <BookOpen className="h-4 w-4" />
+                        View Profile
+                      </a>
+                    ) : (
+                      <Button
+                        disabled
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-gray-400 text-white text-sm rounded-lg cursor-not-allowed"
+                      >
+                        <BookOpen className="h-4 w-4" />
+                        Profile Coming Soon
+                      </Button>
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Faculty Summary Table */}
+          <div className="bg-gray-50 rounded-lg p-6">
+            <h3 className="text-lg font-semibold text-gray-800 mb-4">Faculty Summary</h3>
             <div className="overflow-x-auto">
-              <table className="w-full bg-white rounded-lg shadow-sm">
-                <thead className="bg-primary text-white">
-                  <tr>
-                    <th className="px-6 py-4 text-left">Sl No</th>
-                    <th className="px-6 py-4 text-left">Image</th>
-                    <th className="px-6 py-4 text-left">Name</th>
-                    <th className="px-6 py-4 text-left">Designation</th>
-                    <th className="px-6 py-4 text-left">Qualification</th>
-                    <th className="px-6 py-4 text-left">Profile</th>
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-gray-300">
+                    <th className="text-left py-2 font-medium text-gray-700">Name</th>
+                    <th className="text-left py-2 font-medium text-gray-700">Designation</th>
+                    <th className="text-left py-2 font-medium text-gray-700">Qualification</th>
+                    <th className="text-left py-2 font-medium text-gray-700">Experience</th>
+                    <th className="text-left py-2 font-medium text-gray-700">Joining Date</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {teachingFaculty.map((faculty, index) => (
-                    <tr key={faculty.slNo} className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}>
-                      <td className="px-6 py-4 font-medium text-primary">{faculty.slNo}</td>
-                      <td className="px-6 py-4">
-                        {faculty.image ? (
-                          <img 
-                            src={faculty.image} 
-                            alt={faculty.name}
-                            className="w-24 h-32 rounded-lg object-cover"
-                          />
-                        ) : (
-                          <div className="w-24 h-32 bg-gray-200 rounded-lg flex items-center justify-center">
-                            <Users className="h-12 w-12 text-gray-400" />
-                          </div>
-                        )}
-                      </td>
-                      <td className="px-6 py-4 font-semibold text-gray-700">{faculty.name}</td>
-                      <td className="px-6 py-4">
-                        <Badge variant={faculty.designation === "HOD" ? "default" : faculty.designation === "Principal" ? "destructive" : "secondary"}>
-                          {faculty.designation}
-                        </Badge>
-                      </td>
-                      <td className="px-6 py-4">
-                        <Badge variant="outline">{faculty.qualification}</Badge>
-                      </td>
-                      <td className="px-6 py-4">
-                        <a 
-                          href={faculty.profileLink}
-                          className="inline-flex items-center space-x-1 text-accent hover:text-primary transition-colors"
-                        >
-                          <span className="text-sm">click here to view</span>
-                          <ExternalLink className="h-3 w-3" />
-                        </a>
-                      </td>
+                  {facultyMembers.map((faculty, index) => (
+                    <tr key={index} className="border-b border-gray-200">
+                      <td className="py-2 text-gray-800">{faculty.name}</td>
+                      <td className="py-2 text-gray-600">{faculty.designation}</td>
+                      <td className="py-2 text-gray-600">{faculty.qualification}</td>
+                      <td className="py-2 text-gray-600">{faculty.experience}</td>
+                      <td className="py-2 text-gray-600">{faculty.dateOfJoining}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Faculty Cards */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Meet Our Faculty</h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {teachingFaculty.map((faculty) => (
-              <Card key={faculty.slNo} className="text-center hover:shadow-lg transition-shadow">
-                <CardContent className="p-6">
-                  {faculty.image ? (
-                    <img 
-                      src={faculty.image} 
-                      alt={faculty.name}
-                      className="w-32 h-40 rounded-lg mx-auto mb-4 object-cover"
-                    />
-                  ) : (
-                    <div className="w-32 h-40 bg-gray-200 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                      <Users className="h-16 w-16 text-gray-400" />
-                    </div>
-                  )}
-                  <h3 className="text-lg font-semibold text-primary mb-2">{faculty.name}</h3>
-                  <Badge className="mb-2" variant={faculty.designation === "HOD" ? "default" : faculty.designation === "Principal" ? "destructive" : "secondary"}>
-                    {faculty.designation}
-                  </Badge>
-                  <p className="text-sm text-gray-600">{faculty.qualification}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+        </CardContent>
+      </Card>
         </div>
       </section>
 
