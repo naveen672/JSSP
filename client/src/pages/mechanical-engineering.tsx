@@ -1,452 +1,427 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
-import { Button } from "@/components/ui/button";
-import { GraduationCap, Users, Award, Building2, Target, Eye, Book, UserCheck, Calendar, MapPin, Building, BookOpen, Mail, Phone } from "lucide-react";
-import meLabImage from "@assets/ME.jpg";
+import { Users, BookOpen, Calendar, ExternalLink, GraduationCap, Target, Eye } from "lucide-react";
+import classroomImage from "@assets/image_1748547541718.png";
+import hodImage from "@assets/image_1748547564485.png";
+import prashanthImage from "@assets/image_1748547571826.png";
+import principalImage from "@assets/image_1748547577741.png";
+import udayImage from "@assets/image_1748547583155.png";
+import thirumaleshImage from "@assets/image_1748547591250.png";
+import supportStaffImage from "@assets/image_1748547597996.png";
 
 export default function MechanicalEngineering() {
-  const facultyMembers = [
+  const teachingFaculty = [
     {
+      slNo: 1,
+      name: "Rajashekara. H.M",
+      designation: "HOD",
+      qualification: "BE",
+      profileLink: "#",
+      image: hodImage
+    },
+    {
+      slNo: 2,
       name: "Prashanthkumar N Malavade",
       designation: "Lecturer",
-      qualification: "MTech (Engineering Management), BE (Mechanical Engineering)",
-      dateOfJoining: "25/03/1998",
-      image: null,
-      experience: "26+ years Teaching",
-      phone: "9980265133",
-      email: "pnm@jsspolytechnic.org",
-      profilePdf: "/attached_assets/PNM sir_1749578783714.pdf",
-      specialization: "Engineering Management, Mechanical Systems Design"
+      qualification: "MTech",
+      profileLink: "#",
+      image: prashanthImage
     },
     {
-      name: "Chandrashekhara Murthy K B",
-      designation: "Lecturer",
-      qualification: "BE (Mechanical Engineering), Diploma (Mechanical Engineering)",
-      dateOfJoining: "01/01/2009",
-      image: null,
-      experience: "15+ years Teaching, 5 years Industry",
-      phone: "9448558571",
-      email: "kbc@jsspolytechnic.org",
-      profilePdf: "/attached_assets/Chandrashekhara Murthy K B_1749578783713.pdf",
-      specialization: "Manufacturing Processes, Engineering Metrology"
+      slNo: 3,
+      name: "Dr. Bhaktavatsala. K.S",
+      designation: "Principal",
+      qualification: "PhD",
+      profileLink: "#",
+      image: principalImage
     },
     {
+      slNo: 4,
       name: "Uday R",
       designation: "Lecturer",
-      qualification: "MTech (Maintenance & Engineering), BE (Industrial & Production Engineering)",
-      dateOfJoining: "26/02/2024",
-      image: null,
-      experience: "New Faculty Member",
-      phone: "7892235595",
-      email: "udayraj987654@gmail.com",
-      profilePdf: "/attached_assets/Uday_1749578783714.pdf",
-      specialization: "Industrial Engineering, Production Systems, Maintenance Engineering"
+      qualification: "M.Tech",
+      profileLink: "#",
+      image: udayImage
     },
     {
-      name: "Faculty Member 4",
+      slNo: 5,
+      name: "Chandrashekharamurthy. K.B",
       designation: "Lecturer",
-      qualification: "To be updated",
-      dateOfJoining: "To be updated",
-      image: null,
-      experience: "Profile will be added soon",
-      phone: "To be updated",
-      email: "To be updated",
-      profilePdf: null,
-      specialization: "To be updated"
+      qualification: "BE",
+      profileLink: "#",
+      image: null
     },
     {
-      name: "Faculty Member 5",
+      slNo: 6,
+      name: "Thirumalesha. B.R",
       designation: "Lecturer",
-      qualification: "To be updated",
-      dateOfJoining: "To be updated",
-      image: null,
-      experience: "Profile will be added soon",
-      phone: "To be updated",
-      email: "To be updated",
-      profilePdf: null,
-      specialization: "To be updated"
-    },
-    {
-      name: "Faculty Member 6",
-      designation: "Lecturer",
-      qualification: "To be updated",
-      dateOfJoining: "To be updated",
-      image: null,
-      experience: "Profile will be added soon",
-      phone: "To be updated",
-      email: "To be updated",
-      profilePdf: null,
-      specialization: "To be updated"
+      qualification: "ME",
+      profileLink: "#",
+      image: thirumaleshImage
     }
   ];
 
   const supportingStaff = [
     {
-      id: 1,
-      image: null,
-      name: "Supporting Staff 1",
+      slNo: 1,
+      name: "Nagendra. H.C",
       designation: "Instructor",
-      qualification: "To be updated"
+      qualification: "DME",
+      image: null
     },
     {
-      id: 2,
-      image: null,
-      name: "Supporting Staff 2",
-      designation: "Mechanic",
-      qualification: "To be updated"
-    },
-    {
-      id: 3,
-      image: null,
-      name: "Supporting Staff 3",
+      slNo: 3,
+      name: "Prakash.N",
       designation: "Lab Helper",
-      qualification: "To be updated"
+      qualification: "ITI",
+      image: null
+    },
+    {
+      slNo: 4,
+      name: "Udayakumar. R",
+      designation: "Lab Helper",
+      qualification: "ITI",
+      image: null
+    },
+    {
+      slNo: 5,
+      name: "Mahadevaswamy",
+      designation: "Lab Helper",
+      qualification: "ITI",
+      image: supportStaffImage
     }
   ];
 
+  const missions = [
+    "To benefit the society by imparting quality technical education to students by providing excellent Teaching learning Environment in collaboration with industry and academia.",
+    "To apply the knowledge of basic and contemporary science, engineering and innovative skills to identify problems in Academia, Industry and Society and to develop practical solutions to them.",
+    "To impart ethical values, leadership, teamwork, communication skills and hands-on activities for day-to-day mechanical engineering problems."
+  ];
+
+  const objectives = [
+    "To enhance their technical knowledge by pursuing higher studies.",
+    "To lead successful careers in wider ranges of industries by acquiring the knowledge through continuous learning.",
+    "To develop entrepreneurship skills and become a successful entrepreneur.",
+    "To develop professional ethics and responsibilities to address societal and environmental issues."
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-green-900 to-emerald-900 text-white">
-        <div className="container mx-auto px-4 py-16">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <div className="flex items-center gap-3 mb-4">
-                <GraduationCap className="h-10 w-10 text-yellow-400" />
-                <Badge variant="secondary" className="bg-yellow-400 text-green-900 font-semibold">
-                  Established 1987
-                </Badge>
-              </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                Mechanical Engineering
-              </h1>
-              <p className="text-xl text-green-100 mb-6">
-                Excellence in mechanical engineering education with hands-on practical training and industry-focused curriculum since 1987
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <div className="flex items-center gap-2">
-                  <Users className="h-5 w-5" />
-                  <span>60 Students Intake</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Award className="h-5 w-5" />
-                  <span>AICTE Approved</span>
-                </div>
-              </div>
+    <div className="w-full">
+      {/* Department Image */}
+      <section className="relative">
+        <img 
+          src={classroomImage} 
+          alt="Mechanical Engineering Department Classroom" 
+          className="w-full h-64 md:h-96 object-cover"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="text-center text-white">
+            <h1 className="text-4xl lg:text-6xl font-bold mb-4">Mechanical Engineering</h1>
+            <p className="text-xl lg:text-2xl opacity-90">Excellence in Engineering Education Since 1987</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Vision Section */}
+      <section className="py-16 bg-primary text-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="flex items-center justify-center mb-6">
+              <Eye className="h-8 w-8 mr-3" />
+              <h2 className="text-3xl font-bold">VISION</h2>
             </div>
-            <div className="relative">
-              <img 
-                src={meLabImage} 
-                alt="Mechanical Engineering Laboratory"
-                className="rounded-lg shadow-2xl w-full"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
+            <p className="text-xl leading-relaxed">
+              To develop programme with excellence in teaching-learning to produce competent professionals 
+              in Mechanical Engineering with ethical values to meet the needs of the industry and society.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-center justify-center mb-8">
+              <Target className="h-8 w-8 mr-3 text-accent" />
+              <h2 className="text-3xl font-bold">MISSION</h2>
+            </div>
+            <div className="space-y-6">
+              {missions.map((mission, index) => (
+                <Card key={index}>
+                  <CardContent className="p-6">
+                    <div className="flex items-start space-x-4">
+                      <Badge className="mt-1">M{index + 1}</Badge>
+                      <p className="text-gray-700">{mission}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="container mx-auto px-4 py-12">
-        {/* Vision and Mission */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <Card className="border-l-4 border-l-green-600 shadow-lg">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-green-900">
-                <Eye className="h-6 w-6" />
-                Vision
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-700 leading-relaxed">
-                To excel in mechanical engineering education by providing quality technical education 
-                that develops competent professionals capable of meeting industrial and societal needs 
-                through innovation and sustainable practices.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="border-l-4 border-l-emerald-600 shadow-lg">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-green-900">
-                <Target className="h-6 w-6" />
-                Mission
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="space-y-2 text-gray-700">
-                <li className="flex items-start gap-2">
-                  <span className="w-2 h-2 bg-emerald-600 rounded-full mt-2 flex-shrink-0"></span>
-                  To provide quality technical education in mechanical engineering
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="w-2 h-2 bg-emerald-600 rounded-full mt-2 flex-shrink-0"></span>
-                  To develop skilled professionals for industry and entrepreneurship
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="w-2 h-2 bg-emerald-600 rounded-full mt-2 flex-shrink-0"></span>
-                  To promote research and innovation in mechanical engineering
-                </li>
-              </ul>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Department Laboratory */}
-        <Card className="mb-12 shadow-lg">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-green-900">
-              <Building className="h-6 w-6" />
-              Mechanical Engineering Laboratory
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <img 
-                  src={meLabImage} 
-                  alt="Mechanical Engineering Laboratory with advanced machinery"
-                  className="w-full h-64 object-cover rounded-lg shadow-md"
-                />
-              </div>
-              <div>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  Our comprehensive Mechanical Engineering laboratory is equipped with state-of-the-art 
-                  machinery and testing equipment that support the complete curriculum. The lab provides 
-                  hands-on experience with manufacturing processes, material testing, and thermal systems.
-                </p>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-center gap-2">
-                    <span className="w-2 h-2 bg-green-600 rounded-full"></span>
-                    Advanced manufacturing machinery and tools
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="w-2 h-2 bg-green-600 rounded-full"></span>
-                    Material testing and quality control equipment
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="w-2 h-2 bg-green-600 rounded-full"></span>
-                    Thermal engineering and fluid mechanics lab
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="w-2 h-2 bg-green-600 rounded-full"></span>
-                    CAD/CAM and design visualization facilities
-                  </li>
-                </ul>
-              </div>
+      {/* Program Educational Objectives */}
+      <section className="bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-center justify-center mb-8">
+              <GraduationCap className="h-8 w-8 mr-3 text-accent" />
+              <h2 className="text-3xl font-bold">Program Educational Objectives</h2>
             </div>
-          </CardContent>
-        </Card>
-
-        {/* HOD Message */}
-        <Card className="mb-12 shadow-lg">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-green-900">
-              <Users className="h-6 w-6" />
-              From HOD's Desk
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid md:grid-cols-4 gap-6 items-start">
-              <div className="text-center">
-                <img 
-                  src={meLabImage} 
-                  alt="Head of Department - Mechanical Engineering"
-                  className="w-32 h-40 object-cover rounded-lg shadow-md mx-auto mb-4"
-                />
-                <h3 className="font-semibold text-green-900">Head of Department</h3>
-                <p className="text-sm text-gray-600">Department Head</p>
-                <p className="text-sm text-gray-600">Profile to be updated</p>
-              </div>
-              <div className="md:col-span-3">
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  The Department of Mechanical Engineering was established in 1987 and has been at the forefront 
-                  of technical education in Karnataka. It is recognized by DTE, Bengaluru and affiliated to AICTE, 
-                  New Delhi. The current intake of students is 60 per year.
-                </p>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  Our department focuses on providing comprehensive mechanical engineering education with emphasis 
-                  on practical training, industry exposure, and skill development. We maintain well-equipped 
-                  laboratories that support hands-on learning and research activities.
-                </p>
-                <p className="text-gray-700 leading-relaxed">
-                  Our graduates are well-prepared for careers in manufacturing, automotive, aerospace, energy, 
-                  and other mechanical engineering sectors. Many pursue higher education in prestigious institutions 
-                  while others contribute to industry through their technical expertise and innovative solutions.
-                </p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Faculty Profiles Section */}
-        <Card className="mb-12 shadow-lg">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-green-900">
-              <Users className="h-6 w-6" />
-              Faculty Profiles - Mechanical Engineering
-            </CardTitle>
-            <p className="text-gray-600 mt-2">Click on "View Profile" to access detailed faculty information and achievements</p>
-          </CardHeader>
-          <CardContent>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-              {facultyMembers.map((faculty, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
+            <div className="grid md:grid-cols-2 gap-6">
+              {objectives.map((objective, index) => (
+                <Card key={index}>
                   <CardContent className="p-6">
-                    <div className="text-center mb-4">
-                      <img 
-                        src={faculty.image || meLabImage} 
-                        alt={faculty.name}
-                        className="w-24 h-28 object-cover rounded-lg mx-auto shadow-md mb-3"
-                      />
-                      <h3 className="font-bold text-lg text-gray-800">{faculty.name}</h3>
-                      <p className="text-green-600 font-medium">{faculty.designation}</p>
-                    </div>
-                    
-                    <div className="space-y-2 text-sm">
-                      <div>
-                        <span className="font-medium text-gray-700">Qualification:</span>
-                        <span className="text-gray-600 ml-1 text-xs">{faculty.qualification}</span>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-6 h-6 bg-accent text-white rounded-full flex items-center justify-center text-sm font-semibold mt-1">
+                        {index + 1}
                       </div>
-                      <div>
-                        <span className="font-medium text-gray-700">Experience:</span>
-                        <span className="text-gray-600 ml-1">{faculty.experience}</span>
-                      </div>
-                      {faculty.specialization && (
-                        <div>
-                          <span className="font-medium text-gray-700">Specialization:</span>
-                          <span className="text-gray-600 ml-1 text-xs">{faculty.specialization}</span>
-                        </div>
-                      )}
-                      {faculty.email && faculty.email !== "To be updated" && (
-                        <div>
-                          <span className="font-medium text-gray-700">Email:</span>
-                          <span className="text-gray-600 ml-1 text-xs">{faculty.email}</span>
-                        </div>
-                      )}
-                      {faculty.phone && faculty.phone !== "To be updated" && (
-                        <div>
-                          <span className="font-medium text-gray-700">Phone:</span>
-                          <span className="text-gray-600 ml-1">{faculty.phone}</span>
-                        </div>
-                      )}
-                    </div>
-                    
-                    <div className="mt-4 text-center">
-                      {faculty.profilePdf ? (
-                        <a
-                          href={faculty.profilePdf}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-4 py-2 bg-green-600 text-white text-sm rounded-lg hover:bg-green-700 transition-colors shadow-md"
-                        >
-                          <BookOpen className="h-4 w-4" />
-                          View Profile
-                        </a>
-                      ) : (
-                        <Button
-                          disabled
-                          className="inline-flex items-center gap-2 px-4 py-2 bg-gray-400 text-white text-sm rounded-lg cursor-not-allowed"
-                        >
-                          <BookOpen className="h-4 w-4" />
-                          Profile Coming Soon
-                        </Button>
-                      )}
+                      <p className="text-gray-700">{objective}</p>
                     </div>
                   </CardContent>
                 </Card>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Faculty Summary Table */}
-            <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">Faculty Summary</h3>
-              <div className="overflow-x-auto">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="border-b border-gray-300">
-                      <th className="text-left py-2 font-medium text-gray-700">Name</th>
-                      <th className="text-left py-2 font-medium text-gray-700">Designation</th>
-                      <th className="text-left py-2 font-medium text-gray-700">Qualification</th>
-                      <th className="text-left py-2 font-medium text-gray-700">Experience</th>
-                      <th className="text-left py-2 font-medium text-gray-700">Joining Date</th>
+      {/* HOD's Message */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-8">FROM HOD'S DESK</h2>
+            
+            <Card>
+              <CardContent className="p-8">
+                <div className="flex flex-col md:flex-row gap-6 mb-6">
+                  <div className="flex-shrink-0">
+                    <img 
+                      src={hodImage} 
+                      alt="Rajashekara. H.M - HOD"
+                      className="w-32 h-40 rounded-lg object-cover mx-auto md:mx-0"
+                    />
+                    <div className="text-center mt-3">
+                      <h4 className="font-semibold text-primary">Rajashekara. H.M</h4>
+                      <Badge className="mt-1">Head of Department</Badge>
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <div className="space-y-4 text-gray-700">
+                      <p>
+                        Mechanical Engineering department is one of the oldest and evergreen engineering programmes, 
+                        established in the year 1987, recognised by DTE, Bengaluru and affiliated to AICTE, New Delhi. 
+                        The current intake is 60 students.
+                      </p>
+                      <p>
+                        The department has committed, experienced and highly qualified teaching faculty.
+                      </p>
+                      <p>
+                        It has very good supporting staff, with hands on experience in imparting practical training 
+                        in well-equipped laboratories, workshop and machine shop, with adequate and high end equipment's.
+                      </p>
+                      <p>
+                        The department has a very good track record of successful students who have passed with flying colours.
+                      </p>
+                      <p>
+                        Many students are either employees of prestigious organisations like Infosys, Toyota Kirloskar, 
+                        Wipro, L&T, to name a few or pursuing their higher studies in coveted institutions, 
+                        like RVCE, PESIT, SJCE, NIE.
+                      </p>
+                      <p>
+                        In addition, students are given one to one attention, for their all-round development, 
+                        be it academics, sports, placement or ethical engineering practices.
+                      </p>
+                      <p>
+                        Staff and students are provided with unlimited free internet access at e-Library during spare time, 
+                        so that they can develop and enhance their knowledge acquired in class rooms.
+                      </p>
+                      <p className="font-medium text-primary">
+                        Students express that their stay in the department is not only an experience to reckon with 
+                        but is an emotional attachment to be experienced.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Teaching Faculty */}
+      <section className="bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">LIST OF TEACHING FACULTY</h2>
+          
+          <div className="max-w-6xl mx-auto">
+            <div className="overflow-x-auto">
+              <table className="w-full bg-white rounded-lg shadow-sm">
+                <thead className="bg-primary text-white">
+                  <tr>
+                    <th className="px-6 py-4 text-left">Sl No</th>
+                    <th className="px-6 py-4 text-left">Image</th>
+                    <th className="px-6 py-4 text-left">Name</th>
+                    <th className="px-6 py-4 text-left">Designation</th>
+                    <th className="px-6 py-4 text-left">Qualification</th>
+                    <th className="px-6 py-4 text-left">Profile</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {teachingFaculty.map((faculty, index) => (
+                    <tr key={faculty.slNo} className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+                      <td className="px-6 py-4 font-medium text-primary">{faculty.slNo}</td>
+                      <td className="px-6 py-4">
+                        {faculty.image ? (
+                          <img 
+                            src={faculty.image} 
+                            alt={faculty.name}
+                            className="w-24 h-32 rounded-lg object-cover"
+                          />
+                        ) : (
+                          <div className="w-24 h-32 bg-gray-200 rounded-lg flex items-center justify-center">
+                            <Users className="h-12 w-12 text-gray-400" />
+                          </div>
+                        )}
+                      </td>
+                      <td className="px-6 py-4 font-semibold text-gray-700">{faculty.name}</td>
+                      <td className="px-6 py-4">
+                        <Badge variant={faculty.designation === "HOD" ? "default" : faculty.designation === "Principal" ? "destructive" : "secondary"}>
+                          {faculty.designation}
+                        </Badge>
+                      </td>
+                      <td className="px-6 py-4">
+                        <Badge variant="outline">{faculty.qualification}</Badge>
+                      </td>
+                      <td className="px-6 py-4">
+                        <a 
+                          href={faculty.profileLink}
+                          className="inline-flex items-center space-x-1 text-accent hover:text-primary transition-colors"
+                        >
+                          <span className="text-sm">click here to view</span>
+                          <ExternalLink className="h-3 w-3" />
+                        </a>
+                      </td>
                     </tr>
-                  </thead>
-                  <tbody>
-                    {facultyMembers.map((faculty, index) => (
-                      <tr key={index} className="border-b border-gray-200">
-                        <td className="py-2 text-gray-800">{faculty.name}</td>
-                        <td className="py-2 text-gray-600">{faculty.designation}</td>
-                        <td className="py-2 text-gray-600 text-xs">{faculty.qualification}</td>
-                        <td className="py-2 text-gray-600">{faculty.experience}</td>
-                        <td className="py-2 text-gray-600">{faculty.dateOfJoining}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Faculty Cards */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Meet Our Faculty</h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {teachingFaculty.map((faculty) => (
+              <Card key={faculty.slNo} className="text-center hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  {faculty.image ? (
+                    <img 
+                      src={faculty.image} 
+                      alt={faculty.name}
+                      className="w-32 h-40 rounded-lg mx-auto mb-4 object-cover"
+                    />
+                  ) : (
+                    <div className="w-32 h-40 bg-gray-200 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                      <Users className="h-16 w-16 text-gray-400" />
+                    </div>
+                  )}
+                  <h3 className="text-lg font-semibold text-primary mb-2">{faculty.name}</h3>
+                  <Badge className="mb-2" variant={faculty.designation === "HOD" ? "default" : faculty.designation === "Principal" ? "destructive" : "secondary"}>
+                    {faculty.designation}
+                  </Badge>
+                  <p className="text-sm text-gray-600">{faculty.qualification}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Supporting Staff */}
+      <section className="bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">LIST OF SUPPORTING STAFF</h2>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="overflow-x-auto">
+              <table className="w-full bg-white rounded-lg shadow-sm">
+                <thead className="bg-primary text-white">
+                  <tr>
+                    <th className="px-6 py-4 text-left">Sl No</th>
+                    <th className="px-6 py-4 text-left">Image</th>
+                    <th className="px-6 py-4 text-left">Name</th>
+                    <th className="px-6 py-4 text-left">Designation</th>
+                    <th className="px-6 py-4 text-left">Qualification</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {supportingStaff.map((staff, index) => (
+                    <tr key={staff.slNo} className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+                      <td className="px-6 py-4 font-medium text-primary">{staff.slNo}</td>
+                      <td className="px-6 py-4">
+                        {staff.image ? (
+                          <img 
+                            src={staff.image} 
+                            alt={staff.name}
+                            className="w-24 h-32 rounded-lg object-cover"
+                          />
+                        ) : (
+                          <div className="w-24 h-32 bg-gray-200 rounded-lg flex items-center justify-center">
+                            <Users className="h-12 w-12 text-gray-400" />
+                          </div>
+                        )}
+                      </td>
+                      <td className="px-6 py-4 font-semibold text-gray-700">{staff.name}</td>
+                      <td className="px-6 py-4">
+                        <Badge variant="secondary">{staff.designation}</Badge>
+                      </td>
+                      <td className="px-6 py-4">
+                        <Badge variant="outline">{staff.qualification}</Badge>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Department Statistics */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-12">Department Highlights</h2>
+            
+            <div className="grid md:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary mb-2">1987</div>
+                <div className="text-gray-600">Established</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary mb-2">60</div>
+                <div className="text-gray-600">Student Intake</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary mb-2">6</div>
+                <div className="text-gray-600">Teaching Faculty</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary mb-2">4</div>
+                <div className="text-gray-600">Supporting Staff</div>
               </div>
             </div>
-          </CardContent>
-        </Card>
-
-        {/* Supporting Staff Section */}
-        <Card className="mb-12 shadow-lg">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-green-900">
-              <UserCheck className="h-6 w-6" />
-              Supporting Staff
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {supportingStaff.map((staff, index) => (
-                <Card key={index} className="hover:shadow-md transition-shadow">
-                  <CardContent className="p-4">
-                    <div className="text-center">
-                      <img 
-                        src={staff.image || "/api/placeholder/100/120"} 
-                        alt={staff.name}
-                        className="w-16 h-20 object-cover rounded-lg mx-auto shadow-sm mb-3"
-                      />
-                      <h3 className="font-semibold text-gray-800">{staff.name}</h3>
-                      <p className="text-green-600 text-sm">{staff.designation}</p>
-                      <p className="text-gray-600 text-xs">{staff.qualification}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Department Statistics */}
-        <div className="grid md:grid-cols-4 gap-6">
-          <Card className="text-center shadow-lg">
-            <CardContent className="p-6">
-              <div className="text-3xl font-bold text-green-600 mb-2">60</div>
-              <div className="text-gray-600">Student Intake</div>
-            </CardContent>
-          </Card>
-          <Card className="text-center shadow-lg">
-            <CardContent className="p-6">
-              <div className="text-3xl font-bold text-emerald-600 mb-2">6</div>
-              <div className="text-gray-600">Faculty Members</div>
-            </CardContent>
-          </Card>
-          <Card className="text-center shadow-lg">
-            <CardContent className="p-6">
-              <div className="text-3xl font-bold text-teal-600 mb-2">3</div>
-              <div className="text-gray-600">Support Staff</div>
-            </CardContent>
-          </Card>
-          <Card className="text-center shadow-lg">
-            <CardContent className="p-6">
-              <div className="text-3xl font-bold text-orange-600 mb-2">37+</div>
-              <div className="text-gray-600">Years of Excellence</div>
-            </CardContent>
-          </Card>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }
