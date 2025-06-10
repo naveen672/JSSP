@@ -34,6 +34,7 @@ import JSSCollaborationMOUs from "@/pages/jss-collaboration-mous";
 import MandatoryDisclosure from "@/pages/mandatory-disclosure";
 import ScienceDepartment from "@/pages/science-department";
 import MechanicalEngineering from "@/pages/mechanical-engineering";
+import MechatronicsEngineering from "@/pages/mechatronics-engineering";
 import InformationScienceEngineering from "@/pages/information-science-engineering";
 import ComputerScienceEngineering from "@/pages/computer-science-engineering";
 import CivilEngineering from "@/pages/civil-engineering";
@@ -109,6 +110,7 @@ function Router() {
               <Route path="/mandatory-disclosure" component={MandatoryDisclosure} />
               <Route path="/science-department" component={ScienceDepartment} />
               <Route path="/mechanical-engineering" component={MechanicalEngineering} />
+              <Route path="/mechatronics-engineering" component={MechatronicsEngineering} />
               <Route path="/information-science-engineering" component={InformationScienceEngineering} />
               <Route path="/computer-science-engineering" component={ComputerScienceEngineering} />
               <Route path="/civil-engineering" component={CivilEngineering} />

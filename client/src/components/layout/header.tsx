@@ -165,7 +165,7 @@ export default function Header() {
                   <DropdownLink href="/electronics-communication-engineering" icon={Cpu}>Electronics & Communication Engineering</DropdownLink>
                   <DropdownLink href="/mechanical-engineering" icon={Wrench}>Mechanical Engineering</DropdownLink>
                   <DropdownLink href="/electrical-electronics-engineering" icon={Zap}>Electrical & Electronics Engineering</DropdownLink>
-                  <DropdownLink href="/academics" icon={Cog}>Mechatronics Engineering</DropdownLink>
+                  <DropdownLink href="/mechatronics-engineering" icon={Cog}>Mechatronics Engineering</DropdownLink>
                   <DropdownLink href="/information-science-engineering" icon={Database}>Information Science & Engineering</DropdownLink>
                   <DropdownLink href="/civil-engineering" icon={Building}>Civil Engineering</DropdownLink>
                   <DropdownLink href="/science-department" icon={BookOpen}>Science Department</DropdownLink>
