@@ -57,8 +57,13 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.6 }}
         >
-          <h1 className="text-4xl font-bold text-white mb-2">JSS POLYTECHNIC</h1>
-          <p className="text-xl text-white/90 mb-6">Excellence in Technical Education</p>
+          <p className="text-lg text-white/80 mb-2">JSS MAHAVIDYAPEETHA</p>
+          <h1 className="text-4xl font-bold text-white mb-4">JSS POLYTECHNIC</h1>
+          <div className="text-white/90 mb-6 leading-relaxed">
+            <p className="text-sm mb-1">JSS Technical Institutions' Campus, Mysuru - 570006.</p>
+            <p className="text-sm mb-1">(Approved by Government of Karnataka & A.I.C.T.E. New Delhi)</p>
+            <p className="text-sm">Phone: 0821 - 2548318 , E-mail: jssp418@yahoo.co.in</p>
+          </div>
           
           <div className="flex justify-center">
             <motion.div
