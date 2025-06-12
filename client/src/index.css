@@ -116,6 +116,10 @@
 }
 
 .paused {
+  animation-play-state: paused !important;
+}
+
+.animate-ticker:hover {
   animation-play-state: paused;
 }
 
