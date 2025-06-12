@@ -38,14 +38,22 @@ const categoryColors = {
   "Research": "bg-blue-100 text-blue-800",
   "Global": "bg-purple-100 text-purple-800",
   "Events": "bg-orange-100 text-orange-800",
+  "Academic": "bg-indigo-100 text-indigo-800",
+  "Announcements": "bg-yellow-100 text-yellow-800",
 };
 
 export default function NewsSection() {
-  const { data: news, isLoading } = useQuery({
+  const { data: news, isLoading, error } = useQuery<any[]>({
     queryKey: ["/api/news"],
   });
 
-  const displayNews = news || defaultNews;
+  // Debug logging
+  console.log("News data:", news);
+  console.log("Is loading:", isLoading);
+  console.log("Error:", error);
+
+  // Always use real news if available, otherwise show default
+  const displayNews = (news && Array.isArray(news) && news.length > 0) ? news : defaultNews;
 
   if (isLoading) {
     return (
