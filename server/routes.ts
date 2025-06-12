@@ -8,6 +8,7 @@ import { Strategy as LocalStrategy } from "passport-local";
 import session from "express-session";
 import multer from "multer";
 import path from "path";
+import express from "express";
 import { sendContactConfirmationEmail, testEmailConnection } from "./email";
 
 // Authentication middleware
@@ -18,7 +19,37 @@ function requireAuth(req: any, res: any, next: any) {
   res.status(401).json({ message: "Authentication required" });
 }
 
+// Configure multer for file uploads
+const upload = multer({
+  storage: multer.diskStorage({
+    destination: (req, file, cb) => {
+      cb(null, 'uploads/');
+    },
+    filename: (req, file, cb) => {
+      const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+      cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname));
+    }
+  }),
+  fileFilter: (req, file, cb) => {
+    const allowedTypes = /jpeg|jpg|png|pdf/;
+    const extname = allowedTypes.test(path.extname(file.originalname).toLowerCase());
+    const mimetype = allowedTypes.test(file.mimetype);
+    
+    if (mimetype && extname) {
+      return cb(null, true);
+    } else {
+      cb(new Error('Only images (JPG, PNG) and PDF files are allowed'));
+    }
+  },
+  limits: {
+    fileSize: 10 * 1024 * 1024 // 10MB limit
+  }
+});
+
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Serve uploaded files statically
+  app.use('/uploads', express.static('uploads'));
+  
   // Session configuration
   app.use(
     session({
@@ -220,9 +251,26 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  app.post("/api/admin/news", requireAuth, async (req, res) => {
+  app.post("/api/admin/news", requireAuth, upload.fields([
+    { name: 'imageFile', maxCount: 1 },
+    { name: 'attachmentFile', maxCount: 1 }
+  ]), async (req, res) => {
     try {
-      const validatedData = insertNewsItemSchema.parse(req.body);
+      const files = req.files as { [fieldname: string]: Express.Multer.File[] };
+      const newsData = { ...req.body };
+      
+      // Handle uploaded image
+      if (files.imageFile && files.imageFile[0]) {
+        newsData.imageUrl = `/uploads/${files.imageFile[0].filename}`;
+      }
+      
+      // Handle uploaded attachment
+      if (files.attachmentFile && files.attachmentFile[0]) {
+        newsData.attachmentUrl = `/uploads/${files.attachmentFile[0].filename}`;
+        newsData.attachmentName = files.attachmentFile[0].originalname;
+      }
+      
+      const validatedData = insertNewsItemSchema.parse(newsData);
       const newsItem = await storage.createNewsItem(validatedData);
       res.status(201).json(newsItem);
     } catch (error: any) {

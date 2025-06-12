@@ -80,8 +80,16 @@ export default function AdminDashboard() {
 
   // Mutations
   const createNewsMutation = useMutation({
-    mutationFn: async (data: NewsFormData) => {
-      return await apiRequest("POST", "/api/admin/news", data);
+    mutationFn: async (data: FormData) => {
+      const response = await fetch("/api/admin/news", {
+        method: "POST",
+        body: data,
+        credentials: "include",
+      });
+      if (!response.ok) {
+        throw new Error(await response.text());
+      }
+      return await response.json();
     },
     onSuccess: () => {
       toast({
@@ -103,7 +111,16 @@ export default function AdminDashboard() {
 
   const updateNewsMutation = useMutation({
     mutationFn: async ({ id, data }: { id: number; data: Partial<NewsFormData> }) => {
-      return await apiRequest("PATCH", `/api/admin/news/${id}`, data);
+      const response = await fetch(`/api/admin/news/${id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+        credentials: "include",
+      });
+      if (!response.ok) {
+        throw new Error(await response.text());
+      }
+      return await response.json();
     },
     onSuccess: () => {
       toast({
@@ -127,7 +144,14 @@ export default function AdminDashboard() {
 
   const deleteNewsMutation = useMutation({
     mutationFn: async (id: number) => {
-      return await apiRequest("DELETE", `/api/admin/news/${id}`);
+      const response = await fetch(`/api/admin/news/${id}`, {
+        method: "DELETE",
+        credentials: "include",
+      });
+      if (!response.ok) {
+        throw new Error(await response.text());
+      }
+      return await response.json();
     },
     onSuccess: () => {
       toast({
@@ -167,10 +191,34 @@ export default function AdminDashboard() {
   });
 
   const onSubmit = (data: NewsFormData) => {
+    const formData = new FormData();
+    
+    // Add form fields to FormData
+    formData.append('title', data.title);
+    formData.append('content', data.content);
+    formData.append('category', data.category);
+    formData.append('published', data.published ? 'true' : 'false');
+    
+    if (data.excerpt) formData.append('excerpt', data.excerpt);
+    if (data.imageUrl) formData.append('imageUrl', data.imageUrl);
+    if (data.link) formData.append('link', data.link);
+    
+    // Add file uploads
+    const imageFile = document.getElementById('imageFile') as HTMLInputElement;
+    const attachmentFile = document.getElementById('attachmentFile') as HTMLInputElement;
+    
+    if (imageFile?.files?.[0]) {
+      formData.append('imageFile', imageFile.files[0]);
+    }
+    
+    if (attachmentFile?.files?.[0]) {
+      formData.append('attachmentFile', attachmentFile.files[0]);
+    }
+    
     if (isEditing && selectedNews) {
       updateNewsMutation.mutate({ id: selectedNews.id, data });
     } else {
-      createNewsMutation.mutate(data);
+      createNewsMutation.mutate(formData);
     }
   };
 
