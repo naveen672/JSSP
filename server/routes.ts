@@ -2,6 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertContactSubmissionSchema, insertNewsItemSchema, insertUserSchema, insertHeroSectionSchema, insertPageContentSchema } from "@shared/schema";
+import { z } from "zod";
 import bcrypt from "bcrypt";
 import passport from "passport";
 import { Strategy as LocalStrategy } from "passport-local";
@@ -270,17 +271,22 @@ export async function registerRoutes(app: Express): Promise<Server> {
         newsData.attachmentName = files.attachmentFile[0].originalname;
       }
       
-      // Convert string 'true'/'false' to boolean for published field
-      if (typeof newsData.published === 'string') {
-        newsData.published = newsData.published === 'true';
-      }
+      // Convert string fields from form data to proper types
+      const processedData = {
+        title: String(newsData.title || ''),
+        content: String(newsData.content || ''),
+        category: String(newsData.category || ''),
+        excerpt: newsData.excerpt ? String(newsData.excerpt) : null,
+        link: newsData.link ? String(newsData.link) : null,
+        imageUrl: newsData.imageUrl || '',
+        attachmentUrl: newsData.attachmentUrl || null,
+        attachmentName: newsData.attachmentName || null,
+        published: typeof newsData.published === 'string' ? newsData.published === 'true' : Boolean(newsData.published),
+        publishedAt: null,
+        authorId: null
+      };
       
-      // Use a modified schema that accepts string inputs
-      const modifiedSchema = insertNewsItemSchema.extend({
-        published: z.union([z.boolean(), z.string().transform(val => val === 'true')])
-      });
-      
-      const validatedData = modifiedSchema.parse(newsData);
+      const validatedData = insertNewsItemSchema.parse(processedData);
       const newsItem = await storage.createNewsItem(validatedData);
       res.status(201).json(newsItem);
     } catch (error: any) {
