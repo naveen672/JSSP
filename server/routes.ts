@@ -327,6 +327,99 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Hero Section routes
+  app.get("/api/hero", async (req, res) => {
+    try {
+      const hero = await storage.getActiveHeroSection();
+      res.json(hero);
+    } catch (error: any) {
+      console.error("Error fetching hero section:", error);
+      res.status(500).json({ message: "Internal server error" });
+    }
+  });
+
+  app.post("/api/admin/hero", requireAuth, async (req, res) => {
+    try {
+      const validatedData = insertHeroSectionSchema.parse(req.body);
+      const hero = await storage.createHeroSection(validatedData);
+      res.status(201).json(hero);
+    } catch (error: any) {
+      console.error("Error creating hero section:", error);
+      if (error.name === "ZodError") {
+        res.status(400).json({ message: "Invalid form data", errors: error.errors });
+      } else {
+        res.status(500).json({ message: "Internal server error" });
+      }
+    }
+  });
+
+  app.patch("/api/admin/hero/:id", requireAuth, async (req, res) => {
+    try {
+      const id = parseInt(req.params.id);
+      const updates = req.body;
+      const hero = await storage.updateHeroSection(id, updates);
+      if (!hero) {
+        return res.status(404).json({ message: "Hero section not found" });
+      }
+      res.json(hero);
+    } catch (error: any) {
+      console.error("Error updating hero section:", error);
+      res.status(500).json({ message: "Internal server error" });
+    }
+  });
+
+  // Page Content routes
+  app.get("/api/page/:pageName", async (req, res) => {
+    try {
+      const pageName = req.params.pageName;
+      const page = await storage.getPageContent(pageName);
+      res.json(page);
+    } catch (error: any) {
+      console.error("Error fetching page content:", error);
+      res.status(500).json({ message: "Internal server error" });
+    }
+  });
+
+  app.get("/api/admin/pages", requireAuth, async (req, res) => {
+    try {
+      const pages = await storage.getAllPageContent();
+      res.json(pages);
+    } catch (error: any) {
+      console.error("Error fetching all pages:", error);
+      res.status(500).json({ message: "Internal server error" });
+    }
+  });
+
+  app.post("/api/admin/page", requireAuth, async (req, res) => {
+    try {
+      const validatedData = insertPageContentSchema.parse(req.body);
+      const page = await storage.createPageContent(validatedData);
+      res.status(201).json(page);
+    } catch (error: any) {
+      console.error("Error creating page content:", error);
+      if (error.name === "ZodError") {
+        res.status(400).json({ message: "Invalid form data", errors: error.errors });
+      } else {
+        res.status(500).json({ message: "Internal server error" });
+      }
+    }
+  });
+
+  app.patch("/api/admin/page/:pageName", requireAuth, async (req, res) => {
+    try {
+      const pageName = req.params.pageName;
+      const updates = req.body;
+      const page = await storage.updatePageContent(pageName, updates);
+      if (!page) {
+        return res.status(404).json({ message: "Page content not found" });
+      }
+      res.json(page);
+    } catch (error: any) {
+      console.error("Error updating page content:", error);
+      res.status(500).json({ message: "Internal server error" });
+    }
+  });
+
   // Register (protected - only admins can create users)
   app.post("/api/auth/register", requireAuth, async (req, res) => {
     try {
