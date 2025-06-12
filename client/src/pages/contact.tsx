@@ -11,7 +11,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { insertContactSubmissionSchema } from "@shared/schema";
-import { MapPin, Phone, Mail, Clock, Smartphone } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Smartphone, Facebook, Linkedin, Youtube } from "lucide-react";
 import qrCodeImage from "@assets/image_1748554546191.png";
 import socialQRCodes from "@assets/image_1748554552757.png";
 import type { z } from "zod";
@@ -146,7 +146,7 @@ export default function Contact() {
                 </CardContent>
               </Card>
 
-              {/* QR Codes */}
+              {/* Social Media */}
               <Card>
                 <CardHeader>
                   <CardTitle>Connect With Us</CardTitle>
@@ -154,23 +154,64 @@ export default function Contact() {
                 <CardContent>
                   <div className="space-y-6">
                     <div className="text-center">
-                      <h4 className="font-semibold text-primary mb-3">Scan for Quick Access</h4>
-                      <img 
-                        src={qrCodeImage} 
-                        alt="QR Code for Quick Access"
-                        className="w-32 h-32 mx-auto bg-white p-3 rounded-lg shadow-md border"
-                      />
-                    </div>
-                    
-                    <div className="text-center">
-                      <h4 className="font-semibold text-primary mb-3">Social Media Platforms</h4>
-                      <img 
-                        src={socialQRCodes} 
-                        alt="Social Media QR Codes - LinkedIn, Instagram, Facebook, YouTube"
-                        className="w-full max-w-md mx-auto bg-white p-4 rounded-lg shadow-md border"
-                      />
-                      <p className="text-sm text-gray-600 mt-2">
-                        Scan the respective QR codes to follow us on LinkedIn, Instagram, Facebook, and YouTube
+                      <h4 className="font-semibold text-primary mb-6">Follow us on Social Media</h4>
+                      <div className="flex justify-center space-x-6">
+                        <a 
+                          href="https://m.facebook.com/jss.polytechnic/" 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="flex flex-col items-center p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors group"
+                          aria-label="Follow us on Facebook"
+                        >
+                          <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                            <Facebook className="h-6 w-6" />
+                          </div>
+                          <span className="text-sm font-medium text-blue-700">Facebook</span>
+                        </a>
+
+                        <a 
+                          href="https://www.instagram.com/jsspolytechnicmysuru?igsh=MTMxaDdnZnB6enUycg==" 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="flex flex-col items-center p-4 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors group"
+                          aria-label="Follow us on Instagram"
+                        >
+                          <div className="bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 text-white w-12 h-12 rounded-full flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                            <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                          </div>
+                          <span className="text-sm font-medium text-pink-700">Instagram</span>
+                        </a>
+
+                        <a 
+                          href="https://www.linkedin.com/in/jsspolytechnicmysuru418suru-91197a260/" 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="flex flex-col items-center p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors group"
+                          aria-label="Connect with us on LinkedIn"
+                        >
+                          <div className="bg-blue-700 text-white w-12 h-12 rounded-full flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                            <Linkedin className="h-6 w-6" />
+                          </div>
+                          <span className="text-sm font-medium text-blue-700">LinkedIn</span>
+                        </a>
+
+                        <a 
+                          href="https://youtube.com/@jsspolytechnicmysore8070?si=43hsOYIH66cuUUNl" 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="flex flex-col items-center p-4 bg-red-50 rounded-lg hover:bg-red-100 transition-colors group"
+                          aria-label="Subscribe to our YouTube channel"
+                        >
+                          <div className="bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                            <Youtube className="h-6 w-6" />
+                          </div>
+                          <span className="text-sm font-medium text-red-700">YouTube</span>
+                        </a>
+                      </div>
+                      <p className="text-sm text-gray-600 mt-4">
+                        Stay connected with our latest updates, events, and academic announcements
                       </p>
                     </div>
                   </div>
