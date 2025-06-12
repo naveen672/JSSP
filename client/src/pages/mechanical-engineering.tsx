@@ -11,6 +11,9 @@ import udayImage from "@assets/image_1748547583155.png";
 import thirumaleshImage from "@assets/image_1748547591250.png";
 import supportStaffImage from "@assets/image_1748547597996.png";
 import chandrashekharamurthyImage from "@assets/WhatsApp Image 2025-06-12 at 11.10.57_8e52c3ba_1749723316614.jpg";
+import nagendraImage from "@assets/WhatsApp Image 2025-06-12 at 11.16.49_fdcf85bb_1749723377045.jpg";
+import prakashImage from "@assets/WhatsApp Image 2025-06-12 at 11.14.23_68c145ad_1749723387448.jpg";
+import udayakumarImage from "@assets/WhatsApp Image 2025-06-12 at 11.17.25_eb9e6d59_1749723396208.jpg";
 // Badravathi industrial visit images
 import badravathiImage1 from "@assets/WhatsApp Image 2025-02-25 at 10.06.27 AM_1749582010868.jpeg";
 import badravathiImage2 from "@assets/WhatsApp Image 2025-02-25 at 10.06.25 AM_1749582013552.jpeg";
@@ -115,6 +118,48 @@ export default function MechanicalEngineering() {
       profilePdf: null,
       specialization: "Mechanical Engineering",
       image: thirumaleshImage,
+      hasProfile: false
+    },
+    {
+      id: 7,
+      name: "Nagendra",
+      designation: "Instructor",
+      qualification: "ME",
+      dateOfJoining: "Data not available",
+      experience: "Teaching & Lab Instruction",
+      phone: "Contact department",
+      email: "Contact department",
+      profilePdf: null,
+      specialization: "Mechanical Engineering Laboratory",
+      image: nagendraImage,
+      hasProfile: false
+    },
+    {
+      id: 8,
+      name: "Prakash.N",
+      designation: "Lab Helper",
+      qualification: "ME",
+      dateOfJoining: "Data not available",
+      experience: "Laboratory Support",
+      phone: "Contact department",
+      email: "Contact department",
+      profilePdf: null,
+      specialization: "Laboratory Operations & Maintenance",
+      image: prakashImage,
+      hasProfile: false
+    },
+    {
+      id: 9,
+      name: "Udayakumar. R",
+      designation: "Lab Helper",
+      qualification: "ME",
+      dateOfJoining: "Data not available",
+      experience: "Laboratory Support",
+      phone: "Contact department",
+      email: "Contact department",
+      profilePdf: null,
+      specialization: "Laboratory Operations & Maintenance",
+      image: udayakumarImage,
       hasProfile: false
     }
   ];
