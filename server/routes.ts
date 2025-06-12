@@ -256,7 +256,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     { name: 'attachmentFile', maxCount: 1 }
   ]), async (req, res) => {
     try {
-      const files = req.files as { [fieldname: string]: Express.Multer.File[] };
+      const files = req.files as { [fieldname: string]: Express.Multer.File[] } || {};
       const newsData = { ...req.body };
       
       // Handle uploaded image
@@ -270,7 +270,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
         newsData.attachmentName = files.attachmentFile[0].originalname;
       }
       
-      const validatedData = insertNewsItemSchema.parse(newsData);
+      // Convert string 'true'/'false' to boolean for published field
+      if (typeof newsData.published === 'string') {
+        newsData.published = newsData.published === 'true';
+      }
+      
+      // Use a modified schema that accepts string inputs
+      const modifiedSchema = insertNewsItemSchema.extend({
+        published: z.union([z.boolean(), z.string().transform(val => val === 'true')])
+      });
+      
+      const validatedData = modifiedSchema.parse(newsData);
       const newsItem = await storage.createNewsItem(validatedData);
       res.status(201).json(newsItem);
     } catch (error: any) {
