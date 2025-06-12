@@ -6,6 +6,8 @@ import bcrypt from "bcrypt";
 import passport from "passport";
 import { Strategy as LocalStrategy } from "passport-local";
 import session from "express-session";
+import multer from "multer";
+import path from "path";
 import { sendContactConfirmationEmail, testEmailConnection } from "./email";
 
 // Authentication middleware

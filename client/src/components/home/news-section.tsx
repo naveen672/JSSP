@@ -106,14 +106,12 @@ export default function NewsSection() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
               className="cursor-pointer"
-              onClick={() => window.open(article.link || '#', '_blank')}
-              onMouseEnter={(e) => {
-                const card = e.currentTarget.querySelector('.card-content') as HTMLElement;
-                if (card) card.style.animationPlayState = 'paused';
-              }}
-              onMouseLeave={(e) => {
-                const card = e.currentTarget.querySelector('.card-content') as HTMLElement;
-                if (card) card.style.animationPlayState = 'running';
+              onClick={() => {
+                if (article.link) {
+                  window.open(article.link, '_blank');
+                } else {
+                  window.open('#', '_blank');
+                }
               }}
             >
               <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 h-full card-hover hover:scale-105 hover:border-primary"

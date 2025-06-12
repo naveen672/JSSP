@@ -324,7 +324,7 @@ export default function AdminDashboard() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+                  <form onSubmit={handleSubmit(onSubmit)} className="space-y-4" encType="multipart/form-data">
                     <div>
                       <Label htmlFor="title">Title *</Label>
                       <Input
