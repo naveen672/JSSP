@@ -1,7 +1,23 @@
 import { Bell, Calendar, Trophy } from "lucide-react";
 import { motion } from "framer-motion";
+import { useQuery } from "@tanstack/react-query";
 
 export default function NewsTicker() {
+  const { data: news } = useQuery<any[]>({
+    queryKey: ["/api/news"],
+  });
+
+  const getIcon = (category: string) => {
+    switch (category) {
+      case "Academic":
+        return Calendar;
+      case "Achievements":
+        return Trophy;
+      default:
+        return Bell;
+    }
+  };
+
   return (
     <motion.div 
       className="bg-primary text-white py-3 overflow-hidden border-b border-primary-dark"
@@ -27,26 +43,22 @@ export default function NewsTicker() {
           </motion.div>
           <div className="flex-1 overflow-hidden">
             <div className="flex space-x-12 text-sm whitespace-nowrap animate-ticker ml-4">
-              <span className="flex items-center space-x-2">
-                <Bell className="h-4 w-4 text-accent flex-shrink-0" />
-                <span>Admissions open for 2023-24 academic year</span>
-              </span>
-              <span className="flex items-center space-x-2">
-                <Trophy className="h-4 w-4 text-accent flex-shrink-0" />
-                <span>JSS Polytechnic wins Best Technical Institution Award</span>
-              </span>
-              <span className="flex items-center space-x-2">
-                <Calendar className="h-4 w-4 text-accent flex-shrink-0" />
-                <span>Graduation ceremony scheduled for May 15th</span>
-              </span>
-              <span className="flex items-center space-x-2">
-                <Bell className="h-4 w-4 text-accent flex-shrink-0" />
-                <span>New Computer Science lab inaugurated by Education Minister</span>
-              </span>
-              <span className="flex items-center space-x-2">
-                <Trophy className="h-4 w-4 text-accent flex-shrink-0" />
-                <span>100% placement record for the 5th consecutive year</span>
-              </span>
+              {news && news.length > 0 ? (
+                news.map((article: any) => {
+                  const IconComponent = getIcon(article.category);
+                  return (
+                    <span key={article.id} className="flex items-center space-x-2">
+                      <IconComponent className="h-4 w-4 text-accent flex-shrink-0" />
+                      <span>{article.title}</span>
+                    </span>
+                  );
+                })
+              ) : (
+                <span className="flex items-center space-x-2">
+                  <Bell className="h-4 w-4 text-accent flex-shrink-0" />
+                  <span>Welcome to JSS Polytechnic - Excellence in Technical Education</span>
+                </span>
+              )}
             </div>
           </div>
         </div>

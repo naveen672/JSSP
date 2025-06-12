@@ -6,32 +6,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar } from "lucide-react";
 
-const defaultNews = [
-  {
-    id: 1,
-    title: "Record 98% Placement Rate for Class of 2024",
-    excerpt: "Our graduates continue to excel with the highest placement rate in university history, securing positions at top companies globally.",
-    category: "Achievements",
-    imageUrl: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
-    publishedAt: "2024-03-15",
-  },
-  {
-    id: 2,
-    title: "Breakthrough in Renewable Energy Research",
-    excerpt: "Faculty and students develop innovative solar cell technology with 40% efficiency improvement, published in Nature.",
-    category: "Research",
-    imageUrl: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
-    publishedAt: "2024-03-12",
-  },
-  {
-    id: 3,
-    title: "New International Exchange Programs Launched",
-    excerpt: "Partnerships with 15 universities worldwide offer students enhanced global learning opportunities and cultural exchange.",
-    category: "Global",
-    imageUrl: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
-    publishedAt: "2024-03-10",
-  },
-];
+const defaultNews: any[] = [];
 
 const categoryColors = {
   "Achievements": "bg-green-100 text-green-800",
@@ -47,13 +22,8 @@ export default function NewsSection() {
     queryKey: ["/api/news"],
   });
 
-  // Debug logging
-  console.log("News data:", news);
-  console.log("Is loading:", isLoading);
-  console.log("Error:", error);
-
-  // Always use real news if available, otherwise show default
-  const displayNews = (news && Array.isArray(news) && news.length > 0) ? news : defaultNews;
+  // Use only real news data from admin dashboard
+  const displayNews = news || [];
 
   if (isLoading) {
     return (
