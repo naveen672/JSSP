@@ -205,6 +205,25 @@ export default function AdminDashboard() {
 
   const published = watch("published");
 
+  // Show loading while checking authentication
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="bg-primary text-white w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <University className="h-8 w-8" />
+          </div>
+          <p className="text-gray-600">Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Return null if not authenticated (will redirect via useEffect)
+  if (!isAuthenticated) {
+    return null;
+  }
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
@@ -239,7 +258,7 @@ export default function AdminDashboard() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-gray-600">Total News</p>
-                  <p className="text-3xl font-bold text-primary">{allNews?.length || 0}</p>
+                  <p className="text-3xl font-bold text-primary">{Array.isArray(allNews) ? allNews.length : 0}</p>
                 </div>
                 <FileText className="h-8 w-8 text-accent" />
               </div>
@@ -251,7 +270,7 @@ export default function AdminDashboard() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-gray-600">Contact Submissions</p>
-                  <p className="text-3xl font-bold text-primary">{contacts?.length || 0}</p>
+                  <p className="text-3xl font-bold text-primary">{Array.isArray(contacts) ? contacts.length : 0}</p>
                 </div>
                 <MessageSquare className="h-8 w-8 text-accent" />
               </div>
@@ -263,7 +282,7 @@ export default function AdminDashboard() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-gray-600">Total Visitors</p>
-                  <p className="text-3xl font-bold text-primary">{stats?.visitors || 0}</p>
+                  <p className="text-3xl font-bold text-primary">{(stats as any)?.visitors || 0}</p>
                 </div>
                 <BarChart3 className="h-8 w-8 text-accent" />
               </div>
@@ -508,25 +527,4 @@ export default function AdminDashboard() {
       </div>
     </div>
   );
-
-  // Show loading while checking authentication
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="bg-primary text-white w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
-            <University className="h-8 w-8" />
-          </div>
-          <p className="text-gray-600">Loading...</p>
-        </div>
-      </div>
-    );
-  }
-
-  // Return null if not authenticated (will redirect via useEffect)
-  if (!isAuthenticated) {
-    return null;
-  }
-
-  return dashboardContent;
 }
