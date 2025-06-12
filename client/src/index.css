@@ -115,6 +115,10 @@
   animation: ticker 30s linear infinite;
 }
 
+.paused {
+  animation-play-state: paused;
+}
+
 /* Smooth transitions */
 .transition-all {
   transition: all 0.3s ease-in-out;

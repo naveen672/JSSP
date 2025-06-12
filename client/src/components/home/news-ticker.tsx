@@ -1,11 +1,14 @@
 import { Bell, Calendar, Trophy } from "lucide-react";
 import { motion } from "framer-motion";
 import { useQuery } from "@tanstack/react-query";
+import { useState } from "react";
 
 export default function NewsTicker() {
   const { data: news } = useQuery<any[]>({
     queryKey: ["/api/news"],
   });
+
+  const [isPaused, setIsPaused] = useState(false);
 
   const getIcon = (category: string) => {
     switch (category) {
@@ -42,7 +45,11 @@ export default function NewsTicker() {
             <span className="text-sm text-accent whitespace-nowrap font-bold">Latest News:</span>
           </motion.div>
           <div className="flex-1 overflow-hidden">
-            <div className="flex space-x-12 text-sm whitespace-nowrap animate-ticker ml-4">
+            <div 
+              className={`flex space-x-12 text-sm whitespace-nowrap ml-4 ${isPaused ? 'paused' : 'animate-ticker'}`}
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
+            >
               {news && news.length > 0 ? (
                 news.map((article: any) => {
                   const IconComponent = getIcon(article.category);
