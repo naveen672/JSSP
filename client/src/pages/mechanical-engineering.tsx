@@ -10,6 +10,7 @@ import principalImage from "@assets/image_1748547577741.png";
 import udayImage from "@assets/image_1748547583155.png";
 import thirumaleshImage from "@assets/image_1748547591250.png";
 import supportStaffImage from "@assets/image_1748547597996.png";
+import chandrashekharamurthyImage from "@assets/WhatsApp Image 2025-06-12 at 11.10.57_8e52c3ba_1749723316614.jpg";
 // Badravathi industrial visit images
 import badravathiImage1 from "@assets/WhatsApp Image 2025-02-25 at 10.06.27 AM_1749582010868.jpeg";
 import badravathiImage2 from "@assets/WhatsApp Image 2025-02-25 at 10.06.25 AM_1749582013552.jpeg";
@@ -99,7 +100,7 @@ export default function MechanicalEngineering() {
       email: "kbc@jsspolytechnic.org",
       profilePdf: "/attached_assets/Chandrashekhara Murthy K B_1749579126856.pdf",
       specialization: "Manufacturing Process, Engineering Metrology, NSS Activities",
-      image: null,
+      image: chandrashekharamurthyImage,
       hasProfile: true
     },
     {
