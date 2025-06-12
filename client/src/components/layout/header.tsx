@@ -55,30 +55,30 @@ export default function Header() {
     <Link 
       href={href}
       className={cn(
-        "inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50",
-        isActive(href) && "bg-accent/50 text-accent-foreground",
+        "inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-all duration-300 hover:bg-accent hover:text-accent-foreground hover:scale-105 hover:shadow-md focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 transform group",
+        isActive(href) && "bg-accent/50 text-accent-foreground scale-105 shadow-sm",
         className
       )}
     >
-      {children}
+      <span className="transition-transform duration-300 group-hover:translate-y-[-1px]">{children}</span>
     </Link>
   );
 
   const DropdownButton = ({ name, children, icon: Icon }: { name: string; children: React.ReactNode; icon: any }) => (
     <button
       onClick={() => toggleDropdown(name)}
-      className="inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none text-gray-700 hover:text-primary"
+      className="inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-all duration-300 hover:bg-accent hover:text-accent-foreground hover:scale-105 focus:bg-accent focus:text-accent-foreground focus:outline-none text-gray-700 hover:text-primary hover:shadow-md transform"
     >
-      <Icon className="h-4 w-4 mr-1" />
+      <Icon className="h-4 w-4 mr-1 transition-transform duration-300 hover:scale-110" />
       {children}
-      <ChevronDown className={cn("ml-1 h-3 w-3 transition-transform", activeDropdown === name && "rotate-180")} />
+      <ChevronDown className={cn("ml-1 h-3 w-3 transition-all duration-300", activeDropdown === name && "rotate-180 scale-110")} />
     </button>
   );
 
   const DropdownContent = ({ name, children, className }: { name: string; children: React.ReactNode; className?: string }) => (
     <div className={cn(
-      "absolute top-full left-0 mt-1 w-96 max-h-96 overflow-y-auto bg-white border border-gray-200 rounded-md shadow-lg z-50 transition-all duration-200",
-      activeDropdown === name ? "opacity-100 visible" : "opacity-0 invisible",
+      "absolute top-full left-0 mt-1 w-96 max-h-96 overflow-y-auto bg-white border border-gray-200 rounded-md shadow-xl z-50 transition-all duration-300 transform backdrop-blur-sm",
+      activeDropdown === name ? "opacity-100 visible translate-y-0 scale-100" : "opacity-0 invisible translate-y-2 scale-95",
       className
     )}>
       <div className="p-4 grid gap-1">
@@ -91,10 +91,10 @@ export default function Header() {
     <Link 
       href={href}
       onClick={() => setActiveDropdown(null)}
-      className="flex items-center p-2 rounded-md hover:bg-yellow-50 hover:text-yellow-700 transition-colors group"
+      className="flex items-center p-2 rounded-md hover:bg-yellow-50 hover:text-yellow-700 transition-all duration-300 group transform hover:translate-x-1 hover:shadow-sm"
     >
-      <Icon className="h-4 w-4 mr-2 text-gray-600 group-hover:text-yellow-600" />
-      <span className="text-sm font-medium text-gray-700 group-hover:text-yellow-700">{children}</span>
+      <Icon className="h-4 w-4 mr-2 text-gray-600 group-hover:text-yellow-600 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3" />
+      <span className="text-sm font-medium text-gray-700 group-hover:text-yellow-700 transition-all duration-300">{children}</span>
     </Link>
   );
 
@@ -103,21 +103,21 @@ export default function Header() {
       {/* Logo Section */}
       <div className="container mx-auto px-4 py-3">
         <Link href="/" className="block">
-          <div className="flex items-center justify-center space-x-6 cursor-pointer hover:opacity-90 transition-opacity">
-            <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-primary">
-              <img src={jssLogo1} alt="JSS Logo 1" className="w-full h-full object-cover" />
+          <div className="flex items-center justify-center space-x-6 cursor-pointer hover:opacity-90 transition-all duration-500 transform hover:scale-105 group">
+            <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-primary transition-all duration-500 group-hover:border-accent group-hover:shadow-lg group-hover:rotate-3">
+              <img src={jssLogo1} alt="JSS Logo 1" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
             </div>
-            <div className="text-center">
-              <p className="text-sm text-gray-500 mb-1">JSS MAHAVIDYAPEETHA</p>
-              <h1 className="text-3xl font-bold text-primary">JSS POLYTECHNIC</h1>
-              <div className="text-sm text-gray-600 mt-2 leading-relaxed">
-                <p>JSS Technical Institutions' Campus, Mysuru - 570006.</p>
-                <p>(Approved by Government of Karnataka & A.I.C.T.E. New Delhi)</p>
-                <p>Phone: 0821 - 2548318 , E-mail: jssp418@yahoo.co.in</p>
+            <div className="text-center transition-all duration-500 group-hover:translate-y-1">
+              <p className="text-sm text-gray-500 mb-1 transition-colors duration-300 group-hover:text-primary">JSS MAHAVIDYAPEETHA</p>
+              <h1 className="text-3xl font-bold text-primary transition-all duration-300 group-hover:text-accent group-hover:scale-105">JSS POLYTECHNIC</h1>
+              <div className="text-sm text-gray-600 mt-2 leading-relaxed transition-colors duration-300 group-hover:text-gray-700">
+                <p className="transition-transform duration-300 group-hover:translate-x-1">JSS Technical Institutions' Campus, Mysuru - 570006.</p>
+                <p className="transition-transform duration-300 group-hover:translate-x-1">(Approved by Government of Karnataka & A.I.C.T.E. New Delhi)</p>
+                <p className="transition-transform duration-300 group-hover:translate-x-1">Phone: 0821 - 2548318 , E-mail: jssp418@yahoo.co.in</p>
               </div>
             </div>
-            <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-primary">
-              <img src={jssLogo2} alt="JSS Logo 2" className="w-full h-full object-cover" />
+            <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-primary transition-all duration-500 group-hover:border-accent group-hover:shadow-lg group-hover:-rotate-3">
+              <img src={jssLogo2} alt="JSS Logo 2" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
             </div>
           </div>
         </Link>

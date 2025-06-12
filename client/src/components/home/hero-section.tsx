@@ -104,15 +104,21 @@ export default function HeroSection() {
                 {slides[currentSlide].buttons.map((button, index) => {
                   const Icon = button.icon;
                   return (
-                    <Button 
+                    <motion.div
                       key={index}
-                      size="lg" 
-                      className="justify-center gap-2 whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-background h-11 rounded-md px-8 border-2 border-white hover:bg-white hover:text-primary flex items-center space-x-2 text-[#153156] font-normal"
-                      variant={button.primary ? "default" : "outline"}
+                      whileHover={{ scale: 1.05, y: -2 }}
+                      whileTap={{ scale: 0.95 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 17 }}
                     >
-                      <Icon className="h-5 w-5" />
-                      <span>{button.text}</span>
-                    </Button>
+                      <Button 
+                        size="lg" 
+                        className="justify-center gap-2 whitespace-nowrap text-sm ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-background h-11 rounded-md px-8 border-2 border-white hover:bg-white hover:text-primary hover:shadow-xl hover:border-accent flex items-center space-x-2 text-[#153156] font-normal group"
+                        variant={button.primary ? "default" : "outline"}
+                      >
+                        <Icon className="h-5 w-5 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" />
+                        <span className="transition-transform duration-300 group-hover:translate-x-1">{button.text}</span>
+                      </Button>
+                    </motion.div>
                   );
                 })}
               </motion.div>
@@ -121,27 +127,34 @@ export default function HeroSection() {
         </motion.div>
       </AnimatePresence>
       {/* Navigation Arrows */}
-      <button
+      <motion.button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/20 hover:bg-black/40 text-white p-2 rounded-full transition-colors"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/20 hover:bg-black/40 text-white p-2 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg"
+        whileHover={{ scale: 1.1, x: -2 }}
+        whileTap={{ scale: 0.9 }}
       >
-        <ChevronLeft className="h-6 w-6" />
-      </button>
-      <button
+        <ChevronLeft className="h-6 w-6 transition-transform duration-300 hover:scale-110" />
+      </motion.button>
+      <motion.button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/20 hover:bg-black/40 text-white p-2 rounded-full transition-colors"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/20 hover:bg-black/40 text-white p-2 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg"
+        whileHover={{ scale: 1.1, x: 2 }}
+        whileTap={{ scale: 0.9 }}
       >
-        <ChevronRight className="h-6 w-6" />
-      </button>
+        <ChevronRight className="h-6 w-6 transition-transform duration-300 hover:scale-110" />
+      </motion.button>
       {/* Slide Indicators */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {slides.map((_, index) => (
-          <button
+          <motion.button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-colors ${
-              index === currentSlide ? 'bg-accent' : 'bg-white/50'
+            className={`w-3 h-3 rounded-full transition-all duration-300 hover:scale-125 ${
+              index === currentSlide ? 'bg-accent shadow-lg' : 'bg-white/50 hover:bg-white/70'
             }`}
+            whileHover={{ scale: 1.25 }}
+            whileTap={{ scale: 0.8 }}
+            animate={{ scale: index === currentSlide ? 1.2 : 1 }}
           />
         ))}
       </div>
