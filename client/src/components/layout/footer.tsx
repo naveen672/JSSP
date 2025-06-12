@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { University, Facebook, Twitter, Linkedin, Youtube, BookOpen, Users, Calendar, ExternalLink, MapPin, Phone, Mail, Eye, Smartphone } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
+import { motion } from "framer-motion";
 import jssLogo1 from "@assets/image_1748508966675.png";
 import qrCodeImage from "@assets/image_1748554546191.png";
 import socialQRCodes from "@assets/image_1748554552757.png";
@@ -15,7 +16,12 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Institution Info */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+          >
             <div className="flex items-center space-x-3 mb-4">
               <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-accent">
                 <img 
@@ -70,10 +76,15 @@ export default function Footer() {
                 <Youtube className="h-5 w-5" />
               </a>
             </div>
-          </div>
+          </motion.div>
 
           {/* Quick Links */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
@@ -115,10 +126,15 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
+          </motion.div>
 
           {/* Student Resources */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
             <h4 className="text-lg font-semibold mb-4">Student Resources</h4>
             <ul className="space-y-2">
               <li>
@@ -139,10 +155,15 @@ export default function Footer() {
                 <a href="#" className="text-gray-300 hover:text-accent transition-colors">Career Services</a>
               </li>
             </ul>
-          </div>
+          </motion.div>
 
           {/* Contact Info */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <div className="space-y-3 text-gray-300">
               <div className="flex items-start">
@@ -170,9 +191,7 @@ export default function Footer() {
                 <span>Timings: 08:00 AM to 05:45 PM</span>
               </div>
             </div>
-          </div>
-
-
+          </motion.div>
         </div>
 
         <div className="border-t border-gray-600 mt-8 pt-8">
