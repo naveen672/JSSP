@@ -1,14 +1,11 @@
 import { Bell, Calendar, Trophy } from "lucide-react";
 import { motion } from "framer-motion";
 import { useQuery } from "@tanstack/react-query";
-import { useState } from "react";
 
 export default function NewsTicker() {
   const { data: news } = useQuery<any[]>({
     queryKey: ["/api/news"],
   });
-
-  const [isPaused, setIsPaused] = useState(false);
 
   const getIcon = (category: string) => {
     switch (category) {
@@ -44,10 +41,8 @@ export default function NewsTicker() {
             </motion.div>
             <span className="text-sm text-accent whitespace-nowrap font-bold">Latest News:</span>
           </motion.div>
-          <div className="flex-1 overflow-hidden">
-            <div 
-              className={`flex space-x-12 text-sm whitespace-nowrap ml-4 ${isPaused ? 'paused' : 'animate-ticker'}`}
-            >
+          <div className="flex-1 overflow-hidden ticker-container">
+            <div className="flex space-x-12 text-sm whitespace-nowrap ml-4 animate-ticker">
               {news && news.length > 0 ? (
                 news.map((article: any) => {
                   const IconComponent = getIcon(article.category);
@@ -65,16 +60,8 @@ export default function NewsTicker() {
                   return (
                     <span 
                       key={article.id} 
-                      className="flex items-center space-x-2 cursor-pointer hover:text-accent transition-colors duration-200 news-item"
+                      className="flex items-center space-x-2 cursor-pointer hover:text-accent transition-colors duration-200"
                       onClick={handleClick}
-                      onMouseEnter={(e) => {
-                        setIsPaused(true);
-                        e.stopPropagation();
-                      }}
-                      onMouseLeave={(e) => {
-                        setIsPaused(false);
-                        e.stopPropagation();
-                      }}
                     >
                       <IconComponent className="h-4 w-4 text-accent flex-shrink-0" />
                       <span>{article.title}</span>

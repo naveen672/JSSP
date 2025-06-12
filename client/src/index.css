@@ -115,11 +115,7 @@
   animation: ticker 30s linear infinite;
 }
 
-.paused {
-  animation-play-state: paused !important;
-}
-
-.animate-ticker:hover {
+.ticker-container:hover .animate-ticker {
   animation-play-state: paused;
 }
 
