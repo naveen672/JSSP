@@ -46,8 +46,23 @@ export default function NewsTicker() {
               {news && news.length > 0 ? (
                 news.map((article: any) => {
                   const IconComponent = getIcon(article.category);
+                  const handleClick = () => {
+                    // Priority: Open attachment/image if available, otherwise link
+                    if (article.attachmentUrl) {
+                      window.open(article.attachmentUrl, '_blank');
+                    } else if (article.imageUrl) {
+                      window.open(article.imageUrl, '_blank');
+                    } else if (article.link) {
+                      window.open(article.link, '_blank');
+                    }
+                  };
+                  
                   return (
-                    <span key={article.id} className="flex items-center space-x-2">
+                    <span 
+                      key={article.id} 
+                      className="flex items-center space-x-2 cursor-pointer hover:text-accent transition-colors duration-200"
+                      onClick={handleClick}
+                    >
                       <IconComponent className="h-4 w-4 text-accent flex-shrink-0" />
                       <span>{article.title}</span>
                     </span>
