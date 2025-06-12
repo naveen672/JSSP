@@ -49,25 +49,6 @@ export default function AdminDashboard() {
     }
   }, [isAuthenticated, isLoading, setLocation]);
 
-  // Show loading while checking authentication
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="bg-primary text-white w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
-            <University className="h-8 w-8" />
-          </div>
-          <p className="text-gray-600">Loading...</p>
-        </div>
-      </div>
-    );
-  }
-
-  // Return null if not authenticated (will redirect via useEffect)
-  if (!isAuthenticated) {
-    return null;
-  }
-
   const {
     register,
     handleSubmit,
@@ -527,4 +508,25 @@ export default function AdminDashboard() {
       </div>
     </div>
   );
+
+  // Show loading while checking authentication
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="bg-primary text-white w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <University className="h-8 w-8" />
+          </div>
+          <p className="text-gray-600">Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Return null if not authenticated (will redirect via useEffect)
+  if (!isAuthenticated) {
+    return null;
+  }
+
+  return dashboardContent;
 }
