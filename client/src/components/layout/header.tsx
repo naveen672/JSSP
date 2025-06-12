@@ -101,9 +101,10 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       {/* Logo Section */}
-      <div className="container mx-auto px-4 py-3">
+      <div className="container mx-auto px-4 py-2 md:py-3">
         <Link href="/" className="block">
-          <div className="flex items-center justify-center space-x-6 cursor-pointer hover:opacity-90 transition-all duration-500 transform hover:scale-105 group">
+          {/* Desktop Logo */}
+          <div className="hidden md:flex items-center justify-center space-x-6 cursor-pointer hover:opacity-90 transition-all duration-500 transform hover:scale-105 group">
             <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-primary transition-all duration-500 group-hover:border-accent group-hover:shadow-lg group-hover:rotate-3">
               <img src={jssLogo1} alt="JSS Logo 1" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
             </div>
@@ -117,6 +118,22 @@ export default function Header() {
               </div>
             </div>
             <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-primary transition-all duration-500 group-hover:border-accent group-hover:shadow-lg group-hover:-rotate-3">
+              <img src={jssLogo2} alt="JSS Logo 2" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+            </div>
+          </div>
+          {/* Mobile Logo */}
+          <div className="flex md:hidden items-center justify-center space-x-3 cursor-pointer hover:opacity-90 transition-all duration-500 transform hover:scale-105 group">
+            <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-primary transition-all duration-500 group-hover:border-accent group-hover:shadow-lg group-hover:rotate-3">
+              <img src={jssLogo1} alt="JSS Logo 1" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+            </div>
+            <div className="text-center transition-all duration-500 group-hover:translate-y-1">
+              <p className="text-xs text-gray-500 transition-colors duration-300 group-hover:text-primary">JSS MAHAVIDYAPEETHA</p>
+              <h1 className="text-lg font-bold text-primary transition-all duration-300 group-hover:text-accent group-hover:scale-105">JSS POLYTECHNIC</h1>
+              <div className="text-xs text-gray-600 leading-tight transition-colors duration-300 group-hover:text-gray-700">
+                <p className="transition-transform duration-300 group-hover:translate-x-1">Mysuru - 570006</p>
+              </div>
+            </div>
+            <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-primary transition-all duration-500 group-hover:border-accent group-hover:shadow-lg group-hover:-rotate-3">
               <img src={jssLogo2} alt="JSS Logo 2" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
             </div>
           </div>
@@ -290,57 +307,44 @@ export default function Header() {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="w-[300px] sm:w-[400px] p-0 flex flex-col h-full">
+            <SheetContent side="left" className="w-[280px] sm:w-[320px] p-0 flex flex-col h-full">
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <SheetDescription className="sr-only">Main navigation menu for JSS Polytechnic website</SheetDescription>
-              <div className="flex-shrink-0 p-6 border-b">
-                <div className="flex items-center space-x-2">
-                  <div className="w-10 h-10 rounded-full overflow-hidden">
+              <div className="flex-shrink-0 p-4 border-b bg-primary/5">
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 rounded-full overflow-hidden">
                     <img src={jssLogo1} alt="JSS Logo" className="w-full h-full object-cover" />
                   </div>
                   <div>
-                    <h2 className="font-semibold">JSS Polytechnic</h2>
-                    <p className="text-xs text-gray-600">Navigation</p>
+                    <h2 className="font-semibold text-sm">JSS Polytechnic</h2>
+                    <p className="text-xs text-gray-600">Menu</p>
                   </div>
                 </div>
               </div>
               
-              <nav className="flex-1 overflow-y-auto p-6">
-                <div className="space-y-2">
+              <nav className="flex-1 overflow-y-auto p-4">
+                <div className="space-y-1">
                   {/* Mobile Home Section */}
                   <div>
                     <button 
                       onClick={() => toggleMobileDropdown("mobile-home")}
-                      className="flex items-center justify-between w-full p-2 rounded-md hover:bg-gray-100"
+                      className="flex items-center justify-between w-full p-3 rounded-md hover:bg-gray-100 transition-colors"
                     >
-                      <div className="flex items-center space-x-2">
-                        <Home className="h-4 w-4" />
-                        <span>Home</span>
+                      <div className="flex items-center space-x-3">
+                        <Home className="h-4 w-4 text-primary" />
+                        <span className="font-medium">Home</span>
                       </div>
                       <ChevronDown className={cn("h-4 w-4 transition-transform", mobileActiveDropdown === "mobile-home" && "rotate-180")} />
                     </button>
                     {mobileActiveDropdown === "mobile-home" && (
-                      <div className="pl-6 mt-2 space-y-1 max-h-80 overflow-y-auto">
-                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">About Section</div>
-                        <Link href="/about-jssmvp" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">About JSSMVP</Link>
-                        <Link href="/about" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Vision Mission of the Institute</Link>
-                        <Link href="/about" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Leadership Team</Link>
-                        <Link href="/messages" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Messages</Link>
-                        <Link href="/governance" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Governance</Link>
-                        <Link href="/aicte-eoa" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">All India Council for Technical Education (AICTE) and EOA</Link>
-                        <Link href="/nba" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">NBA</Link>
-                        <Link href="/iqac" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Internal Quality Assurance Cell (IQAC)</Link>
-                        
-                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Employee Benefits</div>
-                        <Link href="/student-group-accident-policy" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Student Group Accident Policy</Link>
-                        <Link href="/jss-health-scheme" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">JSS Health Scheme</Link>
-                        <Link href="/group-gratuity-saving-scheme" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Group Gratuity Saving Scheme</Link>
-                        
-                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Reports and Downloads</div>
-                        <Link href="/ncc-annual-report" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">NCC Annual Report</Link>
-                        <Link href="/audit-report-2022-23" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Audit Report 2022-2023</Link>
-                        <Link href="/audit-report-2021-22" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Audit Report 2021-2022</Link>
-                        <Link href="/audit-report-2020-21" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Audit Report 2020-2021</Link>
+                      <div className="pl-4 mt-1 space-y-1 max-h-64 overflow-y-auto">
+                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1 px-2">About</div>
+                        <Link href="/about-jssmvp" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-primary/10 hover:text-primary rounded">About JSSMVP</Link>
+                        <Link href="/about" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-primary/10 hover:text-primary rounded">Vision & Mission</Link>
+                        <Link href="/messages" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-primary/10 hover:text-primary rounded">Messages</Link>
+                        <Link href="/governance" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-primary/10 hover:text-primary rounded">Governance</Link>
+                        <Link href="/nba" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-primary/10 hover:text-primary rounded">NBA</Link>
+                        <Link href="/iqac" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-primary/10 hover:text-primary rounded">IQAC</Link>
                       </div>
                     )}
                   </div>
@@ -349,48 +353,25 @@ export default function Header() {
                   <div>
                     <button 
                       onClick={() => toggleMobileDropdown("mobile-academics")}
-                      className="flex items-center justify-between w-full p-2 rounded-md hover:bg-gray-100"
+                      className="flex items-center justify-between w-full p-3 rounded-md hover:bg-gray-100 transition-colors"
                     >
-                      <div className="flex items-center space-x-2">
-                        <GraduationCap className="h-4 w-4" />
-                        <span>Academics</span>
+                      <div className="flex items-center space-x-3">
+                        <GraduationCap className="h-4 w-4 text-primary" />
+                        <span className="font-medium">Academics</span>
                       </div>
                       <ChevronDown className={cn("h-4 w-4 transition-transform", mobileActiveDropdown === "mobile-academics" && "rotate-180")} />
                     </button>
                     {mobileActiveDropdown === "mobile-academics" && (
-                      <div className="pl-6 mt-2 space-y-1 max-h-80 overflow-y-auto">
-                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Departments</div>
-                        <Link href="/computer-science-engineering" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Computer Science & Engineering</Link>
-                        <Link href="/electronics-communication-engineering" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Electronics & Communication Engineering</Link>
-                        <Link href="/mechanical-engineering" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Mechanical Engineering</Link>
-                        <Link href="/electrical-electronics-engineering" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Electrical & Electronics Engineering</Link>
-                        <Link href="/academics" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Mechatronics Engineering</Link>
-                        <Link href="/information-science-engineering" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Information Science & Engineering</Link>
-                        <Link href="/civil-engineering" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Civil Engineering</Link>
-                        <Link href="/science-department" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Science Department</Link>
-                        
-                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Calendar</div>
-                        <Link href="/calendar-events" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Calendar of Events</Link>
-                        
-                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Professional Bodies</div>
-                        <Link href="/cs-professional-bodies" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Computer Science & Engineering</Link>
-                        <Link href="/ece-professional-bodies" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Electronics & Communication Engineering</Link>
-                        <Link href="/mechanical-professional-bodies" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Mechanical Engineering</Link>
-                        <Link href="/eee-professional-bodies" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Electrical & Electronics Engineering</Link>
-                        <Link href="/mechatronics-professional-bodies" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Mechatronics Engineering</Link>
-                        <Link href="/information-science-engineering" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Information Science & Engineering</Link>
-                        <Link href="/civil-professional-bodies" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Civil Engineering</Link>
-                        <Link href="/science-department" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Science Department</Link>
-                        
-                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Other</div>
-                        <Link href="/academics" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">About Academics</Link>
-                        <Link href="/jss-collaboration-mous" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">JSS Collaboration MOUs</Link>
-                        <Link href="/mandatory-disclosure" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Mandatory Disclosure</Link>
-                        
-                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Admission</div>
-                        <Link href="/admissions" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">College Prospectus</Link>
-                        <Link href="/admissions" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Admission Help desk</Link>
-                        <Link href="/admissions" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Admission Details</Link>
+                      <div className="pl-4 mt-1 space-y-1 max-h-64 overflow-y-auto">
+                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1 px-2">Departments</div>
+                        <Link href="/computer-science-engineering" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-primary/10 hover:text-primary rounded">Computer Science</Link>
+                        <Link href="/electronics-communication-engineering" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-primary/10 hover:text-primary rounded">Electronics & Communication</Link>
+                        <Link href="/mechanical-engineering" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-primary/10 hover:text-primary rounded">Mechanical</Link>
+                        <Link href="/electrical-electronics-engineering" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-primary/10 hover:text-primary rounded">Electrical & Electronics</Link>
+                        <Link href="/civil-engineering" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-primary/10 hover:text-primary rounded">Civil Engineering</Link>
+                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1 mt-2 px-2">General</div>
+                        <Link href="/academics" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-primary/10 hover:text-primary rounded">About Academics</Link>
+                        <Link href="/admissions" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-primary/10 hover:text-primary rounded">Admissions</Link>
                       </div>
                     )}
                   </div>
@@ -399,33 +380,21 @@ export default function Header() {
                   <div>
                     <button 
                       onClick={() => toggleMobileDropdown("mobile-facilities")}
-                      className="flex items-center justify-between w-full p-2 rounded-md hover:bg-gray-100"
+                      className="flex items-center justify-between w-full p-3 rounded-md hover:bg-gray-100 transition-colors"
                     >
-                      <div className="flex items-center space-x-2">
-                        <Building className="h-4 w-4" />
-                        <span>Facilities</span>
+                      <div className="flex items-center space-x-3">
+                        <Building className="h-4 w-4 text-primary" />
+                        <span className="font-medium">Facilities</span>
                       </div>
                       <ChevronDown className={cn("h-4 w-4 transition-transform", mobileActiveDropdown === "mobile-facilities" && "rotate-180")} />
                     </button>
                     {mobileActiveDropdown === "mobile-facilities" && (
-                      <div className="pl-6 mt-2 space-y-1 max-h-80 overflow-y-auto">
-                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">General Facilities</div>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Library & Information Centre</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Hostel</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Sports</Link>
-                        
-                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Placements & Training</div>
-                        <Link href="/placements" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Placements</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Internships & Training</Link>
-                        
-                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Infrastructure</div>
-                        <Link href="/infrastructure" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Infrastructure Overview</Link>
-                        <Link href="/infrastructure" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Computer Science & Engineering</Link>
-                        <Link href="/infrastructure" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Electronics & Communication</Link>
-                        <Link href="/infrastructure" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Mechanical Engineering</Link>
-                        <Link href="/infrastructure" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Electrical & Electronics</Link>
-                        <Link href="/infrastructure" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Mechatronics</Link>
-                        <Link href="/infrastructure" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Civil Engineering</Link>
+                      <div className="pl-4 mt-1 space-y-1 max-h-64 overflow-y-auto">
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-primary/10 hover:text-primary rounded">Library & Information Centre</Link>
+                        <Link href="/hostel" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-primary/10 hover:text-primary rounded">Hostel</Link>
+                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-primary/10 hover:text-primary rounded">Sports</Link>
+                        <Link href="/infrastructure" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-primary/10 hover:text-primary rounded">Infrastructure</Link>
+                        <Link href="/placements" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-primary/10 hover:text-primary rounded">Placements</Link>
                       </div>
                     )}
                   </div>
@@ -434,30 +403,21 @@ export default function Header() {
                   <div>
                     <button 
                       onClick={() => toggleMobileDropdown("mobile-support")}
-                      className="flex items-center justify-between w-full p-2 rounded-md hover:bg-gray-100"
+                      className="flex items-center justify-between w-full p-3 rounded-md hover:bg-gray-100 transition-colors"
                     >
-                      <div className="flex items-center space-x-2">
-                        <Users className="h-4 w-4" />
-                        <span>Student Support</span>
+                      <div className="flex items-center space-x-3">
+                        <Users className="h-4 w-4 text-primary" />
+                        <span className="font-medium">Student Support</span>
                       </div>
                       <ChevronDown className={cn("h-4 w-4 transition-transform", mobileActiveDropdown === "mobile-support" && "rotate-180")} />
                     </button>
                     {mobileActiveDropdown === "mobile-support" && (
-                      <div className="pl-6 mt-2 space-y-1 max-h-80 overflow-y-auto">
-                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Basic Support</div>
-                        <Link href="/scholarships" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Scholarships</Link>
-                        <Link href="/mentoring-scheme" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Mentoring Scheme</Link>
-                        <Link href="/anti-ragging" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Anti Ragging</Link>
-                        
-                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Committees</div>
-                        <Link href="/committees" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">All Committees</Link>
-                        
-                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">Higher Education</div>
-                        <Link href="/higher-education" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Higher Education</Link>
-                        <Link href="/exam" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Exam</Link>
-                        <Link href="/fee-payment" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Fee Payment</Link>
-                        <Link href="/cultural-activities" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Cultural Crew</Link>
-                        <Link href="/social-outreach" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Social Outreach Programs</Link>
+                      <div className="pl-4 mt-1 space-y-1 max-h-64 overflow-y-auto">
+                        <Link href="/scholarships" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-primary/10 hover:text-primary rounded">Scholarships</Link>
+                        <Link href="/mentoring-scheme" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-primary/10 hover:text-primary rounded">Mentoring Scheme</Link>
+                        <Link href="/anti-ragging" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-primary/10 hover:text-primary rounded">Anti Ragging</Link>
+                        <Link href="/committees" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-primary/10 hover:text-primary rounded">Committees</Link>
+                        <Link href="/exam" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-primary/10 hover:text-primary rounded">Exam</Link>
                       </div>
                     )}
                   </div>
