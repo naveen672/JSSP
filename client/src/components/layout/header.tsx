@@ -422,34 +422,20 @@ export default function Header() {
                     )}
                   </div>
 
-                  {/* Mobile Training & Placements Section */}
-                  <div>
-                    <button 
-                      onClick={() => toggleMobileDropdown("mobile-placements")}
-                      className="flex items-center justify-between w-full p-2 rounded-md hover:bg-gray-100"
-                    >
-                      <div className="flex items-center space-x-2">
-                        <Briefcase className="h-4 w-4" />
-                        <span>Training & Placements</span>
-                      </div>
-                      <ChevronDown className={cn("h-4 w-4 transition-transform", mobileActiveDropdown === "mobile-placements" && "rotate-180")} />
-                    </button>
-                    {mobileActiveDropdown === "mobile-placements" && (
-                      <div className="pl-6 mt-2 space-y-1 max-h-80 overflow-y-auto">
-                        <Link href="/training-placements" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Training</Link>
-                        <Link href="/placements" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Placements</Link>
-                        <Link href="/campus-life" onClick={() => closeMobileMenu()} className="block p-2 text-sm hover:bg-yellow-50 hover:text-yellow-700 rounded">Internships</Link>
-                      </div>
-                    )}
-                  </div>
-
-                  <Link href="/iqac" onClick={() => closeMobileMenu()} className="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-100">
-                    <UserCheck className="h-4 w-4" />
-                    <span>IQAC</span>
+                  {/* Direct Links */}
+                  <Link href="/placements" onClick={() => closeMobileMenu()} className="flex items-center space-x-3 p-3 rounded-md hover:bg-gray-100 transition-colors">
+                    <Briefcase className="h-4 w-4 text-primary" />
+                    <span className="font-medium">Training & Placements</span>
                   </Link>
-                  <Link href="/contact" onClick={() => closeMobileMenu()} className="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-100">
-                    <Phone className="h-4 w-4" />
-                    <span>Contact</span>
+
+                  <Link href="/iqac" onClick={() => closeMobileMenu()} className="flex items-center space-x-3 p-3 rounded-md hover:bg-gray-100 transition-colors">
+                    <UserCheck className="h-4 w-4 text-primary" />
+                    <span className="font-medium">IQAC</span>
+                  </Link>
+                  
+                  <Link href="/contact" onClick={() => closeMobileMenu()} className="flex items-center space-x-3 p-3 rounded-md hover:bg-gray-100 transition-colors">
+                    <Phone className="h-4 w-4 text-primary" />
+                    <span className="font-medium">Contact</span>
                   </Link>
                 </div>
               </nav>
