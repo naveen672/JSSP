@@ -62,24 +62,34 @@ export default function StatsCounter() {
           {statsData.map((stat, index) => (
             <motion.div 
               key={stat.label}
-              className="text-center"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="text-center group"
+              initial={{ opacity: 0, y: 20, scale: 0.8 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, delay: index * 0.1, type: "spring", stiffness: 300 }}
               viewport={{ once: true }}
+              whileHover={{ scale: 1.05, y: -5 }}
             >
-              <div className="flex justify-center mb-4">
-                <div className="bg-primary text-white p-3 rounded-full">
-                  {index === 0 && <Users className="h-6 w-6" />}
-                  {index === 1 && <GraduationCap className="h-6 w-6" />}
-                  {index === 2 && <Building className="h-6 w-6" />}
-                  {index === 3 && <Calendar className="h-6 w-6" />}
+              <motion.div 
+                className="flex justify-center mb-4"
+                whileHover={{ rotate: 360 }}
+                transition={{ duration: 0.5 }}
+              >
+                <div className="bg-primary text-white p-3 rounded-full transition-all duration-300 group-hover:bg-accent group-hover:shadow-lg">
+                  {index === 0 && <Users className="h-6 w-6 transition-transform duration-300 group-hover:scale-110" />}
+                  {index === 1 && <GraduationCap className="h-6 w-6 transition-transform duration-300 group-hover:scale-110" />}
+                  {index === 2 && <Building className="h-6 w-6 transition-transform duration-300 group-hover:scale-110" />}
+                  {index === 3 && <Calendar className="h-6 w-6 transition-transform duration-300 group-hover:scale-110" />}
                 </div>
-              </div>
-              <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">
+              </motion.div>
+              <motion.div 
+                className="text-4xl lg:text-5xl font-bold text-primary mb-2 transition-colors duration-300 group-hover:text-accent"
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.8, delay: index * 0.1 + 0.3, type: "bounce" }}
+              >
                 <StatCounter end={stat.value} suffix={stat.suffix} />
-              </div>
-              <div className="text-gray-600 font-medium">{stat.label}</div>
+              </motion.div>
+              <div className="text-gray-600 font-medium transition-all duration-300 group-hover:text-gray-800 group-hover:font-semibold">{stat.label}</div>
             </motion.div>
           ))}
         </div>

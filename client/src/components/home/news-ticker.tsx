@@ -1,14 +1,30 @@
 import { Bell, Calendar, Trophy } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function NewsTicker() {
   return (
-    <div className="bg-primary text-white py-3 overflow-hidden border-b border-primary-dark">
+    <motion.div 
+      className="bg-primary text-white py-3 overflow-hidden border-b border-primary-dark"
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="container mx-auto px-4">
         <div className="flex items-center">
-          <div className="flex items-center space-x-2 mr-8 flex-shrink-0 bg-primary z-10 pr-4">
-            <Bell className="h-4 w-4 text-accent animate-pulse" />
+          <motion.div 
+            className="flex items-center space-x-2 mr-8 flex-shrink-0 bg-primary z-10 pr-4"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
+          >
+            <motion.div
+              animate={{ rotate: [0, 15, -15, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            >
+              <Bell className="h-4 w-4 text-accent" />
+            </motion.div>
             <span className="text-sm text-accent whitespace-nowrap font-bold">Latest News:</span>
-          </div>
+          </motion.div>
           <div className="flex-1 overflow-hidden">
             <div className="flex space-x-12 text-sm whitespace-nowrap animate-ticker ml-4">
               <span className="flex items-center space-x-2">
@@ -35,6 +51,6 @@ export default function NewsTicker() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
