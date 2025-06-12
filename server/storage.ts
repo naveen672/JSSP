@@ -5,6 +5,8 @@ import {
   departments, 
   facultyMembers, 
   visitorCounter,
+  heroSection,
+  pageContent,
   type User, 
   type InsertUser,
   type NewsItem,
@@ -15,7 +17,11 @@ import {
   type InsertDepartment,
   type FacultyMember,
   type InsertFacultyMember,
-  type VisitorCounter
+  type VisitorCounter,
+  type HeroSection,
+  type InsertHeroSection,
+  type PageContent,
+  type InsertPageContent
 } from "@shared/schema";
 import { db } from "./db";
 import { eq, desc, and } from "drizzle-orm";
@@ -54,6 +60,17 @@ export interface IStorage {
   // Analytics methods
   incrementVisitorCount(): Promise<void>;
   getVisitorStats(): Promise<{ total: number; today: number }>;
+
+  // Hero Section methods
+  getActiveHeroSection(): Promise<HeroSection | undefined>;
+  updateHeroSection(id: number, updates: Partial<InsertHeroSection>): Promise<HeroSection | undefined>;
+  createHeroSection(heroSection: InsertHeroSection): Promise<HeroSection>;
+
+  // Page Content methods
+  getPageContent(pageName: string): Promise<PageContent | undefined>;
+  updatePageContent(pageName: string, updates: Partial<InsertPageContent>): Promise<PageContent | undefined>;
+  createPageContent(pageContent: InsertPageContent): Promise<PageContent>;
+  getAllPageContent(): Promise<PageContent[]>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -116,7 +133,7 @@ export class DatabaseStorage implements IStorage {
 
   async deleteNewsItem(id: number): Promise<boolean> {
     const result = await db.delete(newsItems).where(eq(newsItems.id, id));
-    return result.rowCount > 0;
+    return (result.rowCount || 0) > 0;
   }
 
   async createContactSubmission(submission: InsertContactSubmission): Promise<ContactSubmission> {
@@ -214,6 +231,54 @@ export class DatabaseStorage implements IStorage {
       total,
       today: todayVisit?.visits || 0
     };
+  }
+
+  async getActiveHeroSection(): Promise<HeroSection | undefined> {
+    const [hero] = await db.select().from(heroSection).where(eq(heroSection.active, true));
+    return hero || undefined;
+  }
+
+  async updateHeroSection(id: number, updates: Partial<InsertHeroSection>): Promise<HeroSection | undefined> {
+    const [updated] = await db
+      .update(heroSection)
+      .set({ ...updates, updatedAt: new Date() })
+      .where(eq(heroSection.id, id))
+      .returning();
+    return updated || undefined;
+  }
+
+  async createHeroSection(heroData: InsertHeroSection): Promise<HeroSection> {
+    const [created] = await db
+      .insert(heroSection)
+      .values(heroData)
+      .returning();
+    return created;
+  }
+
+  async getPageContent(pageName: string): Promise<PageContent | undefined> {
+    const [page] = await db.select().from(pageContent).where(eq(pageContent.pageName, pageName));
+    return page || undefined;
+  }
+
+  async updatePageContent(pageName: string, updates: Partial<InsertPageContent>): Promise<PageContent | undefined> {
+    const [updated] = await db
+      .update(pageContent)
+      .set({ ...updates, updatedAt: new Date() })
+      .where(eq(pageContent.pageName, pageName))
+      .returning();
+    return updated || undefined;
+  }
+
+  async createPageContent(pageData: InsertPageContent): Promise<PageContent> {
+    const [created] = await db
+      .insert(pageContent)
+      .values(pageData)
+      .returning();
+    return created;
+  }
+
+  async getAllPageContent(): Promise<PageContent[]> {
+    return await db.select().from(pageContent);
   }
 }
 

@@ -1,7 +1,7 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { insertContactSubmissionSchema, insertNewsItemSchema, insertUserSchema } from "@shared/schema";
+import { insertContactSubmissionSchema, insertNewsItemSchema, insertUserSchema, insertHeroSectionSchema, insertPageContentSchema } from "@shared/schema";
 import bcrypt from "bcrypt";
 import passport from "passport";
 import { Strategy as LocalStrategy } from "passport-local";
