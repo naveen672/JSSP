@@ -10,6 +10,11 @@ import niranjanamurthyImage from "@assets/image_1748550435055.png";
 import yogithaImage from "@assets/image_1748550439012.png";
 import shilpaImage from "@assets/image_1748550443402.png";
 import chandrashekara from "@assets/image_1749574090140.png";
+import yamunaImage from "@assets/image_1749723594433.png";
+import vimalaImage from "@assets/image_1749723600476.png";
+import pavithraImage from "@assets/image_1749723606419.png";
+import rashmiImage from "@assets/image_1749723611230.png";
+import srikantamurthyImage from "@assets/image_1749723627247.png";
 // Industrial visit images
 import ecVisitImage1 from "@assets/WhatsApp Image 2024-03-07 at 3.34.02 PM (1)_1749581625987.jpeg";
 import ecVisitImage2 from "@assets/WhatsApp Image 2024-03-07 at 3.34.02 PM_1749581628658.jpeg";
@@ -77,7 +82,7 @@ export default function ElectronicsCommunicationEngineering() {
     },
     {
       id: 4,
-      image: null,
+      image: pavithraImage,
       name: "Pavithra B",
       designation: "Lecturer",
       qualification: "MTech (VLSI Design and Embedded Systems)",
@@ -116,6 +121,62 @@ export default function ElectronicsCommunicationEngineering() {
       profilePdf: "/attached_assets/parashivamurthy_1749578032084.pdf",
       specialization: "C Programming, Microcontrollers, Wireless Communication",
       hasProfile: true
+    },
+    {
+      id: 7,
+      image: yamunaImage,
+      name: "Yamuna K",
+      designation: "Lecturer",
+      qualification: "Electronics & Communication Engineering",
+      dateOfJoining: "Data not available",
+      experience: "Teaching",
+      phone: "Contact department",
+      email: "Contact department",
+      profilePdf: null,
+      specialization: "Electronics & Communication Engineering",
+      hasProfile: false
+    },
+    {
+      id: 8,
+      image: vimalaImage,
+      name: "Vimala H N",
+      designation: "Lecturer",
+      qualification: "Electronics & Communication Engineering",
+      dateOfJoining: "Data not available",
+      experience: "Teaching",
+      phone: "Contact department",
+      email: "Contact department",
+      profilePdf: null,
+      specialization: "Electronics & Communication Engineering",
+      hasProfile: false
+    },
+    {
+      id: 9,
+      image: rashmiImage,
+      name: "Rashmi N S",
+      designation: "Lecturer",
+      qualification: "Electronics & Communication Engineering",
+      dateOfJoining: "Data not available",
+      experience: "Teaching",
+      phone: "Contact department",
+      email: "Contact department",
+      profilePdf: null,
+      specialization: "Electronics & Communication Engineering",
+      hasProfile: false
+    },
+    {
+      id: 10,
+      image: srikantamurthyImage,
+      name: "Srikantamurthy",
+      designation: "Lecturer",
+      qualification: "Electronics & Communication Engineering",
+      dateOfJoining: "Data not available",
+      experience: "Teaching",
+      phone: "Contact department",
+      email: "Contact department",
+      profilePdf: null,
+      specialization: "Electronics & Communication Engineering",
+      hasProfile: false
     }
   ];
 
