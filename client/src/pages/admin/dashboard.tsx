@@ -66,10 +66,12 @@ export default function AdminDashboard() {
   // Queries
   const { data: allNews, isLoading: newsLoading } = useQuery({
     queryKey: ["/api/admin/news"],
+    enabled: isAuthenticated,
   });
 
   const { data: contacts, isLoading: contactsLoading } = useQuery({
     queryKey: ["/api/admin/contacts"],
+    enabled: isAuthenticated,
   });
 
   const { data: stats } = useQuery({
@@ -419,10 +421,10 @@ export default function AdminDashboard() {
                   <div className="space-y-4 max-h-96 overflow-y-auto">
                     {newsLoading ? (
                       <p>Loading...</p>
-                    ) : allNews?.length === 0 ? (
+                    ) : !Array.isArray(allNews) || allNews.length === 0 ? (
                       <p className="text-gray-500">No news articles yet.</p>
                     ) : (
-                      allNews?.map((article: any) => (
+                      allNews.map((article: any) => (
                         <div key={article.id} className="border rounded-lg p-4">
                           <div className="flex justify-between items-start mb-2">
                             <h3 className="font-semibold text-sm">{article.title}</h3>
@@ -478,10 +480,10 @@ export default function AdminDashboard() {
                 <div className="space-y-4">
                   {contactsLoading ? (
                     <p>Loading...</p>
-                  ) : contacts?.length === 0 ? (
+                  ) : !Array.isArray(contacts) || contacts.length === 0 ? (
                     <p className="text-gray-500">No contact submissions yet.</p>
                   ) : (
-                    contacts?.map((contact: any) => (
+                    contacts.map((contact: any) => (
                       <div key={contact.id} className="border rounded-lg p-4">
                         <div className="flex justify-between items-start mb-2">
                           <div>
