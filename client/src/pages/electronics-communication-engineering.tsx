@@ -54,7 +54,7 @@ export default function ElectronicsCommunicationEngineering() {
     },
     {
       id: 2,
-      image: null,
+      image: yamunaImage,
       name: "Yamuna K",
       designation: "Lecturer",
       qualification: "MTech (Computer Networks Engineering)",
@@ -68,7 +68,7 @@ export default function ElectronicsCommunicationEngineering() {
     },
     {
       id: 3,
-      image: null,
+      image: vimalaImage,
       name: "Vimala H N",
       designation: "Lecturer",
       qualification: "BE (Electronics & Communication Engineering)",
@@ -121,69 +121,13 @@ export default function ElectronicsCommunicationEngineering() {
       profilePdf: "/attached_assets/parashivamurthy_1749578032084.pdf",
       specialization: "C Programming, Microcontrollers, Wireless Communication",
       hasProfile: true
-    },
-    {
-      id: 7,
-      image: yamunaImage,
-      name: "Yamuna K",
-      designation: "Lecturer",
-      qualification: "Electronics & Communication Engineering",
-      dateOfJoining: "Data not available",
-      experience: "Teaching",
-      phone: "Contact department",
-      email: "Contact department",
-      profilePdf: null,
-      specialization: "Electronics & Communication Engineering",
-      hasProfile: false
-    },
-    {
-      id: 8,
-      image: vimalaImage,
-      name: "Vimala H N",
-      designation: "Lecturer",
-      qualification: "Electronics & Communication Engineering",
-      dateOfJoining: "Data not available",
-      experience: "Teaching",
-      phone: "Contact department",
-      email: "Contact department",
-      profilePdf: null,
-      specialization: "Electronics & Communication Engineering",
-      hasProfile: false
-    },
-    {
-      id: 9,
-      image: rashmiImage,
-      name: "Rashmi N S",
-      designation: "Lecturer",
-      qualification: "Electronics & Communication Engineering",
-      dateOfJoining: "Data not available",
-      experience: "Teaching",
-      phone: "Contact department",
-      email: "Contact department",
-      profilePdf: null,
-      specialization: "Electronics & Communication Engineering",
-      hasProfile: false
-    },
-    {
-      id: 10,
-      image: srikantamurthyImage,
-      name: "Srikantamurthy",
-      designation: "Lecturer",
-      qualification: "Electronics & Communication Engineering",
-      dateOfJoining: "Data not available",
-      experience: "Teaching",
-      phone: "Contact department",
-      email: "Contact department",
-      profilePdf: null,
-      specialization: "Electronics & Communication Engineering",
-      hasProfile: false
     }
   ];
 
   const supportingStaff = [
     {
       id: 1,
-      image: null,
+      image: rashmiImage,
       name: "Rashmi N S",
       designation: "Instructor",
       qualification: "DEC"
@@ -211,7 +155,7 @@ export default function ElectronicsCommunicationEngineering() {
     },
     {
       id: 5,
-      image: null,
+      image: srikantamurthyImage,
       name: "Srikantamurthy",
       designation: "Lab Helper",
       qualification: "ITI"

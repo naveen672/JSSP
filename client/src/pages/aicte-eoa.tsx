@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { FileText, MapPin, Phone, Mail, Clock, ExternalLink } from "lucide-react";
+import aicteLogoImage from "@assets/image_1749723920039.png";
 
 export default function AICTEEOA() {
   const eoaLinks = [
@@ -37,8 +38,18 @@ export default function AICTEEOA() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="bg-primary text-white py-16">
-        <div className="container mx-auto px-4 text-center">
+      <section 
+        className="bg-primary text-white py-16 relative overflow-hidden"
+        style={{
+          backgroundImage: `url(${aicteLogoImage})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center right',
+          backgroundSize: '300px auto',
+          backgroundColor: 'rgba(59, 130, 246, 0.95)'
+        }}
+      >
+        <div className="absolute inset-0 bg-primary/80"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
           <h1 className="text-4xl lg:text-6xl font-bold mb-6">AICTE & EOA</h1>
           <p className="text-xl lg:text-2xl opacity-90 max-w-3xl mx-auto">
             All India Council for Technical Education approval and Extension of Approval details for JSS Polytechnic.
