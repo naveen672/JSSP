@@ -306,8 +306,10 @@ export default function AdminDashboard() {
 
         {/* Main Content */}
         <Tabs defaultValue="news" className="space-y-6">
-          <TabsList>
+          <TabsList className="grid w-full grid-cols-4">
             <TabsTrigger value="news">News Management</TabsTrigger>
+            <TabsTrigger value="hero">Hero Section</TabsTrigger>
+            <TabsTrigger value="pages">Page Content</TabsTrigger>
             <TabsTrigger value="contacts">Contact Submissions</TabsTrigger>
           </TabsList>
 

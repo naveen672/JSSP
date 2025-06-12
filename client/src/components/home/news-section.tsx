@@ -98,15 +98,27 @@ export default function NewsSection() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {displayNews.slice(0, 3).map((article: any, index: number) => (
+          {(Array.isArray(displayNews) ? displayNews : []).slice(0, 3).map((article: any, index: number) => (
             <motion.article
               key={article.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
+              className="cursor-pointer"
+              onClick={() => window.open(article.link || '#', '_blank')}
+              onMouseEnter={(e) => {
+                const card = e.currentTarget.querySelector('.card-content') as HTMLElement;
+                if (card) card.style.animationPlayState = 'paused';
+              }}
+              onMouseLeave={(e) => {
+                const card = e.currentTarget.querySelector('.card-content') as HTMLElement;
+                if (card) card.style.animationPlayState = 'running';
+              }}
             >
-              <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full card-hover">
+              <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 h-full card-hover hover:scale-105 hover:border-primary"
+                style={{ transition: 'transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease' }}
+              >
                 <div className="h-48 overflow-hidden">
                   <img 
                     src={article.imageUrl} 

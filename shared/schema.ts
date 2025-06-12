@@ -19,6 +19,9 @@ export const newsItems = pgTable("news_items", {
   excerpt: text("excerpt"),
   category: varchar("category", { length: 50 }).notNull(),
   imageUrl: text("image_url"),
+  attachmentUrl: text("attachment_url"), // For PDF/document attachments
+  attachmentName: varchar("attachment_name", { length: 100 }),
+  link: text("link"), // External link for news items
   published: boolean("published").default(false).notNull(),
   publishedAt: timestamp("published_at"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
@@ -64,6 +67,32 @@ export const visitorCounter = pgTable("visitor_counter", {
   visits: integer("visits").default(1).notNull(),
 });
 
+export const heroSection = pgTable("hero_section", {
+  id: serial("id").primaryKey(),
+  title: varchar("title", { length: 200 }).notNull(),
+  subtitle: text("subtitle"),
+  description: text("description"),
+  primaryButtonText: varchar("primary_button_text", { length: 50 }),
+  primaryButtonLink: text("primary_button_link"),
+  secondaryButtonText: varchar("secondary_button_text", { length: 50 }),
+  secondaryButtonLink: text("secondary_button_link"),
+  backgroundImageUrl: text("background_image_url"),
+  videoUrl: text("video_url"),
+  active: boolean("active").default(true).notNull(),
+  updatedAt: timestamp("updated_at").defaultNow().notNull(),
+});
+
+export const pageContent = pgTable("page_content", {
+  id: serial("id").primaryKey(),
+  pageName: varchar("page_name", { length: 100 }).notNull().unique(),
+  title: varchar("title", { length: 200 }),
+  content: text("content"),
+  metaDescription: text("meta_description"),
+  sections: text("sections"), // JSON string for flexible section content
+  images: text("images").array(), // Array of image URLs
+  updatedAt: timestamp("updated_at").defaultNow().notNull(),
+});
+
 // Relations
 export const newsItemsRelations = relations(newsItems, ({ one }) => ({
   author: one(users, {
@@ -102,6 +131,16 @@ export const insertFacultyMemberSchema = createInsertSchema(facultyMembers).omit
   id: true,
 });
 
+export const insertHeroSectionSchema = createInsertSchema(heroSection).omit({
+  id: true,
+  updatedAt: true,
+});
+
+export const insertPageContentSchema = createInsertSchema(pageContent).omit({
+  id: true,
+  updatedAt: true,
+});
+
 // Types
 export type User = typeof users.$inferSelect;
 export type InsertUser = z.infer<typeof insertUserSchema>;
@@ -114,3 +153,7 @@ export type InsertDepartment = z.infer<typeof insertDepartmentSchema>;
 export type FacultyMember = typeof facultyMembers.$inferSelect;
 export type InsertFacultyMember = z.infer<typeof insertFacultyMemberSchema>;
 export type VisitorCounter = typeof visitorCounter.$inferSelect;
+export type HeroSection = typeof heroSection.$inferSelect;
+export type InsertHeroSection = z.infer<typeof insertHeroSectionSchema>;
+export type PageContent = typeof pageContent.$inferSelect;
+export type InsertPageContent = z.infer<typeof insertPageContentSchema>;
