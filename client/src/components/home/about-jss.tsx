@@ -1,25 +1,58 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Award, Users, Globe, BookOpen } from "lucide-react";
+import { motion } from "framer-motion";
 import jssMainBuilding from "@assets/b1.jpg";
 
 export default function AboutJSS() {
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-primary mb-4">About JSS Polytechnic</h2>
-          <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+        <motion.div 
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <motion.h2 
+            className="text-3xl font-bold text-primary mb-4"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            About JSS Polytechnic
+          </motion.h2>
+          <motion.p 
+            className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
             One of the premier and oldest Polytechnics under JSS Mahavidyapeetha, established in 1954. 
             We are committed to excellence in technical education with over 300 educational institutions 
             across the country, serving more than 1,00,000 students from kindergarten to post-doctoral courses.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         {/* JSS Mahavidyapeetha Background */}
-        <div className="mb-12 bg-white rounded-lg p-8 shadow-sm">
+        <motion.div 
+          className="mb-12 bg-white rounded-lg p-8 shadow-sm"
+          initial={{ opacity: 0, y: 50, scale: 0.95 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+          whileHover={{ scale: 1.02, y: -5 }}
+        >
           <h3 className="text-2xl font-bold text-primary mb-6 text-center">JSS Mahavidyapeetha Heritage</h3>
           <div className="grid md:grid-cols-2 gap-8">
-            <div>
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
               <h4 className="text-lg font-semibold text-gray-800 mb-3">Institutional Legacy</h4>
               <p className="text-gray-600 leading-relaxed mb-4">
                 Jagadguru Sri Shivarathreeshwara Mahavidyapeetha (JSSMVP) was established in 1954 by 
@@ -31,8 +64,13 @@ export default function AboutJSS() {
                 across several branches of knowledge, welfare, and culture, spanning from crèches for 
                 toddlers to advanced research centers.
               </p>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+            >
               <h4 className="text-lg font-semibold text-gray-800 mb-3">Suttur Math Connection</h4>
               <p className="text-gray-600 leading-relaxed mb-4">
                 Suttur Math, a pilgrim center with over a thousand years of history, is situated on the 
@@ -43,125 +81,72 @@ export default function AboutJSS() {
                 The Math has grown over centuries as a multi-dimensional religious, social, cultural, and 
                 educational movement, contributing immensely to societal advancement.
               </p>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Campus Image */}
-        <div className="mb-12">
-          <div className="relative rounded-lg overflow-hidden shadow-lg">
+        <motion.div 
+          className="mb-12"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          viewport={{ once: true }}
+          whileHover={{ scale: 1.02 }}
+        >
+          <div className="relative rounded-lg overflow-hidden shadow-lg group">
             <img 
               src={jssMainBuilding} 
               alt="JSS Polytechnic Main Building" 
-              className="w-full h-64 md:h-80 object-cover"
+              className="w-full h-64 md:h-80 object-cover transition-transform duration-500 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-          </div>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <Card className="h-full">
-            <CardContent className="p-8">
-              <h3 className="text-xl font-semibold text-primary mb-4">Vision of the Institute</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Vision of the institute to be recognized as a prestigious academic Centre for excellence in 
-                technical education and to meet the needs of Academia, Industry & Society.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="h-full">
-            <CardContent className="p-8">
-              <h3 className="text-xl font-semibold text-primary mb-4">Mission of the Institute</h3>
-              <div className="space-y-3 text-gray-600 text-sm">
-                <div className="flex items-start space-x-2">
-                  <span className="font-semibold text-accent">M1:</span>
-                  <span>To impart holistic outcome based education in both technical and non technical programs through state of the art curriculum and effective teaching-learning process.</span>
-                </div>
-                <div className="flex items-start space-x-2">
-                  <span className="font-semibold text-accent">M2:</span>
-                  <span>To promote industry institutional collaboration through MOUs and internship programs.</span>
-                </div>
-                <div className="flex items-start space-x-2">
-                  <span className="font-semibold text-accent">M3:</span>
-                  <span>To infuse ethical and responsible engineering practices to create successful professionals.</span>
-                </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute bottom-4 left-4 text-white">
+                <h4 className="text-xl font-bold">JSS Polytechnic Campus</h4>
+                <p className="text-sm opacity-90">Modern Infrastructure for Quality Education</p>
               </div>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Institutional Highlights from PPT */}
-        <div className="mb-12 bg-white rounded-lg p-8 shadow-sm">
-          <h3 className="text-2xl font-bold text-primary mb-6 text-center">Institutional Highlights</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-blue-50 p-4 rounded-lg">
-              <h4 className="font-semibold text-blue-800 mb-2">Green Campus Initiative</h4>
-              <p className="text-sm text-blue-700">Building enclosed with rooftop solar panels and rainwater harvesting systems</p>
-            </div>
-            <div className="bg-green-50 p-4 rounded-lg">
-              <h4 className="font-semibold text-green-800 mb-2">Higher Education Support</h4>
-              <p className="text-sm text-green-700">Special DCET cell for higher education aspirants with dedicated guidance</p>
-            </div>
-            <div className="bg-purple-50 p-4 rounded-lg">
-              <h4 className="font-semibold text-purple-800 mb-2">Technical Excellence</h4>
-              <p className="text-sm text-purple-700">Organized National level Technical Seminars and modern laboratory facilities</p>
-            </div>
-            <div className="bg-orange-50 p-4 rounded-lg">
-              <h4 className="font-semibold text-orange-800 mb-2">Student Welfare</h4>
-              <p className="text-sm text-orange-700">Hostel facility provided with comprehensive student support services</p>
-            </div>
-            <div className="bg-red-50 p-4 rounded-lg">
-              <h4 className="font-semibold text-red-800 mb-2">Industry Placement</h4>
-              <p className="text-sm text-red-700">Best at industry placements with strong corporate partnerships</p>
-            </div>
-            <div className="bg-indigo-50 p-4 rounded-lg">
-              <h4 className="font-semibold text-indigo-800 mb-2">Quality Assurance</h4>
-              <p className="text-sm text-indigo-700">Internal Quality Assurance Cell (IQAC) and Program Assessment Committee</p>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-4 gap-6">
-          <div className="text-center">
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <Award className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h4 className="font-semibold text-primary mb-2">300+ Institutions</h4>
-              <p className="text-gray-600 text-sm">Under JSS Mahavidyapeetha</p>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <Users className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h4 className="font-semibold text-primary mb-2">1,00,000+ Students</h4>
-              <p className="text-gray-600 text-sm">From kindergarten to post-doctoral</p>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <Globe className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h4 className="font-semibold text-primary mb-2">10,000+ Employees</h4>
-              <p className="text-gray-600 text-sm">Dedicated Academic Workforce</p>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <BookOpen className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h4 className="font-semibold text-primary mb-2">NBA Accreditation</h4>
-              <p className="text-gray-600 text-sm">Quality Assured Programs</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="text-center mt-12">
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Our institution is equipped with state-of-the-art facilities, experienced faculty, and strong industry connections 
-            to provide students with a comprehensive learning experience that prepares them for successful careers.
-          </p>
-        </div>
+        {/* Key Features */}
+        <motion.div 
+          className="grid md:grid-cols-4 gap-6"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
+        >
+          {[
+            { icon: Award, title: "Excellence", description: "70+ years of educational excellence", color: "text-yellow-600" },
+            { icon: Users, title: "Community", description: "1,00,000+ students across institutions", color: "text-blue-600" },
+            { icon: Globe, title: "Reach", description: "300+ educational institutions", color: "text-green-600" },
+            { icon: BookOpen, title: "Programs", description: "Kindergarten to post-doctoral courses", color: "text-purple-600" }
+          ].map((feature, index) => (
+            <motion.div
+              key={feature.title}
+              initial={{ opacity: 0, y: 30, scale: 0.8 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.1 * index }}
+              viewport={{ once: true }}
+              whileHover={{ y: -10, scale: 1.05 }}
+            >
+              <Card className="text-center p-6 h-full hover:shadow-xl transition-all duration-300 group">
+                <CardContent className="space-y-4">
+                  <motion.div 
+                    className={`w-16 h-16 mx-auto rounded-full bg-gray-100 flex items-center justify-center group-hover:bg-gray-200 transition-colors duration-300`}
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <feature.icon className={`h-8 w-8 ${feature.color} transition-transform duration-300 group-hover:scale-110`} />
+                  </motion.div>
+                  <h3 className="text-lg font-semibold text-gray-800 transition-colors duration-300 group-hover:text-primary">{feature.title}</h3>
+                  <p className="text-gray-600 text-sm transition-colors duration-300 group-hover:text-gray-700">{feature.description}</p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
