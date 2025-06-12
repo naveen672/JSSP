@@ -119,48 +119,6 @@ export default function MechanicalEngineering() {
       specialization: "Mechanical Engineering",
       image: thirumaleshImage,
       hasProfile: false
-    },
-    {
-      id: 7,
-      name: "Nagendra",
-      designation: "Instructor",
-      qualification: "ME",
-      dateOfJoining: "Data not available",
-      experience: "Teaching & Lab Instruction",
-      phone: "Contact department",
-      email: "Contact department",
-      profilePdf: null,
-      specialization: "Mechanical Engineering Laboratory",
-      image: nagendraImage,
-      hasProfile: false
-    },
-    {
-      id: 8,
-      name: "Prakash.N",
-      designation: "Lab Helper",
-      qualification: "ME",
-      dateOfJoining: "Data not available",
-      experience: "Laboratory Support",
-      phone: "Contact department",
-      email: "Contact department",
-      profilePdf: null,
-      specialization: "Laboratory Operations & Maintenance",
-      image: prakashImage,
-      hasProfile: false
-    },
-    {
-      id: 9,
-      name: "Udayakumar. R",
-      designation: "Lab Helper",
-      qualification: "ME",
-      dateOfJoining: "Data not available",
-      experience: "Laboratory Support",
-      phone: "Contact department",
-      email: "Contact department",
-      profilePdf: null,
-      specialization: "Laboratory Operations & Maintenance",
-      image: udayakumarImage,
-      hasProfile: false
     }
   ];
 
@@ -170,21 +128,21 @@ export default function MechanicalEngineering() {
       name: "Nagendra. H.C",
       designation: "Instructor",
       qualification: "DME",
-      image: null
+      image: nagendraImage
     },
     {
       slNo: 3,
       name: "Prakash.N",
       designation: "Lab Helper",
       qualification: "ITI",
-      image: null
+      image: prakashImage
     },
     {
       slNo: 4,
       name: "Udayakumar. R",
       designation: "Lab Helper",
       qualification: "ITI",
-      image: null
+      image: udayakumarImage
     },
     {
       slNo: 5,
